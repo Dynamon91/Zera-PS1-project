@@ -1,0 +1,7 @@
+/build/
+__pycache__/
+*.py[cod]
+*.rgb
+*.raw
+*.mcd
+/assets/audio_source/cosmic_core.wav
