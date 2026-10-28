@@ -159,7 +159,7 @@
       "audio_music_ready": 1,
       "audio_underruns": 0,
       "audio_cd_errors": 0,
-      "audio_refills": 9,
+      "audio_refills": 10,
       "audio_wraps": 0,
       "audio_muted": 0,
       "camera_height": 0,
@@ -1613,13 +1613,13 @@
     }
   ],
   "content": "zera_wip09.cue",
-  "bin_sha256": "c289f601523e5953bda64353004d8d8fcd3514c340516c544bd2c53f6d21466a",
+  "bin_sha256": "24eadfb9fe966472351018ad675a280fd0ce2ad1384287f5aae5f764c0c1d4b6",
   "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
   "gif_samples": 0,
   "audio_output": {
     "interleaved_samples": 1763872,
-    "peak": 11547,
-    "rms": 1140.03,
+    "peak": 11542,
+    "rms": 1138.25,
     "clipped_samples": 0,
     "saved_pcm_bytes": 3527744
   }
