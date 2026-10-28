@@ -5,6 +5,7 @@ import json
 import math
 from pathlib import Path
 import UnityPy
+import dnfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -40,6 +41,12 @@ def main():
     (area/'src/launch_config.h').write_text('/* Recovered original level3 LaunchPad 7246; positions in FP=256. */\n'
         +'#define LAUNCH_FACING '+str(facing)+'\n'
         +'static const LaunchConfig launch_config={'+','.join([vector(start),vector(end),vector(trigger),str(3*scale*256),str(step),str(arc)])+'};\n')
+    assembly=args.data/'Managed/Assembly-CSharp.dll'
+    pe=dnfile.dnPE(str(assembly))
+    audit={'assembly_sha256':hashlib.sha256(assembly.read_bytes()).hexdigest(),
+           'set_gravity_member_references':[str(r.Name) for r in pe.net.mdtables.MemberRef.rows if str(r.Name)=='set_gravity'],
+           'scope':'Assembly-CSharp.dll metadata only; does not audit other assemblies or native components'}
+    (area/'reports/gravity_reference_audit.json').write_text(json.dumps(audit,indent=2)+'\n')
     print(json.dumps(report))
 
 if __name__=='__main__':main()

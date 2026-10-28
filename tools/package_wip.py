@@ -138,6 +138,27 @@ def make_package(root, output, source_commit, native_artifact=None):
                             "run": "Open build/zera_level3_preview.cue inside the same native ZIP",
                             "status": "Bounded original level3 terrain; no original progression active",
                         }
+                with zipfile.ZipFile(native_artifact) as native:
+                    if "build/zera_launchpad_preview.bin" in native.namelist():
+                        launch = json.loads(native.read("docs/screenshots/launchpad/verification.json"))
+                        launch_hash = hashlib.sha256(native.read("build/zera_launchpad_preview.bin")).hexdigest()
+                        if (launch["bin_sha256"] != launch_hash or launch["source_commit"] != check["source_commit"]
+                                or not launch["grounded"] or launch["automatic_respawns"] != 0
+                                or launch["launches_started"] != 3 or launch["launches_completed"] != 2
+                                or launch["launches_cancelled"] != 1 or launch["paused_samples"] < 3
+                                or launch.get("camera_tracked_samples", 0) < 3):
+                            raise ValueError("launchpad build/flight validation mismatch")
+                        if not native.read("build/zera_launchpad.exe").startswith(b"PS-X EXE"):
+                            raise ValueError("launchpad preview lacks a PS-X executable")
+                        if '"zera_launchpad_preview.bin"' not in native.read("build/zera_launchpad_preview.cue").decode():
+                            raise ValueError("launchpad CUE does not reference included BIN")
+                        manifest["additional_native_preview"]["launchpad_preview"] = {
+                            "source_commit": launch["source_commit"], "bin_sha256": launch_hash,
+                            "run": "Open build/zera_launchpad_preview.cue inside the same native ZIP",
+                            "status": "Original launchpad area and trajectory; manual Triangle activation prototype",
+                            "launches_completed": launch["launches_completed"],
+                            "pause_and_cancel_verified": True,
+                        }
                 write_entry(archive, name, data)
             write_entry(archive, "CHECKPOINT.json", (json.dumps(manifest, indent=2, sort_keys=True) + "\n").encode())
         # CRC check before replacing an existing output archive.

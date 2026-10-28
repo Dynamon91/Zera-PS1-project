@@ -78,6 +78,29 @@ class PackageTests(unittest.TestCase):
             restored_native.write_bytes(native.read_bytes())
             make_package(root, combined, "a" * 40, restored_native)
             verify_checkpoint(combined)
+            launch_native = root / "dist/launch-native.zip"
+            launch_digest = hashlib.sha256(b"launch disc").hexdigest()
+            launch_check = {"bin_sha256": launch_digest, "source_commit": "b" * 40,
+                            "grounded": True, "automatic_respawns": 0, "launches_started": 3,
+                            "launches_completed": 2, "launches_cancelled": 1, "paused_samples": 4, "camera_tracked_samples": 4}
+            def write_launch_fixture(digest):
+                launch_check["bin_sha256"] = digest
+                with zipfile.ZipFile(native) as old, zipfile.ZipFile(launch_native, "w") as new:
+                    for item in old.namelist():
+                        new.writestr(item, old.read(item))
+                    new.writestr("build/zera_launchpad_preview.bin", b"launch disc")
+                    new.writestr("build/zera_launchpad.exe", b"PS-X EXE")
+                    new.writestr("build/zera_launchpad_preview.cue", 'FILE "zera_launchpad_preview.bin" BINARY')
+                    new.writestr("docs/screenshots/launchpad/verification.json", json.dumps(launch_check))
+            write_launch_fixture(launch_digest)
+            launch_status = make_package(root, combined, "a" * 40, launch_native)
+            self.assertEqual(launch_status["additional_native_preview"]["launchpad_preview"]["launches_completed"], 2)
+            verify_checkpoint(combined)
+            write_launch_fixture("0" * 64)
+            with self.assertRaisesRegex(ValueError, "launchpad build/flight validation mismatch"):
+                make_package(root, combined, "a" * 40, launch_native)
+            # A failed replacement must preserve the last verified output.
+            self.assertEqual(verify_checkpoint(combined), launch_status)
             output.unlink()
             (root / "disc/zera_wip08.bin").unlink()
             with self.assertRaisesRegex(ValueError, "missing checkpoint file"):

@@ -1,0 +1,5 @@
+{
+  "assembly_sha256": "68b1c2a086ff4245795a30a46517fb3540d16db283d125c33e0c1476aa65f225",
+  "set_gravity_member_references": [],
+  "scope": "Assembly-CSharp.dll metadata only; does not audit other assemblies or native components"
+}

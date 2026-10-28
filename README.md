@@ -4,10 +4,20 @@
 assessment covers the complete game adaptation, not the fraction of exported
 assets or elapsed development time. See [PROGRESS.md](PROGRESS.md).
 
+## New: playable original trampoline area
+
+A **third PS1 disc**, `build/zera_launchpad_preview.cue`, lets Zera launch from an
+original level3 trampoline and land on its original upper platform. Press Triangle
+near the pad; Start pauses flight and Select cancels/respawns. The recovered arc
+and source gravity are used, with a provisional manual activation replacing the
+unported companion/Somersault condition.
+
+[Actual before-flight/flight/landing screenshots and native checks](docs/LAUNCH_GAMEPLAY.md).
+
 ## Updated playable Zera mascot
 
 The original Zera mascot now has its source eye/spot textures and per-corner
-Gouraud colors in both playable discs. Skinning-aware packing preserves distinct
+Gouraud colors in the playable discs. Skinning-aware packing preserves distinct
 joint influences: 412 animated positions, 806 triangles and four original clips.
 [Actual before/after screenshots, source details and animation checks](docs/MASCOT.md).
 Facing now shares the current movement yaw, and the grounded mascot idles when
@@ -412,4 +422,4 @@ Clipping optimization: [measured before/after results](docs/PERFORMANCE.md).
 
 Original progression source recovery: [193 relics, 20 essences and 13 checkpoints with original transforms](docs/ORIGINAL_PROGRESSION.md). This is recovered conversion data; the playable runtime is unchanged.
 
-Original traversal recovery: [nine launchpads, saved destinations and compiled trajectory formula](docs/LAUNCHPADS.md). Source-data milestone; launch gameplay is not yet enabled.
+Original traversal recovery: [nine launchpads, saved destinations and compiled trajectory formula](docs/LAUNCHPADS.md). The recovered arc is now playable in the [dedicated launchpad prototype](docs/LAUNCH_GAMEPLAY.md); full companion activation remains pending.

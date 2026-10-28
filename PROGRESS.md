@@ -2,7 +2,7 @@
 
 **Estimated full-port completion: approximately 29%.**
 
-Reviewed: 28 October 2026. Stage: expanded level2 prototype plus a separate bounded level3 terrain preview.
+Reviewed: 28 October 2026. Stage: expanded level2 prototype, bounded level3 start, and a separate playable original launchpad area.
 Current shared checkpoint includes the tested WIP09 native preview; `disc/` retains
 WIP08 as a reference. The estimate is provisional engineering judgment, with a
 rough 25–35% range. It is not a measure of exported-file count, playtime coverage,
@@ -22,7 +22,7 @@ based on the evidence below; scope discoveries may change the estimate.
 | PS1 rendering and animation | 10 | 6 | Native textured/Gouraud renderer, original mascot eye/spot textures, skinning-aware packing, four sampled character clips, local render cells and vertex-cache checks; overlays, shaders and performance remain incomplete. |
 | Movement, collision and camera | 10 | 6 | Jump/glide/boost, heightfield/wall movement, side-view fallback and terrain-aware respawn; overlapping floors, ceiling/camera-volume tests and broader usability remain. |
 | Full world and level flow | 25 | 3 | Radius-32 level2 patch, grounded native exploration beyond the old boundary, and a separately tested level3 start patch; full levels, connections, actors, props and streaming remain. |
-| Original gameplay and progression | 20 | 0 | Original authored collection/progression and interactions remain unported. The timed trial is separate development content. |
+| Original gameplay and progression | 20 | 0 | One recovered launch arc and destination are playable with provisional manual activation; original companion/Somersault behavior, collection and progression remain unported. The timed trial is separate development content. |
 | Audio | 10 | 4 | One streamed track, seven effects and verified session mute; broader source content, transitions, persistent settings and hardware checks remain. |
 | Menus and persistent saves | 5 | 1 | Title/pause/controls, session audio and trial records; memory-card persistence and complete original UI remain. |
 | Release validation and performance | 10 | 1 | Sanitizer host checks and native HLE scenarios; retail BIOS, PAL, physical hardware, stress/memory checks and frame budget remain. |
@@ -67,7 +67,7 @@ but trajectories/timing diverge; the images are not a same-position fidelity cla
 See [WORLD.md](docs/WORLD.md) and `docs/screenshots/world/verification.json`.
 
 The exploratory HLE capture observed approximately **14.29 simulation updates/s**
-in its active interval (1,033 updates over 4,469 emulated video frames at 60 Hz).
+in its active interval (1,064 updates over 4,469 emulated video frames at 60 Hz).
 This is scenario-specific simulation pacing, not physical-hardware FPS. The
 30-update target is not established. Performance profiling and further optimization
 remain a release requirement. Draw-distance popping, affine texture distortion,
@@ -202,3 +202,7 @@ These are existing prototype refinements; the full-port estimate stays 29%.
 ### Original launchpad recovery — 28 October 2026
 
 Recovered all nine serialized LaunchPad components, including two in level3, with resolved companion targets and compiled arc/time-step evidence. Added reproducible extraction, CI validation and an original-coordinate level3 placement map. Both level3 pads are outside the current preview; original launch gameplay and connecting routes remain pending. Existing native discs are unchanged. Full-port estimate remains **29%**. See [LAUNCHPADS.md](docs/LAUNCHPADS.md).
+
+### Playable original launchpad area
+
+Added a third native disc with recovered LaunchPad 7246, surrounding terrain and original upper platform. Flight uses source gravity and original travel parameters. Host checks cover the arc, exact endpoint, stable upper-floor support, trigger boundaries, cancellation and retry; native evidence is recorded in [LAUNCH_GAMEPLAY.md](docs/LAUNCH_GAMEPLAY.md). Triangle activation and existing animation/effects are provisional. Full-port estimate stays **29%** until original interaction/progression behavior is integrated more broadly.
