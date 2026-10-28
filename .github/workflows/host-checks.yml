@@ -14,7 +14,9 @@ jobs:
       - name: Check gameplay modules with address and undefined-behavior sanitizers
         run: sh tools/run_host_checks.sh
       - name: Verify recovered original progression data
-        run: python3 tools/check_progression_recovery.py
+        run: |
+          python3 tools/check_progression_recovery.py
+          python3 tools/check_launchpad_recovery.py
       - name: Check resumable package integrity and reproducibility
         run: python3 tools/test_package.py
       - name: Package current source and the labeled WIP08 playable checkpoint

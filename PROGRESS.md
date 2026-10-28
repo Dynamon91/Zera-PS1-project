@@ -198,3 +198,7 @@ The builder now replaces a nested native ZIP already present in an extracted
 checkpoint, preventing duplicate archive entries during resume/repackaging.
 Both the older-nested-build and inside-source-tree artifact cases are tested.
 These are existing prototype refinements; the full-port estimate stays 29%.
+
+### Original launchpad recovery — 28 October 2026
+
+Recovered all nine serialized LaunchPad components, including two in level3, with resolved companion targets and compiled arc/time-step evidence. Added reproducible extraction, CI validation and an original-coordinate level3 placement map. Both level3 pads are outside the current preview; original launch gameplay and connecting routes remain pending. Existing native discs are unchanged. Full-port estimate remains **29%**. See [LAUNCHPADS.md](docs/LAUNCHPADS.md).

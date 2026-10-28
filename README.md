@@ -411,3 +411,5 @@ streaming helper sources are included under their original license.
 Clipping optimization: [measured before/after results](docs/PERFORMANCE.md).
 
 Original progression source recovery: [193 relics, 20 essences and 13 checkpoints with original transforms](docs/ORIGINAL_PROGRESSION.md). This is recovered conversion data; the playable runtime is unchanged.
+
+Original traversal recovery: [nine launchpads, saved destinations and compiled trajectory formula](docs/LAUNCHPADS.md). Source-data milestone; launch gameplay is not yet enabled.

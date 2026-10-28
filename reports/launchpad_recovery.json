@@ -1,0 +1,2919 @@
+{
+  "schema_version": 1,
+  "source_file_sha256": {
+    "Managed/Assembly-CSharp.dll": "68b1c2a086ff4245795a30a46517fb3540d16db283d125c33e0c1476aa65f225",
+    "globalgamemanagers.assets": "1b730746d100c1bcbdd60a99e0e9124b86ea76e773edb420e162f6086a1a2eb6",
+    "level0": "d5f7de1e7a58dc1d071d07076ac0c8638da73b07fd9e346255bcebb8fd93f0d0",
+    "level1": "476a443330f4428d75159178da7fde68c548eb35201beff5a98dc9d614593b43",
+    "level2": "f9563c7125bcb9e6f35c92ab76c85fb98aa25ed5a2d64aba7f3f5a73067293e1",
+    "level3": "06324ca85b7a0888b05b823256262f722a8eab261ec3a1e073e2d066e8daba99",
+    "level4": "af48db82641f7a21fbd7c07c78d2c7502f451e3fc4b51aa1d7b16c4e27b7e44c",
+    "level5": "6b8d15bc9ad629f89faf598c4d12768fc89b55e09ccc7baa7f983f06c0735868",
+    "level6": "5bdfe6be37d3dfea1cc3fe5c68a7983963e9597599424288483b7a3ce628c278",
+    "level7": "d61f1fc1fd0e76048af3f744e4591405a4c4f6fa212b08e1c3b9c4921df80035"
+  },
+  "public_field_signatures": [
+    [
+      "landingPoint",
+      "06113d"
+    ],
+    [
+      "kiwiPoint",
+      "061235"
+    ],
+    [
+      "layers",
+      "061180b5"
+    ],
+    [
+      "travelTime",
+      "060c"
+    ],
+    [
+      "travelSpeed",
+      "060c"
+    ],
+    [
+      "glideLockRange",
+      "060c"
+    ]
+  ],
+  "resolved_field_types": {
+    "landingPoint": "UnityEngine.Vector3",
+    "kiwiPoint": "UnityEngine.Transform",
+    "layers": "UnityEngine.LayerMask"
+  },
+  "coordinate_system": "Original Unity world coordinates, not PS1 coordinates",
+  "limitations": [
+    "Serialized placements and compiled method audit; no PS1 launch gameplay enabled",
+    "Runtime gravity, companion interaction, state transitions and collision require integration validation",
+    "landingPoint is a world-space Vector3, not a transform reference",
+    "travelTime is an arc parameter; normalized time advances by fixedDeltaTime / travelTime * travelSpeed"
+  ],
+  "scenes": [
+    {
+      "scene": "level0",
+      "entries": []
+    },
+    {
+      "scene": "level1",
+      "entries": []
+    },
+    {
+      "scene": "level2",
+      "entries": [
+        {
+          "name": "_Trampoline (2)",
+          "game_object_path_id": 1433,
+          "transform_path_id": 4092,
+          "hierarchy": [
+            "_Trampoline (2)"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              0.9859202681615329,
+              0.0,
+              -0.16721610218005703,
+              -82.90611267089844
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              27.393999099731445
+            ],
+            [
+              0.16721610218005703,
+              0.0,
+              0.9859202681615329,
+              109.1512222290039
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            -82.90611267089844,
+            27.393999099731445,
+            109.1512222290039
+          ],
+          "component_path_id": 7243,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "422e66f650868cddda058ff2f7eb4166753d60dba70b90476c04198a508206e7",
+          "landing_point": [
+            -75.2130355834961,
+            32.106117248535156,
+            111.35247802734375
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 3514,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 2138,
+              "transform_path_id": 3514,
+              "hierarchy": [
+                "_Trampoline (2)",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  0.9859202681615324,
+                  0.0,
+                  -0.16721610218005697,
+                  -82.90611267089844
+                ],
+                [
+                  0.0,
+                  0.9999999999999996,
+                  0.0,
+                  27.97399902716279
+                ],
+                [
+                  0.16721610218005697,
+                  0.0,
+                  0.9859202681615324,
+                  109.1512222290039
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                -82.90611267089844,
+                27.97399902716279,
+                109.1512222290039
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 1.0199999809265137,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        },
+        {
+          "name": "_Trampoline (1)",
+          "game_object_path_id": 1432,
+          "transform_path_id": 4091,
+          "hierarchy": [
+            "_Trampoline (1)"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              0.9859202681615329,
+              0.0,
+              -0.16721610218005703,
+              21.010000228881836
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              23.790000915527344
+            ],
+            [
+              0.16721610218005703,
+              0.0,
+              0.9859202681615329,
+              -100.47000122070312
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            21.010000228881836,
+            23.790000915527344,
+            -100.47000122070312
+          ],
+          "component_path_id": 7244,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "145fce7986b0c969012047996ccfdf9ea0069cb21075d05a114f5a63aa4f1ebe",
+          "landing_point": [
+            19.98192596435547,
+            33.677364349365234,
+            -95.68904113769531
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 3515,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 2137,
+              "transform_path_id": 3515,
+              "hierarchy": [
+                "_Trampoline (1)",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  0.9859202681615324,
+                  0.0,
+                  -0.16721610218005697,
+                  21.010000228881836
+                ],
+                [
+                  0.0,
+                  0.9999999999999996,
+                  0.0,
+                  24.37000084295869
+                ],
+                [
+                  0.16721610218005697,
+                  0.0,
+                  0.9859202681615324,
+                  -100.47000122070312
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                21.010000228881836,
+                24.37000084295869,
+                -100.47000122070312
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 1.4500000476837158,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        }
+      ]
+    },
+    {
+      "scene": "level3",
+      "entries": [
+        {
+          "name": "_Trampoline (1)",
+          "game_object_path_id": 853,
+          "transform_path_id": 3118,
+          "hierarchy": [
+            "_Trampoline (1)"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              0.9996708937907555,
+              0.0,
+              0.02565353986473924,
+              4.7813262939453125
+            ],
+            [
+              0.0,
+              0.9999999999999998,
+              0.0,
+              31.058000564575195
+            ],
+            [
+              -0.02565353986473924,
+              0.0,
+              0.9996708937907555,
+              -88.74739074707031
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            4.7813262939453125,
+            31.058000564575195,
+            -88.74739074707031
+          ],
+          "component_path_id": 7246,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "37336e90ba59201ce08a19b4950d7b293148642dc0bed3bef6af270c442c9424",
+          "landing_point": [
+            2.4675865173339844,
+            54.88125228881836,
+            -81.28372192382812
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 2542,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 1551,
+              "transform_path_id": 2542,
+              "hierarchy": [
+                "_Trampoline (1)",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  0.999670893790755,
+                  0.0,
+                  0.025653539864739228,
+                  4.7813262939453125
+                ],
+                [
+                  0.0,
+                  0.9999999999999993,
+                  0.0,
+                  31.63800049200654
+                ],
+                [
+                  -0.025653539864739228,
+                  0.0,
+                  0.999670893790755,
+                  -88.74739074707031
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                4.7813262939453125,
+                31.63800049200654,
+                -88.74739074707031
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 2.159257411956787,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        },
+        {
+          "name": "_Trampoline",
+          "game_object_path_id": 852,
+          "transform_path_id": 3117,
+          "hierarchy": [
+            "_Trampoline"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              0.9890416549431679,
+              0.0,
+              0.14763673251355933,
+              129.1513214111328
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              0.0,
+              9.079000473022461
+            ],
+            [
+              -0.14763673251355933,
+              0.0,
+              0.9890416549431679,
+              -40.38739013671875
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            129.1513214111328,
+            9.079000473022461,
+            -40.38739013671875
+          ],
+          "component_path_id": 7247,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "6b61a45564ef6439b3efe16eea9b199c218679b5a2813a44ebdd8232c80f948a",
+          "landing_point": [
+            123.40962219238281,
+            32.153934478759766,
+            -49.74066162109375
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 2543,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 1550,
+              "transform_path_id": 2543,
+              "hierarchy": [
+                "_Trampoline",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  0.9890416549431674,
+                  0.0,
+                  0.14763673251355927,
+                  129.1513214111328
+                ],
+                [
+                  0.0,
+                  0.9999999999999998,
+                  0.0,
+                  9.659000400453806
+                ],
+                [
+                  -0.14763673251355927,
+                  0.0,
+                  0.9890416549431674,
+                  -40.38739013671875
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                129.1513214111328,
+                9.659000400453806,
+                -40.38739013671875
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 2.1119515895843506,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        }
+      ]
+    },
+    {
+      "scene": "level4",
+      "entries": [
+        {
+          "name": "_Trampoline",
+          "game_object_path_id": 1226,
+          "transform_path_id": 4845,
+          "hierarchy": [
+            "_Trampoline"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              0.9859202681615329,
+              0.0,
+              -0.16721610218005703,
+              -61.739990234375
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              33.06238555908203
+            ],
+            [
+              0.16721610218005703,
+              0.0,
+              0.9859202681615329,
+              62.730003356933594
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            -61.739990234375,
+            33.06238555908203,
+            62.730003356933594
+          ],
+          "component_path_id": 10116,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "7c33b7ce2b7f40e79f38c5b1b65993225e6e7e88cc8d56a3ad2ea4938abec06d",
+          "landing_point": [
+            -27.774311065673828,
+            38.21162414550781,
+            39.988311767578125
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 3770,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 2434,
+              "transform_path_id": 3770,
+              "hierarchy": [
+                "_Trampoline",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  0.9859202681615324,
+                  0.0,
+                  -0.16721610218005697,
+                  -61.739990234375
+                ],
+                [
+                  0.0,
+                  0.9999999999999996,
+                  0.0,
+                  33.642385486513376
+                ],
+                [
+                  0.16721610218005697,
+                  0.0,
+                  0.9859202681615324,
+                  62.730003356933594
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                -61.739990234375,
+                33.642385486513376,
+                62.730003356933594
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 1.7200000286102295,
+          "travel_speed": 1.7200000286102295,
+          "glide_lock_range": 0.5
+        }
+      ]
+    },
+    {
+      "scene": "level5",
+      "entries": [
+        {
+          "name": "_Trampoline",
+          "game_object_path_id": 1272,
+          "transform_path_id": 5061,
+          "hierarchy": [
+            "_Trampoline"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              -0.9877547990124185,
+              0.15601428469193568,
+              0.0,
+              -14.440999984741211
+            ],
+            [
+              0.0,
+              1.3010426069826053e-18,
+              0.9999999999999998,
+              17.739999771118164
+            ],
+            [
+              0.15601428469193568,
+              0.9877547990124185,
+              1.3010426069826053e-18,
+              -9.505999565124512
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            -14.440999984741211,
+            17.739999771118164,
+            -9.505999565124512
+          ],
+          "component_path_id": 9467,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "ff4c358e125b815e1a20f7b507f74be9518aef4bf4fdb96d1203da667bae5167",
+          "landing_point": [
+            17.628761291503906,
+            17.13178062438965,
+            41.935279846191406
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 3831,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 2566,
+              "transform_path_id": 3831,
+              "hierarchy": [
+                "_Trampoline",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  -0.987754799012418,
+                  0.15601428469193562,
+                  0.0,
+                  -14.350511710941634
+                ],
+                [
+                  0.0,
+                  1.3010426069826047e-18,
+                  0.9999999999999993,
+                  17.739999771118164
+                ],
+                [
+                  0.15601428469193562,
+                  0.987754799012418,
+                  1.3010426069826047e-18,
+                  -8.933101853377346
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                -14.350511710941634,
+                17.739999771118164,
+                -8.933101853377346
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 3.2367031574249268,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        }
+      ]
+    },
+    {
+      "scene": "level6",
+      "entries": [
+        {
+          "name": "_Trampoline (2)",
+          "game_object_path_id": 846,
+          "transform_path_id": 3191,
+          "hierarchy": [
+            "_Trampoline (2)"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              0.146238498793379,
+              0.989249362633436,
+              -1.3369303338006677e-09,
+              -231.80999755859375
+            ],
+            [
+              0.9887094912334864,
+              -0.1461586908684114,
+              -0.03303299908353732,
+              50.27000045776367
+            ],
+            [
+              -0.03267787348466415,
+              0.0048306948747838495,
+              -0.9994542615705571,
+              79.97000122070312
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            -231.80999755859375,
+            50.27000045776367,
+            79.97000122070312
+          ],
+          "component_path_id": 7587,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "21183ebe77691e3f764a320914a82aa44cd5ec34309b185faafd6a299a43f3b4",
+          "landing_point": [
+            -177.7100067138672,
+            19.607568740844727,
+            77.29438018798828
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 2539,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 1617,
+              "transform_path_id": 2539,
+              "hierarchy": [
+                "_Trampoline (2)",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  0.14623849879337894,
+                  0.9892493626334355,
+                  -1.3369303338006673e-09,
+                  -231.23623300005485
+                ],
+                [
+                  0.988709491233486,
+                  -0.14615869086841135,
+                  -0.03303299908353731,
+                  50.18522842766653
+                ],
+                [
+                  -0.03267787348466414,
+                  0.004830694874783848,
+                  -0.9994542615705566,
+                  79.97280302337995
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                -231.23623300005485,
+                50.18522842766653,
+                79.97280302337995
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 2.6171600818634033,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        },
+        {
+          "name": "_Trampoline (1)",
+          "game_object_path_id": 844,
+          "transform_path_id": 3189,
+          "hierarchy": [
+            "_Trampoline (1)"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              -0.14224006421369395,
+              -0.9847926093773223,
+              0.09975610581959087,
+              -215.65499877929688
+            ],
+            [
+              0.9887107092104743,
+              -0.14615159693907376,
+              -0.03302793067510911,
+              37.56700134277344
+            ],
+            [
+              0.047105176201830426,
+              0.09393203515288984,
+              0.9944636117762334,
+              78.83399963378906
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            -215.65499877929688,
+            37.56700134277344,
+            78.83399963378906
+          ],
+          "component_path_id": 7588,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "bc4d2ed3b62174cc6b9c11ff0d952e86cf92a68f82d6a1413285395b82f9c4ed",
+          "landing_point": [
+            -231.63189697265625,
+            50.56721496582031,
+            79.81474304199219
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 2541,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 1616,
+              "transform_path_id": 2541,
+              "hierarchy": [
+                "_Trampoline (1)",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  -0.1422400642136939,
+                  -0.9847926093773218,
+                  0.09975610581959081,
+                  -216.22617842127065
+                ],
+                [
+                  0.9887107092104739,
+                  -0.1461515969390737,
+                  -0.0330279306751091,
+                  37.482233427154796
+                ],
+                [
+                  0.0471051762018304,
+                  0.09393203515288978,
+                  0.994463611776233,
+                  78.88848020736121
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                -216.22617842127065,
+                37.482233427154796,
+                78.88848020736121
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 1.0813521146774292,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        },
+        {
+          "name": "_Trampoline",
+          "game_object_path_id": 845,
+          "transform_path_id": 3190,
+          "hierarchy": [
+            "_Trampoline"
+          ],
+          "active_in_serialized_hierarchy": true,
+          "source_world_matrix": [
+            [
+              -0.08930162883971729,
+              0.9960046280447439,
+              -1.5552283988418125e-07,
+              -235.82000732421875
+            ],
+            [
+              1.5552283988418125e-07,
+              -1.422025490971368e-07,
+              -0.9999999999999776,
+              15.529999732971191
+            ],
+            [
+              -0.9960046280447439,
+              -0.08930162883973947,
+              -1.422025490971368e-07,
+              80.69999694824219
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "source_world_position": [
+            -235.82000732421875,
+            15.529999732971191,
+            80.69999694824219
+          ],
+          "component_path_id": 7589,
+          "component_enabled": true,
+          "serialized_payload_offset": 32,
+          "serialized_payload_size": 40,
+          "serialized_object_sha256": "cf4d243db666cc966d9512e62db594568977ed52ddea7a6daa73ae5acb582200",
+          "landing_point": [
+            -215.76377868652344,
+            37.460697174072266,
+            78.93350219726562
+          ],
+          "kiwi_point": {
+            "file_id": 0,
+            "path_id": 2540,
+            "target": {
+              "name": "Kiwipoint",
+              "game_object_path_id": 1615,
+              "transform_path_id": 2540,
+              "hierarchy": [
+                "_Trampoline",
+                "Trampoline",
+                "Kiwipoint"
+              ],
+              "active_in_serialized_hierarchy": true,
+              "source_world_matrix": [
+                [
+                  -0.08930162883971726,
+                  0.9960046280447434,
+                  -1.555228398841812e-07,
+                  -235.24232471223152
+                ],
+                [
+                  1.555228398841812e-07,
+                  -1.4220254909713676e-07,
+                  -0.9999999999999771,
+                  15.529999650493725
+                ],
+                [
+                  -0.9960046280447434,
+                  -0.08930162883973944,
+                  -1.4220254909713676e-07,
+                  80.64820200999563
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "source_world_position": [
+                -235.24232471223152,
+                15.529999650493725,
+                80.64820200999563
+              ]
+            }
+          },
+          "layer_mask": 80760849,
+          "travel_time": 1.600000023841858,
+          "travel_speed": 1.75,
+          "glide_lock_range": 0.5
+        }
+      ]
+    },
+    {
+      "scene": "level7",
+      "entries": []
+    }
+  ],
+  "methods": {
+    "LaunchPad.Update": {
+      "rva": 169328,
+      "instructions": [
+        {
+          "offset": 12,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 17,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 22,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 27,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 28,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 33,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 38,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00003e",
+            "name": "Distance"
+          }
+        },
+        {
+          "offset": 43,
+          "opcode": "ldc.r4",
+          "operand": 10.0
+        },
+        {
+          "offset": 48,
+          "opcode": "bgt.un.s",
+          "operand": 137
+        },
+        {
+          "offset": 50,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 51,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000728",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 56,
+          "opcode": "brtrue.s",
+          "operand": 137
+        },
+        {
+          "offset": 58,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 59,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000729",
+            "name": "launched"
+          }
+        },
+        {
+          "offset": 64,
+          "opcode": "brtrue.s",
+          "operand": 137
+        },
+        {
+          "offset": 66,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 71,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 76,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 77,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 82,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000181",
+            "name": "set_parent"
+          }
+        },
+        {
+          "offset": 87,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 88,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 89,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000728",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 94,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 99,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 100,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400071b",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 105,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 110,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 111,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000719",
+            "name": "wasWaiting"
+          }
+        },
+        {
+          "offset": 116,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 121,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 122,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000726",
+            "name": "kiwiPoint"
+          }
+        },
+        {
+          "offset": 127,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 132,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000711",
+            "name": "launchPosition"
+          }
+        },
+        {
+          "offset": 137,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 142,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 147,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 152,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 153,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 158,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 163,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00003e",
+            "name": "Distance"
+          }
+        },
+        {
+          "offset": 168,
+          "opcode": "ldc.r4",
+          "operand": 10.0
+        },
+        {
+          "offset": 173,
+          "opcode": "ble.un.s",
+          "operand": 248
+        },
+        {
+          "offset": 175,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 176,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000728",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 181,
+          "opcode": "brfalse.s",
+          "operand": 248
+        },
+        {
+          "offset": 183,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 188,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 193,
+          "opcode": "ldnull",
+          "operand": null
+        },
+        {
+          "offset": 194,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000181",
+            "name": "set_parent"
+          }
+        },
+        {
+          "offset": 199,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 200,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 201,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000728",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 206,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 211,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 212,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400071b",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 217,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 222,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 223,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000719",
+            "name": "wasWaiting"
+          }
+        },
+        {
+          "offset": 228,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 233,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000708",
+            "name": "anim"
+          }
+        },
+        {
+          "offset": 238,
+          "opcode": "ldstr",
+          "operand": "string token(0x7001B9A4)"
+        },
+        {
+          "offset": 243,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a0000b0",
+            "name": "Play"
+          }
+        },
+        {
+          "offset": 248,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 253,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 258,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 263,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 264,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000726",
+            "name": "kiwiPoint"
+          }
+        },
+        {
+          "offset": 269,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 274,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 279,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00003e",
+            "name": "Distance"
+          }
+        },
+        {
+          "offset": 284,
+          "opcode": "ldc.r4",
+          "operand": 3.0
+        },
+        {
+          "offset": 289,
+          "opcode": "bgt.un.s",
+          "operand": 378
+        },
+        {
+          "offset": 291,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 296,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0600027b",
+            "name": "get_activeState"
+          }
+        },
+        {
+          "offset": 301,
+          "opcode": "isinst",
+          "operand": {
+            "token": "0x02000191",
+            "name": "Somersault"
+          }
+        },
+        {
+          "offset": 306,
+          "opcode": "brfalse.s",
+          "operand": 378
+        },
+        {
+          "offset": 308,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 309,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000729",
+            "name": "launched"
+          }
+        },
+        {
+          "offset": 314,
+          "opcode": "brtrue.s",
+          "operand": 378
+        },
+        {
+          "offset": 316,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 317,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 318,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000729",
+            "name": "launched"
+          }
+        },
+        {
+          "offset": 323,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 328,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 329,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400071b",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 334,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 339,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 340,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000719",
+            "name": "wasWaiting"
+          }
+        },
+        {
+          "offset": 345,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 350,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000708",
+            "name": "anim"
+          }
+        },
+        {
+          "offset": 355,
+          "opcode": "ldstr",
+          "operand": "string token(0x7001B9A4)"
+        },
+        {
+          "offset": 360,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a0000b0",
+            "name": "Play"
+          }
+        },
+        {
+          "offset": 365,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 366,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 367,
+          "opcode": "call",
+          "operand": {
+            "token": "0x06000827",
+            "name": "LaunchMotion"
+          }
+        },
+        {
+          "offset": 372,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00003f",
+            "name": "StartCoroutine"
+          }
+        },
+        {
+          "offset": 377,
+          "opcode": "pop",
+          "operand": null
+        },
+        {
+          "offset": 378,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    "LaunchPad.Reset": {
+      "rva": 169708,
+      "instructions": [
+        {
+          "offset": 12,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 13,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 18,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 23,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000132",
+            "name": "get_down"
+          }
+        },
+        {
+          "offset": 28,
+          "opcode": "ldloca.s",
+          "operand": "local(0x0000)"
+        },
+        {
+          "offset": 30,
+          "opcode": "ldc.r4",
+          "operand": "inf"
+        },
+        {
+          "offset": 35,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 36,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 37,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000727",
+            "name": "layers"
+          }
+        },
+        {
+          "offset": 42,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000133",
+            "name": "op_Implicit"
+          }
+        },
+        {
+          "offset": 47,
+          "opcode": "ldc.i4.s",
+          "operand": 31
+        },
+        {
+          "offset": 49,
+          "opcode": "and",
+          "operand": null
+        },
+        {
+          "offset": 50,
+          "opcode": "shl",
+          "operand": null
+        },
+        {
+          "offset": 51,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a0001d2",
+            "name": "Raycast"
+          }
+        },
+        {
+          "offset": 56,
+          "opcode": "brfalse.s",
+          "operand": 72
+        },
+        {
+          "offset": 58,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 59,
+          "opcode": "ldloca.s",
+          "operand": "local(0x0000)"
+        },
+        {
+          "offset": 61,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a0000cd",
+            "name": "get_point"
+          }
+        },
+        {
+          "offset": 66,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000725",
+            "name": "landingPoint"
+          }
+        },
+        {
+          "offset": 71,
+          "opcode": "ret",
+          "operand": null
+        },
+        {
+          "offset": 72,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 73,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 74,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 79,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 84,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000725",
+            "name": "landingPoint"
+          }
+        },
+        {
+          "offset": 89,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    "LaunchPad.LaunchMotion": {
+      "rva": 169798,
+      "instructions": [
+        {
+          "offset": 1,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 2,
+          "opcode": "newobj",
+          "operand": {
+            "token": "0x06000bde",
+            "name": ".ctor"
+          }
+        },
+        {
+          "offset": 7,
+          "opcode": "dup",
+          "operand": null
+        },
+        {
+          "offset": 8,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 9,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000c2f",
+            "name": "<>4__this"
+          }
+        },
+        {
+          "offset": 14,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    "LaunchPad.CancelLaunch": {
+      "rva": 91262,
+      "instructions": [
+        {
+          "offset": 1,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 2,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    "LaunchPad..ctor": {
+      "rva": 169813,
+      "instructions": [
+        {
+          "offset": 1,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 2,
+          "opcode": "ldc.r4",
+          "operand": 5.0
+        },
+        {
+          "offset": 7,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400072a",
+            "name": "travelTime"
+          }
+        },
+        {
+          "offset": 12,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 13,
+          "opcode": "ldc.r4",
+          "operand": 1.0
+        },
+        {
+          "offset": 18,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400072b",
+            "name": "travelSpeed"
+          }
+        },
+        {
+          "offset": 23,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 24,
+          "opcode": "ldc.r4",
+          "operand": 0.5
+        },
+        {
+          "offset": 29,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400072d",
+            "name": "glideLockRange"
+          }
+        },
+        {
+          "offset": 34,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 35,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00002e",
+            "name": ".ctor"
+          }
+        },
+        {
+          "offset": 40,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    "<LaunchMotion>d__11.MoveNext": {
+      "rva": 253776,
+      "instructions": [
+        {
+          "offset": 12,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 13,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000c2d",
+            "name": "<>1__state"
+          }
+        },
+        {
+          "offset": 18,
+          "opcode": "stloc.0",
+          "operand": null
+        },
+        {
+          "offset": 19,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 20,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000c2f",
+            "name": "<>4__this"
+          }
+        },
+        {
+          "offset": 25,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 26,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 27,
+          "opcode": "brfalse.s",
+          "operand": 38
+        },
+        {
+          "offset": 29,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 30,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 31,
+          "opcode": "beq",
+          "operand": 382
+        },
+        {
+          "offset": 36,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 37,
+          "opcode": "ret",
+          "operand": null
+        },
+        {
+          "offset": 38,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 39,
+          "opcode": "ldc.i4.m1",
+          "operand": null
+        },
+        {
+          "offset": 40,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000c2d",
+            "name": "<>1__state"
+          }
+        },
+        {
+          "offset": 45,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 50,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 51,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x040007f7",
+            "name": "skip"
+          }
+        },
+        {
+          "offset": 56,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 61,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 62,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x040007f8",
+            "name": "wasLaunched"
+          }
+        },
+        {
+          "offset": 67,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 72,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x040007d0",
+            "name": "sound"
+          }
+        },
+        {
+          "offset": 77,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000c98",
+            "name": "source14"
+          }
+        },
+        {
+          "offset": 82,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 87,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x040007d0",
+            "name": "sound"
+          }
+        },
+        {
+          "offset": 92,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000cab",
+            "name": "boing"
+          }
+        },
+        {
+          "offset": 97,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a00015d",
+            "name": "PlayOneShot"
+          }
+        },
+        {
+          "offset": 102,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 103,
+          "opcode": "ldc.r4",
+          "operand": 0.0
+        },
+        {
+          "offset": 108,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400072c",
+            "name": "traversalTime"
+          }
+        },
+        {
+          "offset": 113,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 118,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 119,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000807",
+            "name": "currentLaunchPad"
+          }
+        },
+        {
+          "offset": 124,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 129,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x040007e5",
+            "name": "rigidbody"
+          }
+        },
+        {
+          "offset": 134,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 135,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a00044a",
+            "name": "set_isKinematic"
+          }
+        },
+        {
+          "offset": 140,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 141,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 146,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 151,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 152,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000725",
+            "name": "landingPoint"
+          }
+        },
+        {
+          "offset": 157,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00003e",
+            "name": "Distance"
+          }
+        },
+        {
+          "offset": 162,
+          "opcode": "pop",
+          "operand": null
+        },
+        {
+          "offset": 163,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 164,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000725",
+            "name": "landingPoint"
+          }
+        },
+        {
+          "offset": 169,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 170,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 175,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 180,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a0000b1",
+            "name": "op_Subtraction"
+          }
+        },
+        {
+          "offset": 185,
+          "opcode": "stloc.2",
+          "operand": null
+        },
+        {
+          "offset": 186,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 191,
+          "opcode": "ldloc.2",
+          "operand": null
+        },
+        {
+          "offset": 192,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0a000043",
+            "name": "x"
+          }
+        },
+        {
+          "offset": 197,
+          "opcode": "ldloc.2",
+          "operand": null
+        },
+        {
+          "offset": 198,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0a000045",
+            "name": "z"
+          }
+        },
+        {
+          "offset": 203,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a0001b7",
+            "name": "Atan2"
+          }
+        },
+        {
+          "offset": 208,
+          "opcode": "ldc.r4",
+          "operand": 57.295780181884766
+        },
+        {
+          "offset": 213,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 214,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x040007e8",
+            "name": "currentRotation"
+          }
+        },
+        {
+          "offset": 219,
+          "opcode": "br",
+          "operand": 403
+        },
+        {
+          "offset": 224,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 225,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000034",
+            "name": "get_transform"
+          }
+        },
+        {
+          "offset": 230,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a000036",
+            "name": "get_position"
+          }
+        },
+        {
+          "offset": 235,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 236,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x04000725",
+            "name": "landingPoint"
+          }
+        },
+        {
+          "offset": 241,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 242,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072c",
+            "name": "traversalTime"
+          }
+        },
+        {
+          "offset": 247,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00003c",
+            "name": "Lerp"
+          }
+        },
+        {
+          "offset": 252,
+          "opcode": "stloc.3",
+          "operand": null
+        },
+        {
+          "offset": 253,
+          "opcode": "ldloca.s",
+          "operand": "local(0x0003)"
+        },
+        {
+          "offset": 255,
+          "opcode": "ldflda",
+          "operand": {
+            "token": "0x0a000044",
+            "name": "y"
+          }
+        },
+        {
+          "offset": 260,
+          "opcode": "dup",
+          "operand": null
+        },
+        {
+          "offset": 261,
+          "opcode": "ldind.r4",
+          "operand": null
+        },
+        {
+          "offset": 262,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 263,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072c",
+            "name": "traversalTime"
+          }
+        },
+        {
+          "offset": 268,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 269,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072c",
+            "name": "traversalTime"
+          }
+        },
+        {
+          "offset": 274,
+          "opcode": "ldc.r4",
+          "operand": 1.0
+        },
+        {
+          "offset": 279,
+          "opcode": "sub",
+          "operand": null
+        },
+        {
+          "offset": 280,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 281,
+          "opcode": "ldc.r4",
+          "operand": 0.5
+        },
+        {
+          "offset": 286,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 287,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a0001ed",
+            "name": "get_gravity"
+          }
+        },
+        {
+          "offset": 292,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0a000044",
+            "name": "y"
+          }
+        },
+        {
+          "offset": 297,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 298,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 299,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072a",
+            "name": "travelTime"
+          }
+        },
+        {
+          "offset": 304,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 305,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 306,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072a",
+            "name": "travelTime"
+          }
+        },
+        {
+          "offset": 311,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 312,
+          "opcode": "add",
+          "operand": null
+        },
+        {
+          "offset": 313,
+          "opcode": "stind.r4",
+          "operand": null
+        },
+        {
+          "offset": 314,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 319,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x040007e5",
+            "name": "rigidbody"
+          }
+        },
+        {
+          "offset": 324,
+          "opcode": "ldloc.3",
+          "operand": null
+        },
+        {
+          "offset": 325,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a00020d",
+            "name": "MovePosition"
+          }
+        },
+        {
+          "offset": 330,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 331,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 332,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072c",
+            "name": "traversalTime"
+          }
+        },
+        {
+          "offset": 337,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a00008a",
+            "name": "get_fixedDeltaTime"
+          }
+        },
+        {
+          "offset": 342,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 343,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072a",
+            "name": "travelTime"
+          }
+        },
+        {
+          "offset": 348,
+          "opcode": "div",
+          "operand": null
+        },
+        {
+          "offset": 349,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 350,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072b",
+            "name": "travelSpeed"
+          }
+        },
+        {
+          "offset": 355,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 356,
+          "opcode": "add",
+          "operand": null
+        },
+        {
+          "offset": 357,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400072c",
+            "name": "traversalTime"
+          }
+        },
+        {
+          "offset": 362,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 363,
+          "opcode": "newobj",
+          "operand": {
+            "token": "0x0a0004f4",
+            "name": ".ctor"
+          }
+        },
+        {
+          "offset": 368,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000c2e",
+            "name": "<>2__current"
+          }
+        },
+        {
+          "offset": 373,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 374,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 375,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000c2d",
+            "name": "<>1__state"
+          }
+        },
+        {
+          "offset": 380,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 381,
+          "opcode": "ret",
+          "operand": null
+        },
+        {
+          "offset": 382,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 383,
+          "opcode": "ldc.i4.m1",
+          "operand": null
+        },
+        {
+          "offset": 384,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000c2d",
+            "name": "<>1__state"
+          }
+        },
+        {
+          "offset": 389,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 394,
+          "opcode": "call",
+          "operand": {
+            "token": "0x0a000060",
+            "name": "op_Implicit"
+          }
+        },
+        {
+          "offset": 399,
+          "opcode": "brtrue.s",
+          "operand": 403
+        },
+        {
+          "offset": 401,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 402,
+          "opcode": "ret",
+          "operand": null
+        },
+        {
+          "offset": 403,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 404,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x0400072c",
+            "name": "traversalTime"
+          }
+        },
+        {
+          "offset": 409,
+          "opcode": "ldc.r4",
+          "operand": 1.0
+        },
+        {
+          "offset": 414,
+          "opcode": "blt",
+          "operand": 224
+        },
+        {
+          "offset": 419,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 420,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 421,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000729",
+            "name": "launched"
+          }
+        },
+        {
+          "offset": 426,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x04000706",
+            "name": "kiwi"
+          }
+        },
+        {
+          "offset": 431,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 432,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x0400071b",
+            "name": "waiting"
+          }
+        },
+        {
+          "offset": 437,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 442,
+          "opcode": "ldnull",
+          "operand": null
+        },
+        {
+          "offset": 443,
+          "opcode": "stfld",
+          "operand": {
+            "token": "0x04000807",
+            "name": "currentLaunchPad"
+          }
+        },
+        {
+          "offset": 448,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": "0x040007bb",
+            "name": "zera"
+          }
+        },
+        {
+          "offset": 453,
+          "opcode": "ldfld",
+          "operand": {
+            "token": "0x040007e5",
+            "name": "rigidbody"
+          }
+        },
+        {
+          "offset": 458,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 459,
+          "opcode": "callvirt",
+          "operand": {
+            "token": "0x0a00044a",
+            "name": "set_isKinematic"
+          }
+        },
+        {
+          "offset": 464,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 465,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    }
+  }
+}
