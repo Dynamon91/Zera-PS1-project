@@ -1,6 +1,6 @@
 # Confronto nativo WIP08 / sorgente WIP09
 
-Sorgente compilato: `6bac3839b7f349a2cb96cffe7f654595b52ac8f0`. Catture reali PCSX-ReARMed, HLE BIOS,
+Sorgente compilato: `85ee3b8033939136720c5d8eb793bfebf5c0423f`. Catture reali PCSX-ReARMed, HLE BIOS,
 interprete CPU e GPU software. Stesso percorso e stessi istanti di cattura.
 Questo confronto verifica un caso della telecamera; non aggiunge livelli al gioco.
 
@@ -17,20 +17,12 @@ Il build e tutte le catture sono scaricabili dagli artifact della relativa esecu
 **Native PS1 preview** in GitHub Actions. Il vecchio disco in `disc/` resta WIP08.
 Il pacchetto WIP09 source mantiene il suo stato esplicito: non sostituisce quel disco.
 
-## Risultato osservato, non solo confronto visivo
+## Camera da fermo: prima e dopo la ricerca laterale
 
-| Dato registrato al frame 1300 | WIP08 | WIP09 |
-| --- | ---: | ---: |
-| X del personaggio, fixed point | 145152 | 145152 |
-| Y del personaggio, fixed point | -9728 | -9728 |
-| Z del personaggio, fixed point | 197888 | 197888 |
-| Distanza camera | 420 | 152 |
+Catture dello stesso scenario al frame 1410; i metadati dei due build sono conservati nelle rispettive cartelle.
 
-La posizione del personaggio è identica. Il minimo della camera nell'intera
-cattura passa da 420 a 151 unità. La camera rispetta l'ostacolo più vicino,
-ma il primo piano del personaggio riduce la leggibilità: questa resta una
-limitazione aperta, non una promessa di miglioramento visivo in ogni scena.
+| WIP09 prima della ricerca laterale | WIP09 con ricerca laterale |
+| --- | --- |
+| ![Prima](screenshots/wip09-before-orbit/frame_1410.png) | ![Dopo](screenshots/wip09/frame_1410.png) |
 
-Compilazione e cattura: [esecuzione riuscita con build e screenshot](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40649620714).
-I prossimi controlli sono selezione di un'inquadratura alternativa, leggibilità
-vicino al personaggio e ripetizione degli altri scenari sul nuovo build.
+La ricerca si attiva solo da fermo, con pausa e controlli manuali prioritari. Non garantisce una vista libera in ogni angolo.
