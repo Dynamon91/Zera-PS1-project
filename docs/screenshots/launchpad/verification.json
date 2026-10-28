@@ -1,6 +1,6 @@
 {
-  "source_commit": "c0419aead40c27d3e5d404a6b650c9eb5b072c45",
-  "bin_sha256": "8c1622be9438a5434726013ecab1ef57f0f740eaead764101cabc34baf8ab7c7",
+  "source_commit": "23e35b41246c41ac7f1d3b6cdab0e08013a5a173",
+  "bin_sha256": "082ca9b833440fa42d9579a2bcd7bbae408d4def64664548369295cc950a76da",
   "scene": "level3",
   "component_path_id": 7246,
   "launches_started": 3,
@@ -8,6 +8,7 @@
   "launches_cancelled": 1,
   "paused_samples": 4,
   "trajectory_samples": 24,
+  "camera_tracked_samples": 24,
   "final_position_fp": [
     47385,
     485120,
