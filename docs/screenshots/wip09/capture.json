@@ -2303,7 +2303,7 @@
     }
   ],
   "content": "zera_wip09.cue",
-  "bin_sha256": "24eadfb9fe966472351018ad675a280fd0ce2ad1384287f5aae5f764c0c1d4b6",
+  "bin_sha256": "97d809131083ba7278af1f3a01f36f1ba0f55230e76c91744103ce20d8db7f05",
   "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
   "gif_samples": 0,
   "audio_output": {

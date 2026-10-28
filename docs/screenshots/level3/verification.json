@@ -1,0 +1,15 @@
+{
+  "source_commit": "cb15b29e9ad1323d836b839cdd992b5c6c77b88a",
+  "bin_sha256": "1ff967be94199242a285270bca93e787d46c674225804968bf9c959cd211807b",
+  "scene": "level3",
+  "final_position": [
+    500,
+    0,
+    0
+  ],
+  "grounded": true,
+  "automatic_respawns": 0,
+  "render_triangles": 543,
+  "source_patch_triangles": 289,
+  "validation": "Separate level3 bounded terrain preview; input-only HLE smoke test; no original progression implemented"
+}
