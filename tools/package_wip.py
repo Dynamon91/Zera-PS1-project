@@ -92,6 +92,8 @@ def make_package(root, output, source_commit, native_artifact=None):
                         mascot = json.loads(native.read("docs/screenshots/mascot/verification.json"))
                         if mascot["bin_sha256"] != digest or mascot["packed_vertices"] != 412 or mascot["animation_clips_observed"] != [0, 1, 2, 3] or mascot["automatic_respawns"] != 0:
                             raise ValueError("mascot build/animation validation mismatch")
+                        if "camera_movement_aligned_samples" in mascot and (mascot["camera_movement_aligned_samples"] < 1 or mascot["blocked_idle_samples"] < 1):
+                            raise ValueError("mascot motion validation failed")
                     if not native.read("build/zera.exe").startswith(b"PS-X EXE"):
                         raise ValueError("native artifact lacks a PS-X executable")
                     if '"zera_wip09.bin"' not in native.read("build/zera_wip09.cue").decode():
@@ -109,6 +111,9 @@ def make_package(root, output, source_commit, native_artifact=None):
                         "textured_spot_faces": mascot["textured_spot_faces"], "textured_eye_faces": mascot["textured_eye_faces"],
                         "animation_clips_observed": mascot["animation_clips_observed"],
                     }
+                if mascot is not None and "camera_movement_aligned_samples" in mascot:
+                    manifest["additional_native_preview"]["mascot"]["camera_movement_aligned_samples"] = mascot["camera_movement_aligned_samples"]
+                    manifest["additional_native_preview"]["mascot"]["blocked_idle_samples"] = mascot["blocked_idle_samples"]
                 if has_level3:
                     with zipfile.ZipFile(native_artifact) as native:
                         level3 = json.loads(native.read("docs/screenshots/level3/verification.json"))

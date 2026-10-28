@@ -170,3 +170,16 @@ actual jump/glide states, a grounded ending and zero automatic respawns. All
 previous native gameplay/terrain checks still pass. [Before/after evidence](docs/MASCOT.md).
 The completion estimate stays 29%; this improves the existing mascot adaptation
 without porting additional original progression or a full level.
+
+
+## Mascot movement consistency
+
+Facing now uses the camera basis captured for this update's movement, including
+simultaneous camera rotation/recenter. Ground Run/Idle selection follows actual
+horizontal displacement. Tests verify all eight input directions across sixteen
+camera headings, wrap/turn limits, pause and respawn behavior. Native captures
+confirm aligned camera/movement samples and Idle at a blocked position that
+previously kept Run active. [Evidence](docs/CHARACTER_MOTION.md).
+
+Movement tuning, geometry and original progression are unchanged; the
+full-port estimate remains 29%.

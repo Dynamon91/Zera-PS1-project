@@ -10,6 +10,8 @@ The original Zera mascot now has its source eye/spot textures and per-corner
 Gouraud colors in both playable discs. Skinning-aware packing preserves distinct
 joint influences: 412 animated positions, 806 triangles and four original clips.
 [Actual before/after screenshots, source details and animation checks](docs/MASCOT.md).
+Facing now shares the current movement yaw, and the grounded mascot idles when
+blocked rather than running in place. [Movement/camera checks](docs/CHARACTER_MOTION.md).
 
 ## New: separate original level3 preview
 

@@ -42,7 +42,7 @@ Per-corner UVs/colors retain their original seams independently of that mapping.
 
 ## Native verification
 
-The [2,200-video-frame controller-only scenario](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40749689934)
+The [2,200-video-frame controller-only scenario](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40752870106)
 observes Idle, Run, Jump and Glide clips, including actual jumping and gliding
 player states, and finishes grounded with zero automatic respawns. All existing
 wall/camera, audio, respawn, trial and both terrain checks also pass.
@@ -53,7 +53,9 @@ coverage, vertex bounds and the updated animation arrays.
 | --- | --- |
 | ![Mascot view](screenshots/mascot/frame_0950.png) | ![Glide](screenshots/mascot/frame_1500.png) |
 
-Source game code tested: `2e20f8b592078ab27d4d4c2737a36cfa23871c1b`.
+Material restoration introduced at `2e20f8b592078ab27d4d4c2737a36cfa23871c1b`.
+The latest verified movement behavior is documented in [CHARACTER_MOTION.md](CHARACTER_MOTION.md);
+the raw verification below records the exact current build source.
 [Raw capture and binary hash](screenshots/mascot/verification.json).
 
 This is a PS1 material adaptation. Soft alpha blending, the original custom
