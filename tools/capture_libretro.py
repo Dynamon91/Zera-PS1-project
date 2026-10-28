@@ -12,7 +12,7 @@ core=C.CDLL(str(Path(sys.argv[1]).resolve()));out=Path(sys.argv[3]);out.mkdir(pa
 class Var(C.Structure):_fields_=[('key',C.c_char_p),('value',C.c_char_p)]
 class Game(C.Structure):_fields_=[('path',C.c_char_p),('data',C.c_void_p),('size',C.c_size_t),('meta',C.c_char_p)]
 ENV=C.CFUNCTYPE(C.c_bool,C.c_uint,C.c_void_p);VID=C.CFUNCTYPE(None,C.c_void_p,C.c_uint,C.c_uint,C.c_size_t);AUDIO=C.CFUNCTYPE(None,C.c_int16,C.c_int16);BATCH=C.CFUNCTYPE(C.c_size_t,C.c_void_p,C.c_size_t);POLL=C.CFUNCTYPE(None);INPUT=C.CFUNCTYPE(C.c_int16,C.c_uint,C.c_uint,C.c_uint,C.c_uint)
-ram=0;symbols={}
+ram=0;symbols={};movement_stopped=False
 options={};keep=[];fmt=0;frame=None;tick=0;audio_writer=None;audio_count=0;audio_peak=0;audio_energy=0;audio_clips=0;audio_written=0
 folder=str(out.resolve()).encode();keep.append(folder)
 @ENV
@@ -65,7 +65,12 @@ def batch(data,n):
 def poll():pass
 @INPUT
 def inp(port,device,index,id):
+ global movement_stopped
  if port:return 0
+ # Scenario feedback changes controller input only; never write emulated RAM.
+ if scenario.get('stop_movement_below_y') is not None and ram and 'player' in symbols:
+  if C.c_int.from_address(ram+symbols['player']+4).value < scenario['stop_movement_below_y']*256:movement_stopped=True
+  if movement_stopped and id in (4,5,6,7):return 0
  if scenario.get("stop_on_trial_complete") and ram and "trial" in symbols and id in (4,5,6,7):
   if C.c_int.from_address(ram+symbols["trial"]+12).value and "menu" in symbols and C.c_int.from_address(ram+symbols["menu"]).value==1:return 0
  if 'actions' in scenario:

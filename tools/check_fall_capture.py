@@ -7,9 +7,10 @@ import sys
 
 root=Path(__file__).resolve().parent.parent
 directory=Path(sys.argv[1]);report=json.loads((directory/'capture.json').read_text())
-assert report['frames_run']==1200
+assert report['frames_run']==2400
 rows=report['state_samples'];last=rows[-1]
 lowest=min(r['y_fp']//256 for r in rows)
+print(json.dumps({'lowest':lowest,'last':last,'max_x':max(r['x_fp']//256 for r in rows)}),flush=True)
 assert lowest<-700, 'did not cross the old spawn-relative safety plane'
 assert last['player_respawn_events']==1, 'expected one natural fall respawn'
 assert last['x_fp']==0 and last['z_fp']==0 and last['y_fp']==0 and last['state']==0
@@ -19,8 +20,11 @@ result={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':report['bin_sha256
         'final_camera_distance':last['camera_distance'],'final_camera_height':last['camera_height'],
         'emulator':report['emulator'],'validation':'Natural input-only fall in HLE; no hardware test'}
 out=root/'docs/screenshots/respawn';out.mkdir(parents=True,exist_ok=True)
-for name in ('frame_0650.png','frame_0750.png','frame_1199.png','capture.json'):
-    shutil.copyfile(directory/name,out/name)
+shots=[r for r in rows if (directory/f"frame_{r['frame']:04d}.png").is_file()]
+fall=min(shots,key=lambda r:r['y_fp'])
+shutil.copyfile(directory/f"frame_{fall['frame']:04d}.png",out/'fall.png')
+shutil.copyfile(directory/'frame_2399.png',out/'spawn.png')
+shutil.copyfile(directory/'capture.json',out/'capture.json')
 (out/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
 (root/'docs/RESPAWN.md').write_text(f'''# Terrain-relative fall recovery
 
@@ -31,11 +35,11 @@ The safety plane is now 700 units below the lowest valid heightfield sample
 Host tests check landing on valid ground at -800 and reject missing samples
 when deriving the limit. Native input-only testing checks the off-map path:
 minimum sampled Y **{lowest}**, one automatic respawn, then player at spawn and
-camera restored to distance 850 / height 0. No game RAM is edited.
+camera restored to distance 850 / height 0. Movement is released using read-only Y feedback after the fall starts. No game RAM is edited.
 
 | Falling | Recovered at spawn |
 | --- | --- |
-| ![Fall](screenshots/respawn/frame_0750.png) | ![Spawn](screenshots/respawn/frame_1199.png) |
+| ![Fall](screenshots/respawn/fall.png) | ![Spawn](screenshots/respawn/spawn.png) |
 
 This changes a provisional safety rule; it does not add new level geometry or
 claim fidelity to the original game's death/checkpoint rules. HLE validation
