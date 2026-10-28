@@ -19,7 +19,7 @@ based on the evidence below; scope discoveries may change the estimate.
 | Work area | Scope points | Credited points | Evidence and principal remaining work |
 | --- | ---: | ---: | --- |
 | Asset recovery and conversion pipeline | 10 | 8 | Original scene recovery, source hashes/transforms, 786 mesh exports and animation/audio converters; remaining scene semantics and fidelity verification. |
-| PS1 rendering and animation | 10 | 6 | Native textured renderer, clipping, four sampled character clips, local render cells and vertex-cache checks; overlays, shaders and performance remain incomplete. |
+| PS1 rendering and animation | 10 | 6 | Native textured/Gouraud renderer, original mascot eye/spot textures, skinning-aware packing, four sampled character clips, local render cells and vertex-cache checks; overlays, shaders and performance remain incomplete. |
 | Movement, collision and camera | 10 | 6 | Jump/glide/boost, heightfield/wall movement, side-view fallback and terrain-aware respawn; overlapping floors, ceiling/camera-volume tests and broader usability remain. |
 | Full world and level flow | 25 | 3 | Radius-32 level2 patch, grounded native exploration beyond the old boundary, and a separately tested level3 start patch; full levels, connections, actors, props and streaming remain. |
 | Original gameplay and progression | 20 | 0 | Original authored collection/progression and interactions remain unported. The timed trial is separate development content. |
@@ -66,7 +66,7 @@ respawns. The WIP08 reference and new version run the same controller scenario,
 but trajectories/timing diverge; the images are not a same-position fidelity claim.
 See [WORLD.md](docs/WORLD.md) and `docs/screenshots/world/verification.json`.
 
-The exploratory HLE capture observed approximately **13.99 simulation updates/s**
+The exploratory HLE capture observed approximately **14.27 simulation updates/s**
 in its active interval (1,033 updates over 4,469 emulated video frames at 60 Hz).
 This is scenario-specific simulation pacing, not physical-hardware FPS. The
 30-update target is not established. Performance profiling and further optimization
@@ -155,3 +155,18 @@ Wall proxies remain conservative and overhead capsule collision is absent.
 Mathematically overlapping surfaces do not establish usable underpass routes.
 The completion estimate remains 29% while these collision and original-content
 requirements remain unfinished.
+
+
+## Playable mascot increment
+
+Zera's source eye and spot materials are now rendered in both playable discs,
+with original per-corner colors replacing per-face averaging. Shared mesh and
+animation packing preserves differing joint influences at a coincident position,
+producing 412 packed positions and the same 806 faces. The original eye/spot
+textures, renderer/material IDs and conversion limits are retained as provenance.
+
+A 2200-video-frame HLE scenario verifies idle, run, jump and glide clip coverage,
+actual jump/glide states, a grounded ending and zero automatic respawns. All
+previous native gameplay/terrain checks still pass. [Before/after evidence](docs/MASCOT.md).
+The completion estimate stays 29%; this improves the existing mascot adaptation
+without porting additional original progression or a full level.

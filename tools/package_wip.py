@@ -77,6 +77,7 @@ def make_package(root, output, source_commit, native_artifact=None):
                 # Keep the tested native build separate from the older disc/ reference.
                 data = Path(native_artifact).read_bytes()
                 with zipfile.ZipFile(native_artifact) as native:
+                    mascot = None
                     has_level3 = "docs/screenshots/level3/verification.json" in native.namelist()
                     if native.testzip() is not None:
                         raise ValueError("native artifact ZIP integrity failed")
@@ -87,6 +88,10 @@ def make_package(root, output, source_commit, native_artifact=None):
                         raise ValueError("native artifact build/capture hashes disagree")
                     if capture["frames_run"] != 1600 or check["muted_rms"] >= 1 or check["restored_rms"] <= 10:
                         raise ValueError("native artifact validation evidence failed")
+                    if "docs/screenshots/mascot/verification.json" in native.namelist():
+                        mascot = json.loads(native.read("docs/screenshots/mascot/verification.json"))
+                        if mascot["bin_sha256"] != digest or mascot["packed_vertices"] != 412 or mascot["animation_clips_observed"] != [0, 1, 2, 3] or mascot["automatic_respawns"] != 0:
+                            raise ValueError("mascot build/animation validation mismatch")
                     if not native.read("build/zera.exe").startswith(b"PS-X EXE"):
                         raise ValueError("native artifact lacks a PS-X executable")
                     if '"zera_wip09.bin"' not in native.read("build/zera_wip09.cue").decode():
@@ -98,6 +103,12 @@ def make_package(root, output, source_commit, native_artifact=None):
                     "bin_sha256": digest, "validation": check["validation"],
                     "run": "Open build/zera_wip09.cue after extracting the native ZIP",
                 }
+                if mascot is not None:
+                    manifest["additional_native_preview"]["mascot"] = {
+                        "source_commit": mascot["source_commit"], "packed_vertices": mascot["packed_vertices"],
+                        "textured_spot_faces": mascot["textured_spot_faces"], "textured_eye_faces": mascot["textured_eye_faces"],
+                        "animation_clips_observed": mascot["animation_clips_observed"],
+                    }
                 if has_level3:
                     with zipfile.ZipFile(native_artifact) as native:
                         level3 = json.loads(native.read("docs/screenshots/level3/verification.json"))

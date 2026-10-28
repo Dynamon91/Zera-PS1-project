@@ -4,6 +4,13 @@
 assessment covers the complete game adaptation, not the fraction of exported
 assets or elapsed development time. See [PROGRESS.md](PROGRESS.md).
 
+## Updated playable Zera mascot
+
+The original Zera mascot now has its source eye/spot textures and per-corner
+Gouraud colors in both playable discs. Skinning-aware packing preserves distinct
+joint influences: 412 animated positions, 806 triangles and four original clips.
+[Actual before/after screenshots, source details and animation checks](docs/MASCOT.md).
+
 ## New: separate original level3 preview
 
 The package now includes a **second playable PS1 disc** for a bounded original
@@ -53,7 +60,7 @@ uses the unsplit recovered surface. Host tests check cell coverage, conservative
 rejection and a route to original ground outside the previous patch. Distant
 terrain may pop at cell boundaries; there is no fog or level-data streaming yet.
 
-The exploratory HLE capture observed approximately **13.99 simulation updates/s**
+The exploratory HLE capture observed approximately **14.27 simulation updates/s**
 over its active interval. This is scenario-specific emulated simulation pacing,
 not a hardware FPS certification. The 30-update target, full original-level flow,
 actors, custom shaders, authored progression and hardware validation remain unfinished.
@@ -387,7 +394,7 @@ stress/load timing, memory cards, optical-drive streaming, full original-world p
 
 Next: validate the extracted room and animation against original Unity footage;
 expand environment visibility, refine wall proxies and tight-corner camera behavior;
-refine transitions and add character overlays and interaction; then level-data streaming, saving and physical-hardware validation.
+refine transitions, mascot material fidelity and original interactions; then level-data streaming, saving and physical-hardware validation.
 
 ## Attribution
 Original recovered game content remains attributable to its creators.
