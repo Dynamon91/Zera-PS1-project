@@ -30,7 +30,7 @@ uses the unsplit recovered surface. Host tests check cell coverage, conservative
 rejection and a route to original ground outside the previous patch. Distant
 terrain may pop at cell boundaries; there is no fog or level-data streaming yet.
 
-The exploratory HLE capture observed approximately **13.92 simulation updates/s**
+The exploratory HLE capture observed approximately **13.99 simulation updates/s**
 over its active interval. This is scenario-specific emulated simulation pacing,
 not a hardware FPS certification. The 30-update target, full original-level flow,
 actors, custom shaders, authored progression and hardware validation remain unfinished.

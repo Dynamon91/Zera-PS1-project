@@ -66,7 +66,7 @@ respawns. The WIP08 reference and new version run the same controller scenario,
 but trajectories/timing diverge; the images are not a same-position fidelity claim.
 See [WORLD.md](docs/WORLD.md) and `docs/screenshots/world/verification.json`.
 
-The exploratory HLE capture observed approximately **13.92 simulation updates/s**
+The exploratory HLE capture observed approximately **13.99 simulation updates/s**
 in its active interval (1,033 updates over 4,469 emulated video frames at 60 Hz).
 This is scenario-specific simulation pacing, not physical-hardware FPS. The
 30-update target is not established. Performance profiling and further optimization

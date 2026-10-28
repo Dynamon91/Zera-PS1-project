@@ -1,4 +1,4 @@
-# Clipping optimization checkpoint
+# Rendering and camera performance checkpoints
 
 The clipper reuses signed endpoint distances across adjacent polygon edges.
 Each active clipping plane now evaluates each vertex once rather than twice.
@@ -36,3 +36,37 @@ New native source: `967a963041c01478f04d97005fa5e1dcc22703f9`.
 passed, including wall/camera, audio mute, automatic fall respawn, trial and
 expanded-world exploration. Completion stays at the provisional **29%**: this
 checkpoint adds no original level content or progression.
+
+
+## Camera ray broad phase
+
+Camera obstruction checks visit 576 wall proxies for each camera view query.
+The new implementation rejects disjoint closed segment bounds in X, Z and Y
+before computing the exact 64-bit intersection. Endpoint contacts, collinear
+rays, vertical entry and zero-length rays retain the exact narrow-phase test.
+
+The optimized implementation matches the frozen previous implementation in
+100,000 seeded ray/wall cases, including forced collinear, vertical and point
+rays: all Q12 hit fractions agree, including 6,750 intersections. Existing camera
+edge-case tests and the address/undefined-behavior sanitizer checks also pass.
+
+| Same controller scenario | Before camera filter | After camera filter |
+| --- | ---: | ---: |
+| Active interval, frames 330–4799 | 13.923 updates/s | 13.990 updates/s |
+| Stationary interval, frames 3000–4799 | 15.008 updates/s | 15.008 updates/s |
+| Final position | (2207, -241, 0) | (2207, -241, 0) |
+
+The route gain is small; the stationary interval is unchanged. The 30 Hz target
+remains unmet. These rates describe the emulated scenario, not hardware FPS.
+[Raw interval counts and hashes](screenshots/camera_performance/comparison.json).
+
+| Before camera filter | After camera filter |
+| --- | --- |
+| ![Before](screenshots/camera_performance/before.png) | ![After](screenshots/camera_performance/after.png) |
+
+Actual frame-4799 emulator captures retain the same final grounded position;
+animation phases can differ. Source `943c20653a6301b34cdaad2c9891e95017541d51`
+passed [native checks](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40738639949)
+for walls/camera, mute/restoration, automatic fall respawn, trial and expanded
+world exploration. Completion remains the provisional **29%**.
+
