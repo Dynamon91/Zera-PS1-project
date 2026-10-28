@@ -1,0 +1,59 @@
+{
+  "video_hz": 60,
+  "scenario": "tools/scenarios/world_expansion.json",
+  "runs": [
+    {
+      "label": "before",
+      "source_commit": "8970bfc60f5b841d1df2aea8beea58c51ee28e70",
+      "bin_sha256": "b85542213081e59cedc4d797698a471a55b55fc351bd233633a371d421572792",
+      "intervals": {
+        "route": {
+          "start_frame": 330,
+          "end_frame": 4799,
+          "simulation_updates": 1033,
+          "video_frames": 4469,
+          "updates_per_emulated_second": 13.868874468561199
+        },
+        "stationary": {
+          "start_frame": 3000,
+          "end_frame": 4799,
+          "simulation_updates": 450,
+          "video_frames": 1799,
+          "updates_per_emulated_second": 15.008337965536409
+        }
+      },
+      "final_position": [
+        2207,
+        -241,
+        0
+      ]
+    },
+    {
+      "label": "after",
+      "source_commit": "967a963041c01478f04d97005fa5e1dcc22703f9",
+      "bin_sha256": "c289f601523e5953bda64353004d8d8fcd3514c340516c544bd2c53f6d21466a",
+      "intervals": {
+        "route": {
+          "start_frame": 330,
+          "end_frame": 4799,
+          "simulation_updates": 1037,
+          "video_frames": 4469,
+          "updates_per_emulated_second": 13.922577757887671
+        },
+        "stationary": {
+          "start_frame": 3000,
+          "end_frame": 4799,
+          "simulation_updates": 450,
+          "video_frames": 1799,
+          "updates_per_emulated_second": 15.008337965536409
+        }
+      },
+      "final_position": [
+        2207,
+        -241,
+        0
+      ]
+    }
+  ],
+  "caveat": "HLE scenario pacing, not hardware FPS. Route timing differs; stationary samples use the same final position."
+}

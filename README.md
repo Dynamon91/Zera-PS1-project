@@ -30,7 +30,7 @@ uses the unsplit recovered surface. Host tests check cell coverage, conservative
 rejection and a route to original ground outside the previous patch. Distant
 terrain may pop at cell boundaries; there is no fog or level-data streaming yet.
 
-The exploratory HLE capture observed approximately **13.9 simulation updates/s**
+The exploratory HLE capture observed approximately **13.92 simulation updates/s**
 over its active interval. This is scenario-specific emulated simulation pacing,
 not a hardware FPS certification. The 30-update target, full original-level flow,
 actors, custom shaders, authored progression and hardware validation remain unfinished.
@@ -372,3 +372,5 @@ Render context functions in src/main.c derive from the PSn00bSDK template by
 Lameguy64 and spicyjpeg under MPL-2.0; retain its source header and included
 PSn00bSDK_LICENSE.md. The external SDK/toolchain/emulator binaries are not bundled; the attributed
 streaming helper sources are included under their original license.
+
+Clipping optimization: [measured before/after results](docs/PERFORMANCE.md).
