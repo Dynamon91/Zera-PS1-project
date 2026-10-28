@@ -13,6 +13,17 @@ static struct {int lba,sectors,next,last;volatile int pending,refill;} reader;
 static int sample_addr[7],next_voice=1;
 volatile int audio_music_ready,audio_underruns,audio_cd_errors,audio_refills,audio_wraps;
 int audio_sfx_events[7];
+int audio_muted;
+void audio_set_muted(int muted){
+ muted=!!muted;
+ if(muted==audio_muted)return;
+ audio_muted=muted;
+ if(muted){
+  /* Silence resident tails as well as music; keep CD/SPU stream state alive. */
+  SpuSetKey(0,0x1fe);
+  for(int ch=0;ch<=8;ch++)SPU_CH_VOL_L(ch)=SPU_CH_VOL_R(ch)=0;
+ }
+}
 static void underrun(void){audio_underruns++;}
 static void read_done(CdlIntrResult event,uint8_t *payload){
  (void)payload;
@@ -35,7 +46,7 @@ static int feed(void){
  return 1;
 }
 void audio_play(int sample){
- if(sample<0 || sample>=7)return;
+ if(audio_muted || sample<0 || sample>=7)return;
  int ch=next_voice;next_voice=next_voice==8?1:next_voice+1;
  SpuSetKey(0,1u<<ch);SPU_CH_FREQ(ch)=getSPUSampleRate(22050);
  SPU_CH_ADDR(ch)=getSPUAddr(sample_addr[sample]);SPU_CH_LOOP_ADDR(ch)=getSPUAddr(0x1000);
@@ -69,5 +80,5 @@ void audio_init(void){
 }
 void audio_update(int duck){
  if(!audio_music_ready)return;
- feed();SPU_CH_VOL_L(0)=SPU_CH_VOL_R(0)=duck?0x0900:0x1200;
+ feed();SPU_CH_VOL_L(0)=SPU_CH_VOL_R(0)=audio_muted?0:duck?0x0900:0x1200;
 }

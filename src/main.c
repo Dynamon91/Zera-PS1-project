@@ -210,11 +210,14 @@ static void draw_menu(void){
  if(menu.screen==MENU_TITLE){
   snprintf(text,sizeof(text),"ZERA\nMYTHS AWAKEN\n\n%s EXPLORE SPAWN AREA\n\n%s CONTROLS\n\n%s DIAGNOSTICS: %s\n\nCROSS SELECT   UP/DOWN MOVE",menu.selection==0?">":" ",menu.selection==1?">":" ",menu.selection==2?">":" ",menu.debug?"ON":"OFF");
   draw_text(&ctx,48,56,0,text);
-  draw_text(&ctx,40,216,0,"PS1 ADAPTATION  WIP08 / PROTOTYPE");
+  draw_text(&ctx,40,216,0,"PS1 ADAPTATION  WIP09 / PROTOTYPE");
   ui_tile(40,78+menu.selection*16,240,15,58,36,70);
  }else{
-  const char *items[]={"RESUME","RESPAWN","CONTROLS","RETURN TO TITLE","DIAGNOSTICS","TEST: PICKUP TRIAL"};
-  snprintf(text,sizeof(text),"PAUSED\n\n%s %s\n\n%s %s\n\n%s %s\n\n%s %s\n\n%s %s: %s\n\n%s %s",menu.selection==0?">":" ",items[0],menu.selection==1?">":" ",items[1],menu.selection==2?">":" ",items[2],menu.selection==3?">":" ",items[3],menu.selection==4?">":" ",items[4],menu.debug?"ON":"OFF",menu.selection==5?">":" ",items[5]);
+  const char *items[]={"RESUME","RESPAWN","CONTROLS","RETURN TO TITLE","DIAGNOSTICS","AUDIO","TEST: PICKUP TRIAL"};
+  int used=snprintf(text,sizeof(text),"PAUSED\n\n");
+  for(int n=0;n<7;n++){
+   used+=snprintf(text+used,sizeof(text)-used,"%s %s%s%s\n\n",menu.selection==n?">":" ",items[n],n==4 || n==5?": ":"",n==4?(menu.debug?"ON":"OFF"):n==5?(menu.muted?"OFF":"ON"):"");
+  }
   draw_text(&ctx,48,48,0,text);ui_tile(40,62+menu.selection*16,240,15,58,36,70);
  }
  ui_tile(24,40,272,160,14,22,36);ui_tile(22,38,276,164,100,74,110);
@@ -232,6 +235,7 @@ int main(void){
   uint16_t pressed=held & ~old;old=held;
   unsigned ui=(pressed&PAD_UP?UI_UP:0)|(pressed&PAD_DOWN?UI_DOWN:0)|(pressed&PAD_CROSS?UI_ACCEPT:0)|(pressed&PAD_CIRCLE?UI_BACK:0)|(pressed&PAD_START?UI_START:0);
   int previous_selection=menu.selection;int before=menu.screen,action=menu_update(&menu,ui);
+  audio_set_muted(menu.muted);
   if(before!=MENU_PLAY && (ui&(UI_UP|UI_DOWN)) && menu.selection!=previous_selection)audio_play(SFX_UI_MOVE);
   if(ui&(UI_ACCEPT|UI_BACK|UI_START))if(before!=MENU_PLAY || menu.screen!=MENU_PLAY)audio_play(SFX_UI_ACCEPT);
   if(before==MENU_PLAY && menu.screen==MENU_PLAY && (pressed&PAD_SELECT))action|=MENU_RESET;

@@ -104,7 +104,7 @@ for tick in range(run_frames):
    ms=struct.unpack('<4i',C.string_at(ram+symbols['menu'],16));row.update(dict(zip(['menu_screen','menu_selection','menu_return','diagnostics'],ms)))
   if 'animator' in symbols:
    av=struct.unpack('<3i',C.string_at(ram+symbols['animator'],12));row.update(dict(zip(['animation_clip','animation_tick','blend_tick'],av)))
-  for name in ('audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps'):
+  for name in ('audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted'):
    if name in symbols:row[name]=struct.unpack('<i',C.string_at(ram+symbols[name],4))[0]
   if 'audio_sfx_events' in symbols:row['sfx_events']=list(struct.unpack('<7i',C.string_at(ram+symbols['audio_sfx_events'],28)))
   if 'trial' in symbols:
