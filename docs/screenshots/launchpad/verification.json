@@ -1,0 +1,19 @@
+{
+  "source_commit": "c0419aead40c27d3e5d404a6b650c9eb5b072c45",
+  "bin_sha256": "8c1622be9438a5434726013ecab1ef57f0f740eaead764101cabc34baf8ab7c7",
+  "scene": "level3",
+  "component_path_id": 7246,
+  "launches_started": 3,
+  "launches_completed": 2,
+  "launches_cancelled": 1,
+  "paused_samples": 4,
+  "trajectory_samples": 24,
+  "final_position_fp": [
+    47385,
+    485120,
+    152856
+  ],
+  "grounded": true,
+  "automatic_respawns": 0,
+  "validation": "Controller-only HLE prototype: original arc, paused flight, Select cancellation, retry and stable landing; manual Triangle activation substitutes for companion/Somersault behavior"
+}
