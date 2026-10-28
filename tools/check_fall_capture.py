@@ -7,7 +7,7 @@ import sys
 
 root=Path(__file__).resolve().parent.parent
 directory=Path(sys.argv[1]);report=json.loads((directory/'capture.json').read_text())
-assert report['frames_run']==2400
+assert report['frames_run']==3200
 rows=report['state_samples'];last=rows[-1]
 lowest=min(r['y_fp']//256 for r in rows)
 print(json.dumps({'lowest':lowest,'last':last,'max_x':max(r['x_fp']//256 for r in rows)}),flush=True)
@@ -23,7 +23,7 @@ out=root/'docs/screenshots/respawn';out.mkdir(parents=True,exist_ok=True)
 shots=[r for r in rows if (directory/f"frame_{r['frame']:04d}.png").is_file()]
 fall=min(shots,key=lambda r:r['y_fp'])
 shutil.copyfile(directory/f"frame_{fall['frame']:04d}.png",out/'fall.png')
-shutil.copyfile(directory/'frame_2399.png',out/'spawn.png')
+shutil.copyfile(directory/'frame_3199.png',out/'spawn.png')
 shutil.copyfile(directory/'capture.json',out/'capture.json')
 (out/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
 (root/'docs/RESPAWN.md').write_text(f'''# Terrain-relative fall recovery

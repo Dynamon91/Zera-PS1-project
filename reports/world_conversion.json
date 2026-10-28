@@ -7,37 +7,101 @@
     9.231999397277832
   ],
   "ground_height": 21.883107788088076,
-  "source_radius_units": 16.0,
+  "source_radius_units": 32.0,
   "world_scale": 80,
-  "render_triangles": 591,
+  "render_triangles": 910,
   "texture_materials": [
     "CC_Plate",
     "CC_Grass",
     "CC_Metal",
     "CC_Dirt",
     "CC_Sand",
+    "CC_Rock",
     "CC_Grass_Top",
     "CC_Brick",
     "CC_Rock_2",
+    "No Name",
+    "CC_Path",
     "CC_VineEnd",
     "CC_Vine"
   ],
   "texture_format": "8-bit indexed 256x256 atlas, 64x64 repeating tiles",
-  "source_collision_triangles": 478,
-  "wall_proxies": 345,
+  "source_collision_triangles": 831,
+  "wall_proxies": 576,
   "instances": [
     {
       "object": "Walkable.000",
       "mesh": "Walkable.000",
-      "triangles_before_clipping": 478,
+      "triangles_before_clipping": 759,
       "source_file": "sharedassets2.assets",
-      "mesh_id": 77
+      "mesh_id": 77,
+      "transform_path_id": 4420,
+      "source_world_matrix": [
+        [
+          99.99999999999989,
+          4.4703492374060125e-06,
+          8.792518657090458e-13,
+          0.0
+        ],
+        [
+          -1.2560732473097927e-13,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          46.70000076293945
+        ],
+        [
+          4.470349237406096e-06,
+          -99.99999999999847,
+          -1.6858739687597435e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.002",
+      "mesh": "Walkable.002",
+      "triangles_before_clipping": 72,
+      "source_file": "sharedassets2.assets",
+      "mesh_id": 93,
+      "transform_path_id": 4423,
+      "source_world_matrix": [
+        [
+          99.99999999999989,
+          4.4703492374060125e-06,
+          8.792518657090458e-13,
+          0.0
+        ],
+        [
+          -1.2560732473097927e-13,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          46.70000076293945
+        ],
+        [
+          4.470349237406096e-06,
+          -99.99999999999847,
+          -1.6858739687597435e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
     }
   ],
   "heightfield": {
-    "size": 65,
+    "size": 129,
     "step": 40,
-    "origin": -1280,
+    "origin": -2560,
     "missing_sentinel": -32768
   },
   "limitations": [
@@ -45,6 +109,15 @@
     "conservative steep-triangle wall proxies; not full capsule/triangle collision",
     "original main textures; custom Unity shader effects omitted",
     "actors and effects omitted",
+    "heightfield samples capped at spawn height + 6 source units",
     "not full original level"
-  ]
+  ],
+  "source_files_sha256": {
+    "level2": "f9563c7125bcb9e6f35c92ab76c85fb98aa25ed5a2d64aba7f3f5a73067293e1",
+    "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d",
+    "sharedassets1.assets": "9909cc11b7c7883e6c81ef91bd8b02da5ba27b0b8bca1539465be939df877ea1",
+    "sharedassets2.assets": "180ce00b531de9c7e4f3179e9fb544e9325214bb95eb2162405ebccd4b6438ae",
+    "Resources/unity default resources": "28f34dd870e9ef576828fca791d86a90f932a3d6814b947dc191fbed2354b888"
+  },
+  "converter_unitypy_version": "1.25.4"
 }

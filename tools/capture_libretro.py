@@ -69,7 +69,10 @@ def inp(port,device,index,id):
  if port:return 0
  # Scenario feedback changes controller input only; never write emulated RAM.
  if scenario.get('stop_movement_below_y') is not None and ram and 'player' in symbols:
-  if C.c_int.from_address(ram+symbols['player']+4).value < scenario['stop_movement_below_y']*256:movement_stopped=True
+  if C.c_int.from_address(ram+symbols['player']+4).value < scenario['stop_movement_below_y']*256 and C.c_int.from_address(ram+symbols['player']).value >= scenario.get('stop_movement_after_x',-1000000)*256:movement_stopped=True
+  if movement_stopped and id in (4,5,6,7):return 0
+ if scenario.get('stop_movement_at_x') is not None and ram and 'player' in symbols:
+  if C.c_int.from_address(ram+symbols['player']).value >= scenario['stop_movement_at_x']*256:movement_stopped=True
   if movement_stopped and id in (4,5,6,7):return 0
  if scenario.get("stop_on_trial_complete") and ram and "trial" in symbols and id in (4,5,6,7):
   if C.c_int.from_address(ram+symbols["trial"]+12).value and "menu" in symbols and C.c_int.from_address(ram+symbols["menu"]).value==1:return 0

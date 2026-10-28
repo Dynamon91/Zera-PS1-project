@@ -10,4 +10,6 @@ for module in player collision camera clip menu animator trial; do
 done
 cc -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/world.c src/collision.c src/camera.c tools/test_world.c -o "$check_dir/world"
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/world"
+cc -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/player.c src/world.c src/collision.c tools/test_exploration.c -o "$check_dir/exploration"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/exploration"
 printf 'Host checks passed\n'
