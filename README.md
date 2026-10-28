@@ -22,6 +22,19 @@ Vedi il [confronto completo con provenienza](docs/NATIVE_COMPARISON.md), la
 [galleria](docs/SCREENSHOTS.md) e il
 [build nativo con BIN/CUE e catture](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40649620714).
 
+### Latest camera increment
+
+When stationary near an obstructing wall, the camera can now choose a clearer
+45-degree side view, with manual-input priority, pause freeze and a cooldown.
+The native wall scenario passed: at frame 1410 the player stays at the same
+coordinates while camera distance improves from 152 to 850 units. The pause
+menu covers the center of this checkpoint; the comparison retains the original
+captures and recorded state. While moving, the existing pullback remains active.
+
+[Latest native build and captures](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40689764638).
+See the side-view comparison at the end of [NATIVE_COMPARISON.md](docs/NATIVE_COMPARISON.md).
+This does not expand level or original-progression coverage; the estimate remains ~28%.
+
 ## Download and resume this checkpoint
 
 The current downloadable package is `Zera_PS1_WIP09_Source_Checkpoint.zip`.

@@ -109,6 +109,12 @@ current wall clearance is under half the normal distance. It chooses a side
 only for a substantial clearance gain and waits 30 active ticks before another
 change. Movement input, manual camera controls and pause prevent automatic
 repositioning. This avoids changing the movement basis while walking.
-Host regression checks pass; native validation is performed by the new run.
+Host regression checks and the new native 1,600-frame HLE wall run pass.
+Tested source: `7e68ed9421239ee5e9f305e0770733cc39fb55c8`. At frame 1410,
+player coordinates match the pre-orbit WIP09 capture, while camera distance
+changes from 152 to 850 units. The pause menu obscures the center of that
+screenshot; the capture state, surrounding view and subsequent gameplay frame
+provide additional evidence. Resume uses the new camera-relative movement basis.
+This is one controlled scenario, not a guarantee for every corner.
 The previous WIP09 captures are retained in `docs/screenshots/wip09-before-orbit/`.
 The full-port estimate remains approximately 28%.
