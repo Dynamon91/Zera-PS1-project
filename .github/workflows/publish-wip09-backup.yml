@@ -54,6 +54,7 @@ jobs:
               'Completamento stimato: 29%. Build WIP, verificate in emulazione HLE; progressione originale e fisica completa restano in lavorazione.\n'
           )
           PY
+      # Tag the current approved workflow commit; ZIP source remains pinned above.
       - name: Publish downloadable backup release
         run: |
-          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$BACKUP_SOURCE" --title "Zera PS1 WIP09 - Mascotte aggiornata, 28 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
+          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Mascotte aggiornata, 28 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
