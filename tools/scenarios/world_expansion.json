@@ -1,1 +1,1 @@
-{"frames": 3000, "gif": false, "audio": false, "stop_movement_at_x": 2200, "shots": [359, 700, 1200, 1800, 2400, 2999], "actions": [{"start": 300, "end": 320, "buttons": [0]}, {"start": 360, "end": 2600, "buttons": [7, 5]}]}
+{"frames": 4800, "gif": false, "audio": false, "stop_movement_at_x": 2200, "shots": [359, 700, 1200, 1800, 2400, 3600, 4799], "actions": [{"start": 300, "end": 320, "buttons": [0]}, {"start": 340, "end": 4200, "buttons": [10]}, {"start": 460, "end": 4200, "buttons": [7]}]}

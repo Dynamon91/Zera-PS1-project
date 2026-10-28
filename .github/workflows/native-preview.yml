@@ -74,6 +74,17 @@ jobs:
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so disc/zera_wip08.cue build/world-before tools/scenarios/world_expansion.json
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_wip09.cue build/world-after tools/scenarios/world_expansion.json
           python3 tools/check_world_capture.py build/world-before build/world-after
+      - name: Preserve failed capture diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Zera-PS1-diagnostics-${{ github.sha }}
+          path: |
+            build/*-preview/
+            build/world-before/
+            build/world-after/
+          if-no-files-found: warn
+          retention-days: 7
       - name: Upload playable build and actual captures
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

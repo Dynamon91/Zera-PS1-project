@@ -158,7 +158,7 @@ static Trial trial;
 static int facing=0,camera_height=0,camera_distance=CAMERA_DISTANCE;
 static int camera_orbit_cooldown=0;
 static const char *names[]={"GROUND","JUMP","FALL","GLIDE","DASH"};
-static volatile int player_respawn_events=0;
+static volatile int player_respawn_events=0,simulation_ticks=0,debug_input_x=0,debug_input_z=0;
 static void reset_view(void){animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;}
 static int camera_view(int angle,int height,MATRIX *m){
  SVECTOR rot={280,angle,0,0};RotMatrix(&rot,m);
@@ -256,9 +256,10 @@ int main(void){
    if(pad->ls_x<96)in.x=-1;else if(pad->ls_x>160)in.x=1;
    if(pad->ls_y<96)in.z=1;else if(pad->ls_y>160)in.z=-1;
   }
+  debug_input_x=in.x;debug_input_z=in.z;
   in.camera_c=rcos(yaw);in.camera_s=rsin(yaw);
   int oldstate=player.state,olddash=player.dash_ticks;
-  if(!paused){if(player_tick(&player,in)){reset_view();player_respawn_events++;}if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;}
+  if(!paused){simulation_ticks++;if(player_tick(&player,in)){reset_view();player_respawn_events++;}if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;}
   if(!paused){
    if(oldstate==GROUND && player.state==JUMP)audio_play(SFX_JUMP);
    if(oldstate!=GROUND && player.state==GROUND)audio_play(SFX_LAND);

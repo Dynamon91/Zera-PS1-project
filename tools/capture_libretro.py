@@ -96,7 +96,7 @@ if mapfile.exists():
  for line in mapfile.read_text().splitlines():
   fields=line.split()
   if len(fields)>=4 and fields[0]=='trial':trial_words=7 if int(fields[3],16)>=28 else 5
-  if len(fields)>=3 and fields[0] in ('player','camera_distance','camera_height','player_respawn_events','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
+  if len(fields)>=3 and fields[0] in ('player','camera_distance','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','yaw','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
 core.retro_get_memory_data.argtypes=[C.c_uint];core.retro_get_memory_data.restype=C.c_void_p
 core.retro_get_memory_size.argtypes=[C.c_uint];core.retro_get_memory_size.restype=C.c_size_t
 ram=core.retro_get_memory_data(2);ramsize=core.retro_get_memory_size(2)
@@ -108,13 +108,13 @@ for tick in range(run_frames):
  if scenario.get('gif',True) and tick>=300 and tick%4==0 and frame:gif_frames.append(frame.resize((640,480),Image.Resampling.NEAREST))
  if (tick>=300 and tick%30==0 or tick in shots) and ram and 'player' in symbols:
   addr=symbols['player'];assert addr+24<=ramsize
-  values=struct.unpack('<6i',C.string_at(ram+addr,24));row=dict(zip(['x_fp','y_fp','z_fp','vy_fp','dash_ticks','state'],values));row['frame']=tick
+  values=struct.unpack('<6i',C.string_at(ram+addr,24));row=dict(zip(['x_fp','y_fp','z_fp','vy_fp','dash_ticks','state'],values));row['frame']=tick;row['scenario_movement_stopped']=movement_stopped
   if 'camera_distance' in symbols:row['camera_distance']=struct.unpack('<i',C.string_at(ram+symbols['camera_distance'],4))[0]
   if 'menu' in symbols:
    ms=struct.unpack('<4i',C.string_at(ram+symbols['menu'],16));row.update(dict(zip(['menu_screen','menu_selection','menu_return','diagnostics'],ms)))
   if 'animator' in symbols:
    av=struct.unpack('<3i',C.string_at(ram+symbols['animator'],12));row.update(dict(zip(['animation_clip','animation_tick','blend_tick'],av)))
-  for name in ('audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','camera_height','player_respawn_events'):
+  for name in ('audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','yaw'):
    if name in symbols:row[name]=struct.unpack('<i',C.string_at(ram+symbols[name],4))[0]
   if 'audio_sfx_events' in symbols:row['sfx_events']=list(struct.unpack('<7i',C.string_at(ram+symbols['audio_sfx_events'],28)))
   if 'trial' in symbols:

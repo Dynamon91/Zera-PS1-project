@@ -3,11 +3,11 @@
 #include "../src/world.h"
 int main(void){
  Player p;player_init(&p);
- /* Default 45-degree camera: Right+Down walks toward world +X.
+ /* Recentered camera: Right walks toward world +X.
     This source-ground route was outside the old +/-1280 patch. */
  for(int tick=0;tick<600;tick++){
   int moving=p.x/FP<2200;
-  Input i={.x=moving,.z=-moving,.camera_c=2896,.camera_s=2896};
+  Input i={.x=moving,.camera_c=4096};
   assert(!player_tick(&p,i));
  }
  int height;

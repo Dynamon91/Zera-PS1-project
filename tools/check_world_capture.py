@@ -8,9 +8,10 @@ import sys
 root=Path(__file__).resolve().parent.parent
 before=Path(sys.argv[1]);after=Path(sys.argv[2])
 old=json.loads((before/'capture.json').read_text());new=json.loads((after/'capture.json').read_text())
-assert old['frames_run']==3000 and new['frames_run']==3000
+assert old['frames_run']==4800 and new['frames_run']==4800
 assert old['bin_sha256']!=new['bin_sha256']
 last=new['state_samples'][-1]
+print(json.dumps({'last':last,'max_x':max(r['x_fp']//256 for r in new['state_samples'])}),flush=True)
 assert last['x_fp']//256>=2200 and abs(last['z_fp'])<256
 assert last['state']==0 and last['player_respawn_events']==0
 data=json.loads((root/'assets/world_chunk_source.json').read_text())
@@ -28,7 +29,7 @@ else:
 assert last['y_fp']==height*256, 'player is not on the recovered source floor'
 out=root/'docs/screenshots/world';out.mkdir(parents=True,exist_ok=True)
 for label,source in [('before',before),('after',after)]:
-    shutil.copyfile(source/'frame_2999.png',out/(label+'.png'))
+    shutil.copyfile(source/'frame_4799.png',out/(label+'.png'))
     shutil.copyfile(source/'capture.json',out/(label+'_capture.json'))
 result={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':new['bin_sha256'],
         'baseline_bin_sha256':old['bin_sha256'],'previous_radius':16,'new_radius':32,
@@ -55,10 +56,10 @@ Source file hashes, mesh IDs and world matrices are recorded in
 | --- | --- |
 | ![Previous patch](screenshots/world/before.png) | ![Expanded patch](screenshots/world/after.png) |
 
-Both captures use the same controller scenario, attempting to reach X=2200 and
+Both captures use the same controller scenario, recentering with L1 then holding Right to reach X=2200 and
 then stopping via read-only position feedback. Their simulated trajectories and
 timing can diverge: the previous patch lacks terrain beyond +/-1280. This is
-not a frame-matched visual fidelity claim. The new 3,000-frame run finishes at
+not a frame-matched visual fidelity claim. The new 4,800-frame run finishes at
 **({result['final_x']}, {height}, {result['final_z']})**, grounded on the recovered
 heightfield beyond the old boundary, with **zero automatic respawns**.
 
