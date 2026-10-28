@@ -279,7 +279,13 @@ int main(void){
    int lf=camera_view(yaw+512,camera_height,&left);
    int rf=camera_view(yaw-512,camera_height,&right);
    int offset=camera_orbit_offset(fraction,lf,rf);
-   if(offset){yaw+=offset;m=offset>0?left:right;fraction=offset>0?lf:rf;camera_orbit_cooldown=30;}
+   if(offset){
+    yaw+=offset;m=offset>0?left:right;fraction=offset>0?lf:rf;
+    /* An orbit cut is already immediate. Start at the tested side-view
+       clearance instead of carrying the old wall's close-up into this view. */
+    camera_distance=camera_distance_step(CAMERA_DISTANCE,fraction,0);
+    camera_orbit_cooldown=30;
+   }
   }
   VECTOR target={player.x/FP,-camera_height,player.z/FP},turned;
   ApplyMatrixLV(&m,&target,&turned);
