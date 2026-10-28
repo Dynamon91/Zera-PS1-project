@@ -38,7 +38,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 0,
@@ -77,7 +79,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 0,
@@ -116,7 +120,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 1817,
@@ -155,7 +161,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 14536,
@@ -194,7 +202,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 29072,
@@ -233,7 +243,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 41791,
@@ -272,7 +284,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 56327,
@@ -311,7 +325,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 69046,
@@ -350,7 +366,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 83582,
@@ -389,7 +407,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 96301,
@@ -428,7 +448,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 110837,
@@ -467,7 +489,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 123556,
@@ -506,7 +530,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 138092,
@@ -545,7 +571,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 150811,
@@ -584,7 +612,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 156262,
@@ -623,7 +653,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 165347,
@@ -662,7 +694,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 165376,
@@ -701,7 +735,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 163072,
@@ -740,7 +776,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 161280,
@@ -779,7 +817,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 158976,
@@ -818,7 +858,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 156928,
@@ -857,7 +899,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 154880,
@@ -896,7 +940,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 152576,
@@ -935,7 +981,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 150528,
@@ -974,7 +1022,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 148224,
@@ -1013,7 +1063,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 147456,
@@ -1052,7 +1104,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 146176,
@@ -1091,7 +1145,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1130,7 +1186,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1169,7 +1227,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1208,7 +1268,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1247,7 +1309,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1286,7 +1350,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1325,7 +1391,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1364,7 +1432,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1403,7 +1473,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1442,7 +1514,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1481,7 +1555,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1520,7 +1596,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1559,7 +1637,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1598,7 +1678,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1637,7 +1719,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 145152,
@@ -1676,7 +1760,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 137472,
@@ -1715,7 +1801,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 119552,
@@ -1754,7 +1842,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 119552,
@@ -1793,7 +1883,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 0,
@@ -1832,7 +1924,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 0,
@@ -1871,7 +1965,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 0,
@@ -1910,7 +2006,9 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     },
     {
       "x_fp": 0,
@@ -1949,11 +2047,13 @@
       "trial_active": 0,
       "trial_count": 0,
       "trial_complete": 0,
-      "trial_ticks": 0
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
     }
   ],
   "content": "zera_wip09.cue",
-  "bin_sha256": "374c33cf81ed77edfa97ef7b925978112f4a5da81b967705fff3bb8b48d6001a",
+  "bin_sha256": "480b624f29fa5e7a253d0683ee66166caa8f1a9baa7bce9eaaa1fec27e726426",
   "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
   "gif_samples": 0,
   "audio_output": {
