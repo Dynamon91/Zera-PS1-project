@@ -1,5 +1,9 @@
 #include "world.h"
 #ifdef ZERA_LEVEL3_PREVIEW
+#include "surface.h"
+#include "../previews/level3/src/world_floors.h"
+#endif
+#ifdef ZERA_LEVEL3_PREVIEW
 #include "../previews/level3/src/world_height.h"
 #else
 #include "world_height.h"
@@ -12,6 +16,9 @@ int world_fall_limit(void){
    int height=world_heights[z][x];
    if(height!=-32768 && height<lowest)lowest=height;
   }
+#ifdef ZERA_LEVEL3_PREVIEW
+  for(int i=0;i<WORLD_FLOOR_COUNT;i++)for(int k=1;k<9;k+=3)if(world_floors[i][k]<lowest)lowest=world_floors[i][k];
+#endif
   limit=lowest-700;ready=1;
  }
  return limit;
@@ -55,4 +62,13 @@ int world_camera_fraction(int x,int y,int z,int dx,int dy,int dz){
  /* Keep a small clearance before the intersected proxy. */
  if(best<4096){best-=160;if(best<0)best=0;}
  return best;
+}
+
+int world_floor(int x,int z,int ceiling,int *height){
+#ifdef ZERA_LEVEL3_PREVIEW
+ if(x<WORLD_ORIGIN || z<WORLD_ORIGIN || x>=-WORLD_ORIGIN || z>=-WORLD_ORIGIN)return 0;
+ return surface_height(world_floors,WORLD_FLOOR_COUNT,x,z,ceiling,height);
+#else
+ (void)ceiling;return world_height(x,z,height);
+#endif
 }

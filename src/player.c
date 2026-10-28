@@ -15,10 +15,12 @@ int player_tick(Player *p,Input i){
  world_move(ox/FP,oz/FP,&wx,&wz,oy/FP);
  if(wx!=tx)p->x=wx*FP;
  if(wz!=tz)p->z=wz*FP;
- int height=0,hasfloor=world_height(p->x/FP,p->z/FP,&height);height*=FP;
- /* Heightfield columns prevent stepping into a rise taller than 48 units. */
+ int ceiling=oy/FP+(p->state==GROUND?48:8);
+ int height=0,hasfloor=world_floor(p->x/FP,p->z/FP,ceiling,&height);height*=FP;
+ /* Retain the legacy heightfield rise guard. Level3 support is selected by
+    height; conservative wall proxies still handle horizontal obstructions. */
  if(hasfloor && height>oy+48*FP){
-  p->x=ox;p->z=oz;height=0;hasfloor=world_height(ox/FP,oz/FP,&height);height*=FP;
+  p->x=ox;p->z=oz;height=0;hasfloor=world_floor(ox/FP,oz/FP,ceiling,&height);height*=FP;
  }
  if(p->state==GROUND){
   if(hasfloor && height>=oy-24*FP){p->y=height;p->vy=0;}

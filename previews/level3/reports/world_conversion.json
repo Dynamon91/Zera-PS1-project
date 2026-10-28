@@ -487,5 +487,14 @@
     "level3": "06324ca85b7a0888b05b823256262f722a8eab261ec3a1e073e2d066e8daba99",
     "sharedassets3.assets": "194668e49328c64c8867a7f2dd3f963d941c010f6fa736a2396a2e7934869ce3"
   },
-  "converter_unitypy_version": "1.25.4"
+  "converter_unitypy_version": "1.25.4",
+  "floor_surfaces": {
+    "triangles": 55,
+    "height_cap": null,
+    "selection": "highest original collider surface at or below player step/landing ceiling",
+    "limitations": [
+      "point support only; no capsule sweep or overhead ceiling collision",
+      "integer-quantized original triangles"
+    ]
+  }
 }

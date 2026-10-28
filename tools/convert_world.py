@@ -226,6 +226,25 @@ report['source_patch_triangles_before_render_partition']=patch_triangle_count
 report['render_cells']={'size_world_units':cell_size,'count':len(cells),'draw_radius_world_units':1280}
 report['source_files_sha256']=source_hashes
 report['converter_unitypy_version']=UnityPy.__version__
+floor_triangles=[]
+if args.scene=='level3':
+ for triangle in collision:
+  poly=list(triangle)
+  for axis in (0,2):
+   poly=clip(poly,axis,spawn[axis]-R,1)
+   if poly:poly=clip(poly,axis,spawn[axis]+R,-1)
+   if not poly:break
+  for i in range(1,len(poly)-1):
+   pts=np.array([poly[0],poly[i],poly[i+1]])
+   q=np.rint(np.column_stack([-(pts[:,0]-spawn[0])*SCALE,(pts[:,1]-ground)*SCALE,(pts[:,2]-spawn[2])*SCALE])).astype(int)
+   if np.abs(q).max()>32767:raise RuntimeError('Floor triangle exceeds short coordinates')
+   a,b,c=q
+   if (b[2]-c[2])*(a[0]-c[0])+(c[0]-b[0])*(a[2]-c[2])==0:continue
+   floor_triangles.append(q.tolist())
+ assert floor_triangles
+ (P/'src/world_floors.h').write_text('/* Original walkable collider triangles, bounded XZ; positive Y up. */\n#define WORLD_FLOOR_COUNT %d\nstatic const short world_floors[][9]={\n'%len(floor_triangles)+''.join('{'+','.join(str(v) for p in a for v in p)+'},\n' for a in floor_triangles)+'};\n')
+ report['floor_surfaces']={'triangles':len(floor_triangles),'height_cap':None,'selection':'highest original collider surface at or below player step/landing ceiling','limitations':['point support only; no capsule sweep or overhead ceiling collision','integer-quantized original triangles']}
+
 (P/'reports/world_conversion.json').write_text(json.dumps(report,indent=2))
-(P/'assets/world_chunk_source.json').write_text(json.dumps({'report':report,'triangles':[a.tolist() for a in tri],'colors':[c.tolist() for c in colors],'heightfield':grid,'walls':walls,'render_cells':cells}))
+(P/'assets/world_chunk_source.json').write_text(json.dumps({'report':report,'triangles':[a.tolist() for a in tri],'colors':[c.tolist() for c in colors],'heightfield':grid,'walls':walls,'render_cells':cells,'floor_triangles':floor_triangles}))
 print('World triangles:',len(tri),'collision source:',len(collision),'spawn ground:',ground,'instances:',len(instances))

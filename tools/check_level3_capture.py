@@ -15,13 +15,20 @@ assert last['player_respawn_events']==0 and last['simulation_ticks']>=50
 assert last['audio_cd_errors']==0
 world=json.loads((root/'previews/level3/assets/world_chunk_source.json').read_text())
 report=world['report'];assert report['scene']=='level3'
-grid=world['heightfield'];layout=report['heightfield'];step=layout['step']
-x=int(last['x_fp']/256)-layout['origin'];z=int(last['z_fp']/256)-layout['origin'];ix,fx=divmod(x,step);iz,fz=divmod(z,step)
-a,b,c,d=grid[iz][ix],grid[iz][ix+1],grid[iz+1][ix],grid[iz+1][ix+1]
-if fx+fz<=step:
- assert -32768 not in (a,b,c);height=a+int(((b-a)*fx+(c-a)*fz)/step)
-else:
- assert -32768 not in (b,c,d);height=d+int(((c-d)*(step-fx)+(b-d)*(step-fz))/step)
+x=int(last['x_fp']/256);z=int(last['z_fp']/256)
+heights=[];all_heights=[]
+for triangle in world['floor_triangles']:
+ a,b,c=triangle
+ den=(b[2]-c[2])*(a[0]-c[0])+(c[0]-b[0])*(a[2]-c[2])
+ wa=(b[2]-c[2])*(x-c[0])+(c[0]-b[0])*(z-c[2])
+ wb=(c[2]-a[2])*(x-c[0])+(a[0]-c[0])*(z-c[2]);wc=den-wa-wb
+ if den<0:den=-den;wa=-wa;wb=-wb;wc=-wc
+ if not den or min(wa,wb,wc)<0:continue
+ h=int((wa*a[1]+wb*b[1]+wc*c[1])/den);all_heights.append(h)
+ if h<=last['y_fp']//256+48:heights.append(h)
+assert heights
+height=max(heights)
+assert height==0
 assert last['y_fp']==height*256
 binary=source.parent/'zera_level3_preview.bin';assert hashlib.sha256(binary.read_bytes()).hexdigest()==capture['bin_sha256']
 out=root/'docs/screenshots/level3';out.mkdir(parents=True,exist_ok=True)
@@ -30,7 +37,7 @@ for frame in [359,1599]:shutil.copyfile(source/f'frame_{frame:04d}.png',out/f'le
 shutil.copyfile(source/'capture.json',out/'capture.json')
 result={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':capture['bin_sha256'],'scene':'level3',
         'final_position':[last['x_fp']//256,height,last['z_fp']//256],'grounded':True,'automatic_respawns':0,
-        'render_triangles':report['render_triangles'],'source_patch_triangles':report['source_patch_triangles_before_render_partition'],
+        'floor_support':'original uncapped collider triangles selected by player height','overhead_surface_heights':sorted(set(v for v in all_heights if v>height)),'render_triangles':report['render_triangles'],'source_patch_triangles':report['source_patch_triangles_before_render_partition'],
         'validation':'Separate level3 bounded terrain preview; input-only HLE smoke test; no original progression implemented'}
 (out/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
 (root/'docs/LEVEL3.md').write_text(f'''# Original level3 terrain preview
@@ -48,7 +55,9 @@ source units; this is an early terrain preview, not a complete level.
 Actual emulator captures show two different original areas, not a frame-matched
 fidelity comparison. The new controller-only 1600-video-frame scenario walks to
 **{tuple(result['final_position'])}** and finishes grounded, with zero automatic
-respawns. Host tests separately walk 500 world units in all four directions.
+respawns. Host tests separately walk 500 world units in all four directions. They also
+verify height selection at actual overlapping collider surfaces; the native
+walking route does not demonstrate a traversable underpass.
 
 ![Level3 after walking](screenshots/level3/level3_1599.png)
 
@@ -63,7 +72,11 @@ The preview title identifies level3, and its pause menu omits the six-token
 trial because that new test layout belongs to the level2 patch. The main
 character, animation, controls and audio are shared adaptations. Original relics,
 essences, checkpoints, lava hazards, enemies, level flow and saving are not active.
-The heightfield remains single-valued and capped at spawn+6 source units.
+Floor support now uses original uncapped collider triangles and selects the
+highest support below the player's step/landing ceiling. The legacy diagnostic
+heightfield remains single-valued; it no longer determines level3 player support.
+This supports stacked surfaces, but overhead capsule/ceiling collision is still
+absent and steep-wall proxies remain conservative.
 Only the source area's static environment root is converted; lava is omitted.
 
 ## Static batch recovery

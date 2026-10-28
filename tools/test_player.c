@@ -9,6 +9,7 @@ int world_height(int x,int z,int *h){
  *h=terrain==4?-800:terrain==1?x/2:terrain==2 && x>0?100:0;
  return 1;
 }
+int world_floor(int x,int z,int ceiling,int *h){if(terrain==5){*h=ceiling>=200?200:0;return ceiling>=0;}return world_height(x,z,h);}
 int main(void){
  Player p;player_init(&p);assert(p.state==GROUND);
  player_tick(&p,(Input){.jump_pressed=1});assert(p.y>0 && p.state==JUMP);
@@ -27,6 +28,14 @@ int main(void){
  assert(p.state==FALL && p.y<0);
  for(int n=0;n<100;n++)player_tick(&p,(Input){0});
  assert(p.state==GROUND && p.x==0 && p.y==0);
+ /* Stacked support: a jump below an upper floor must return to the lower one;
+    falling from above must land on the upper one rather than pass through. */
+ terrain=5;player_init(&p);player_tick(&p,(Input){.jump_pressed=1});
+ for(int n=0;n<100;n++)player_tick(&p,(Input){0});
+ assert(p.state==GROUND && p.y==0);
+ p.y=300*FP;p.vy=0;p.state=FALL;
+ for(int n=0;n<100;n++)player_tick(&p,(Input){0});
+ assert(p.state==GROUND && p.y==200*FP);
  /* Valid low ground must not trigger the old spawn-relative safety plane. */
  terrain=4;player_init(&p);
  for(int n=0;n<100;n++)player_tick(&p,(Input){0});
