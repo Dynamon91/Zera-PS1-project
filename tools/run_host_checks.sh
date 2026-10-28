@@ -24,4 +24,6 @@ cc -DZERA_LEVEL3_PREVIEW -Wall -Wextra -Werror -fsanitize=address,undefined src/
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/level3_cells"
 cc -Wall -Wextra -Werror -fsanitize=address,undefined tools/test_character.c -o "$check_dir/character"
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/character"
+cc -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/character.c tools/test_character_motion.c -o "$check_dir/character_motion"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/character_motion"
 printf 'Host checks passed\n'

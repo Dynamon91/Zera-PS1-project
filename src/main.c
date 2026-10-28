@@ -38,6 +38,7 @@
 #include "mascot_materials.h"
 #include "mascot_texture.h"
 #include "animator.h"
+#include "character.h"
 #include "menu.h"
 #include "audio.h"
 #include "trial.h"
@@ -171,10 +172,11 @@ static SVECTOR pose[ANIM_VERTICES];
 static Animator animator;
 static Menu menu;
 static Trial trial;
-static int facing=0,camera_height=0,camera_distance=CAMERA_DISTANCE;
+static volatile int facing=0;
+static int camera_height=0,camera_distance=CAMERA_DISTANCE;
 static int camera_orbit_cooldown=0;
 static const char *names[]={"GROUND","JUMP","FALL","GLIDE","DASH"};
-static volatile int player_respawn_events=0,simulation_ticks=0,debug_input_x=0,debug_input_z=0;
+static volatile int player_respawn_events=0,simulation_ticks=0,debug_input_x=0,debug_input_z=0,debug_movement_yaw=0,debug_actual_moving=0;
 static void reset_view(void){animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;}
 static int camera_view(int angle,int height,MATRIX *m){
  SVECTOR rot={280,angle,0,0};RotMatrix(&rot,m);
@@ -275,9 +277,11 @@ int main(void){
    if(pad->ls_y<96)in.z=1;else if(pad->ls_y>160)in.z=-1;
   }
   debug_input_x=in.x;debug_input_z=in.z;
-  in.camera_c=rcos(yaw);in.camera_s=rsin(yaw);
+  int movement_yaw=yaw;debug_movement_yaw=movement_yaw;
+  in.camera_c=rcos(movement_yaw);in.camera_s=rsin(movement_yaw);
+  int oldx=player.x,oldz=player.z,respawned=0;
   int oldstate=player.state,olddash=player.dash_ticks;
-  if(!paused){simulation_ticks++;if(player_tick(&player,in)){reset_view();player_respawn_events++;}if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;}
+  if(!paused){simulation_ticks++;if(player_tick(&player,in)){reset_view();player_respawn_events++;respawned=1;}if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;}
   if(!paused){
    if(oldstate==GROUND && player.state==JUMP)audio_play(SFX_JUMP);
    if(oldstate!=GROUND && player.state==GROUND)audio_play(SFX_LAND);
@@ -286,12 +290,10 @@ int main(void){
   }
   if(trial_update(&trial,&player,!paused))audio_play(SFX_PICKUP);
   audio_update(menu.screen!=MENU_PLAY);
-  if(!paused && (in.x || in.z)){
-   int direction=in.z>0?(in.x>0?512:in.x<0?-512:0):in.z<0?(in.x>0?1536:in.x<0?-1536:2048):(in.x>0?1024:-1024);
-   int turn=(direction-yaw-facing)&4095;if(turn>2048)turn-=4096;
-   if(turn>128)turn=128;if(turn<-128)turn=-128;facing+=turn;
-  }
-  int desired=player.state==GLIDE?3:player.state!=GROUND?2:(in.x || in.z)?1:0;
+  int moved=!paused && !respawned && (player.x!=oldx || player.z!=oldz);
+  debug_actual_moving=moved;
+  facing=character_facing_step(facing,in.x,in.z,movement_yaw,!paused && !respawned);
+  int desired=character_animation(player.state,moved);
   animator_update(&animator,desired,!paused);
   int fc=rcos(facing),fs=rsin(facing);
   for(int i=0;i<ANIM_VERTICES;i++){
