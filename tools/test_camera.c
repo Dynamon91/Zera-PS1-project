@@ -1,6 +1,11 @@
 #include <assert.h>
 #include "../src/camera.h"
 int main(void){
+ assert(camera_orbit_offset(700,4096,1000)==512);
+ assert(camera_orbit_offset(700,1000,4096)==-512);
+ assert(camera_orbit_offset(700,1400,1400)==512);
+ assert(camera_orbit_offset(700,1000,1100)==0);
+ assert(camera_orbit_offset(2048,4096,4096)==0);
  /* A close proxy used to be ignored by the 420-unit readability floor. */
  assert(camera_distance_step(850,1024,0)==212);
  assert(camera_distance_step(850,0,0)==0);

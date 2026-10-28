@@ -1,4 +1,10 @@
 #include "camera.h"
+int camera_orbit_offset(int current,int left,int right){
+ if(current>=2048)return 0;
+ int best=left>=right?left:right;
+ if(best-current<512)return 0;
+ return left>=right?512:-512;
+}
 int camera_distance_step(int current,int fraction,int paused){
  if(fraction<0)fraction=0;
  if(fraction>4096)fraction=4096;

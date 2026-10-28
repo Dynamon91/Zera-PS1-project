@@ -101,3 +101,14 @@ approximately 28%. See the README for download and resume instructions.
 
 Update this file and the README estimate together after reviewing milestone
 evidence. Keep source-tested work separate from playable-build validation.
+
+## Current camera increment
+
+A stationary camera fallback now probes two 45-degree side views when the
+current wall clearance is under half the normal distance. It chooses a side
+only for a substantial clearance gain and waits 30 active ticks before another
+change. Movement input, manual camera controls and pause prevent automatic
+repositioning. This avoids changing the movement basis while walking.
+Host regression checks pass; native validation is performed by the new run.
+The previous WIP09 captures are retained in `docs/screenshots/wip09-before-orbit/`.
+The full-port estimate remains approximately 28%.
