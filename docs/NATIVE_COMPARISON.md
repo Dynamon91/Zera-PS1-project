@@ -16,3 +16,21 @@ Le immagini non dimostrano prestazioni o compatibilità hardware.
 Il build e tutte le catture sono scaricabili dagli artifact della relativa esecuzione
 **Native PS1 preview** in GitHub Actions. Il vecchio disco in `disc/` resta WIP08.
 Il pacchetto WIP09 source mantiene il suo stato esplicito: non sostituisce quel disco.
+
+## Risultato osservato, non solo confronto visivo
+
+| Dato registrato al frame 1300 | WIP08 | WIP09 |
+| --- | ---: | ---: |
+| X del personaggio, fixed point | 145152 | 145152 |
+| Y del personaggio, fixed point | -9728 | -9728 |
+| Z del personaggio, fixed point | 197888 | 197888 |
+| Distanza camera | 420 | 152 |
+
+La posizione del personaggio è identica. Il minimo della camera nell'intera
+cattura passa da 420 a 151 unità. La camera rispetta l'ostacolo più vicino,
+ma il primo piano del personaggio riduce la leggibilità: questa resta una
+limitazione aperta, non una promessa di miglioramento visivo in ogni scena.
+
+Compilazione e cattura: [esecuzione riuscita con build e screenshot](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40649620714).
+I prossimi controlli sono selezione di un'inquadratura alternativa, leggibilità
+vicino al personaggio e ripetizione degli altri scenari sul nuovo build.

@@ -1,6 +1,7 @@
 # Screenshot e stato del progetto
 
-Le immagini sotto sono catture reali WIP08 a 320×240. Non sono immagini generate
+Le immagini di riferimento sotto sono catture reali WIP08 a 320×240.
+Il confronto WIP08/WIP09 usa anche nuove catture native, nella pagina dedicata. Non sono immagini generate
 né prove visive dei cambiamenti successivi della telecamera.
 
 ## Prima e dopo durante lo stesso test
@@ -29,8 +30,8 @@ Non sono un confronto tra due versioni. Per quello, usare il
 | --- | --- |
 | Disco incluso in `disc/` | WIP08, con catture HLE esistenti |
 | Pacchetto sorgente | WIP09 source, con manifest SHA-256 e riferimento al commit |
-| Camera più recente | Modifiche e test host pubblicati; verifica nativa separata tramite Actions |
-| Nuove screenshot | Workflow `Native PS1 preview`: compila, cattura, controlla e pubblica immagini con provenienza |
+| Camera più recente | Test host e nuovo build nativo: scenario pareti completato per 1.600 frame in HLE |
+| Nuove screenshot | Nuove catture WIP09 pubblicate con sorgente e hash del disco; vedi il confronto nativo |
 | Porting completo | Stima provvisoria circa 28%, dettagli in [PROGRESS.md](../PROGRESS.md) |
 | Livelli e progressione | Ancora una piccola porzione del mondo; progressione originale non portata |
 

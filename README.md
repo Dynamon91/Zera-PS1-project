@@ -4,16 +4,23 @@
 engineering assessment of the complete game adaptation. See [PROGRESS.md](PROGRESS.md)
 for the weighted breakdown, evidence, remaining milestones, and build status.
 
-## Screenshot e confronto prima/dopo
+## Screenshot reali: prima e dopo
 
-| WIP08 — test a 1/6 | WIP08 — test completato |
+Stesso percorso, stessa posizione del personaggio, frame 1300:
+
+| Prima — WIP08, camera 420 | Dopo — nuovo build WIP09, camera 152 |
 | --- | --- |
-| ![WIP08 pickup trial 1 of 6](preview/frame_0500.png) | ![WIP08 pickup trial complete](preview/frame_0959.png) |
+| ![Prima WIP08 frame 1300](diagnostics/wall_walk/frame_1300.png) | ![Dopo WIP09 frame 1300](docs/screenshots/wip09/frame_1300.png) |
 
-Catture reali dello stesso build, in momenti diversi; non sono un confronto tra versioni.
-Vedi la [galleria e lo stato completo](docs/SCREENSHOTS.md) e il
-[confronto nativo WIP08/WIP09](docs/NATIVE_COMPARISON.md).
-La nuova pagina comparativa viene popolata solo dopo compilazione e catture riuscite.
+Il nuovo build è stato compilato ed eseguito per 1.600 frame in PCSX-ReARMed HLE.
+La camera rispetta l'ostacolo più vicino; a questa distanza il personaggio riempie
+molto lo schermo. Questo limite di leggibilità resta da migliorare, senza
+spostare nuovamente la camera oltre la parete. Non sono nuovi livelli o nuova
+progressione originale.
+
+Vedi il [confronto completo con provenienza](docs/NATIVE_COMPARISON.md), la
+[galleria](docs/SCREENSHOTS.md) e il
+[build nativo con BIN/CUE e catture](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40649620714).
 
 ## Download and resume this checkpoint
 
@@ -66,15 +73,17 @@ Host checks pass with address/undefined-behavior sanitizers. New regression case
 cover close walls, pause/recovery, all 4,097 Q12 fractions, and pullback against the
 recovered wall proxies. The earlier parallel-ray correction also matched an
 independent exact-rational calculation in 12,000 cases. GitHub Actions runs the
-host suite on pushes and pull requests. These checks do not compile or emulate
-the PS1 executable. Near the player, character faces can clip; sphere/ceiling
+host suite on pushes and pull requests. The separate Native PS1 preview workflow has also compiled the updated source
+and completed the 1,600-frame wall scenario in the pinned HLE emulator; see the
+comparison and provenance above. Other scenarios have not been rerun on that build. Near the player, character faces can clip; sphere/ceiling
 collision and alternative orbit selection remain pending. Wall proxies are still
 conservative, and a ray is not a camera-volume collision test.
 
 **The files in `disc/`, `preview/` and `diagnostics/` are the original WIP08
-build and captures.** They include neither post-WIP08 source correction. Rebuild
-with PSn00bSDK and validate the resulting image in an emulator before treating
-it as an updated playable release. No WIP09 disc has been produced yet.
+build and captures.** They include neither post-WIP08 source correction. A separate
+WIP09 native BIN/CUE and its new captures are available in the linked GitHub
+Actions artifact. That build passed the wall-scenario HLE smoke check; it has not
+replaced the packaged WIP08 disc or passed the full release-validation matrix.
 
 Native PSn00bSDK prototype using the recovered Zera mesh and four original
 animation clips. The renderer uses 411 integer vertex positions and 806 triangles.

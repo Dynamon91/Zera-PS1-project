@@ -52,10 +52,22 @@ acceptance evidence; do not equate GitHub upload completion with game completion
 The latest source passes the local ASan/UBSan host suite. The new camera tests
 exercise logic and recovered wall proxies, not the PS1 renderer. The earlier
 parallel-ray fix was additionally compared with 12,000 independent rational
-geometry cases. Neither source update has a rebuilt/emulator-tested disc here:
-the required PSn00bSDK/MIPS toolchain and emulator core are absent in this
-workspace. `disc/`, `preview/` and `diagnostics/` remain the WIP08 checkpoint.
-No WIP09 playable image is claimed.
+geometry cases. GitHub's separate native workflow now builds the updated source with the official
+PSn00bSDK 0.24 and runs the pinned emulator for the 1,600-frame wall scenario.
+That native build and capture succeeded. Source tested:
+`6bac3839b7f349a2cb96cffe7f654595b52ac8f0`. The downloadable native artifact includes
+BIN/CUE, EXE, ELF, map and actual screenshots. See `docs/NATIVE_COMPARISON.md` and
+`docs/screenshots/wip09/provenance.json` for the tested source and disc hash.
+
+At frame 1300, WIP08 and WIP09 have identical recorded player coordinates. The
+camera distance changes from 420 to 152 units (minimum observed: 420 versus 151).
+The close view exposes a usability issue: the character fills much of the screen.
+Alternative orbit selection/near-camera presentation remains unfinished.
+
+Only this wall scenario has been rerun on the native WIP09 build; the complete
+menu/trial/audio/retail-BIOS/hardware matrix remains pending. `disc/`, `preview/`
+and `diagnostics/` retain WIP08. The source ZIP includes the new screenshots but
+its playable disc remains WIP08; the new native build is a separate GitHub artifact.
 
 ## Package continuity
 
@@ -69,9 +81,10 @@ approximately 28%. See the README for download and resume instructions.
 ## Next acceptance milestones
 
 1. **Updated native checkpoint:** build the current source with PSn00bSDK 0.24,
-   check executable/disc structure and memory use, then cold-boot the new CUE.
-   Replay menu, movement, trial and wall scenarios; capture close-wall camera
-   behavior and confirm the character remains usable at short distances.
+   the current native wall-preview build has compiled and cold-booted in HLE.
+   Complete executable/disc structure and memory checks, then rerun the menu,
+   movement, trial and audio scenarios. Confirm close-camera usability before
+   promoting the new image into the packaged playable checkpoint.
 2. **Camera usability:** assess near-camera character clipping, improve camera
    volume/ceiling handling and select alternative views in tight corners.
    Confirm results in emulator captures before increasing camera credit.
