@@ -4,6 +4,25 @@
 assessment covers the complete game adaptation, not the fraction of exported
 assets or elapsed development time. See [PROGRESS.md](PROGRESS.md).
 
+## New: separate original level3 preview
+
+The package now includes a **second playable PS1 disc** for a bounded original
+level3 start area. It contains 289 globally clipped source triangles, partitioned
+into 543 render triangles. Static-batch submesh selection and scene-space
+transforms are recovered and checked against original collider meshes.
+
+| Established level2 start | New level3 start |
+| --- | --- |
+| ![Level2](docs/screenshots/level3/before_level2.png) | ![Level3](docs/screenshots/level3/level3_0359.png) |
+
+These real emulator captures show different original areas. The level3 test
+walks to (500, 0, 0), finishes grounded and records zero automatic respawns.
+This separate terrain preview has no active original collection, enemies,
+checkpoints or lava hazards; it is not a full level or a replacement for WIP09.
+After extracting the nested native ZIP, open **`build/zera_level3_preview.cue`**
+for level3 or **`build/zera_wip09.cue`** for the established level2 build.
+[Full level3 evidence, screenshots and limitations](docs/LEVEL3.md).
+
 ## Latest original-world expansion
 
 The original Windows build's level2 scene was recovered again with its original

@@ -2,7 +2,7 @@
 
 **Estimated full-port completion: approximately 29%.**
 
-Reviewed: 28 October 2026. Stage: an expanded, playable original-world prototype.
+Reviewed: 28 October 2026. Stage: expanded level2 prototype plus a separate bounded level3 terrain preview.
 Current shared checkpoint includes the tested WIP09 native preview; `disc/` retains
 WIP08 as a reference. The estimate is provisional engineering judgment, with a
 rough 25–35% range. It is not a measure of exported-file count, playtime coverage,
@@ -21,7 +21,7 @@ based on the evidence below; scope discoveries may change the estimate.
 | Asset recovery and conversion pipeline | 10 | 8 | Original scene recovery, source hashes/transforms, 786 mesh exports and animation/audio converters; remaining scene semantics and fidelity verification. |
 | PS1 rendering and animation | 10 | 6 | Native textured renderer, clipping, four sampled character clips, local render cells and vertex-cache checks; overlays, shaders and performance remain incomplete. |
 | Movement, collision and camera | 10 | 6 | Jump/glide/boost, heightfield/wall movement, side-view fallback and terrain-aware respawn; overlapping floors, ceiling/camera-volume tests and broader usability remain. |
-| Full world and level flow | 25 | 3 | Radius-32 original scene patch, two walkable meshes and grounded native exploration beyond the old boundary; full levels, connections, actors, props and streaming remain. |
+| Full world and level flow | 25 | 3 | Radius-32 level2 patch, grounded native exploration beyond the old boundary, and a separately tested level3 start patch; full levels, connections, actors, props and streaming remain. |
 | Original gameplay and progression | 20 | 0 | Original authored collection/progression and interactions remain unported. The timed trial is separate development content. |
 | Audio | 10 | 4 | One streamed track, seven effects and verified session mute; broader source content, transitions, persistent settings and hardware checks remain. |
 | Menus and persistent saves | 5 | 1 | Title/pause/controls, session audio and trial records; memory-card persistence and complete original UI remain. |
@@ -120,3 +120,23 @@ Update README and this weighted estimate together when milestone evidence change
 Clipping optimization: [measured before/after results](docs/PERFORMANCE.md).
 
 Original progression source recovery: [193 relics, 20 essences and 13 checkpoints with original transforms](docs/ORIGINAL_PROGRESSION.md). This is recovered conversion data; the playable runtime is unchanged.
+
+
+## Separate level3 terrain increment
+
+A second disc now opens a bounded 32×32-source-unit area around the original
+level3 named start spawn. Six original static environment renderers contribute
+289 globally clipped source triangles; render-cell partitioning produces 543
+triangles. The scene-space static-batch mesh interpretation selects each
+renderer's declared submesh range. Walkable bounds agree with independently
+stored transformed collider meshes to within 0.041 source units.
+
+Native controller input walks to (500, 0, 0), grounded with no automatic respawn.
+Host checks walk 500 units in all four directions and validate render-cell
+coverage/frustum rejection for this dataset. Both discs build in CI; all existing
+WIP09 native checks still pass. [Screenshots and verification](docs/LEVEL3.md).
+
+The preview omits lava, actors and original progression. It retains the
+single-valued heightfield and spawn+6 source-unit height cap. Completion remains
+at the provisional 29%; a complete connected level and original interactions
+are still required for substantive world/progression credit.
