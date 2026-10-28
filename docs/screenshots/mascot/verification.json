@@ -1,6 +1,6 @@
 {
-  "source_commit": "0c8e4c27657922a787963efbc07f79f7fa92c131",
-  "bin_sha256": "c0d5e312ab287e79193365655bb961a4454ab2d04cf8930c45af17ce4e918039",
+  "source_commit": "498bd0e22c04893859389fc6059f9061a53b8983",
+  "bin_sha256": "a5e5b86a56e60b9a45c486aee6f4c8640f57ea9d98e31f635cf38e4540af5e0c",
   "frames": 2200,
   "animation_clips_observed": [
     0,
@@ -17,6 +17,8 @@
   "automatic_respawns": 0,
   "camera_movement_aligned_samples": 3,
   "blocked_idle_samples": 5,
+  "close_camera_hidden_samples": 20,
+  "clear_camera_restored_samples": 11,
   "packed_vertices": 412,
   "triangles": 806,
   "textured_spot_faces": 96,
