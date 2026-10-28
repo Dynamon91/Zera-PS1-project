@@ -12,6 +12,9 @@ joint influences: 412 animated positions, 806 triangles and four original clips.
 [Actual before/after screenshots, source details and animation checks](docs/MASCOT.md).
 Facing now shares the current movement yaw, and the grounded mascot idles when
 blocked rather than running in place. [Movement/camera checks](docs/CHARACTER_MOTION.md).
+A close-camera guard temporarily hides the mascot when an obstruction pushes
+the view into its geometry, then restores it with separate distance thresholds.
+[Real close-view before/after and recovery checks](docs/CLOSE_CAMERA.md).
 
 ## New: separate original level3 preview
 
@@ -62,7 +65,7 @@ uses the unsplit recovered surface. Host tests check cell coverage, conservative
 rejection and a route to original ground outside the previous patch. Distant
 terrain may pop at cell boundaries; there is no fog or level-data streaming yet.
 
-The exploratory HLE capture observed approximately **14.27 simulation updates/s**
+The exploratory HLE capture observed approximately **14.29 simulation updates/s**
 over its active interval. This is scenario-specific emulated simulation pacing,
 not a hardware FPS certification. The 30-update target, full original-level flow,
 actors, custom shaders, authored progression and hardware validation remain unfinished.

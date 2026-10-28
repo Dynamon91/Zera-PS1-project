@@ -66,7 +66,7 @@ respawns. The WIP08 reference and new version run the same controller scenario,
 but trajectories/timing diverge; the images are not a same-position fidelity claim.
 See [WORLD.md](docs/WORLD.md) and `docs/screenshots/world/verification.json`.
 
-The exploratory HLE capture observed approximately **14.27 simulation updates/s**
+The exploratory HLE capture observed approximately **14.29 simulation updates/s**
 in its active interval (1,033 updates over 4,469 emulated video frames at 60 Hz).
 This is scenario-specific simulation pacing, not physical-hardware FPS. The
 30-update target is not established. Performance profiling and further optimization
@@ -183,3 +183,18 @@ previously kept Run active. [Evidence](docs/CHARACTER_MOTION.md).
 
 Movement tuning, geometry and original progression are unchanged; the
 full-port estimate remains 29%.
+
+
+## Close-camera presentation and resumable packaging
+
+A camera-distance visibility guard removes the screen-filling inside-mascot
+view at close obstructions, then restores the model after clearance returns.
+Separate hide/restore thresholds are tested against repeated small oscillations.
+Native captures preserve identical player/camera values at the comparison point,
+verify hidden/restored samples and retain all prior movement and animation checks.
+[Evidence](docs/CLOSE_CAMERA.md).
+
+The builder now replaces a nested native ZIP already present in an extracted
+checkpoint, preventing duplicate archive entries during resume/repackaging.
+Both the older-nested-build and inside-source-tree artifact cases are tested.
+These are existing prototype refinements; the full-port estimate stays 29%.

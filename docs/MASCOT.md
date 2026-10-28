@@ -76,3 +76,5 @@ sh tools/run_host_checks.sh
 
 Open `build/zera_wip09.cue` or `build/zera_level3_preview.cue` after extracting the
 nested native ZIP from the updated WIP package.
+
+The mascot is temporarily hidden at very close obstruction-driven camera distances; see [CLOSE_CAMERA.md](CLOSE_CAMERA.md) for current visibility behavior.

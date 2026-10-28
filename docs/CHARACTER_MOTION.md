@@ -22,7 +22,8 @@ update. These changes do not alter movement speed, jump tuning or collision data
 Actual emulator screenshots at video frame 1300 have identical player position
 and camera values: **X=567, Z=773**, with Right still held. Before, the animation
 clip is Run (1); after, actual movement is zero and the clip is Idle (0).
-The close camera view remains a limitation of this particular obstruction case.
+These captures predate the [close-camera presentation guard](CLOSE_CAMERA.md),
+which now clears the inside-mascot view at this obstruction.
 [Full samples and binary hashes](screenshots/character_motion/verification.json).
 
 The native mascot scenario now rotates the camera while moving. It records
