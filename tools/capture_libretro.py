@@ -86,7 +86,7 @@ mapfile=Path(sys.argv[2]).with_name('zera.map')
 if mapfile.exists():
  for line in mapfile.read_text().splitlines():
   fields=line.split()
-  if len(fields)>=3 and fields[0] in ('player','camera_distance','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
+  if len(fields)>=3 and fields[0] in ('player','camera_distance','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
 core.retro_get_memory_data.argtypes=[C.c_uint];core.retro_get_memory_data.restype=C.c_void_p
 core.retro_get_memory_size.argtypes=[C.c_uint];core.retro_get_memory_size.restype=C.c_size_t
 ram=core.retro_get_memory_data(2);ramsize=core.retro_get_memory_size(2)
