@@ -9,7 +9,7 @@
   "ground_height": 21.883107788088076,
   "source_radius_units": 32.0,
   "world_scale": 80,
-  "render_triangles": 910,
+  "render_triangles": 3588,
   "texture_materials": [
     "CC_Plate",
     "CC_Grass",
@@ -112,6 +112,12 @@
     "heightfield samples capped at spawn height + 6 source units",
     "not full original level"
   ],
+  "source_patch_triangles_before_render_partition": 910,
+  "render_cells": {
+    "size_world_units": 640,
+    "count": 64,
+    "draw_radius_world_units": 1280
+  },
   "source_files_sha256": {
     "level2": "f9563c7125bcb9e6f35c92ab76c85fb98aa25ed5a2d64aba7f3f5a73067293e1",
     "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d",

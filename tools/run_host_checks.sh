@@ -12,4 +12,6 @@ cc -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefine
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/world"
 cc -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/player.c src/world.c src/collision.c tools/test_exploration.c -o "$check_dir/exploration"
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/exploration"
+cc -Wall -Wextra -Werror -fsanitize=address,undefined src/clip.c tools/test_render_cells.c -o "$check_dir/render_cells"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/render_cells"
 printf 'Host checks passed\n'

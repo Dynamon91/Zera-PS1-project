@@ -32,7 +32,7 @@ for label,source in [('before',before),('after',after)]:
     shutil.copyfile(source/'capture.json',out/(label+'_capture.json'))
 result={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':new['bin_sha256'],
         'baseline_bin_sha256':old['bin_sha256'],'previous_radius':16,'new_radius':32,
-        'render_triangles':report['render_triangles'],'world_grid_size':layout['size'],
+        'render_triangles':report['render_triangles'],'source_patch_triangles':report['source_patch_triangles_before_render_partition'],'world_grid_size':layout['size'],
         'final_x':last['x_fp']//256,'final_y':height,'final_z':last['z_fp']//256,
         'grounded_beyond_old_boundary':True,'automatic_respawns':0,
         'emulator':new['emulator'],'validation':'Input-only HLE exploration; not a full level or hardware test'}
@@ -42,9 +42,12 @@ result={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':new['bin_sha256'],
 The source archive was recovered and the level2 scene was converted with its
 original transforms. Radius grows from 16 to 32 source units: a **64×64** source-unit
 square rather than 32×32. This is extraction extent, not a claim of four times
-the complete game's playable content. Rendering grows from 591 to
-**{report['render_triangles']} triangles**, including original Walkable.000 and
-Walkable.002. The collision grid grows from 65×65 to 129×129 at the same spacing.
+the complete game's playable content. The globally clipped source patch grows from 591 to
+**{report['source_patch_triangles_before_render_partition']} triangles**, including original Walkable.000 and
+Walkable.002. Offline cell splitting produces {report['render_triangles']} render triangles
+in {report['render_cells']['count']} cells; that subdivision is not additional authored content.
+Only nearby cells are considered for drawing, with whole-cell frustum rejection and
+on-demand shared-vertex classification. Collision proxies use the unsplit surface. The collision grid grows from 65×65 to 129×129 at the same spacing.
 Source file hashes, mesh IDs and world matrices are recorded in
 `reports/world_conversion.json`. No replacement environment geometry was invented.
 

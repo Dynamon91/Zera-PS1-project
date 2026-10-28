@@ -146,7 +146,8 @@ void draw_text(RenderContext *ctx, int x, int y, int z, const char *text) {
 
 static RenderContext ctx;
 static ClipCamera clip_camera;
-static unsigned int world_codes[WORLD_UNIQUE_COUNT];
+static unsigned int world_codes[WORLD_UNIQUE_COUNT],world_code_stamp[WORLD_UNIQUE_COUNT];
+static unsigned int view_stamp=0;
 static uint8_t pads[2][34];
 static Player player;
 static int yaw=512;
@@ -185,9 +186,14 @@ static void triangle(SVECTOR a,SVECTOR b,SVECTOR c,int r,int g,int bl){
 }
 
 static void world_triangle(int i){
- const SVECTOR *v=world_triangles[i];const unsigned char *u=world_uv[i];ClipVertex in[3],out[10];
- for(int k=0;k<3;k++){in[k]=(ClipVertex){v[k].vx,v[k].vy,v[k].vz,u[k*2],u[k*2+1]};}
- unsigned int codes[3]={world_codes[world_corner_ids[i][0]],world_codes[world_corner_ids[i][1]],world_codes[world_corner_ids[i][2]]};
+ const unsigned char *u=world_uv[i];ClipVertex in[3],out[10];
+ for(int k=0;k<3;k++){const SVECTOR *v=&world_unique[world_corner_ids[i][k]];in[k]=(ClipVertex){v->vx,v->vy,v->vz,u[k*2],u[k*2+1]};}
+ unsigned int codes[3];
+ for(int k=0;k<3;k++){
+  unsigned int id=world_corner_ids[i][k];
+  if(world_code_stamp[id]!=view_stamp){world_codes[id]=clip_code(&clip_camera,&in[k]);world_code_stamp[id]=view_stamp;}
+  codes[k]=world_codes[id];
+ }
  int n=clip_triangle_known(&clip_camera,in,codes,out);
  for(int k=1;k<n-1;k++){
   ClipVertex *a=&out[0],*b=&out[k],*c=&out[k+1];short xy[6];int depth=project(a,b,c,xy);if(!depth)continue;
@@ -298,8 +304,19 @@ int main(void){
   camera_distance=camera_distance_step(camera_distance,fraction,paused);
   VECTOR pos={-turned.vx,100*camera_distance/CAMERA_DISTANCE-turned.vy,-turned.vz+camera_distance};TransMatrix(&m,&pos);gte_SetRotMatrix(&m);gte_SetTransMatrix(&m);
   for(int r=0;r<3;r++){for(int c=0;c<3;c++)clip_camera.m[r][c]=m.m[r][c];clip_camera.t[r]=m.t[r];}
-  for(int i=0;i<WORLD_UNIQUE_COUNT;i++){const SVECTOR *v=&world_unique[i];ClipVertex q={v->vx,v->vy,v->vz,0,0};world_codes[i]=clip_code(&clip_camera,&q);}
-  for(int i=0;i<WORLD_TRIANGLE_COUNT;i++)world_triangle(i);
+  if(++view_stamp==0){for(int i=0;i<WORLD_UNIQUE_COUNT;i++)world_code_stamp[i]=0;view_stamp=1;}
+  int wx=player.x/FP,wz=player.z/FP;
+  for(int cell=0;cell<WORLD_CELL_COUNT;cell++){
+   const short *b=world_cells[cell];
+   if(b[2]<wx-1280 || b[0]>wx+1280 || b[3]<wz-1280 || b[1]>wz+1280)continue;
+   unsigned int common=~0u;
+   for(int k=0;k<8;k++){
+    ClipVertex corner={k&1?b[2]:b[0],k&2?b[7]:b[6],k&4?b[3]:b[1],0,0};
+    common &= clip_code(&clip_camera,&corner);
+   }
+   if(common)continue;
+   for(int i=b[4];i<b[4]+b[5];i++)world_triangle(i);
+  }
   if(trial.active){
    for(int id=0;id<TRIAL_PICKUPS;id++){
     if(trial.collected&(1u<<id))continue;

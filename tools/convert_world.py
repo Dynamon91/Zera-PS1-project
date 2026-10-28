@@ -123,8 +123,40 @@ assert grid[N//2][N//2]==0
 used=sorted(set(tile_indices));remap={old:new for new,old in enumerate(used)}
 tiles=[tiles[i] for i in used];texture_names=[texture_names[i] for i in used];tile_indices=[remap[i] for i in tile_indices]
 assert len(tiles)<=16, 'expanded area exceeds the current atlas capacity'
+# Partition rendering only. Collision proxies retain the unpartitioned surface,
+# so optimizing draw cells does not alter the recovered collision adaptation.
+wall_source_tri=tri.copy();patch_triangle_count=len(tri)
+cell_size=640;cell_origin=-round(R*SCALE);cell_count=math.ceil(2*R*SCALE/cell_size)
+buckets={}
+for a,color,tc,tile in zip(tri,colors,uvs,tile_indices):
+ poly=np.column_stack([a,tc]).astype(float)
+ lo=poly[:,[0,2]].min(axis=0);hi=poly[:,[0,2]].max(axis=0)
+ first=np.maximum(0,np.minimum(cell_count-1,np.floor((lo-cell_origin)/cell_size).astype(int)))
+ upper=np.where(hi>lo,hi-1e-6,hi)
+ last=np.maximum(first,np.minimum(cell_count-1,np.floor((upper-cell_origin)/cell_size).astype(int)))
+ for cz in range(first[1],last[1]+1):
+  for cx in range(first[0],last[0]+1):
+   part=list(poly)
+   for axis,index in ((0,cx),(2,cz)):
+    part=clip(part,axis,cell_origin+index*cell_size,1)
+    if part:part=clip(part,axis,min(round(R*SCALE),cell_origin+(index+1)*cell_size),-1)
+    if not part:break
+   for k in range(1,len(part)-1):
+    pts=np.array([part[0],part[k],part[k+1]])
+    xyz=np.rint(pts[:,:3]).astype(int)
+    if not np.any(np.cross(xyz[1]-xyz[0],xyz[2]-xyz[0])):continue
+    uv=np.rint(pts[:,3:5]).astype(int).clip(0,255)
+    buckets.setdefault((cz,cx),[]).append((xyz,color,uv,tile))
+tri=[];colors=[];uvs=[];tile_indices=[];cells=[]
+for (cz,cx),items in sorted(buckets.items()):
+ start=len(tri)
+ for xyz,color,tc,tile in items:
+  tri.append(xyz);colors.append(color);uvs.append(tc);tile_indices.append(tile)
+ cells.append([cell_origin+cx*cell_size,cell_origin+cz*cell_size,
+               min(round(R*SCALE),cell_origin+(cx+1)*cell_size),
+               min(round(R*SCALE),cell_origin+(cz+1)*cell_size),start,len(items),min(int(a[:,1].min()) for a,_,_,_ in items),max(int(a[:,1].max()) for a,_,_,_ in items)])
+assert len(tri)<6000,len(tri)
 s='/* Original level2 spawn-area geometry; clipped offline. */\n'
-s+='static const SVECTOR world_triangles[][3]={\n'+''.join('{'+''.join('{%d,%d,%d,0},'%tuple(v) for v in a)+'},\n' for a in tri)+'};\n'
 s+='static const unsigned char world_colors[][3]={\n'+''.join('{%d,%d,%d},\n'%tuple(c) for c in colors)+'};\n'
 s+='static const unsigned char world_uv[][6]={\n'+''.join('{'+','.join(map(str,u.flatten()))+'},\n' for u in uvs)+'};\n'
 s+='static const unsigned char world_tile[]={'+','.join(map(str,tile_indices))+'};\n'
@@ -133,11 +165,13 @@ s+='static const SVECTOR world_unique[]={'+''.join('{%d,%d,%d,0},'%v for v in un
 s+='static const unsigned short world_corner_ids[][3]={'+''.join('{'+','.join(str(lookup[tuple(map(int,v))]) for v in a)+'},' for a in tri)+'};\n'
 s+='#define WORLD_UNIQUE_COUNT %d\n'%len(unique)
 s+='#define WORLD_TRIANGLE_COUNT %d\n'%len(tri)
+s+='#define WORLD_CELL_COUNT %d\n'%len(cells)
+s+='static const short world_cells[][8]={'+''.join('{'+','.join(map(str,c))+'},' for c in cells)+'};\n'
 (P/'src/world_mesh.h').write_text(s)
 # Conservative vertical-wall proxies from steep triangles in this collision-
 # matched walkable mesh. Longest XZ edge plus the triangle's vertical interval.
 walls=set()
-for a in tri:
+for a in wall_source_tri:
  g=a.copy();g[:,1]=80-g[:,1]
  normal=np.cross(g[1]-g[0],g[2]-g[0])
  if 2*int(normal[1])**2 >= int(normal[0])**2+int(normal[2])**2:continue
@@ -169,8 +203,10 @@ for name in sorted(source_asset_files):
  matches=list(Path(args.data).rglob(name))
  if len(matches)!=1:raise RuntimeError('Cannot resolve source provenance file: '+name)
  path=matches[0];source_hashes[path.relative_to(args.data).as_posix()]=hashlib.sha256(path.read_bytes()).hexdigest()
+report['source_patch_triangles_before_render_partition']=patch_triangle_count
+report['render_cells']={'size_world_units':cell_size,'count':len(cells),'draw_radius_world_units':1280}
 report['source_files_sha256']=source_hashes
 report['converter_unitypy_version']=UnityPy.__version__
 (P/'reports/world_conversion.json').write_text(json.dumps(report,indent=2))
-(P/'assets/world_chunk_source.json').write_text(json.dumps({'report':report,'triangles':[a.tolist() for a in tri],'colors':[c.tolist() for c in colors],'heightfield':grid,'walls':walls}))
+(P/'assets/world_chunk_source.json').write_text(json.dumps({'report':report,'triangles':[a.tolist() for a in tri],'colors':[c.tolist() for c in colors],'heightfield':grid,'walls':walls,'render_cells':cells}))
 print('World triangles:',len(tri),'collision source:',len(collision),'spawn ground:',ground,'instances:',len(instances))
