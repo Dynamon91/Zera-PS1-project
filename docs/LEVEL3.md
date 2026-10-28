@@ -13,7 +13,9 @@ source units; this is an early terrain preview, not a complete level.
 Actual emulator captures show two different original areas, not a frame-matched
 fidelity comparison. The new controller-only 1600-video-frame scenario walks to
 **(500, 0, 0)** and finishes grounded, with zero automatic
-respawns. Host tests separately walk 500 world units in all four directions.
+respawns. Host tests separately walk 500 world units in all four directions. They also
+verify height selection at actual overlapping collider surfaces; the native
+walking route does not demonstrate a traversable underpass.
 
 ![Level3 after walking](screenshots/level3/level3_1599.png)
 
@@ -28,7 +30,11 @@ The preview title identifies level3, and its pause menu omits the six-token
 trial because that new test layout belongs to the level2 patch. The main
 character, animation, controls and audio are shared adaptations. Original relics,
 essences, checkpoints, lava hazards, enemies, level flow and saving are not active.
-The heightfield remains single-valued and capped at spawn+6 source units.
+Floor support now uses original uncapped collider triangles and selects the
+highest support below the player's step/landing ceiling. The legacy diagnostic
+heightfield remains single-valued; it no longer determines level3 player support.
+This supports stacked surfaces, but overhead capsule/ceiling collision is still
+absent and steep-wall proxies remain conservative.
 Only the source area's static environment root is converted; lava is omitted.
 
 ## Static batch recovery
@@ -50,6 +56,6 @@ python3 tools/convert_world.py "/path/to/Zera Myths Awaken_Data" --scene level3 
 python3 tools/check_level3_batch_source.py "/path/to/Zera Myths Awaken_Data"
 ```
 
-Native source tested: `cb15b29e9ad1323d836b839cdd992b5c6c77b88a`. HLE interpreter/software-GPU
+Native source tested: `7cdeb50ee99c84becbfb2be1607fc88f15a63882`. HLE interpreter/software-GPU
 verification is not retail BIOS or physical-hardware validation. Completion
 remains the provisional **29%** while this separate content preview is integrated.
