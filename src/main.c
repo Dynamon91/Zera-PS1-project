@@ -172,12 +172,12 @@ static SVECTOR pose[ANIM_VERTICES];
 static Animator animator;
 static Menu menu;
 static Trial trial;
-static volatile int facing=0;
+static volatile int facing=0,mascot_visible=1;
 static int camera_height=0,camera_distance=CAMERA_DISTANCE;
 static int camera_orbit_cooldown=0;
 static const char *names[]={"GROUND","JUMP","FALL","GLIDE","DASH"};
 static volatile int player_respawn_events=0,simulation_ticks=0,debug_input_x=0,debug_input_z=0,debug_movement_yaw=0,debug_actual_moving=0;
-static void reset_view(void){animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;}
+static void reset_view(void){animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;mascot_visible=1;}
 static int camera_view(int angle,int height,MATRIX *m){
  SVECTOR rot={280,angle,0,0};RotMatrix(&rot,m);
  int x=(-100*m->m[1][0]-CAMERA_DISTANCE*m->m[2][0])/4096;
@@ -323,6 +323,7 @@ int main(void){
   VECTOR target={player.x/FP,-camera_height,player.z/FP},turned;
   ApplyMatrixLV(&m,&target,&turned);
   camera_distance=camera_distance_step(camera_distance,fraction,paused);
+  mascot_visible=character_visible_step(mascot_visible,camera_distance);
   VECTOR pos={-turned.vx,100*camera_distance/CAMERA_DISTANCE-turned.vy,-turned.vz+camera_distance};TransMatrix(&m,&pos);gte_SetRotMatrix(&m);gte_SetTransMatrix(&m);
   for(int r=0;r<3;r++){for(int c=0;c<3;c++)clip_camera.m[r][c]=m.m[r][c];clip_camera.t[r]=m.t[r];}
   if(++view_stamp==0){for(int i=0;i<WORLD_UNIQUE_COUNT;i++)world_code_stamp[i]=0;view_stamp=1;}
@@ -354,7 +355,7 @@ int main(void){
    }
   }
   int x=player.x/FP,y=80-player.y/FP,z=player.z/FP;
-  for(int order=0;order<ZERA_FACE_COUNT;order++){
+  if(mascot_visible)for(int order=0;order<ZERA_FACE_COUNT;order++){
    int i=mascot_draw_order[order];
    const unsigned short *f=zera_faces[i];
    SVECTOR a=pose[f[0]],b=pose[f[1]],c=pose[f[2]];

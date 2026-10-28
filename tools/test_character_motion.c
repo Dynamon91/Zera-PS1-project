@@ -23,5 +23,20 @@ int main(void){
  assert(character_animation(GROUND,0)==0 && character_animation(GROUND,1)==1);
  assert(character_animation(JUMP,0)==2 && character_animation(FALL,1)==2);
  assert(character_animation(GLIDE,0)==3);
+ assert(character_visible_step(1,850)==1);
+ assert(character_visible_step(1,CHARACTER_HIDE_DISTANCE)==1);
+ assert(character_visible_step(1,CHARACTER_HIDE_DISTANCE-1)==0);
+ assert(character_visible_step(0,CHARACTER_SHOW_DISTANCE-1)==0);
+ assert(character_visible_step(0,CHARACTER_SHOW_DISTANCE)==1);
+ assert(character_visible_step(1,-10)==0);
+ int visible=1,changes=0;
+ for(int n=0;n<100;n++){
+  int next=character_visible_step(visible,CHARACTER_HIDE_DISTANCE+(n&1?1:-1));
+  changes+=next!=visible;visible=next;
+ }
+ assert(changes==1 && !visible);
+ visible=character_visible_step(visible,CHARACTER_SHOW_DISTANCE);
+ for(int n=0;n<100;n++)visible=character_visible_step(visible,CHARACTER_SHOW_DISTANCE+(n&1?1:-1));
+ assert(visible);
  return 0;
 }

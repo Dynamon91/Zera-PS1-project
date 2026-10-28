@@ -64,6 +64,10 @@ def make_package(root, output, source_commit, native_artifact=None):
                     relative = path.relative_to(root).as_posix()
                     if path in (output, temporary) or relative == "CHECKPOINT.json":
                         continue
+                    # An extracted checkpoint already contains this nested ZIP.
+                    # A supplied tested build replaces it once, below.
+                    if native_artifact is not None and relative == "native/Zera_PS1_WIP09_Native.zip":
+                        continue
                     if path.is_symlink():
                         raise ValueError(f"symlink is not supported: {relative}")
                     if path.suffix in {".pyc", ".pyo"}:

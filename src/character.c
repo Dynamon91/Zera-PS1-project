@@ -11,3 +11,7 @@ int character_facing_step(int facing,int x,int z,int yaw,int active){
 int character_animation(int state,int moved){
  return state==GLIDE?3:state!=GROUND?2:moved?1:0;
 }
+
+int character_visible_step(int visible,int distance){
+ return distance >= (visible?CHARACTER_HIDE_DISTANCE:CHARACTER_SHOW_DISTANCE);
+}

@@ -64,6 +64,20 @@ class PackageTests(unittest.TestCase):
             combined_status = verify_checkpoint(combined)
             self.assertEqual(combined_status["additional_native_preview"]["source_commit"], "b" * 40)
             self.assertIn("native/Zera_PS1_WIP09_Native.zip", combined_status["files"])
+            # Resuming an extracted WIP must replace its older nested build,
+            # rather than emit two members with the same archive name.
+            restored_native = root / "native/Zera_PS1_WIP09_Native.zip"
+            restored_native.parent.mkdir()
+            restored_native.write_bytes(b"older native archive")
+            make_package(root, combined, "a" * 40, native)
+            verify_checkpoint(combined)
+            with zipfile.ZipFile(combined) as zipped:
+                member = "zera_ps1/native/Zera_PS1_WIP09_Native.zip"
+                self.assertEqual(zipped.namelist().count(member), 1)
+                self.assertEqual(zipped.read(member), native.read_bytes())
+            restored_native.write_bytes(native.read_bytes())
+            make_package(root, combined, "a" * 40, restored_native)
+            verify_checkpoint(combined)
             output.unlink()
             (root / "disc/zera_wip08.bin").unlink()
             with self.assertRaisesRegex(ValueError, "missing checkpoint file"):
