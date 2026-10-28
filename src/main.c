@@ -40,11 +40,25 @@
 #include "audio.h"
 #include "trial.h"
 #include "pickup_mesh.h"
+#ifdef ZERA_LEVEL3_PREVIEW
+#include "../previews/level3/src/world_mesh.h"
+#define PREVIEW_TITLE "ZERA\nLEVEL3 PREVIEW"
+#define EXPLORE_TEXT "EXPLORE LEVEL3 PATCH"
+#define PAUSE_ITEMS 6
+#else
 #include "world_mesh.h"
+#define PREVIEW_TITLE "ZERA\nMYTHS AWAKEN"
+#define EXPLORE_TEXT "EXPLORE SPAWN AREA"
+#define PAUSE_ITEMS 7
+#endif
 #include "world.h"
 #include "camera.h"
 #include "clip.h"
+#ifdef ZERA_LEVEL3_PREVIEW
+#include "../previews/level3/src/world_texture.h"
+#else
 #include "world_texture.h"
+#endif
 
 // Length of the ordering table, i.e. the range Z coordinates can have, 0-15 in
 // this case. Larger values will allow for more granularity with depth (useful
@@ -216,14 +230,14 @@ static void draw_menu(void){
   ui_tile(24,42,272,160,14,22,36);ui_tile(22,40,276,164,100,74,110);return;
  }
  if(menu.screen==MENU_TITLE){
-  snprintf(text,sizeof(text),"ZERA\nMYTHS AWAKEN\n\n%s EXPLORE SPAWN AREA\n\n%s CONTROLS\n\n%s DIAGNOSTICS: %s\n\nCROSS SELECT   UP/DOWN MOVE",menu.selection==0?">":" ",menu.selection==1?">":" ",menu.selection==2?">":" ",menu.debug?"ON":"OFF");
+  snprintf(text,sizeof(text),PREVIEW_TITLE "\n\n%s " EXPLORE_TEXT "\n\n%s CONTROLS\n\n%s DIAGNOSTICS: %s\n\nCROSS SELECT   UP/DOWN MOVE",menu.selection==0?">":" ",menu.selection==1?">":" ",menu.selection==2?">":" ",menu.debug?"ON":"OFF");
   draw_text(&ctx,48,56,0,text);
   draw_text(&ctx,40,216,0,"PS1 ADAPTATION  WIP09 / PROTOTYPE");
   ui_tile(40,78+menu.selection*16,240,15,58,36,70);
  }else{
   const char *items[]={"RESUME","RESPAWN","CONTROLS","RETURN TO TITLE","DIAGNOSTICS","AUDIO","TEST: PICKUP TRIAL"};
   int used=snprintf(text,sizeof(text),"PAUSED\n\n");
-  for(int n=0;n<7;n++){
+  for(int n=0;n<PAUSE_ITEMS;n++){
    used+=snprintf(text+used,sizeof(text)-used,"%s %s%s%s\n\n",menu.selection==n?">":" ",items[n],n==4 || n==5?": ":"",n==4?(menu.debug?"ON":"OFF"):n==5?(menu.muted?"OFF":"ON"):"");
   }
   draw_text(&ctx,48,48,0,text);ui_tile(40,62+menu.selection*16,240,15,58,36,70);

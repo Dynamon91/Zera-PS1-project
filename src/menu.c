@@ -10,7 +10,11 @@ int menu_update(Menu *m,unsigned p){
   return 0;
  }
  if(m->screen==MENU_PAUSE && (p&(UI_BACK|UI_START))){m->screen=MENU_PLAY;return 0;}
+ #ifdef ZERA_LEVEL3_PREVIEW
+ int count=m->screen==MENU_TITLE?3:6;
+#else
  int count=m->screen==MENU_TITLE?3:7;
+#endif
  if(p&UI_UP)m->selection=(m->selection+count-1)%count;
  if(p&UI_DOWN)m->selection=(m->selection+1)%count;
  if(m->screen==MENU_TITLE && (p&UI_START))p|=UI_ACCEPT;

@@ -1,7 +1,11 @@
 #include <assert.h>
 #include "../src/clip.h"
 typedef struct {short vx,vy,vz,pad;} SVECTOR;
+#ifdef ZERA_LEVEL3_PREVIEW
+#include "../previews/level3/src/world_mesh.h"
+#else
 #include "../src/world_mesh.h"
+#endif
 int main(void){
  (void)world_colors;(void)world_tile;
  int end=0;

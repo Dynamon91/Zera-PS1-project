@@ -11,10 +11,14 @@ from UnityPy.helpers.MeshHelper import MeshHandler
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('data')
 parser.add_argument('--radius',type=float,default=16.0)
+parser.add_argument('--scene',choices=['level2','level3'],default='level2')
+parser.add_argument('--output-root',type=Path,help='Separate generated project root for a preview')
 args=parser.parse_args()
 if args.radius<=0 or abs(args.radius*80/40-round(args.radius*80/40))>1e-6:parser.error('radius must be positive and align to the 40-unit collision grid')
-P=Path(__file__).resolve().parents[1];E=UnityPy.load(args.data);F=next(f for f in E.files.values() if getattr(f,'name',None)=='level2')
-source_asset_files={'level2'}
+P=args.output_root or Path(__file__).resolve().parents[1]
+for folder in ('src','assets','reports'):(P/folder).mkdir(parents=True,exist_ok=True)
+E=UnityPy.load(args.data);F=next(f for f in E.files.values() if getattr(f,'name',None)==args.scene)
+source_asset_files={args.scene}
 cache={};meshcache={};tiles=[];tile_ids={};texture_names=[]
 def wm(t):
  id=t.object_reader.path_id
@@ -34,28 +38,42 @@ def meshdata(ptr):
  return meshcache[key]
 def transform(t,v):m=wm(t);return v@m[:3,:3].T+m[:3,3]
 def go_transform(go):return next(c.component.read() for c in go.m_Component if c.component.deref().type.name=='Transform')
-spawn=next(wm(o.read())[:3,3] for o in F.objects.values() if o.type.name=='Transform' and o.read().m_GameObject.read().m_Name=='_StartSpawnPoint')
+spawn=next(wm(o.read())[:3,3] for o in F.objects.values() if o.type.name=='Transform' and o.read().m_GameObject.read().m_Name.startswith('_StartSpawnPoint'))
 SCALE=80;R=args.radius;scene=[];collision=[];instances=[]
 for o in F.objects.values():
  if o.type.name not in ('MeshFilter','MeshCollider'):continue
  d=o.read();go=d.m_GameObject.read()
  if not d.m_Mesh.path_id:continue
  if o.type.name=='MeshCollider' and not go.m_Name.startswith('Walkable'):continue
- try:v,idx,col,mesh,uv=meshdata(d.m_Mesh);t=go_transform(go);v=transform(t,v)
- except Exception:continue
- if len(v)==0:continue
- if np.any(v[:,[0,2]].max(0)<spawn[[0,2]]-R) or np.any(v[:,[0,2]].min(0)>spawn[[0,2]]+R):continue
- root=t
+ t=go_transform(go);root=t
  while root.m_Father.path_id:root=root.m_Father.read()
- # Include original static environment, omitting actors, UI, water and effects.
- if o.type.name=='MeshFilter' and root.m_GameObject.read().m_Name not in ('Islands','Tutorial'):continue
+ renderer=None;batch_first=0;batch_count=0
  if o.type.name=='MeshFilter':
+  if root.m_GameObject.read().m_Name not in (('Islands','Tutorial') if args.scene=='level2' else ('DrearyValley',)):continue
+  if args.scene=='level3' and go.m_Name.startswith('Lava'):continue
   renderer=next((c.component.read() for c in go.m_Component if c.component.deref().type.name=='MeshRenderer'),None)
   if renderer is None or not renderer.m_Enabled:continue
-  if renderer.m_StaticBatchInfo.subMeshCount:raise RuntimeError('Static batched source requires separate conversion')
- added=0
- material_tiles=[]
- if o.type.name=='MeshFilter':
+  batch_first=renderer.m_StaticBatchInfo.firstSubMesh
+  batch_count=renderer.m_StaticBatchInfo.subMeshCount
+  if batch_count and renderer.m_StaticBatchRoot.path_id:
+   raise RuntimeError('Non-scene static batch root requires separate conversion')
+ v,idx,col,mesh,uv=meshdata(d.m_Mesh)
+ applied_matrix=np.eye(4) if batch_count else wm(t)
+ v=v@applied_matrix[:3,:3].T+applied_matrix[:3,3]
+ if len(v)==0:continue
+ selected=range(batch_first,batch_first+batch_count) if batch_count else range(len(mesh.m_SubMeshes))
+ if any(si>=len(mesh.m_SubMeshes) for si in selected):raise RuntimeError('Invalid static-batch submesh range')
+ selected_ids=[]
+ for si in selected:
+  sub=mesh.m_SubMeshes[si]
+  if sub.topology!=0:continue
+  start=sub.firstByte//(2 if mesh.m_IndexFormat==0 else 4)
+  selected_ids.extend(idx[start:start+sub.indexCount])
+ if not selected_ids:continue
+ bounds=v[selected_ids]
+ if np.any(bounds[:,[0,2]].max(0)<spawn[[0,2]]-R) or np.any(bounds[:,[0,2]].min(0)>spawn[[0,2]]+R):continue
+ added=0;material_tiles=[]
+ if renderer:
   for mp in renderer.m_Materials:
    material=mp.read();key=(mp.deref().assets_file.name,mp.path_id)
    source_asset_files.add(key[0])
@@ -65,15 +83,16 @@ for o in F.objects.values():
     im=tex.read().image.convert('RGB').resize((64,64)) if tex else Image.new('RGB',(64,64),'white')
     tile_ids[key]=len(tiles);tiles.append(im);texture_names.append(material.m_Name)
    material_tiles.append(tile_ids[key])
- for si,sub in enumerate(mesh.m_SubMeshes):
+ for local_si,si in enumerate(selected):
+  sub=mesh.m_SubMeshes[si]
   if sub.topology!=0:continue
   start=sub.firstByte//(2 if mesh.m_IndexFormat==0 else 4)
   for ids in idx[start:start+sub.indexCount].reshape(-1,3):
    a=v[ids]
    if np.any(a[:,[0,2]].max(0)<spawn[[0,2]]-R) or np.any(a[:,[0,2]].min(0)>spawn[[0,2]]+R):continue
    if o.type.name=='MeshCollider':collision.append(a)
-   else:scene.append((np.column_stack([a,uv[ids]]),col[ids,:3].mean(0),material_tiles[min(si,len(material_tiles)-1)]));added+=1
- if added:instances.append({'object':go.m_Name,'mesh':mesh.m_Name,'triangles_before_clipping':added,'source_file':d.m_Mesh.deref().assets_file.name,'mesh_id':d.m_Mesh.path_id,'transform_path_id':t.object_reader.path_id,'source_world_matrix':wm(t).tolist()})
+   else:scene.append((np.column_stack([a,uv[ids]]),col[ids,:3].mean(0),material_tiles[min(local_si,len(material_tiles)-1)]));added+=1
+ if added:instances.append({'object':go.m_Name,'mesh':mesh.m_Name,'triangles_before_clipping':added,'source_file':d.m_Mesh.deref().assets_file.name,'mesh_id':d.m_Mesh.path_id,'transform_path_id':t.object_reader.path_id,'source_world_matrix':applied_matrix.tolist(),'original_object_world_matrix':wm(t).tolist(),'static_batch_first_submesh':batch_first,'static_batch_submesh_count':batch_count,'source_world_bounds':[bounds.min(0).tolist(),bounds.max(0).tolist()]})
 collision=np.array(collision)
 def heights(x,z):
  a,b,c=collision[:,0],collision[:,1],collision[:,2]
@@ -156,7 +175,7 @@ for (cz,cx),items in sorted(buckets.items()):
                min(round(R*SCALE),cell_origin+(cx+1)*cell_size),
                min(round(R*SCALE),cell_origin+(cz+1)*cell_size),start,len(items),min(int(a[:,1].min()) for a,_,_,_ in items),max(int(a[:,1].max()) for a,_,_,_ in items)])
 assert len(tri)<6000,len(tri)
-s='/* Original level2 spawn-area geometry; clipped offline. */\n'
+s=f'/* Original {args.scene} spawn-area geometry; clipped offline. */\n'
 s+='static const unsigned char world_colors[][3]={\n'+''.join('{%d,%d,%d},\n'%tuple(c) for c in colors)+'};\n'
 s+='static const unsigned char world_uv[][6]={\n'+''.join('{'+','.join(map(str,u.flatten()))+'},\n' for u in uvs)+'};\n'
 s+='static const unsigned char world_tile[]={'+','.join(map(str,tile_indices))+'};\n'
@@ -197,7 +216,7 @@ clutwords=[clut[i]|(clut[i+1]<<16) for i in range(0,256,2)]
 (P/'src/world_texture.h').write_text('/* Original textures: 8-bit indexed 256x256 atlas + BGR555 CLUT. */\nstatic const uint32_t world_texture[]={'+','.join(hex(x) for x in words)+'};\nstatic const uint32_t world_clut[]={'+','.join(hex(x) for x in clutwords)+'};\n')
 s=('#define WORLD_N %d\n#define WORLD_STEP %d\n#define WORLD_ORIGIN (%d)\nstatic const short world_heights[WORLD_N][WORLD_N]={\n'%(N,STEP,ORIGIN))+''.join('{'+','.join(map(str,row))+'},\n' for row in grid)+'};\n'
 (P/'src/world_height.h').write_text(s)
-report={'scene':'level2','area':'original overworld spawn vicinity','spawn':spawn.tolist(),'ground_height':ground,'source_radius_units':R,'world_scale':SCALE,'render_triangles':len(tri),'texture_materials':texture_names,'texture_format':'8-bit indexed 256x256 atlas, 64x64 repeating tiles','source_collision_triangles':len(collision),'wall_proxies':len(walls),'instances':instances,'heightfield':{'size':N,'step':STEP,'origin':ORIGIN,'missing_sentinel':-32768},'limitations':['single-valued heightfield','conservative steep-triangle wall proxies; not full capsule/triangle collision','original main textures; custom Unity shader effects omitted','actors and effects omitted','heightfield samples capped at spawn height + 6 source units','not full original level']}
+report={'scene':args.scene,'area':'original bounded spawn vicinity','spawn':spawn.tolist(),'ground_height':ground,'source_radius_units':R,'world_scale':SCALE,'render_triangles':len(tri),'texture_materials':texture_names,'texture_format':'8-bit indexed 256x256 atlas, 64x64 repeating tiles','source_collision_triangles':len(collision),'wall_proxies':len(walls),'instances':instances,'heightfield':{'size':N,'step':STEP,'origin':ORIGIN,'missing_sentinel':-32768},'limitations':['single-valued heightfield','conservative steep-triangle wall proxies; not full capsule/triangle collision','original main textures; custom Unity shader effects omitted','actors and effects omitted', 'lava geometry and hazard behavior omitted','heightfield samples capped at spawn height + 6 source units','not full original level']}
 source_hashes={}
 for name in sorted(source_asset_files):
  matches=list(Path(args.data).rglob(name))

@@ -1,5 +1,9 @@
 #include "world.h"
+#ifdef ZERA_LEVEL3_PREVIEW
+#include "../previews/level3/src/world_height.h"
+#else
 #include "world_height.h"
+#endif
 int world_fall_limit(void){
  static int ready=0,limit;
  if(!ready){
@@ -27,7 +31,11 @@ int world_height(int x,int z,int *height){
  return 1;
 }
 #include "collision.h"
+#ifdef ZERA_LEVEL3_PREVIEW
+#include "../previews/level3/src/world_walls.h"
+#else
 #include "world_walls.h"
+#endif
 void world_move(int oldx,int oldz,int *x,int *z,int feet){
  int dx=*x-oldx,dz=*z-oldz,max=dx<0?-dx:dx,t=dz<0?-dz:dz;if(t>max)max=t;
  int steps=(max+7)/8;if(steps<1)steps=1;if(steps>16)steps=16;

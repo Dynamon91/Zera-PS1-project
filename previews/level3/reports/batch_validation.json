@@ -1,0 +1,18 @@
+{
+  "validation": "Independent collider-local mesh transformed by original object hierarchy vs scene-space static-batch render bounds",
+  "tolerance_source_units": 0.1,
+  "results": [
+    {
+      "object": "Walkable.002",
+      "collider_mesh_path_id": 186,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.04014837433999219
+    },
+    {
+      "object": "Walkable.001",
+      "collider_mesh_path_id": 133,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.027334404850066107
+    }
+  ]
+}

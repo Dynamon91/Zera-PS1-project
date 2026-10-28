@@ -91,7 +91,7 @@ core.retro_load_game.argtypes=[C.POINTER(Game)];core.retro_load_game.restype=C.c
 if not core.retro_load_game(C.byref(g)):raise RuntimeError('core rejected content')
 symbols={}
 trial_words=5
-mapfile=Path(sys.argv[2]).with_name('zera.map')
+mapfile=Path(sys.argv[2]).with_name(scenario.get('map_file','zera.map'))
 if mapfile.exists():
  for line in mapfile.read_text().splitlines():
   fields=line.split()

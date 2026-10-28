@@ -77,6 +77,7 @@ def make_package(root, output, source_commit, native_artifact=None):
                 # Keep the tested native build separate from the older disc/ reference.
                 data = Path(native_artifact).read_bytes()
                 with zipfile.ZipFile(native_artifact) as native:
+                    has_level3 = "docs/screenshots/level3/verification.json" in native.namelist()
                     if native.testzip() is not None:
                         raise ValueError("native artifact ZIP integrity failed")
                     check = json.loads(native.read("docs/screenshots/audio/verification.json"))
@@ -97,6 +98,21 @@ def make_package(root, output, source_commit, native_artifact=None):
                     "bin_sha256": digest, "validation": check["validation"],
                     "run": "Open build/zera_wip09.cue after extracting the native ZIP",
                 }
+                if has_level3:
+                    with zipfile.ZipFile(native_artifact) as native:
+                        level3 = json.loads(native.read("docs/screenshots/level3/verification.json"))
+                        level3_hash = hashlib.sha256(native.read("build/zera_level3_preview.bin")).hexdigest()
+                        if level3["bin_sha256"] != level3_hash or not level3["grounded"] or level3["automatic_respawns"] != 0:
+                            raise ValueError("level3 preview build/validation mismatch")
+                        if not native.read("build/zera_level3.exe").startswith(b"PS-X EXE"):
+                            raise ValueError("level3 preview lacks a PS-X executable")
+                        if '\"zera_level3_preview.bin\"' not in native.read("build/zera_level3_preview.cue").decode():
+                            raise ValueError("level3 CUE does not reference included BIN")
+                        manifest["additional_native_preview"]["level3_terrain_preview"] = {
+                            "source_commit": level3["source_commit"], "bin_sha256": level3_hash,
+                            "run": "Open build/zera_level3_preview.cue inside the same native ZIP",
+                            "status": "Bounded original level3 terrain; no original progression active",
+                        }
                 write_entry(archive, name, data)
             write_entry(archive, "CHECKPOINT.json", (json.dumps(manifest, indent=2, sort_keys=True) + "\n").encode())
         # CRC check before replacing an existing output archive.
