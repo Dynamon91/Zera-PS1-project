@@ -118,3 +118,20 @@ provide additional evidence. Resume uses the new camera-relative movement basis.
 This is one controlled scenario, not a guarantee for every corner.
 The previous WIP09 captures are retained in `docs/screenshots/wip09-before-orbit/`.
 The full-port estimate remains approximately 28%.
+
+## Audio usability increment
+
+A session-only AUDIO ON/OFF control is now available in the native pause menu.
+Music continues streaming while muted, effects and their tails are silenced,
+and the setting survives respawn/title transitions. Host menu regressions pass.
+The 1,200-frame native audio scenario verified mute and restore from real PCM:
+muted RMS 0.000, restored RMS 708.164. Source tested:
+`844fe689eed287cf328a7cd2e392d5d2db1b0ff4`. See `docs/AUDIO.md`.
+No memory-card persistence is claimed. The original content/progression scope
+is unchanged; the full-port estimate remains approximately 28%.
+
+The shared checkpoint can now carry the verified native artifact under `native/`,
+with separate build-source and binary-hash evidence in CHECKPOINT.json. Its
+original `disc/` directory stays WIP08; use the nested native ZIP for the new build.
+The package checks that the native BIN hash matches both wall and audio captures
+and that the included EXE has a PS-X header before adding it.

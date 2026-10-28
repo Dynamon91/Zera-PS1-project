@@ -17,7 +17,7 @@ REQUIRED = (
 )
 
 
-def make_package(root, output, source_commit):
+def make_package(root, output, source_commit, native_artifact=None):
     root, output = Path(root).resolve(), Path(output).resolve()
     if not re.fullmatch(r"[0-9a-f]{40}", source_commit):
         raise ValueError("source commit must be a full 40-character Git SHA")
@@ -73,6 +73,31 @@ def make_package(root, output, source_commit):
                         "size": len(data), "sha256": hashlib.sha256(data).hexdigest()
                     }
                     write_entry(archive, relative, data)
+            if native_artifact is not None:
+                # Keep the tested native build separate from the older disc/ reference.
+                data = Path(native_artifact).read_bytes()
+                with zipfile.ZipFile(native_artifact) as native:
+                    if native.testzip() is not None:
+                        raise ValueError("native artifact ZIP integrity failed")
+                    check = json.loads(native.read("docs/screenshots/audio/verification.json"))
+                    capture = json.loads(native.read("build/native-preview/capture.json"))
+                    digest = hashlib.sha256(native.read("build/zera_wip09.bin")).hexdigest()
+                    if check["bin_sha256"] != digest or capture["bin_sha256"] != digest:
+                        raise ValueError("native artifact build/capture hashes disagree")
+                    if capture["frames_run"] != 1600 or check["muted_rms"] >= 1 or check["restored_rms"] <= 10:
+                        raise ValueError("native artifact validation evidence failed")
+                    if not native.read("build/zera.exe").startswith(b"PS-X EXE"):
+                        raise ValueError("native artifact lacks a PS-X executable")
+                    if '"zera_wip09.bin"' not in native.read("build/zera_wip09.cue").decode():
+                        raise ValueError("native CUE does not reference the included BIN")
+                name = "native/Zera_PS1_WIP09_Native.zip"
+                manifest["files"][name] = {"size": len(data), "sha256": hashlib.sha256(data).hexdigest()}
+                manifest["additional_native_preview"] = {
+                    "archive": name, "source_commit": check["source_commit"],
+                    "bin_sha256": digest, "validation": check["validation"],
+                    "run": "Open build/zera_wip09.cue after extracting the native ZIP",
+                }
+                write_entry(archive, name, data)
             write_entry(archive, "CHECKPOINT.json", (json.dumps(manifest, indent=2, sort_keys=True) + "\n").encode())
         # CRC check before replacing an existing output archive.
         with zipfile.ZipFile(temporary) as archive:
@@ -88,10 +113,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-commit", required=True)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--native-artifact", type=Path, help="Optional verified GitHub native artifact ZIP")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
     output = args.output or root / "dist" / ARCHIVE_NAME
-    manifest = make_package(root, output, args.source_commit)
+    manifest = make_package(root, output, args.source_commit, args.native_artifact)
     print(json.dumps({"archive": str(output), "files": len(manifest["files"]),
                       "checkpoint": CHECKPOINT, "playable_build": "WIP08"}))
 

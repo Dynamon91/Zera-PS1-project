@@ -35,6 +35,21 @@ captures and recorded state. While moving, the existing pullback remains active.
 See the side-view comparison at the end of [NATIVE_COMPARISON.md](docs/NATIVE_COMPARISON.md).
 This does not expand level or original-progression coverage; the estimate remains ~28%.
 
+### Session audio control
+
+The new pause-menu **AUDIO: ON/OFF** control mutes music and effects while the
+CD/SPU stream continues. It survives respawn and return to title during the
+session; it is not saved to a memory card. The native 1,200-frame audio scenario
+passed: captured PCM RMS was 0.000 while muted and 708.164 after restoration.
+See [real screenshots and verification](docs/AUDIO.md).
+
+The updated checkpoint shared in this chat also includes
+`native/Zera_PS1_WIP09_Native.zip`. Extract that ZIP and open
+`build/zera_wip09.cue`, keeping its BIN alongside it, to run the new tested preview.
+The original `disc/` directory remains WIP08 as a reference. GitHub's automatic
+source-only packages omit this optional native ZIP; native artifacts are also
+available in the corresponding **Native PS1 preview** run.
+
 ## Download and resume this checkpoint
 
 The current downloadable package is `Zera_PS1_WIP09_Source_Checkpoint.zip`.
@@ -61,6 +76,7 @@ To reproduce a package from a clean checkout, run:
 ```
 python3 tools/test_package.py
 python3 tools/package_wip.py --source-commit "$(git rev-parse HEAD)"
+# Optional: add --native-artifact /path/to/downloaded-native-artifact.zip
 python3 tools/verify_checkpoint.py dist/Zera_PS1_WIP09_Source_Checkpoint.zip
 ```
 
@@ -159,8 +175,8 @@ track; it is an ordinary data file on the disc. Track restart is from the beginn
 with padding to a stream chunk boundary, not an authored seamless loop.
 Seven original effects are resident in SPU RAM: UI navigation/accept, jump, landing,
 dash, flap (on entering glide), and pickup. Voices 1-8 rotate for effects; voice 0 streams
-music. Music continues through menus at a lower volume. There is no audio setting
-or persistent volume option yet.
+music. Music continues through menus at a lower volume. The packaged WIP08 disc has no audio setting. Current native source adds the
+session-only AUDIO toggle described above; persistent volume settings remain pending.
 
 The stream driver `src/stream.c` and `src/stream.h` are copied from PSn00bSDK's
 MPL-2.0 cdstream example; `audio.c` adapts its disc feed pattern. Effects live above

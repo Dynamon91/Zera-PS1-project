@@ -49,6 +49,21 @@ class PackageTests(unittest.TestCase):
                     changed.writestr(name, b"modified" if name.endswith("src/main.c") else data)
             with self.assertRaisesRegex(ValueError, "does not match checkpoint"):
                 verify_checkpoint(damaged)
+            native = root / "dist/native.zip"
+            digest = hashlib.sha256(b"disc").hexdigest()
+            check = {"bin_sha256": digest, "muted_rms": 0, "restored_rms": 20,
+                     "source_commit": "b" * 40, "validation": "test fixture"}
+            with zipfile.ZipFile(native, "w") as zipped:
+                zipped.writestr("build/zera_wip09.bin", b"disc")
+                zipped.writestr("build/zera.exe", b"PS-X EXE")
+                zipped.writestr("build/zera_wip09.cue", 'FILE "zera_wip09.bin" BINARY')
+                zipped.writestr("build/native-preview/capture.json", json.dumps({"bin_sha256": digest, "frames_run": 1600}))
+                zipped.writestr("docs/screenshots/audio/verification.json", json.dumps(check))
+            combined = root / "dist/combined.zip"
+            make_package(root, combined, "a" * 40, native)
+            combined_status = verify_checkpoint(combined)
+            self.assertEqual(combined_status["additional_native_preview"]["source_commit"], "b" * 40)
+            self.assertIn("native/Zera_PS1_WIP09_Native.zip", combined_status["files"])
             output.unlink()
             (root / "disc/zera_wip08.bin").unlink()
             with self.assertRaisesRegex(ValueError, "missing checkpoint file"):
