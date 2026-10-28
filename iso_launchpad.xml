@@ -1,0 +1,8 @@
+<iso_project><track type="data">
+<identifiers system="PLAYSTATION" application="PLAYSTATION" volume="ZERA_LAUNCH" volume_set="ZERA_LAUNCH" publisher="HOMEBREW" data_preparer="PSN00BSDK"/>
+<directory_tree>
+<file name="SYSTEM.CNF" type="data" source="${PROJECT_SOURCE_DIR}/system.cnf"/>
+<file name="ZERA.EXE" type="data" source="zera_launchpad.exe"/>
+<file name="MUSIC.VAG" type="data" source="${PROJECT_SOURCE_DIR}/assets/audio/MUSIC.VAG"/>
+<dummy sectors="1024"/>
+</directory_tree></track></iso_project>

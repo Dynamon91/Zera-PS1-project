@@ -1,10 +1,18 @@
 #include "world.h"
 #ifdef ZERA_LEVEL3_PREVIEW
 #include "surface.h"
+#ifdef ZERA_LAUNCH_PREVIEW
+#include "../previews/launchpad/src/world_floors.h"
+#else
 #include "../previews/level3/src/world_floors.h"
 #endif
+#endif
 #ifdef ZERA_LEVEL3_PREVIEW
+#ifdef ZERA_LAUNCH_PREVIEW
+#include "../previews/launchpad/src/world_height.h"
+#else
 #include "../previews/level3/src/world_height.h"
+#endif
 #else
 #include "world_height.h"
 #endif
@@ -39,7 +47,11 @@ int world_height(int x,int z,int *height){
 }
 #include "collision.h"
 #ifdef ZERA_LEVEL3_PREVIEW
+#ifdef ZERA_LAUNCH_PREVIEW
+#include "../previews/launchpad/src/world_walls.h"
+#else
 #include "../previews/level3/src/world_walls.h"
+#endif
 #else
 #include "world_walls.h"
 #endif

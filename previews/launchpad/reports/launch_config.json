@@ -1,0 +1,39 @@
+{
+  "scene": "level3",
+  "component_path_id": 7246,
+  "source_report_sha256": "cbb0b3c31b49c1ad018f82d619878cb5b2a0fa4127e2da28ca5e1ee3760bf24c",
+  "physics_source_sha256": "6164a364e9bbb6ffce390cf14519b082b7847412886bef6afec2a98f80bde93e",
+  "physics_manager_path_id": 10,
+  "gravity_y": -30.0,
+  "travel_time": 2.159257411956787,
+  "travel_speed": 1.75,
+  "scale": 80,
+  "fractional_position_scale": 256,
+  "normalized_time_scale": 65536,
+  "simulation_hz": 30,
+  "start_fp": [
+    0,
+    -2703,
+    0
+  ],
+  "end_fp": [
+    47385,
+    485197,
+    152856
+  ],
+  "trigger_fp": [
+    0,
+    9175,
+    0
+  ],
+  "trigger_radius_fp": 61440,
+  "time_step_q16": 1770,
+  "arc_fp": 1432287,
+  "facing": 196,
+  "adaptations": [
+    "Triangle while grounded near the original companion target replaces unported Somersault/companion trigger",
+    "30 Hz integer trajectory; final endpoint clamped exactly before floor support selection",
+    "Kinematic flight ignores wall proxies, matching source kinematic intent; full original collision/state behavior is not ported",
+    "Existing jump/land effects and jump animation are placeholders for original boing/launch animations"
+  ]
+}

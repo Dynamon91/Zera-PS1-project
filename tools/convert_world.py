@@ -12,6 +12,7 @@ parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('data')
 parser.add_argument('--radius',type=float,default=16.0)
 parser.add_argument('--scene',choices=['level2','level3'],default='level2')
+parser.add_argument('--launchpad',type=int,help='Center a separate level3 preview on this original LaunchPad component')
 parser.add_argument('--output-root',type=Path,help='Separate generated project root for a preview')
 args=parser.parse_args()
 if args.radius<=0 or abs(args.radius*80/40-round(args.radius*80/40))>1e-6:parser.error('radius must be positive and align to the 40-unit collision grid')
@@ -38,18 +39,27 @@ def meshdata(ptr):
  return meshcache[key]
 def transform(t,v):m=wm(t);return v@m[:3,:3].T+m[:3,3]
 def go_transform(go):return next(c.component.read() for c in go.m_Component if c.component.deref().type.name=='Transform')
+launch_root=None
+if args.launchpad is not None:
+ if args.scene!='level3' or args.output_root is None:parser.error('launchpad requires level3 and a separate output root')
+ component=F.objects[args.launchpad].read(check_read=False)
+ script=component.m_Script.read()
+ if (script.m_Namespace,script.m_ClassName)!=('NewZera','LaunchPad'):raise ValueError('Not an original LaunchPad')
+ launch_root=go_transform(component.m_GameObject.read()).object_reader.path_id
 spawn=next(wm(o.read())[:3,3] for o in F.objects.values() if o.type.name=='Transform' and o.read().m_GameObject.read().m_Name.startswith('_StartSpawnPoint'))
+if launch_root is not None:spawn=wm(F.objects[launch_root].read())[:3,3]
 SCALE=80;R=args.radius;scene=[];collision=[];instances=[]
 for o in F.objects.values():
  if o.type.name not in ('MeshFilter','MeshCollider'):continue
  d=o.read();go=d.m_GameObject.read()
  if not d.m_Mesh.path_id:continue
- if o.type.name=='MeshCollider' and not go.m_Name.startswith('Walkable'):continue
  t=go_transform(go);root=t
  while root.m_Father.path_id:root=root.m_Father.read()
+ is_launch_object=root.object_reader.path_id==launch_root
+ if o.type.name=='MeshCollider' and not go.m_Name.startswith('Walkable') and not is_launch_object:continue
  renderer=None;batch_first=0;batch_count=0
  if o.type.name=='MeshFilter':
-  if root.m_GameObject.read().m_Name not in (('Islands','Tutorial') if args.scene=='level2' else ('DrearyValley',)):continue
+  if root.m_GameObject.read().m_Name not in (('Islands','Tutorial') if args.scene=='level2' else ('DrearyValley',)) and not is_launch_object:continue
   if args.scene=='level3' and go.m_Name.startswith('Lava'):continue
   renderer=next((c.component.read() for c in go.m_Component if c.component.deref().type.name=='MeshRenderer'),None)
   if renderer is None or not renderer.m_Enabled:continue
@@ -222,6 +232,9 @@ for name in sorted(source_asset_files):
  matches=list(Path(args.data).rglob(name))
  if len(matches)!=1:raise RuntimeError('Cannot resolve source provenance file: '+name)
  path=matches[0];source_hashes[path.relative_to(args.data).as_posix()]=hashlib.sha256(path.read_bytes()).hexdigest()
+if launch_root is not None:
+ report['launchpad_component_path_id']=args.launchpad
+ report['area']='original launchpad vicinity; dedicated traversal prototype'
 report['source_patch_triangles_before_render_partition']=patch_triangle_count
 report['render_cells']={'size_world_units':cell_size,'count':len(cells),'draw_radius_world_units':1280}
 report['source_files_sha256']=source_hashes

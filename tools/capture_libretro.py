@@ -96,7 +96,7 @@ if mapfile.exists():
  for line in mapfile.read_text().splitlines():
   fields=line.split()
   if len(fields)>=4 and fields[0]=='trial':trial_words=7 if int(fields[3],16)>=28 else 5
-  if len(fields)>=3 and fields[0] in ('player','camera_distance','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','debug_movement_yaw','debug_actual_moving','facing','mascot_visible','yaw','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
+  if len(fields)>=3 and fields[0] in ('player','camera_distance','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','debug_movement_yaw','debug_actual_moving','facing','mascot_visible','launch','yaw','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
 core.retro_get_memory_data.argtypes=[C.c_uint];core.retro_get_memory_data.restype=C.c_void_p
 core.retro_get_memory_size.argtypes=[C.c_uint];core.retro_get_memory_size.restype=C.c_size_t
 ram=core.retro_get_memory_data(2);ramsize=core.retro_get_memory_size(2)
@@ -117,6 +117,8 @@ for tick in range(run_frames):
   for name in ('audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','debug_movement_yaw','debug_actual_moving','facing','mascot_visible','yaw'):
    if name in symbols:row[name]=struct.unpack('<i',C.string_at(ram+symbols[name],4))[0]
   if 'audio_sfx_events' in symbols:row['sfx_events']=list(struct.unpack('<7i',C.string_at(ram+symbols['audio_sfx_events'],28)))
+  if 'launch' in symbols:
+   values=struct.unpack('<5i',C.string_at(ram+symbols['launch'],20));row.update(dict(zip(['launch_active','launch_time','launch_started','launch_completed','launch_cancelled'],values)))
   if 'trial' in symbols:
    values=struct.unpack('<'+str(trial_words)+'i',C.string_at(ram+symbols['trial'],trial_words*4));row.update(dict(zip(['trial_mask','trial_active','trial_count','trial_complete','trial_ticks','trial_best_ticks','trial_best_valid'],values)))
   observed.append(row)

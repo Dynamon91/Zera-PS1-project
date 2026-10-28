@@ -1,7 +1,9 @@
 #include <assert.h>
 #include "../src/clip.h"
 typedef struct {short vx,vy,vz,pad;} SVECTOR;
-#ifdef ZERA_LEVEL3_PREVIEW
+#ifdef ZERA_LAUNCH_PREVIEW
+#include "../previews/launchpad/src/world_mesh.h"
+#elif defined(ZERA_LEVEL3_PREVIEW)
 #include "../previews/level3/src/world_mesh.h"
 #else
 #include "../src/world_mesh.h"

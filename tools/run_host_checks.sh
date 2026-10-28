@@ -27,3 +27,8 @@ ASAN_OPTIONS=detect_leaks=0 "$check_dir/character"
 cc -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/character.c tools/test_character_motion.c -o "$check_dir/character_motion"
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/character_motion"
 printf 'Host checks passed\n'
+cc -DZERA_LEVEL3_PREVIEW -DZERA_LAUNCH_PREVIEW -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/launch.c src/player.c src/surface.c src/world.c src/collision.c tools/test_launch.c -o "$check_dir/launch"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/launch"
+cc -DZERA_LAUNCH_PREVIEW -Wall -Wextra -Werror -fsanitize=address,undefined src/clip.c tools/test_render_cells.c -o "$check_dir/launch_cells"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/launch_cells"
+printf 'Launch trajectory, landing, cancellation and render-cell checks passed\n'

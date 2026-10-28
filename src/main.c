@@ -43,7 +43,17 @@
 #include "audio.h"
 #include "trial.h"
 #include "pickup_mesh.h"
-#ifdef ZERA_LEVEL3_PREVIEW
+#ifdef ZERA_LAUNCH_PREVIEW
+#include "launch.h"
+#include "../previews/launchpad/src/launch_config.h"
+static Launch launch;
+#endif
+#ifdef ZERA_LAUNCH_PREVIEW
+#include "../previews/launchpad/src/world_mesh.h"
+#define PREVIEW_TITLE "ZERA\nLAUNCHPAD PROTOTYPE"
+#define EXPLORE_TEXT "EXPLORE TRAMPOLINE AREA"
+#define PAUSE_ITEMS 6
+#elif defined(ZERA_LEVEL3_PREVIEW)
 #include "../previews/level3/src/world_mesh.h"
 #define PREVIEW_TITLE "ZERA\nLEVEL3 PREVIEW"
 #define EXPLORE_TEXT "EXPLORE LEVEL3 PATCH"
@@ -57,7 +67,9 @@
 #include "world.h"
 #include "camera.h"
 #include "clip.h"
-#ifdef ZERA_LEVEL3_PREVIEW
+#ifdef ZERA_LAUNCH_PREVIEW
+#include "../previews/launchpad/src/world_texture.h"
+#elif defined(ZERA_LEVEL3_PREVIEW)
 #include "../previews/level3/src/world_texture.h"
 #else
 #include "world_texture.h"
@@ -177,7 +189,11 @@ static int camera_height=0,camera_distance=CAMERA_DISTANCE;
 static int camera_orbit_cooldown=0;
 static const char *names[]={"GROUND","JUMP","FALL","GLIDE","DASH"};
 static volatile int player_respawn_events=0,simulation_ticks=0,debug_input_x=0,debug_input_z=0,debug_movement_yaw=0,debug_actual_moving=0;
-static void reset_view(void){animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;mascot_visible=1;}
+static void reset_view(void){
+#ifdef ZERA_LAUNCH_PREVIEW
+launch_cancel(&launch);
+#endif
+animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;mascot_visible=1;}
 static int camera_view(int angle,int height,MATRIX *m){
  SVECTOR rot={280,angle,0,0};RotMatrix(&rot,m);
  int x=(-100*m->m[1][0]-CAMERA_DISTANCE*m->m[2][0])/4096;
@@ -231,6 +247,9 @@ static void draw_menu(void){
  char text[512];
  if(menu.screen==MENU_CONTROLS){
   draw_text(&ctx,48,58,0,"CONTROLS\n\nDPAD / LEFT STICK   MOVE\nCROSS              JUMP\nHOLD CROSS         GLIDE\nR1                 DASH\nL2 / R2            CAMERA\nL1                 RECENTER\nSTART              PAUSE\nSELECT             RESPAWN\n\nCROSS / CIRCLE     BACK");
+#ifdef ZERA_LAUNCH_PREVIEW
+  draw_text(&ctx,32,216,0,"TRIANGLE: LAUNCH NEAR TRAMPOLINE");
+#endif
   ui_tile(24,42,272,160,14,22,36);ui_tile(22,40,276,164,100,74,110);return;
  }
  if(menu.screen==MENU_TITLE){
@@ -281,7 +300,20 @@ int main(void){
   in.camera_c=rcos(movement_yaw);in.camera_s=rsin(movement_yaw);
   int oldx=player.x,oldz=player.z,respawned=0;
   int oldstate=player.state,olddash=player.dash_ticks;
-  if(!paused){simulation_ticks++;if(player_tick(&player,in)){reset_view();player_respawn_events++;respawned=1;}if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;}
+  if(!paused){
+   simulation_ticks++;
+#ifdef ZERA_LAUNCH_PREVIEW
+   if((pressed&PAD_TRIANGLE) && launch_begin(&launch,&player,&launch_config))facing=LAUNCH_FACING;
+   if(launch.active){
+    if(launch_tick(&launch,&player,&launch_config)){
+     int floor;
+     if(world_floor(player.x/FP,player.z/FP,player.y/FP+8,&floor) && floor*FP>=player.y-48*FP){player.y=floor*FP;player.state=GROUND;}
+    }
+   }else
+#endif
+   if(player_tick(&player,in)){reset_view();player_respawn_events++;respawned=1;}
+   if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;
+  }
   if(!paused){
    if(oldstate==GROUND && player.state==JUMP)audio_play(SFX_JUMP);
    if(oldstate!=GROUND && player.state==GROUND)audio_play(SFX_LAND);
@@ -292,6 +324,9 @@ int main(void){
   audio_update(menu.screen!=MENU_PLAY);
   int moved=!paused && !respawned && (player.x!=oldx || player.z!=oldz);
   debug_actual_moving=moved;
+  #ifdef ZERA_LAUNCH_PREVIEW
+  if(!launch.active)
+#endif
   facing=character_facing_step(facing,in.x,in.z,movement_yaw,!paused && !respawned);
   int desired=character_animation(player.state,moved);
   animator_update(&animator,desired,!paused);
@@ -382,6 +417,9 @@ int main(void){
     char text[256];snprintf(text,sizeof(text),"ZERA PS1 WIP09\n%s X:%d Y:%d Z:%d\nCLIP:%d BLEND:%d CAM:%d",names[player.state],x,player.y/FP,z,animator.clip,animator.blend_tick,camera_distance);
     draw_text(&ctx,8,8,0,text);
    }
+#ifdef ZERA_LAUNCH_PREVIEW
+   draw_text(&ctx,8,184,0,launch.active?"ORIGINAL LAUNCH ARC\nIN FLIGHT":launch_can_start(&launch,&player,&launch_config)?"TRIANGLE: LAUNCH\nPROTOTYPE ACTIVATION":launch.completed?"LANDING REACHED\nSELECT: RETURN TO PAD":"RETURN NEAR PAD TO LAUNCH");
+#endif
    if(trial.active){
     char status[192],best[40];int tenths=trial.ticks/3;
     if(trial.best_valid){int bt=trial.best_ticks/3;snprintf(best,sizeof(best),"BEST %d.%d S",bt/10,bt%10);}
