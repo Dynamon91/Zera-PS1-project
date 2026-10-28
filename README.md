@@ -63,6 +63,19 @@ See [actual fall/recovery screenshots and recorded state](docs/RESPAWN.md).
 This is a correction to provisional port behavior, not a recovered original
 checkpoint rule or additional level content. The estimate remains ~28%.
 
+### Pickup trial timing and best run
+
+The optional development trial now displays **SIM TIME** and **BEST**. Timing
+counts simulation updates at a nominal 30 Hz, not wall-clock time or measured FPS.
+The native test completed 6/6 pickups in 64 ticks (displayed as 2.1 simulation
+seconds), preserved that completed time through respawn, and kept the record
+when starting a fresh trial. Returning to title or starting new Explore clears
+it; there is no memory-card save. Pausing and completion freeze the run timer.
+
+See [actual completed/restarted-run screenshots and verification](docs/TRIAL.md).
+These timings, placements and scoring remain PS1 development content, not
+recovered original-game progression. The full-port estimate stays ~28%.
+
 ## Download and resume this checkpoint
 
 The current downloadable package is `Zera_PS1_WIP09_Source_Checkpoint.zip`.

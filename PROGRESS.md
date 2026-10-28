@@ -154,3 +154,21 @@ audio-toggle scenarios passed on the same build. See `docs/RESPAWN.md`.
 
 No new original-world geometry or authored progression was added. Full-port
 completion remains a provisional approximately 28%.
+
+## Optional trial timing increment
+
+The development pickup trial now has a simulation timer and best completed-run
+time. Best survives trial restarts and player respawns; title/new Explore clears
+it. Paused and completed runs do not advance time, slower runs retain the record
+and faster runs replace it. Host sanitizer tests cover those transitions.
+
+The current native build passed the wall-camera, audio-toggle, fall-recovery and
+1,650-frame trial-lifecycle scenarios. The trial captured 6/6 pickups at 64 ticks,
+then verified completed score/time surviving manual respawn, a fresh run retaining
+best, and return to title clearing it. Capture reads the trial structure size from
+the map to remain compatible with the older five-field WIP08 layout. See
+`docs/TRIAL.md` for source/build provenance and real screenshots.
+
+Time is nominal 30 Hz simulation time, not wall-clock or an FPS measurement.
+No new original-world or authored-progression coverage is claimed. The weighted
+full-port estimate remains approximately 28%.
