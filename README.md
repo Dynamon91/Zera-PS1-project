@@ -1,144 +1,99 @@
-# Zera PS1 adaptation — WIP09 source checkpoint
+# Zera PS1 adaptation — WIP09 checkpoint
 
-**Estimated full-port completion: approximately 28%.** This is a provisional
-engineering assessment of the complete game adaptation. See [PROGRESS.md](PROGRESS.md)
-for the weighted breakdown, evidence, remaining milestones, and build status.
+**Estimated full-port completion: approximately 29%.** This provisional weighted
+assessment covers the complete game adaptation, not the fraction of exported
+assets or elapsed development time. See [PROGRESS.md](PROGRESS.md).
 
-## Screenshot reali: prima e dopo
+## Latest original-world expansion
 
-Stesso percorso, stessa posizione del personaggio, frame 1300:
+The original Windows build's level2 scene was recovered again with its original
+transforms. The extraction radius grows from 16 to 32 source units: a 64×64
+source-unit square instead of 32×32. That is four times the extraction footprint,
+not four times the complete game's playable content. The globally clipped source
+patch grows from 591 to 910 triangles, with original Walkable.000 and Walkable.002,
+13 original main-texture materials and a 129×129 collision grid at unchanged spacing.
 
-| Prima — WIP08, camera 420 | Dopo — nuovo build WIP09, camera 152 |
+| Previous WIP08 patch | Expanded native patch |
 | --- | --- |
-| ![Prima WIP08 frame 1300](diagnostics/wall_walk/frame_1300.png) | ![Dopo WIP09 frame 1300](docs/screenshots/wip09/frame_1300.png) |
+| ![Before expansion](docs/screenshots/world/before.png) | ![After expansion](docs/screenshots/world/after.png) |
 
-Il nuovo build è stato compilato ed eseguito per 1.600 frame in PCSX-ReARMed HLE.
-La camera rispetta l'ostacolo più vicino; a questa distanza il personaggio riempie
-molto lo schermo. Questo limite di leggibilità resta da migliorare, senza
-spostare nuovamente la camera oltre la parete. Non sono nuovi livelli o nuova
-progressione originale.
+The new controller-only exploration run finishes at **(2207, -241, 0)**, grounded
+on recovered terrain beyond the old +/-1280 boundary, with no automatic respawn.
+The two versions follow the same scripted controller route; their trajectories
+and timing diverge, so this is not a frame-matched image-fidelity comparison.
+See [full world evidence and provenance](docs/WORLD.md).
 
-Vedi il [confronto completo con provenienza](docs/NATIVE_COMPARISON.md), la
-[galleria](docs/SCREENSHOTS.md) e il
-[build nativo con BIN/CUE e catture](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40649620714).
+Rendering uses 64 resident cells, local draw-distance and whole-cell frustum
+checks, plus on-demand shared-vertex classification. Offline subdivision produces
+3,588 render triangles; that subdivision is not extra authored content. Collision
+uses the unsplit recovered surface. Host tests check cell coverage, conservative
+rejection and a route to original ground outside the previous patch. Distant
+terrain may pop at cell boundaries; there is no fog or level-data streaming yet.
 
-### Latest camera increment
+The exploratory HLE capture observed approximately **13.9 simulation updates/s**
+over its active interval. This is scenario-specific emulated simulation pacing,
+not a hardware FPS certification. The 30-update target, full original-level flow,
+actors, custom shaders, authored progression and hardware validation remain unfinished.
 
-When stationary near an obstructing wall, the camera can now choose a clearer
-45-degree side view, with manual-input priority, pause freeze and a cooldown.
-The native wall scenario passed: at frame 1410 the player stays at the same
-coordinates while camera distance improves from 152 to 850 units. The pause
-menu covers the center of this checkpoint; the comparison retains the original
-captures and recorded state. While moving, the existing pullback remains active.
+## Current playable features and evidence
 
-[Latest native build and captures](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40689764638).
-See the side-view comparison at the end of [NATIVE_COMPARISON.md](docs/NATIVE_COMPARISON.md).
-This does not expand level or original-progression coverage; the estimate remains ~28%.
+| Feature | Current validation |
+| --- | --- |
+| Jump, glide, boost and terrain/wall movement | Sanitized host checks; native scenario coverage |
+| Close-wall camera and stationary side-view fallback | [Actual version comparison](docs/NATIVE_COMPARISON.md) |
+| Session audio ON/OFF without stopping the stream | [Recorded PCM and screenshots](docs/AUDIO.md) |
+| Terrain-relative fall recovery and view reset | [Input-only native recovery check](docs/RESPAWN.md) |
+| Optional six-token trial with simulation timer and best run | [Completion/respawn/restart/title checks](docs/TRIAL.md) |
+| Larger original terrain patch | [Grounded exploration outside the old boundary](docs/WORLD.md) |
 
-### Session audio control
+The optional trial placements, scoring and timing are new PS1 development content,
+not recovered original progression. Best time survives trial restarts/respawns and
+clears on title/new Explore. Timing uses nominal 30 Hz simulation updates, not wall
+clock. Audio settings and records are not saved to memory cards.
 
-The new pause-menu **AUDIO: ON/OFF** control mutes music and effects while the
-CD/SPU stream continues. It survives respawn and return to title during the
-session; it is not saved to a memory card. The native 1,200-frame audio scenario
-passed: captured PCM RMS was 0.000 while muted and 708.164 after restoration.
-See [real screenshots and verification](docs/AUDIO.md).
+## Download, run and resume
 
-The updated checkpoint shared in this chat also includes
-`native/Zera_PS1_WIP09_Native.zip`. Extract that ZIP and open
-`build/zera_wip09.cue`, keeping its BIN alongside it, to run the new tested preview.
-The original `disc/` directory remains WIP08 as a reference. GitHub's automatic
-source-only packages omit this optional native ZIP; native artifacts are also
-available in the corresponding **Native PS1 preview** run.
+The updated `Zera_PS1_WIP09_Source_Checkpoint.zip` shared in this chat contains
+current source, assets, tests, actual captures, progress status and per-file
+SHA-256 metadata. It also includes **`native/Zera_PS1_WIP09_Native.zip`**: extract
+that ZIP, then open **`build/zera_wip09.cue`** with its BIN alongside it to run the
+new tested preview. The original `disc/`, `preview/` and `diagnostics/` remain the
+WIP08 reference. The nested native artifact records its own built source revision
+and binary hash, separately from the current documentation/package revision.
 
-### Terrain-aware fall recovery
+GitHub Actions also publishes a native artifact with the build and real captures,
+and a source-only checkpoint after host checks. Artifacts expire after 90 days.
+The automatic source-only ZIP omits the optional native artifact; the checkpoint
+shared in this chat includes it. Native checks cover the wall camera, audio toggle,
+fall recovery, trial lifecycle and baseline/new-world exploration. HLE success does
+not establish retail-BIOS, PAL, physical-hardware or full-game compatibility.
 
-The new build places its fall safety plane at -4077 world units: 700 below the
-lowest valid sample of the recovered heightfield, excluding missing data.
-Host tests verify that valid low ground at -800 can be reached without an early
-reset. The native input-only fall scenario reaches sampled Y -3866, then records
-one automatic respawn with player at spawn and camera restored to distance 850 /
-height 0. Animation and camera reset together; no emulated RAM is edited.
-
-See [actual fall/recovery screenshots and recorded state](docs/RESPAWN.md).
-This is a correction to provisional port behavior, not a recovered original
-checkpoint rule or additional level content. The estimate remains ~28%.
-
-### Pickup trial timing and best run
-
-The optional development trial now displays **SIM TIME** and **BEST**. Timing
-counts simulation updates at a nominal 30 Hz, not wall-clock time or measured FPS.
-The native test completed 6/6 pickups in 64 ticks (displayed as 2.1 simulation
-seconds), preserved that completed time through respawn, and kept the record
-when starting a fresh trial. Returning to title or starting new Explore clears
-it; there is no memory-card save. Pausing and completion freeze the run timer.
-
-See [actual completed/restarted-run screenshots and verification](docs/TRIAL.md).
-These timings, placements and scoring remain PS1 development content, not
-recovered original-game progression. The full-port estimate stays ~28%.
-
-## Download and resume this checkpoint
-
-The current downloadable package is `Zera_PS1_WIP09_Source_Checkpoint.zip`.
-It contains current source, original assets, tests, the progress breakdown and
-an embedded `CHECKPOINT.json` recording the source commit and SHA-256 of every
-included file. **Its playable disc and captures remain WIP08.** WIP09 is a
-source checkpoint, not a newly built PS1 release.
-
-After unpacking, use `zera_ps1/` as the project root. Read `PROGRESS.md`, then
-run `sh tools/run_host_checks.sh`. Check a downloaded archive with:
+After unpacking use `zera_ps1/` as the project root, read PROGRESS.md and run:
 
 ```
+sh tools/run_host_checks.sh
+python3 tools/test_package.py
 python3 tools/verify_checkpoint.py /path/to/Zera_PS1_WIP09_Source_Checkpoint.zip
 ```
 
-GitHub Actions now creates a fresh ZIP after host and packaging checks pass
-for each push/pull request. Open the successful **Host checks** run under
-**Actions** and download its commit-labeled WIP source checkpoint artifact.
-GitHub artifacts expire after 90 days. A push generates its own package;
-the downloadable file shared in this chat is the checkpoint saved for this turn.
-
-To reproduce a package from a clean checkout, run:
+To reproduce a source package from a clean checkout:
 
 ```
-python3 tools/test_package.py
 python3 tools/package_wip.py --source-commit "$(git rev-parse HEAD)"
 # Optional: add --native-artifact /path/to/downloaded-native-artifact.zip
-python3 tools/verify_checkpoint.py dist/Zera_PS1_WIP09_Source_Checkpoint.zip
 ```
 
-The ZIP excludes build caches and earlier output packages. Packaging does not
-compile the game or change the full-port completion estimate. Verify the new
-source in a native PS1 build before replacing the WIP08 disc. When a tested
-new disc is available, update the package's explicit build status as well.
+The packager checks the native BIN against its wall/audio evidence and verifies
+the PS-X executable header and CUE reference. The original source game Data files
+are needed to reproduce scene conversion; they are not bundled as a Unity project.
+Use `--radius 32` for current terrain or `--radius 16` for the earlier extraction.
+Source-file hashes, mesh IDs, source transforms and conversion limits are recorded
+in `reports/world_conversion.json`.
 
-## Development after WIP08
+## WIP08 reference implementation details
 
-The source now detects camera rays running along a wall proxy and vertical rays
-on that proxy. Endpoint order and ray direction are handled, with Q12 entry
-rounded into the overlap interval. Ordinary crossing rays retain their behavior.
-
-The next camera correction removes the 420-unit distance floor that could override
-an obstruction. Pullback now follows the collision fraction immediately, including
-zero when the target itself is obstructed, and recovers at eight units per active
-simulation tick. Pausing prevents outward recovery. The world query now starts at
-the same target height used by the rendered camera, rather than 80 units above it.
-A pure C camera module makes the distance policy testable on the host.
-
-Host checks pass with address/undefined-behavior sanitizers. New regression cases
-cover close walls, pause/recovery, all 4,097 Q12 fractions, and pullback against the
-recovered wall proxies. The earlier parallel-ray correction also matched an
-independent exact-rational calculation in 12,000 cases. GitHub Actions runs the
-host suite on pushes and pull requests. The separate Native PS1 preview workflow has also compiled the updated source
-and completed the 1,600-frame wall scenario in the pinned HLE emulator; see the
-comparison and provenance above. Other scenarios have not been rerun on that build. Near the player, character faces can clip; sphere/ceiling
-collision and alternative orbit selection remain pending. Wall proxies are still
-conservative, and a ray is not a camera-volume collision test.
-
-**The files in `disc/`, `preview/` and `diagnostics/` are the original WIP08
-build and captures.** They include neither post-WIP08 source correction. A separate
-WIP09 native BIN/CUE and its new captures are available in the linked GitHub
-Actions artifact. That build passed the wall-scenario HLE smoke check; it has not
-replaced the packaged WIP08 disc or passed the full release-validation matrix.
+The following architecture and packaged capture descriptions document the retained
+WIP08 baseline. Current source differences and current build evidence are above.
 
 Native PSn00bSDK prototype using the recovered Zera mesh and four original
 animation clips. The renderer uses 411 integer vertex positions and 806 triangles.
@@ -213,7 +168,7 @@ streaming; its current environment is resident.
 
 This is not a completed conversion of the original game.
 
-## Run
+## Run the packaged WIP08 reference
 The build opens on a native title menu. Cross or Start selects the highlighted
 entry; Up/Down changes the selection. Explore starts the extracted spawn section.
 Controls opens the controller reference. Diagnostics toggles the in-game debug HUD
@@ -312,7 +267,7 @@ python tools/audit_unity.py /path/to/Data reports
 python tools/export_meshes.py /path/to/Data assets/recovered_meshes
 python tools/convert_character.py
 python tools/bake_animation.py /path/to/Data
-python tools/convert_world.py /path/to/Data
+python tools/convert_world.py /path/to/Data --radius 32
 python tools/convert_pickup.py /path/to/Data
 ```
 

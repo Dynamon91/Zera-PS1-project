@@ -38,7 +38,7 @@ def make_package(root, output, source_commit, native_artifact=None):
         "source_commit": source_commit,
         "playable_build": "WIP08",
         "source_changes_in_disc": False,
-        "full_port_estimate_percent": 28,
+        "full_port_estimate_percent": 29,
         "estimate_basis": "Provisional weighted assessment in PROGRESS.md",
         "status": "New source is host-tested; bundled PS1 disc is the older WIP08 build.",
         "resume": "Use zera_ps1/ as the project root; read PROGRESS.md and README.md first.",

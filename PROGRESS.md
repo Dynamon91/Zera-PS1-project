@@ -1,174 +1,118 @@
 # Zera PS1 project progress
 
-**Estimated completion of the full port: approximately 28%.**
+**Estimated full-port completion: approximately 29%.**
 
-Reviewed: 28 October 2026. Stage: playable prototype of a small original-world
-patch, with further source development. Source package: WIP09 source checkpoint.
-Playable checkpoint: WIP08.
+Reviewed: 28 October 2026. Stage: an expanded, playable original-world prototype.
+Current shared checkpoint includes the tested WIP09 native preview; `disc/` retains
+WIP08 as a reference. The estimate is provisional engineering judgment, with a
+rough 25–35% range. It is not a measure of exported-file count, playtime coverage,
+remaining calendar time or a statistical confidence interval.
 
-This is a provisional engineering estimate, with a rough judgment range of
-25–35%. It is not measured playtime coverage, percentage of source code copied,
-or a prediction of remaining calendar time. The weighting and partial credit
-below are subjective assessments based on the repository evidence. Revising
-scope or learning more about the original game may change the estimate.
+## Scope and weighted assessment
 
-## Scope and calculation
-
-100% means a complete PS1 adaptation of the original game's levels, authored
-progression and interactions, with persistent progress, usable presentation,
-and verified builds within PS1 constraints. The optional six-token development
-trial does not count as recovered original progression. Exporting an OBJ does
-not mean that object or level is integrated into the game.
-
-The estimate is credited points divided by 100 total scope points. Credit is
-partial where an existing implementation is limited or not fully validated.
+100% means a complete PS1 adaptation of the original levels, authored interactions
+and progression, with persistent progress, usable presentation and release validation
+within PS1 constraints. Raw OBJ exports and the optional development pickup trial
+do not count as ported original progression. Points are subjective partial credit
+based on the evidence below; scope discoveries may change the estimate.
 
 | Work area | Scope points | Credited points | Evidence and principal remaining work |
 | --- | ---: | ---: | --- |
-| Asset recovery and conversion pipeline | 10 | 8 | Inventory, 786 exported meshes, character animation and audio/world converters; scene semantics and fidelity still need recovery/verification. |
-| PS1 rendering and animation | 10 | 6 | Native renderer, clipping, textured terrain and four sampled animation clips; character overlays, shader adaptation, visual comparison and broader scenes remain. |
-| Player movement, collision and camera | 10 | 6 | Jump, glide, boost, terrain/wall movement and host-tested camera corrections; full-world collision, camera volume/ceiling handling, tight views and native validation remain. |
-| Full world and level flow | 25 | 2 | One bounded spawn patch; full levels, connections, props, visibility and streaming remain. |
-| Original gameplay and progression | 20 | 0 | Original authored collection/progression and other interactions are not ported. The optional trial is separate test content. |
-| Audio | 10 | 4 | One full streamed track and seven resident effects; broader original audio content, transitions/settings and drive/hardware checks remain. |
-| Menus and persistent saves | 5 | 1 | Title/pause/controls menus work; memory-card persistence and complete game UI remain. |
-| Release validation and performance | 10 | 1 | WIP08 HLE smoke captures and sanitized host checks; new native build, retail BIOS, PAL, stress/performance and hardware validation remain. |
-| **Total** | **100** | **28** | **Approximately 28% of the defined full-port scope.** |
+| Asset recovery and conversion pipeline | 10 | 8 | Original scene recovery, source hashes/transforms, 786 mesh exports and animation/audio converters; remaining scene semantics and fidelity verification. |
+| PS1 rendering and animation | 10 | 6 | Native textured renderer, clipping, four sampled character clips, local render cells and vertex-cache checks; overlays, shaders and performance remain incomplete. |
+| Movement, collision and camera | 10 | 6 | Jump/glide/boost, heightfield/wall movement, side-view fallback and terrain-aware respawn; overlapping floors, ceiling/camera-volume tests and broader usability remain. |
+| Full world and level flow | 25 | 3 | Radius-32 original scene patch, two walkable meshes and grounded native exploration beyond the old boundary; full levels, connections, actors, props and streaming remain. |
+| Original gameplay and progression | 20 | 0 | Original authored collection/progression and interactions remain unported. The timed trial is separate development content. |
+| Audio | 10 | 4 | One streamed track, seven effects and verified session mute; broader source content, transitions, persistent settings and hardware checks remain. |
+| Menus and persistent saves | 5 | 1 | Title/pause/controls, session audio and trial records; memory-card persistence and complete original UI remain. |
+| Release validation and performance | 10 | 1 | Sanitizer host checks and native HLE scenarios; retail BIOS, PAL, physical hardware, stress/memory checks and frame budget remain. |
+| **Total** | **100** | **29** | **Approximately 29% of the defined full-port scope.** |
 
-Small source fixes and additional tests do not automatically earn another
-percentage point. Increase credit when a listed capability reaches its
-acceptance evidence; do not equate GitHub upload completion with game completion.
+World/flow credit increases from 2 to 3 points because the newly recovered terrain
+is now integrated and traversable beyond the old cutoff. This is a bounded part
+of level2, not a complete level. Render subdivision and ZIP/upload work earn no
+extra original-content credit.
 
-## Current development increment
+## Latest world increment
 
-- Fixed parallel/vertical camera-ray overlap with wall proxies in source.
-- Removed the camera's 420-unit readability floor in source, so a close wall's
-  obstruction fraction can shorten the camera below that distance.
-- Aligned the collision ray origin with the rendered camera's target height.
-- Added host tests for close obstruction, immediate pullback, gradual recovery,
-  pause behavior, every Q12 fraction and integration with recovered wall data.
-- Added GitHub Actions host checks; the preceding commit passed its GitHub run.
+The original compiled Windows game's Data files were recovered again. The level2
+converter now supports an explicit radius while retaining original mesh transforms,
+main textures and vertex colors. It records source-file SHA-256 hashes, mesh IDs,
+transform path IDs and source-world matrices. No replacement environment layout
+was invented. The input is compiled Unity data, not a recovered Unity project or
+original C# source.
 
-The latest source passes the local ASan/UBSan host suite. The new camera tests
-exercise logic and recovered wall proxies, not the PS1 renderer. The earlier
-parallel-ray fix was additionally compared with 12,000 independent rational
-geometry cases. GitHub's separate native workflow now builds the updated source with the official
-PSn00bSDK 0.24 and runs the pinned emulator for the 1,600-frame wall scenario.
-That native build and capture succeeded. Source tested:
-`6bac3839b7f349a2cb96cffe7f654595b52ac8f0`. The downloadable native artifact includes
-BIN/CUE, EXE, ELF, map and actual screenshots. See `docs/NATIVE_COMPARISON.md` and
-`docs/screenshots/wip09/provenance.json` for the tested source and disc hash.
+| Measurement | Previous patch | Current patch |
+| --- | ---: | ---: |
+| Extraction radius, original source units | 16 | 32 |
+| Square extraction footprint | 32×32 | 64×64 |
+| Globally clipped patch triangles, before render-cell splitting | 591 | 910 |
+| Original walkable mesh instances | 1 | 2 |
+| Main-texture materials | 10 | 13 |
+| Heightfield dimensions | 65×65 | 129×129 |
+| Valid height samples | 4,225 | 13,380 |
 
-At frame 1300, WIP08 and WIP09 have identical recorded player coordinates. The
-camera distance changes from 420 to 152 units (minimum observed: 420 versus 151).
-The close view exposes a usability issue: the character fills much of the screen.
-Alternative orbit selection/near-camera presentation remains unfinished.
+The larger footprint is not a fourfold increase in whole-game completion. Rendering
+is partitioned into 64 cells (640 world units each), with a local draw radius and
+whole-cell frustum rejection. There are 3,588 render triangles after subdivision;
+that extra subdivision is not extra authored geometry. Shared vertices are classified
+on demand. Host tests verify cell coverage, rejected-cell safety with the full clipper,
+and traversal of recovered floor at X>=2200. Collision proxies remain derived from
+the unsplit surface; all data is still resident, not streamed.
 
-Only this wall scenario has been rerun on the native WIP09 build; the complete
-menu/trial/audio/retail-BIOS/hardware matrix remains pending. `disc/`, `preview/`
-and `diagnostics/` retain WIP08. The source ZIP includes the new screenshots but
-its playable disc remains WIP08; the new native build is a separate GitHub artifact.
+The 4,800-frame native exploration run ends at **(2207, -241, 0)**, grounded on the
+recovered heightfield beyond the former +/-1280 boundary, with zero automatic
+respawns. The WIP08 reference and new version run the same controller scenario,
+but trajectories/timing diverge; the images are not a same-position fidelity claim.
+See [WORLD.md](docs/WORLD.md) and `docs/screenshots/world/verification.json`.
 
-## Package continuity
+The exploratory HLE capture observed approximately **13.9 simulation updates/s**
+in its active interval (1,033 updates over 4,469 emulated video frames at 60 Hz).
+This is scenario-specific simulation pacing, not physical-hardware FPS. The
+30-update target is not established. Performance profiling and further optimization
+remain a release requirement. Draw-distance popping, affine texture distortion,
+conservative wall proxies, single-valued heightfield limitations and the spawn+6
+source-unit height cap remain. Actors, water/effects, custom shaders and full-level
+flow are not included.
 
-WIP09 source checkpoints include the latest source and the WIP08 playable disc,
-with an embedded commit reference and per-file SHA-256 manifest. A deterministic
-packaging tool and integrity verifier are included. Successful GitHub checks
-produce a downloadable package for that commit; artifacts expire after 90 days.
-Packaging and upload work earn no extra full-port credit: the estimate remains
-approximately 28%. See the README for download and resume instructions.
+## Other implemented prototype behavior
+
+- Camera pullback respects close obstacles; stationary fallback probes two side
+  views with manual-input priority, pause freeze and cooldown.
+- Terrain safety plane lies 700 units below the lowest valid source height sample
+  (-4077 for this patch), excluding missing data. Automatic respawn resets view,
+  facing, orbit cooldown and animation. Host tests include valid ground at -800.
+- Session audio ON/OFF silences music/effects while CD/SPU streaming continues;
+  native PCM verifies silence and restoration. It is not a memory-card setting.
+- Optional six-token test trial displays nominal simulation time and best completed
+  run. Respawn preserves score/time, restart preserves best, and title/new Explore
+  clears it. Records and audio settings are session-only. Trial content is not
+  recovered authored progression.
+
+## Validation and deliverables
+
+The current build passed host ASan/UBSan checks and native HLE flows for wall camera,
+audio toggle, fall recovery outside the expanded bounds, trial lifecycle, and
+baseline/new-patch exploration. Captures use the pinned PCSX-ReARMed software core
+and HLE BIOS; controller feedback reads game RAM but never edits it. Reports and
+screenshots record the tested source revision and disc hash.
+
+The shared ZIP includes current source and the tested native artifact under
+`native/`, with per-file SHA-256 checks. The native artifact has its own built-source
+revision; documentation/package commits may be newer without runtime changes.
+`disc/`, `preview/` and `diagnostics/` retain WIP08. Source-only GitHub packages omit
+the optional native ZIP; native artifacts are separately available in Actions.
 
 ## Next acceptance milestones
 
-1. **Updated native checkpoint:** build the current source with PSn00bSDK 0.24,
-   the current native wall-preview build has compiled and cold-booted in HLE.
-   Complete executable/disc structure and memory checks, then rerun the menu,
-   movement, trial and audio scenarios. Confirm close-camera usability before
-   promoting the new image into the packaged playable checkpoint.
-2. **Camera usability:** assess near-camera character clipping, improve camera
-   volume/ceiling handling and select alternative views in tight corners.
-   Confirm results in emulator captures before increasing camera credit.
-3. **Original-world expansion:** recover and verify scene placements and
-   transitions beyond the spawn patch, implement a traversable connected area,
-   and compare the route/geometry with source-game evidence. Raw meshes alone
-   do not satisfy this milestone.
-4. **Original progression:** establish source-authored interaction and reward
-   rules, implement a verified objective and exit, then preserve that progress
-   through memory-card saving. Do not substitute trial placements as originals.
-5. **Broader release checks:** expand level/audio coverage and stress testing,
-   validate retail BIOS/PAL behavior, profile memory/frame budget and test on
-   hardware before awarding release readiness.
+1. Profile native CPU/GPU cost and memory, improve the 30-update budget, and verify
+   draw-cell transitions and near-camera character readability across more routes.
+2. Recover further original scene placements and connected areas, then original
+   transitions and authored interactions. Do not treat extra raw meshes as levels.
+3. Implement and verify original objective/reward/exit rules, then preserve progress
+   through memory-card saving. Keep the development trial separately labeled.
+4. Expand original audio/animation/UI coverage and run the full gameplay matrix.
+5. Validate retail BIOS/PAL behavior, stress cases and physical hardware before
+   claiming a release-ready conversion.
 
-Update this file and the README estimate together after reviewing milestone
-evidence. Keep source-tested work separate from playable-build validation.
-
-## Current camera increment
-
-A stationary camera fallback now probes two 45-degree side views when the
-current wall clearance is under half the normal distance. It chooses a side
-only for a substantial clearance gain and waits 30 active ticks before another
-change. Movement input, manual camera controls and pause prevent automatic
-repositioning. This avoids changing the movement basis while walking.
-Host regression checks and the new native 1,600-frame HLE wall run pass.
-Tested source: `7e68ed9421239ee5e9f305e0770733cc39fb55c8`. At frame 1410,
-player coordinates match the pre-orbit WIP09 capture, while camera distance
-changes from 152 to 850 units. The pause menu obscures the center of that
-screenshot; the capture state, surrounding view and subsequent gameplay frame
-provide additional evidence. Resume uses the new camera-relative movement basis.
-This is one controlled scenario, not a guarantee for every corner.
-The previous WIP09 captures are retained in `docs/screenshots/wip09-before-orbit/`.
-The full-port estimate remains approximately 28%.
-
-## Audio usability increment
-
-A session-only AUDIO ON/OFF control is now available in the native pause menu.
-Music continues streaming while muted, effects and their tails are silenced,
-and the setting survives respawn/title transitions. Host menu regressions pass.
-The 1,200-frame native audio scenario verified mute and restore from real PCM:
-muted RMS 0.000, restored RMS 708.164. Source tested:
-`844fe689eed287cf328a7cd2e392d5d2db1b0ff4`. See `docs/AUDIO.md`.
-No memory-card persistence is claimed. The original content/progression scope
-is unchanged; the full-port estimate remains approximately 28%.
-
-The shared checkpoint can now carry the verified native artifact under `native/`,
-with separate build-source and binary-hash evidence in CHECKPOINT.json. Its
-original `disc/` directory stays WIP08; use the nested native ZIP for the new build.
-The package checks that the native BIN hash matches both wall and audio captures
-and that the included EXE has a PS-X header before adding it.
-
-## Terrain-aware recovery increment
-
-The spawn-relative -700 safety plane was above some valid recovered heightfield
-samples. Current source derives the plane from the lowest valid sample minus
-700, excluding the -32768 missing-data sentinel and caching the result. For
-this patch the limit is -4077. Host tests check landing on valid low ground at
--800 and recovery when falling through the safety plane.
-
-`player_tick` now reports automatic respawn so the main loop can reset the view,
-turning, orbit cooldown and animation together. A volatile diagnostic counter is
-read by the capture tool; the tool never edits game RAM. The native controller
-scenario uses read-only Y feedback to release movement after falling starts.
-Its 2,400-frame run sampled Y -3866 and one automatic respawn, then recorded the
-player at spawn and camera distance 850 / height 0. The existing wall-camera and
-audio-toggle scenarios passed on the same build. See `docs/RESPAWN.md`.
-
-No new original-world geometry or authored progression was added. Full-port
-completion remains a provisional approximately 28%.
-
-## Optional trial timing increment
-
-The development pickup trial now has a simulation timer and best completed-run
-time. Best survives trial restarts and player respawns; title/new Explore clears
-it. Paused and completed runs do not advance time, slower runs retain the record
-and faster runs replace it. Host sanitizer tests cover those transitions.
-
-The current native build passed the wall-camera, audio-toggle, fall-recovery and
-1,650-frame trial-lifecycle scenarios. The trial captured 6/6 pickups at 64 ticks,
-then verified completed score/time surviving manual respawn, a fresh run retaining
-best, and return to title clearing it. Capture reads the trial structure size from
-the map to remain compatible with the older five-field WIP08 layout. See
-`docs/TRIAL.md` for source/build provenance and real screenshots.
-
-Time is nominal 30 Hz simulation time, not wall-clock or an FPS measurement.
-No new original-world or authored-progression coverage is claimed. The weighted
-full-port estimate remains approximately 28%.
+Update README and this weighted estimate together when milestone evidence changes.
