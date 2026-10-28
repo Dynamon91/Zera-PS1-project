@@ -1,7 +1,7 @@
 {
-  "source_commit": "536912e6344d1986e223a1f2cc13f56be1bc56db",
-  "bin_sha256": "0a44eb891d3d47edd70e6f7bcbbbb78c5327e3e73a4e0941b44132fa60810c1a",
-  "minimum_sampled_y_world_units": -3615,
+  "source_commit": "2e20f8b592078ab27d4d4c2737a36cfa23871c1b",
+  "bin_sha256": "7e8a65896a9bf8cd4ba5fc41befeaec184f6f7e5342b7a6019cfd1ffd336c12e",
+  "minimum_sampled_y_world_units": -3375,
   "automatic_respawns": 1,
   "final_camera_distance": 850,
   "final_camera_height": 0,

@@ -1,6 +1,6 @@
 {
-  "source_commit": "536912e6344d1986e223a1f2cc13f56be1bc56db",
-  "bin_sha256": "e034a606f4043b45a198cdda106bcc1fb6e3dd918b346a1aad8508f3ba76fbec",
+  "source_commit": "2e20f8b592078ab27d4d4c2737a36cfa23871c1b",
+  "bin_sha256": "287a1b50f64bb4de480e590ab9c6370bcd1225d2d0add8bb7a3916f6e8eb3b2b",
   "scene": "level3",
   "final_position": [
     500,

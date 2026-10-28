@@ -1,0 +1,23 @@
+{
+  "source_commit": "2e20f8b592078ab27d4d4c2737a36cfa23871c1b",
+  "bin_sha256": "7e8a65896a9bf8cd4ba5fc41befeaec184f6f7e5342b7a6019cfd1ffd336c12e",
+  "frames": 2200,
+  "animation_clips_observed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "player_states_observed": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "automatic_respawns": 0,
+  "packed_vertices": 412,
+  "triangles": 806,
+  "textured_spot_faces": 96,
+  "textured_eye_faces": 16,
+  "validation": "Input-only HLE animation/material smoke test; not an original-Unity visual fidelity certification"
+}

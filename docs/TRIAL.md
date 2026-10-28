@@ -3,7 +3,7 @@
 The optional development trial now displays SIM TIME and BEST. Time counts
 simulation updates at a nominal 30 Hz, not wall-clock time or measured FPS.
 New native run: **6/6 pickups**, best **2.0 simulation seconds**
-(61 ticks). Source: `536912e6344d1986e223a1f2cc13f56be1bc56db`.
+(61 ticks). Source: `2e20f8b592078ab27d4d4c2737a36cfa23871c1b`.
 
 | Completed run | Fresh run with best preserved |
 | --- | --- |

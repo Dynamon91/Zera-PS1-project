@@ -56,6 +56,6 @@ python3 tools/convert_world.py "/path/to/Zera Myths Awaken_Data" --scene level3 
 python3 tools/check_level3_batch_source.py "/path/to/Zera Myths Awaken_Data"
 ```
 
-Native source tested: `536912e6344d1986e223a1f2cc13f56be1bc56db`. HLE interpreter/software-GPU
+Native source tested: `2e20f8b592078ab27d4d4c2737a36cfa23871c1b`. HLE interpreter/software-GPU
 verification is not retail BIOS or physical-hardware validation. Completion
 remains the provisional **29%** while this separate content preview is integrated.

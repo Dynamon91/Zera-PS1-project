@@ -1,12 +1,12 @@
 # Terrain-relative fall recovery
 
-Native source: `536912e6344d1986e223a1f2cc13f56be1bc56db`.
+Native source: `2e20f8b592078ab27d4d4c2737a36cfa23871c1b`.
 
 The safety plane is now 700 units below the lowest valid heightfield sample
 (-4077 in this recovered patch), instead of -700 relative to spawn.
 Host tests check landing on valid ground at -800 and reject missing samples
 when deriving the limit. Native input-only testing checks the off-map path:
-minimum sampled Y **-3615**, one automatic respawn, then player at spawn and
+minimum sampled Y **-3375**, one automatic respawn, then player at spawn and
 camera restored to distance 850 / height 0. Movement is released using read-only Y feedback after the fall starts. No game RAM is edited.
 
 | Falling | Recovered at spawn |

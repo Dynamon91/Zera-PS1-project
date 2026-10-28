@@ -1,8 +1,8 @@
 {
-  "source_commit": "536912e6344d1986e223a1f2cc13f56be1bc56db",
-  "bin_sha256": "0a44eb891d3d47edd70e6f7bcbbbb78c5327e3e73a4e0941b44132fa60810c1a",
+  "source_commit": "2e20f8b592078ab27d4d4c2737a36cfa23871c1b",
+  "bin_sha256": "7e8a65896a9bf8cd4ba5fc41befeaec184f6f7e5342b7a6019cfd1ffd336c12e",
   "muted_rms": 0.0,
-  "restored_rms": 709.1572812915648,
+  "restored_rms": 709.5569211513207,
   "units": "signed 16-bit PCM amplitude",
   "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
   "validation": "HLE emulator recording; no hardware test"
