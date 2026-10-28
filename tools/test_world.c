@@ -2,7 +2,15 @@
 #include "../src/world.h"
 #include "../src/world_walls.h"
 #include "../src/camera.h"
+#include "../src/world_height.h"
 int main(void){
+ int lowest=0;
+ for(int iz=0;iz<WORLD_N;iz++)for(int ix=0;ix<WORLD_N;ix++){
+  int value=world_heights[iz][ix];
+  if(value!=-32768 && value<lowest)lowest=value;
+ }
+ assert(world_fall_limit()==lowest-700);
+ assert(world_fall_limit()<-700);
  int h=123;assert(world_height(0,0,&h) && h==0);
  assert(!world_height(-5000,0,&h));assert(!world_height(0,5000,&h));
  int x=0,z=0;

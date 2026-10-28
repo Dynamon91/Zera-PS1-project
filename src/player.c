@@ -2,7 +2,7 @@
 #include "world.h"
 void player_init(Player *p){p->x=p->y=p->z=p->vy=p->dash_ticks=0;p->state=GROUND;}
 /* Provisional tuning at 30 Hz, not recovered original constants. */
-void player_tick(Player *p,Input i){
+int player_tick(Player *p,Input i){
  int speed=10*FP,ox=p->x,oz=p->z,oy=p->y;
  if(i.jump_pressed && p->state==GROUND){p->vy=18*FP;p->state=JUMP;}
  if(i.dash_pressed && !p->dash_ticks)p->dash_ticks=8;
@@ -31,5 +31,6 @@ void player_tick(Player *p,Input i){
   p->y+=p->vy;
   if(hasfloor && p->vy<=0 && oy>=height-8*FP && p->y<=height){p->y=height;p->vy=0;p->state=GROUND;}
  }
- if(p->y < -700*FP)player_init(p);
+ if(p->y < world_fall_limit()*FP){player_init(p);return 1;}
+ return 0;
 }

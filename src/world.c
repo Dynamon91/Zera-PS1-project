@@ -1,5 +1,17 @@
 #include "world.h"
 #include "world_height.h"
+int world_fall_limit(void){
+ static int ready=0,limit;
+ if(!ready){
+  int lowest=0;
+  for(int z=0;z<WORLD_N;z++)for(int x=0;x<WORLD_N;x++){
+   int height=world_heights[z][x];
+   if(height!=-32768 && height<lowest)lowest=height;
+  }
+  limit=lowest-700;ready=1;
+ }
+ return limit;
+}
 int world_height(int x,int z,int *height){
  x-=WORLD_ORIGIN;z-=WORLD_ORIGIN;
  if(x<0 || z<0 || x>=(WORLD_N-1)*WORLD_STEP || z>=(WORLD_N-1)*WORLD_STEP)return 0;

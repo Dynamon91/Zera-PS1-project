@@ -1,11 +1,12 @@
 #include <assert.h>
 #include "../src/player.h"
 static int terrain;
+int world_fall_limit(void){return terrain==4?-1500:-700;}
 void world_move(int ox,int oz,int *x,int *z,int feet){(void)ox;(void)oz;(void)x;(void)z;(void)feet;}
 int world_height(int x,int z,int *h){
  (void)z;
  if(terrain==3 && x>40)return 0;
- *h=terrain==1?x/2:terrain==2 && x>0?100:0;
+ *h=terrain==4?-800:terrain==1?x/2:terrain==2 && x>0?100:0;
  return 1;
 }
 int main(void){
@@ -25,6 +26,13 @@ int main(void){
  for(int n=0;n<6;n++)player_tick(&p,(Input){.x=1});
  assert(p.state==FALL && p.y<0);
  for(int n=0;n<100;n++)player_tick(&p,(Input){0});
+ assert(p.state==GROUND && p.x==0 && p.y==0);
+ /* Valid low ground must not trigger the old spawn-relative safety plane. */
+ terrain=4;player_init(&p);
+ for(int n=0;n<100;n++)player_tick(&p,(Input){0});
+ assert(p.state==GROUND && p.y==-800*FP);
+ terrain=3;p.x=100*FP;p.y=-699*FP;p.state=FALL;p.vy=-10*FP;
+ assert(player_tick(&p,(Input){0})==1);
  assert(p.state==GROUND && p.x==0 && p.y==0);
  return 0;
 }

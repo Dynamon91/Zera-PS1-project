@@ -4,4 +4,6 @@
 int world_height(int x,int z,int *height);
 void world_move(int oldx,int oldz,int *x,int *z,int feet);
 int world_camera_fraction(int x,int y,int z,int dx,int dy,int dz);
+/* Safety plane below the lowest valid recovered heightfield sample. */
+int world_fall_limit(void);
 #endif

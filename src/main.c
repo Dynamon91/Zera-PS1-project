@@ -157,6 +157,8 @@ static Trial trial;
 static int facing=0,camera_height=0,camera_distance=CAMERA_DISTANCE;
 static int camera_orbit_cooldown=0;
 static const char *names[]={"GROUND","JUMP","FALL","GLIDE","DASH"};
+static volatile int player_respawn_events=0;
+static void reset_view(void){animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;}
 static int camera_view(int angle,int height,MATRIX *m){
  SVECTOR rot={280,angle,0,0};RotMatrix(&rot,m);
  int x=(-100*m->m[1][0]-CAMERA_DISTANCE*m->m[2][0])/4096;
@@ -239,7 +241,7 @@ int main(void){
   if(before!=MENU_PLAY && (ui&(UI_UP|UI_DOWN)) && menu.selection!=previous_selection)audio_play(SFX_UI_MOVE);
   if(ui&(UI_ACCEPT|UI_BACK|UI_START))if(before!=MENU_PLAY || menu.screen!=MENU_PLAY)audio_play(SFX_UI_ACCEPT);
   if(before==MENU_PLAY && menu.screen==MENU_PLAY && (pressed&PAD_SELECT))action|=MENU_RESET;
-  if(action&MENU_RESET){player_init(&player);animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;}
+  if(action&MENU_RESET){player_init(&player);reset_view();}
   if(action&MENU_TRIAL)trial_start(&trial);
   else if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))trial_clear(&trial);
   int paused=menu.screen!=MENU_PLAY || before!=MENU_PLAY || (action&MENU_RESET);
@@ -250,7 +252,7 @@ int main(void){
   }
   in.camera_c=rcos(yaw);in.camera_s=rsin(yaw);
   int oldstate=player.state,olddash=player.dash_ticks;
-  if(!paused){player_tick(&player,in);if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;}
+  if(!paused){if(player_tick(&player,in)){reset_view();player_respawn_events++;}if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;}
   if(!paused){
    if(oldstate==GROUND && player.state==JUMP)audio_play(SFX_JUMP);
    if(oldstate!=GROUND && player.state==GROUND)audio_play(SFX_LAND);
