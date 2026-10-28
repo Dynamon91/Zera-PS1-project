@@ -1,0 +1,17 @@
+{
+  "source_commit": "8970bfc60f5b841d1df2aea8beea58c51ee28e70",
+  "bin_sha256": "b85542213081e59cedc4d797698a471a55b55fc351bd233633a371d421572792",
+  "baseline_bin_sha256": "1cc10f6a01c5670da6509961af2d86fd231178ec745a0a464291ecd0a341e9d2",
+  "previous_radius": 16,
+  "new_radius": 32,
+  "render_triangles": 3588,
+  "source_patch_triangles": 910,
+  "world_grid_size": 129,
+  "final_x": 2207,
+  "final_y": -241,
+  "final_z": 0,
+  "grounded_beyond_old_boundary": true,
+  "automatic_respawns": 0,
+  "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+  "validation": "Input-only HLE exploration; not a full level or hardware test"
+}

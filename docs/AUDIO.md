@@ -1,12 +1,12 @@
 # Audio on/off — native verification
 
-Source: `29736b485c3397c138c70d456dfcf4ab2d018b80`. Build hash: `480b624f29fa5e7a253d0683ee66166caa8f1a9baa7bce9eaaa1fec27e726426`.
+Source: `8970bfc60f5b841d1df2aea8beea58c51ee28e70`. Build hash: `b85542213081e59cedc4d797698a471a55b55fc351bd233633a371d421572792`.
 
 | Muted | Restored |
 | --- | --- |
 | ![Audio OFF](screenshots/audio/frame_0650.png) | ![Audio ON](screenshots/audio/frame_0850.png) |
 
-Captured PCM RMS: muted **0.000**, restored **708.164** (signed 16-bit amplitude).
+Captured PCM RMS: muted **0.000**, restored **709.157** (signed 16-bit amplitude).
 Music remained initialized and disc refills continued during the test.
 The setting persists for this session through respawn and return to title;
 it is not a memory-card setting. This is an emulator check, not hardware validation.

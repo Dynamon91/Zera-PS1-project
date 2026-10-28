@@ -1,8 +1,8 @@
 {
-  "source_commit": "29736b485c3397c138c70d456dfcf4ab2d018b80",
-  "bin_sha256": "480b624f29fa5e7a253d0683ee66166caa8f1a9baa7bce9eaaa1fec27e726426",
+  "source_commit": "8970bfc60f5b841d1df2aea8beea58c51ee28e70",
+  "bin_sha256": "b85542213081e59cedc4d797698a471a55b55fc351bd233633a371d421572792",
   "completed_pickups": 6,
-  "first_best_ticks": 64,
+  "first_best_ticks": 61,
   "simulation_hz": 30,
   "respawn_preserves_score_and_time": true,
   "restart_preserves_best": true,
