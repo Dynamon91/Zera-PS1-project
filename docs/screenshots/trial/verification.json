@@ -1,6 +1,6 @@
 {
-  "source_commit": "8970bfc60f5b841d1df2aea8beea58c51ee28e70",
-  "bin_sha256": "b85542213081e59cedc4d797698a471a55b55fc351bd233633a371d421572792",
+  "source_commit": "967a963041c01478f04d97005fa5e1dcc22703f9",
+  "bin_sha256": "c289f601523e5953bda64353004d8d8fcd3514c340516c544bd2c53f6d21466a",
   "completed_pickups": 6,
   "first_best_ticks": 61,
   "simulation_hz": 30,

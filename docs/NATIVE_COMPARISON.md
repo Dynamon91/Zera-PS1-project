@@ -1,6 +1,6 @@
 # Confronto nativo WIP08 / sorgente WIP09
 
-Sorgente compilato: `8970bfc60f5b841d1df2aea8beea58c51ee28e70`. Catture reali PCSX-ReARMed, HLE BIOS,
+Sorgente compilato: `967a963041c01478f04d97005fa5e1dcc22703f9`. Catture reali PCSX-ReARMed, HLE BIOS,
 interprete CPU e GPU software. Stesso percorso e stessi istanti di cattura.
 Questo confronto verifica un caso della telecamera; non aggiunge livelli al gioco.
 
