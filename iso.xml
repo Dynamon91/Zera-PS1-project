@@ -1,5 +1,5 @@
 <iso_project><track type="data">
-<identifiers system="PLAYSTATION" application="PLAYSTATION" volume="ZERA_PS1_WIP08" volume_set="ZERA_PS1_WIP08" publisher="HOMEBREW" data_preparer="PSN00BSDK"/>
+<identifiers system="PLAYSTATION" application="PLAYSTATION" volume="ZERA_PS1_WIP09" volume_set="ZERA_PS1_WIP09" publisher="HOMEBREW" data_preparer="PSN00BSDK"/>
 <directory_tree>
 <file name="SYSTEM.CNF" type="data" source="${PROJECT_SOURCE_DIR}/system.cnf"/>
 <file name="ZERA.EXE" type="data" source="zera.exe"/>

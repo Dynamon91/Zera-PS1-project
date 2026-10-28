@@ -1,0 +1,91 @@
+name: Native PS1 preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'tools/**'
+      - 'CMakeLists.txt'
+      - 'iso.xml'
+      - '.github/workflows/native-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-preview:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install official PSn00bSDK 0.24
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 https://github.com/Lameguy64/PSn00bSDK/releases/download/v0.24/PSn00bSDK-0.24-Linux.zip -o "$RUNNER_TEMP/sdk.zip"
+          mkdir -p "$RUNNER_TEMP/ps1-sdk"
+          unzip -q "$RUNNER_TEMP/sdk.zip" -d "$RUNNER_TEMP/ps1-sdk"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          root=Path(os.environ['RUNNER_TEMP'])/'ps1-sdk'
+          sdk=next(root.rglob('sdk.cmake')).parent.parent
+          gcc=next(root.rglob('mipsel-none-elf-gcc'))
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write(f'PSN00BSDK_LIBS={sdk}\nPS1_TC={gcc.parent.parent}\n')
+          bins={gcc.parent}
+          for name in ('mkpsxiso','elf2x','lzpack'):
+              bins.update(p.parent for p in root.rglob(name) if p.is_file())
+          with open(os.environ['GITHUB_PATH'],'a') as f:
+              for directory in sorted(bins):
+                  f.write(str(directory)+'\n')
+                  for p in directory.iterdir():
+                      if p.is_file():p.chmod(p.stat().st_mode|0o111)
+          PY
+      - name: Native release build and host checks
+        run: |
+          sh tools/run_host_checks.sh
+          cmake --preset default -DCMAKE_BUILD_TYPE=Release -DPSN00BSDK_TC="$PS1_TC"
+          cmake --build build
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: libretro/pcsx_rearmed
+          ref: c8816799b50388e61cfe237fe2cdbb7d8175f20a
+          submodules: recursive
+          path: build/emulator
+      - name: Build pinned software emulator and capture identical wall scenario
+        run: |
+          python3 -m pip install numpy pillow
+          make -C build/emulator -f Makefile.libretro -j2 platform=unix DYNAREC=0 HAVE_CHD=0
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_wip09.cue build/native-preview tools/scenarios/native_wall_preview.json
+          python3 tools/publish_native_preview.py build/native-preview build/zera_wip09.bin
+      - name: Upload playable build and actual captures
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Zera-PS1-WIP09-native-${{ github.sha }}
+          path: |
+            build/zera.exe
+            build/zera.elf
+            build/zera.map
+            build/zera_wip09.bin
+            build/zera_wip09.cue
+            build/native-preview/
+            docs/NATIVE_COMPARISON.md
+            docs/screenshots/wip09/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Publish verified screenshots to the repository
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$SOURCE_SHA" ]; then
+            echo 'Main advanced; captures remain available in the artifact.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/NATIVE_COMPARISON.md docs/screenshots/wip09
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add verified native WIP09 wall-camera screenshots'
+          git push origin HEAD:main

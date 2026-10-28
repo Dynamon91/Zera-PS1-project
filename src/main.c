@@ -303,7 +303,7 @@ int main(void){
   }
   if(menu.screen==MENU_PLAY){
    if(menu.debug){
-    char text[256];snprintf(text,sizeof(text),"ZERA PS1 WIP08\n%s X:%d Y:%d Z:%d\nCLIP:%d BLEND:%d CAM:%d",names[player.state],x,player.y/FP,z,animator.clip,animator.blend_tick,camera_distance);
+    char text[256];snprintf(text,sizeof(text),"ZERA PS1 WIP09\n%s X:%d Y:%d Z:%d\nCLIP:%d BLEND:%d CAM:%d",names[player.state],x,player.y/FP,z,animator.clip,animator.blend_tick,camera_distance);
     draw_text(&ctx,8,8,0,text);
    }
    if(trial.active){

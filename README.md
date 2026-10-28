@@ -4,6 +4,17 @@
 engineering assessment of the complete game adaptation. See [PROGRESS.md](PROGRESS.md)
 for the weighted breakdown, evidence, remaining milestones, and build status.
 
+## Screenshot e confronto prima/dopo
+
+| WIP08 — test a 1/6 | WIP08 — test completato |
+| --- | --- |
+| ![WIP08 pickup trial 1 of 6](preview/frame_0500.png) | ![WIP08 pickup trial complete](preview/frame_0959.png) |
+
+Catture reali dello stesso build, in momenti diversi; non sono un confronto tra versioni.
+Vedi la [galleria e lo stato completo](docs/SCREENSHOTS.md) e il
+[confronto nativo WIP08/WIP09](docs/NATIVE_COMPARISON.md).
+La nuova pagina comparativa viene popolata solo dopo compilazione e catture riuscite.
+
 ## Download and resume this checkpoint
 
 The current downloadable package is `Zera_PS1_WIP09_Source_Checkpoint.zip`.
@@ -205,7 +216,8 @@ cmake --build build
 ```
 
 If GCC is separate, pass `-DPSN00BSDK_TC=/path/to/toolchain` at configuration.
-Outputs include build/zera.exe, zera.elf, zera.map and zera_wip08.bin/.cue.
+Current source outputs include build/zera.exe, zera.elf, zera.map and zera_wip09.bin/.cue.
+The bundled WIP08 disc in disc/ is retained separately.
 SDK/toolchain binaries and generated CMake caches are not bundled.
 
 ## Reproduce audio conversion
