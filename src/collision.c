@@ -44,6 +44,14 @@ static int ray_slab(int start,int delta,int low,int high,int *enter,int *exit){
 }
 /* Return Q12 fraction of a segment crossing inside the wall's vertical span. */
 int collision_ray(int x,int y,int z,int dx,int dy,int dz,const short w[6]){
+ /* Reject disjoint segment bounds before 64-bit intersection arithmetic.
+    Closed bounds retain endpoint, collinear and zero-length intersections. */
+ int endx=x+dx,endz=z+dz,endy=y+dy;
+ int minx=w[0]<w[2]?w[0]:w[2],maxx=w[0]>w[2]?w[0]:w[2];
+ int minz=w[1]<w[3]?w[1]:w[3],maxz=w[1]>w[3]?w[1]:w[3];
+ if((x<minx && endx<minx) || (x>maxx && endx>maxx) ||
+    (z<minz && endz<minz) || (z>maxz && endz>maxz) ||
+    (y<w[4]-16 && endy<w[4]-16) || (y>w[5]+16 && endy>w[5]+16))return 4096;
  int sx=w[2]-w[0],sz=w[3]-w[1];
  int64_t den=(int64_t)dx*sz-(int64_t)dz*sx;
  if(!den){
