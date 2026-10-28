@@ -1,0 +1,15 @@
+name: Host checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  host-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Check gameplay modules with address and undefined-behavior sanitizers
+        run: sh tools/run_host_checks.sh

@@ -29,11 +29,35 @@ int collision_push(int *x,int *z,int ox,int oz,int feet,int height,int radius,co
  }
  return 1;
 }
+/* Intersect a Q12 parameter interval with one closed coordinate slab. */
+static int ray_slab(int start,int delta,int low,int high,int *enter,int *exit){
+ if(!delta)return start>=low && start<=high;
+ int64_t d=delta,a=(int64_t)low-start,b=(int64_t)high-start;
+ if(d<0){d=-d;int64_t tmp=a;a=-b;b=-tmp;}
+ a*=4096;b*=4096;
+ /* C division truncates toward zero; round entry up and exit down. */
+ int64_t first=a/d+(a%d>0),last=b/d-(b%d<0);
+ if(first>*exit || last<*enter)return 0;
+ if(first>*enter)*enter=(int)first;
+ if(last<*exit)*exit=(int)last;
+ return *enter<=*exit;
+}
 /* Return Q12 fraction of a segment crossing inside the wall's vertical span. */
 int collision_ray(int x,int y,int z,int dx,int dy,int dz,const short w[6]){
  int sx=w[2]-w[0],sz=w[3]-w[1];
  int64_t den=(int64_t)dx*sz-(int64_t)dz*sx;
- if(!den)return 4096;
+ if(!den){
+  /* Parallel rays can still overlap the wall. Include vertical rays whose
+     X/Z projection is a point on the segment; reject separate parallel lines. */
+  if((int64_t)(x-w[0])*sz-(int64_t)(z-w[1])*sx)return 4096;
+  int enter=0,exit=4096;
+  int minx=w[0]<w[2]?w[0]:w[2],maxx=w[0]>w[2]?w[0]:w[2];
+  int minz=w[1]<w[3]?w[1]:w[3],maxz=w[1]>w[3]?w[1]:w[3];
+  if(!ray_slab(x,dx,minx,maxx,&enter,&exit) ||
+     !ray_slab(z,dz,minz,maxz,&enter,&exit) ||
+     !ray_slab(y,dy,w[4]-16,w[5]+16,&enter,&exit))return 4096;
+  return enter;
+ }
  int ax=w[0]-x,az=w[1]-z;
  int64_t t=(int64_t)ax*sz-(int64_t)az*sx,u=(int64_t)ax*dz-(int64_t)az*dx;
  if(den<0){den=-den;t=-t;u=-u;}

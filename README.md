@@ -1,5 +1,25 @@
 # Zera PS1 adaptation — WIP08
 
+## Development after WIP08
+
+The repository now includes a source-level camera collision correction: rays
+running along a wall proxy, and vertical rays on that proxy, detect overlap
+with its segment and height interval. Previously these parallel cases always
+reported no obstruction. Endpoint order and ray direction are handled, with
+Q12 entry rounded into the overlap interval. Ordinary crossing rays retain
+their existing behavior. The 420-unit minimum camera distance and conservative
+wall proxies still apply, so tight-corner occlusion remains possible.
+
+The host regression suite passes with address/undefined-behavior sanitizers.
+An additional 12,000 parallel-ray cases matched an independent exact-rational
+slab calculation. GitHub Actions runs the host suite for pushes and pull
+requests. These checks do not compile or emulate the PS1 executable.
+
+**The files in `disc/`, `preview/` and `diagnostics/` are the original WIP08
+build and captures.** They do not include this source correction. Rebuild with
+PSn00bSDK and validate the resulting image in an emulator before treating it
+as an updated playable release. No WIP09 disc has been produced yet.
+
 Native PSn00bSDK prototype using the recovered Zera mesh and four original
 animation clips. The renderer uses 411 integer vertex positions and 806 triangles.
 The original 47-bone rig is evaluated OFFLINE; 65 sampled vertex frames represent
