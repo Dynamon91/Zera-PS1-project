@@ -4,7 +4,8 @@ on:
     branches: [main]
     paths:
       - 'src/**'
-      - 'previews/level3/**'
+      - 'previews/level3/src/**'
+      - 'previews/level3/assets/world_chunk_source.json'
       - 'tools/capture_libretro.py'
       - 'tools/publish_native_preview.py'
       - 'tools/check_*_capture.py'
@@ -78,6 +79,8 @@ jobs:
           python3 tools/check_world_capture.py build/world-before build/world-after
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/level3-preview tools/scenarios/level3_preview.json
           python3 tools/check_level3_capture.py build/level3-preview
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_wip09.cue build/mascot-preview tools/scenarios/mascot_preview.json
+          python3 tools/check_mascot_capture.py build/mascot-preview
       - name: Preserve failed capture diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -105,6 +108,8 @@ jobs:
             build/zera_level3_preview.bin
             build/zera_level3_preview.cue
             build/level3-preview/
+            docs/screenshots/mascot/
+            build/mascot-preview/
             docs/LEVEL3.md
             docs/screenshots/level3/
             build/native-preview/
@@ -136,7 +141,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/NATIVE_COMPARISON.md docs/screenshots/wip09 docs/AUDIO.md docs/screenshots/audio docs/RESPAWN.md docs/screenshots/respawn docs/TRIAL.md docs/screenshots/trial docs/WORLD.md docs/screenshots/world docs/LEVEL3.md docs/screenshots/level3
+          git add docs/NATIVE_COMPARISON.md docs/screenshots/wip09 docs/AUDIO.md docs/screenshots/audio docs/RESPAWN.md docs/screenshots/respawn docs/TRIAL.md docs/screenshots/trial docs/WORLD.md docs/screenshots/world docs/LEVEL3.md docs/screenshots/level3 docs/screenshots/mascot
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Add verified native WIP09 wall-camera screenshots'
           git push origin HEAD:main

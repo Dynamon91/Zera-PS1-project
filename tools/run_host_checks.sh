@@ -22,4 +22,6 @@ cc -DZERA_LEVEL3_PREVIEW -Wall -Wextra -Werror -Wno-misleading-indentation -fsan
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/level3"
 cc -DZERA_LEVEL3_PREVIEW -Wall -Wextra -Werror -fsanitize=address,undefined src/clip.c tools/test_render_cells.c -o "$check_dir/level3_cells"
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/level3_cells"
+cc -Wall -Wextra -Werror -fsanitize=address,undefined tools/test_character.c -o "$check_dir/character"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/character"
 printf 'Host checks passed\n'

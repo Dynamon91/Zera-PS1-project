@@ -1,0 +1,4 @@
+#ifndef CHARACTER_CONFIG_H
+#define CHARACTER_CONFIG_H
+#define ANIM_VERTICES 412
+#endif

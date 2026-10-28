@@ -35,6 +35,8 @@
 #include <stdio.h>
 #include "player.h"
 #include "zera_mesh.h"
+#include "mascot_materials.h"
+#include "mascot_texture.h"
 #include "animator.h"
 #include "menu.h"
 #include "audio.h"
@@ -165,7 +167,7 @@ static unsigned int view_stamp=0;
 static uint8_t pads[2][34];
 static Player player;
 static int yaw=512;
-static SVECTOR pose[411];
+static SVECTOR pose[ANIM_VERTICES];
 static Animator animator;
 static Menu menu;
 static Trial trial;
@@ -248,6 +250,8 @@ int main(void){
  SetVideoMode(MODE_NTSC); ResetGraph(0); InitGeom(); gte_SetGeomOffset(160,110);gte_SetGeomScreen(256);
  RECT texrect={512,0,128,256},palrect={512,256,256,1};
  LoadImage(&texrect,world_texture);LoadImage(&palrect,world_clut);DrawSync(0);
+ RECT mascotrect={640,0,128,128},mascotpal={512,257,256,1};
+ LoadImage(&mascotrect,mascot_texture);LoadImage(&mascotpal,mascot_clut);DrawSync(0);
  FntLoad(960,0);setup_context(&ctx,320,240,24,32,56);
  InitPAD(pads[0],34,pads[1],34);StartPAD();ChangeClearPAD(0);
  player_init(&player);animator_init(&animator);menu_init(&menu);trial_clear(&trial);audio_init();uint16_t old=0;
@@ -290,7 +294,7 @@ int main(void){
   int desired=player.state==GLIDE?3:player.state!=GROUND?2:(in.x || in.z)?1:0;
   animator_update(&animator,desired,!paused);
   int fc=rcos(facing),fs=rsin(facing);
-  for(int i=0;i<411;i++){
+  for(int i=0;i<ANIM_VERTICES;i++){
    int vx=animator.local[i].x,vz=animator.local[i].z;
    pose[i].vx=(vx*fc+vz*fs)/4096;pose[i].vy=animator.local[i].y;
    pose[i].vz=(-vx*fs+vz*fc)/4096;
@@ -348,15 +352,27 @@ int main(void){
    }
   }
   int x=player.x/FP,y=80-player.y/FP,z=player.z/FP;
-  for(int i=0;i<ZERA_FACE_COUNT;i++){
+  for(int order=0;order<ZERA_FACE_COUNT;order++){
+   int i=mascot_draw_order[order];
    const unsigned short *f=zera_faces[i];
    SVECTOR a=pose[f[0]],b=pose[f[1]],c=pose[f[2]];
    a.vx+=x;b.vx+=x;c.vx+=x;a.vy+=y;b.vy+=y;c.vy+=y;a.vz+=z;b.vz+=z;c.vz+=z;
-   const unsigned char *col=zera_face_colors[i];
-   int nx=(b.vy-a.vy)*(c.vz-a.vz)-(b.vz-a.vz)*(c.vy-a.vy);
-   int ny=(b.vz-a.vz)*(c.vx-a.vx)-(b.vx-a.vx)*(c.vz-a.vz);
-   int shade=160+(nx>0?35:0)+(ny<0?50:0);
-   triangle(a,b,c,col[0]*shade/255,col[1]*shade/255,col[2]*shade/255);
+   ClipVertex va={a.vx,a.vy,a.vz,0,0},vb={b.vx,b.vy,b.vz,0,0},vc={c.vx,c.vy,c.vz,0,0};
+   short xy[6];int depth=project(&va,&vb,&vc,xy);if(!depth)continue;
+   const unsigned char *col=mascot_corner_colors[i];int material=mascot_material[i];
+   if(material){
+    POLY_GT3 *p=new_primitive(&ctx,depth,sizeof(*p));if(!p)continue;
+    const unsigned char *uv=mascot_uv[i];setPolyGT3(p);
+    setRGB0(p,col[0]/2,col[1]/2,col[2]/2);setRGB1(p,col[3]/2,col[4]/2,col[5]/2);setRGB2(p,col[6]/2,col[7]/2,col[8]/2);
+    setXY3(p,xy[0],xy[1],xy[2],xy[3],xy[4],xy[5]);setUV3(p,uv[0],uv[1],uv[2],uv[3],uv[4],uv[5]);
+    p->tpage=getTPage(1,0,640,0);p->clut=getClut(512,257);
+    DR_TWIN *tw=new_primitive(&ctx,depth,sizeof(*tw));if(!tw)continue;
+    RECT window={material==2?128:0,0,128,128};setTexWindow(tw,&window);
+   }else{
+    POLY_G3 *p=new_primitive(&ctx,depth,sizeof(*p));if(!p)continue;
+    setPolyG3(p);setRGB0(p,col[0],col[1],col[2]);setRGB1(p,col[3],col[4],col[5]);setRGB2(p,col[6],col[7],col[8]);
+    setXY3(p,xy[0],xy[1],xy[2],xy[3],xy[4],xy[5]);
+   }
   }
   if(menu.screen==MENU_PLAY){
    if(menu.debug){

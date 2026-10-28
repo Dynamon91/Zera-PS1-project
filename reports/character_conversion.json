@@ -2,11 +2,11 @@
   "source_file": "assets/recovered_meshes/resources_assets_314_Cube_001.obj",
   "identified_by": "SkinnedMeshRenderer child Cube_001 of Zera under _Zera",
   "source_vertices": 1829,
-  "packed_vertices": 411,
+  "packed_vertices": 412,
   "triangles": 806,
-  "animation": "bind pose only",
-  "texture": "not yet converted",
-  "colors": "original mesh vertex colors averaged per triangle; texture overlays not yet converted",
+  "animation": "offline original clip skinning; see animation_conversion.json",
+  "texture": "original mascot materials; see mascot_materials.json",
+  "colors": "original vertex colors; per-corner Gouraud data exported by convert_mascot_materials.py",
   "bounds": {
     "min": [
       -0.920166016,

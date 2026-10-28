@@ -27,16 +27,17 @@
   ],
   "total_frames": 65,
   "weight_sum_max_error": 8.940696716308594e-08,
-  "packed_vertices": 411,
+  "packed_vertices": 412,
   "unmatched_bindings": [],
   "default_pose_differs_from_bind_pose": true,
   "normalization": "animator-root space; idle foot height; same scale for all clips",
   "method": "offline linear blend skinning, sampled transform curves, ~12 Hz integer vertex frames",
   "limitations": [
     "original transition graph not recovered",
-    "texture overlays omitted",
+    "Unity custom shader effects omitted",
     "root motion ignored",
     "no original-Unity visual reference comparison yet"
   ],
-  "runtime_transition": "six simulation ticks, frozen source pose to moving destination; interrupted blends restart from current pose"
+  "runtime_transition": "six simulation ticks, frozen source pose to moving destination; interrupted blends restart from current pose",
+  "packing": "bind positions plus nonzero joint influences; shared mesh/animation mapping"
 }

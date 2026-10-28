@@ -9,6 +9,7 @@ import numpy as np
 from scipy.spatial.transform import Rotation
 import UnityPy
 from UnityPy.helpers.MeshHelper import MeshHandler
+from character_packing import pack
 P=Path(__file__).resolve().parents[1]
 E=UnityPy.load(sys.argv[1]);objects=list(E.objects)
 sm=next(o.read() for o in objects if o.type.name=='SkinnedMeshRenderer' and o.read().m_Mesh.path_id==314 and o.read().m_Mesh.deref().assets_file.name=='resources.assets')
@@ -64,7 +65,8 @@ for l in (P/'assets/recovered_meshes/resources_assets_314_Cube_001.obj').read_te
  if l.startswith('v '):objv.append(tuple(map(float,l.split()[1:4])))
 objv=np.array(objv);lo=objv.min(axis=0);hi=objv.max(axis=0);scale=160/(hi[1]-lo[1]);center=(lo+hi)/2
 q=np.rint(np.column_stack([(objv[:,0]-center[0])*scale,-(objv[:,1]-lo[1])*scale,(objv[:,2]-center[2])*scale])).astype(int)
-keys=list(dict.fromkeys(map(tuple,q)));rep=np.array([next(i for i,x in enumerate(q) if tuple(x)==k) for k in keys]);assert len(rep)==411
+_,_,representatives,packed_mapping=pack(P)
+rep=np.array(representatives);packed_count=len(rep)
 allframes=[];meta=[];sourceclips=[];unmatched=set()
 for clipid in [522,525,523,521]:
  clip=next(o.read() for o in objects if o.assets_file.name=='resources.assets' and o.path_id==clipid)
@@ -111,11 +113,11 @@ ref=allframes[0];reflo=ref.min(axis=0);refhi=ref.max(axis=0)
 scale=160/(refhi[1]-reflo[1]);cx=(reflo[0]+refhi[0])/2;cz=(reflo[2]+refhi[2])/2
 allframes=[np.rint(np.column_stack([(v[:,0]-cx)*scale,-(v[:,1]-reflo[1])*scale,(v[:,2]-cz)*scale])).astype(int) for v in allframes]
 assert all(np.isfinite(f).all() and np.abs(f).max()<16000 for f in allframes)
-s='/* Original Unity clip skinning baked offline at ~12 Hz. */\nstatic const AnimPoint zera_anim[][411]={\n'
+s='/* Original Unity clip skinning baked offline at ~12 Hz. */\nstatic const AnimPoint zera_anim[][ANIM_VERTICES]={\n'
 for f in allframes:s+='{'+''.join('{%d,%d,%d,0},'%tuple(v) for v in f)+'},\n'
 s+='};\nstatic const unsigned short zera_anim_start[]={'+','.join(str(x['first']) for x in meta)+'};\n'
 s+='static const unsigned short zera_anim_count[]={'+','.join(str(x['frames']) for x in meta)+'};\n'
 s+='static const unsigned short zera_anim_ticks[]={'+','.join(str(round(x['duration']*30)) for x in meta)+'};\n'
 (P/'src/zera_anim.h').write_text(s)
 (P/'assets/character_animation_source.json').write_text(json.dumps({'nodes':nodes,'bones':bones,'bind':bind.tolist(),'vertices':verts.tolist(),'weights':weights.tolist(),'indices':indices.tolist(),'clips':sourceclips}))
-(P/'reports/animation_conversion.json').write_text(json.dumps({'clips':meta,'total_frames':len(allframes),'weight_sum_max_error':weight_error,'packed_vertices':411,'unmatched_bindings':list(unmatched),'default_pose_differs_from_bind_pose':True,'normalization':'animator-root space; idle foot height; same scale for all clips','method':'offline linear blend skinning, sampled transform curves, ~12 Hz integer vertex frames','limitations':['original transition graph not recovered','texture overlays omitted','root motion ignored','no original-Unity visual reference comparison yet']},indent=2))
+(P/'reports/animation_conversion.json').write_text(json.dumps({'clips':meta,'total_frames':len(allframes),'weight_sum_max_error':weight_error,'packed_vertices':packed_count,'unmatched_bindings':list(unmatched),'default_pose_differs_from_bind_pose':True,'normalization':'animator-root space; idle foot height; same scale for all clips','method':'offline linear blend skinning, sampled transform curves, ~12 Hz integer vertex frames','limitations':['original transition graph not recovered','Unity custom shader effects omitted','root motion ignored','no original-Unity visual reference comparison yet']},indent=2))

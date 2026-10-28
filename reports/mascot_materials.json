@@ -1,0 +1,101 @@
+{
+  "renderer_scene": "level2",
+  "renderer_path_id": 5571,
+  "materials": [
+    {
+      "slot": 0,
+      "name": "Body",
+      "file": "resources.assets",
+      "path_id": 89
+    },
+    {
+      "slot": 1,
+      "name": "Spots",
+      "file": "resources.assets",
+      "path_id": 102,
+      "main_texture": {
+        "name": "zeratexture",
+        "file": "resources.assets",
+        "path_id": 153,
+        "size": [
+          256,
+          256
+        ],
+        "wrap_u": 0,
+        "wrap_v": 0
+      }
+    },
+    {
+      "slot": 2,
+      "name": "Body",
+      "file": "resources.assets",
+      "path_id": 89
+    },
+    {
+      "slot": 3,
+      "name": "Eyes",
+      "file": "resources.assets",
+      "path_id": 91,
+      "main_texture": {
+        "name": "Eye",
+        "file": "resources.assets",
+        "path_id": 236,
+        "size": [
+          64,
+          64
+        ],
+        "wrap_u": 0,
+        "wrap_v": 0
+      }
+    },
+    {
+      "slot": 4,
+      "name": "Body",
+      "file": "resources.assets",
+      "path_id": 89
+    },
+    {
+      "slot": 5,
+      "name": "Invisible",
+      "file": "resources.assets",
+      "path_id": 93
+    }
+  ],
+  "source_file_sha256": {
+    "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d",
+    "level2": "f9563c7125bcb9e6f35c92ab76c85fb98aa25ed5a2d64aba7f3f5a73067293e1"
+  },
+  "rendered_faces": 806,
+  "textured_spot_faces": 96,
+  "textured_eye_faces": 16,
+  "flat_material_faces": 694,
+  "atlas": {
+    "size": [
+      256,
+      128
+    ],
+    "format": "8-bit indexed",
+    "palette_entries": 256,
+    "transparent_index": 0,
+    "eye_alpha_threshold": 128,
+    "vram_texture": [
+      640,
+      0,
+      128,
+      128
+    ],
+    "vram_clut": [
+      512,
+      257,
+      256,
+      1
+    ]
+  },
+  "limitations": [
+    "nearest-neighbor downsampled spots, 256 to 128 texels",
+    "255 opaque palette colors shared with eyes",
+    "eye alpha thresholded to cutout; no soft blending",
+    "equal-depth ordering favors spots and eyes over body; painter sorting remains approximate",
+    "custom Unity shader and lighting behavior omitted"
+  ]
+}
