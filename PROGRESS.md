@@ -3,7 +3,8 @@
 **Estimated completion of the full port: approximately 28%.**
 
 Reviewed: 28 October 2026. Stage: playable prototype of a small original-world
-patch, with further source development. Playable checkpoint: WIP08.
+patch, with further source development. Source package: WIP09 source checkpoint.
+Playable checkpoint: WIP08.
 
 This is a provisional engineering estimate, with a rough judgment range of
 25–35%. It is not measured playtime coverage, percentage of source code copied,
@@ -55,6 +56,15 @@ geometry cases. Neither source update has a rebuilt/emulator-tested disc here:
 the required PSn00bSDK/MIPS toolchain and emulator core are absent in this
 workspace. `disc/`, `preview/` and `diagnostics/` remain the WIP08 checkpoint.
 No WIP09 playable image is claimed.
+
+## Package continuity
+
+WIP09 source checkpoints include the latest source and the WIP08 playable disc,
+with an embedded commit reference and per-file SHA-256 manifest. A deterministic
+packaging tool and integrity verifier are included. Successful GitHub checks
+produce a downloadable package for that commit; artifacts expire after 90 days.
+Packaging and upload work earn no extra full-port credit: the estimate remains
+approximately 28%. See the README for download and resume instructions.
 
 ## Next acceptance milestones
 

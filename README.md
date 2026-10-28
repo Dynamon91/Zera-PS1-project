@@ -1,8 +1,42 @@
-# Zera PS1 adaptation — WIP08
+# Zera PS1 adaptation — WIP09 source checkpoint
 
 **Estimated full-port completion: approximately 28%.** This is a provisional
 engineering assessment of the complete game adaptation. See [PROGRESS.md](PROGRESS.md)
 for the weighted breakdown, evidence, remaining milestones, and build status.
+
+## Download and resume this checkpoint
+
+The current downloadable package is `Zera_PS1_WIP09_Source_Checkpoint.zip`.
+It contains current source, original assets, tests, the progress breakdown and
+an embedded `CHECKPOINT.json` recording the source commit and SHA-256 of every
+included file. **Its playable disc and captures remain WIP08.** WIP09 is a
+source checkpoint, not a newly built PS1 release.
+
+After unpacking, use `zera_ps1/` as the project root. Read `PROGRESS.md`, then
+run `sh tools/run_host_checks.sh`. Check a downloaded archive with:
+
+```
+python3 tools/verify_checkpoint.py /path/to/Zera_PS1_WIP09_Source_Checkpoint.zip
+```
+
+GitHub Actions now creates a fresh ZIP after host and packaging checks pass
+for each push/pull request. Open the successful **Host checks** run under
+**Actions** and download its commit-labeled WIP source checkpoint artifact.
+GitHub artifacts expire after 90 days. A push generates its own package;
+the downloadable file shared in this chat is the checkpoint saved for this turn.
+
+To reproduce a package from a clean checkout, run:
+
+```
+python3 tools/test_package.py
+python3 tools/package_wip.py --source-commit "$(git rev-parse HEAD)"
+python3 tools/verify_checkpoint.py dist/Zera_PS1_WIP09_Source_Checkpoint.zip
+```
+
+The ZIP excludes build caches and earlier output packages. Packaging does not
+compile the game or change the full-port completion estimate. Verify the new
+source in a native PS1 build before replacing the WIP08 disc. When a tested
+new disc is available, update the package's explicit build status as well.
 
 ## Development after WIP08
 
