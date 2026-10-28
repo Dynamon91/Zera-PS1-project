@@ -336,7 +336,15 @@ int main(void){
    pose[i].vx=(vx*fc+vz*fs)/4096;pose[i].vy=animator.local[i].y;
    pose[i].vz=(-vx*fs+vz*fc)/4096;
   }
-  if(!paused)camera_height+=(player.y/FP-camera_height)/8;
+  if(!paused){
+#ifdef ZERA_LAUNCH_PREVIEW
+   /* The recovered launch rises much faster than a normal jump. Keep the
+      character in view instead of carrying a multi-tick vertical lag. */
+   if(launch.active)camera_height=player.y/FP;
+   else
+#endif
+   camera_height+=(player.y/FP-camera_height)/8;
+  }
   MATRIX m;int fraction=camera_view(yaw,camera_height,&m);
   if(!paused && camera_orbit_cooldown)camera_orbit_cooldown--;
   /* Avoid changing the movement basis under an active movement command.
