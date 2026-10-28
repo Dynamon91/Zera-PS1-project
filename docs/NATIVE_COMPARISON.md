@@ -1,8 +1,18 @@
-# Confronto nativo WIP08 / WIP09
+# Confronto nativo WIP08 / sorgente WIP09
 
-La nuova compilazione e cattura sono in preparazione nel workflow
-[Native PS1 preview](https://github.com/Dynamon91/Zera-PS1-project/actions/workflows/native-preview.yml).
+Sorgente compilato: `6bac3839b7f349a2cb96cffe7f654595b52ac8f0`. Catture reali PCSX-ReARMed, HLE BIOS,
+interprete CPU e GPU software. Stesso percorso e stessi istanti di cattura.
+Questo confronto verifica un caso della telecamera; non aggiunge livelli al gioco.
 
-Non viene mostrato un falso “dopo”: questa pagina sarà sostituita automaticamente
-con screenshot reali solo se compilazione e controlli della cattura riescono.
-Nel frattempo sono disponibili le [screenshot WIP08 già verificate](SCREENSHOTS.md).
+| Frame | Prima: WIP08 | Dopo: nuovo build WIP09 |
+| --- | --- | --- |
+| 359 | ![WIP08 frame 359](../diagnostics/wall_walk/frame_0359.png) | ![WIP09 frame 359](screenshots/wip09/frame_0359.png) |
+| 700 | ![WIP08 frame 700](../diagnostics/wall_walk/frame_0700.png) | ![WIP09 frame 700](screenshots/wip09/frame_0700.png) |
+| 1300 | ![WIP08 frame 1300](../diagnostics/wall_walk/frame_1300.png) | ![WIP09 frame 1300](screenshots/wip09/frame_1300.png) |
+| 1599 | ![WIP08 frame 1599](../diagnostics/wall_walk/frame_1599.png) | ![WIP09 frame 1599](screenshots/wip09/frame_1599.png) |
+
+Le differenze di posizione possono derivare dal nuovo comportamento della camera.
+Le immagini non dimostrano prestazioni o compatibilità hardware.
+Il build e tutte le catture sono scaricabili dagli artifact della relativa esecuzione
+**Native PS1 preview** in GitHub Actions. Il vecchio disco in `disc/` resta WIP08.
+Il pacchetto WIP09 source mantiene il suo stato esplicito: non sostituisce quel disco.
