@@ -15,12 +15,12 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: Dynamon91/Zera-PS1-project
-      BACKUP_SOURCE: 957e7242bf02195a5b412f3e0345a2a65e11c408
-      BACKUP_TAG: wip09-closeview-957e724
+      BACKUP_SOURCE: 558ce6ac4203e648a23a3ffb06e4b9f125661633
+      BACKUP_TAG: wip09-launchpads-558ce6a
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: 957e7242bf02195a5b412f3e0345a2a65e11c408
+          ref: 558ce6ac4203e648a23a3ffb06e4b9f125661633
       - name: Retrieve pinned tested native build
         shell: bash
         run: |
@@ -41,20 +41,21 @@ jobs:
           archive = Path('dist/Zera_PS1_WIP09_Source_Checkpoint.zip')
           with zipfile.ZipFile(archive) as z:
               manifest = z.read('zera_ps1/CHECKPOINT.json')
-              assert hashlib.sha256(manifest).hexdigest() == '84994363603d4650da4007a5242eb776b2d98a3ff427a5158e8d3d580bbf6292'
+              assert hashlib.sha256(manifest).hexdigest() == 'a4511e17f0faadbe83bfd3384b2c280c7a076e46d1c09deb2065f9bdd8979f64'
               status = json.loads(manifest)
-              assert len(status['files']) == 1101
+              assert len(status['files']) == 1107
           checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
           archive.with_suffix('.zip.sha256').write_text(checksum + '  ' + archive.name + '\n')
           Path('dist/release-notes.md').write_text(
-              'Backup completo WIP09 con protezione della visuale ravvicinata, 28 ottobre 2026.\n\n'
-              'Include la protezione che nasconde temporaneamente Zera quando la telecamera e troppo vicina e la ripristina quando la visuale si allontana, con orientamento e animazioni del personaggio verificati, oltre alle texture originali di occhi e macchie e ai colori Gouraud, oltre a sorgenti, asset recuperati, documentazione, screenshot e il pacchetto native con entrambi i dischi PS1 verificati: level2 e anteprima level3.\n\n'
+              'Backup completo WIP09 con recupero dei trampolini originali, 28 ottobre 2026.\n\n'
+              'Recuperati nove trampolini originali con destinazioni, riferimenti del compagno e formula della traiettoria dal codice compilato. Inclusi estrattore riproducibile, validatore CI e mappa del livello 3. Questo e un avanzamento del recupero dati: i trampolini non sono ancora giocabili su PS1.\n\n'
+              'Include sorgenti, asset recuperati, documentazione, screenshot precedenti e i due dischi PS1 gia verificati (level2 e anteprima level3), invariati da questo aggiornamento. Le correzioni a mascotte e telecamera restano incluse.\n\n'
               'Dopo aver estratto lo ZIP principale, estrarre zera_ps1/native/Zera_PS1_WIP09_Native.zip. Aprire build/zera_wip09.cue per level2 oppure build/zera_level3_preview.cue per level3, lasciando i rispettivi BIN accanto.\n\n'
-              'Snapshot sorgente: 957e7242bf02195a5b412f3e0345a2a65e11c408. Integrita verificata per tutti i 1101 file, con manifest identico al checkpoint consegnato. Il file SHA-256 permette di controllare il download.\n\n'
+              'Snapshot sorgente: 558ce6ac4203e648a23a3ffb06e4b9f125661633. Integrita verificata per tutti i 1107 file, con manifest identico al checkpoint consegnato. Il file SHA-256 permette di controllare il download.\n\n'
               'Completamento stimato: 29%. Build WIP, verificate in emulazione HLE; progressione originale e fisica completa restano in lavorazione.\n'
           )
           PY
       # Tag the current approved workflow commit; ZIP source remains pinned above.
       - name: Publish downloadable backup release
         run: |
-          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Visuale ravvicinata, 28 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
+          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Recupero trampolini, 28 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
