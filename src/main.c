@@ -332,7 +332,10 @@ int main(void){
     draw_text(&ctx,8,8,0,text);
    }
    if(trial.active){
-    char status[96];snprintf(status,sizeof(status),"PICKUP TRIAL %d/%d\nNEW TEST LAYOUT%s",trial.count,TRIAL_PICKUPS,trial.completed?"\nTRIAL COMPLETE":"");
+    char status[192],best[40];int tenths=trial.ticks/3;
+    if(trial.best_valid){int bt=trial.best_ticks/3;snprintf(best,sizeof(best),"BEST %d.%d S",bt/10,bt%10);}
+    else snprintf(best,sizeof(best),"BEST --");
+    snprintf(status,sizeof(status),"PICKUP TRIAL %d/%d\nNEW TEST LAYOUT\nSIM TIME %d.%d S\n%s%s",trial.count,TRIAL_PICKUPS,tenths/10,tenths%10,best,trial.completed?"\nTRIAL COMPLETE":"");
     draw_text(&ctx,8,176,0,status);
    }
    draw_text(&ctx,8,224,0,"START MENU    SELECT RESPAWN");

@@ -63,6 +63,8 @@ jobs:
           python3 tools/check_mute_capture.py build/audio-preview
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_wip09.cue build/fall-preview tools/scenarios/fall_respawn.json
           python3 tools/check_fall_capture.py build/fall-preview
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_wip09.cue build/trial-preview tools/scenarios/pickup_trial.json
+          python3 tools/check_trial_capture.py build/trial-preview
       - name: Upload playable build and actual captures
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -82,6 +84,9 @@ jobs:
             build/fall-preview/
             docs/RESPAWN.md
             docs/screenshots/respawn/
+            build/trial-preview/
+            docs/TRIAL.md
+            docs/screenshots/trial/
           if-no-files-found: error
           retention-days: 90
       - name: Publish verified screenshots to the repository
@@ -95,7 +100,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/NATIVE_COMPARISON.md docs/screenshots/wip09 docs/AUDIO.md docs/screenshots/audio docs/RESPAWN.md docs/screenshots/respawn
+          git add docs/NATIVE_COMPARISON.md docs/screenshots/wip09 docs/AUDIO.md docs/screenshots/audio docs/RESPAWN.md docs/screenshots/respawn docs/TRIAL.md docs/screenshots/trial
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Add verified native WIP09 wall-camera screenshots'
           git push origin HEAD:main

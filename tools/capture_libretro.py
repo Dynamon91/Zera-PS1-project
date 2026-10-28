@@ -87,10 +87,12 @@ g=Game(str(Path(sys.argv[2]).resolve()).encode(),None,0,None)
 core.retro_load_game.argtypes=[C.POINTER(Game)];core.retro_load_game.restype=C.c_bool
 if not core.retro_load_game(C.byref(g)):raise RuntimeError('core rejected content')
 symbols={}
+trial_words=5
 mapfile=Path(sys.argv[2]).with_name('zera.map')
 if mapfile.exists():
  for line in mapfile.read_text().splitlines():
   fields=line.split()
+  if len(fields)>=4 and fields[0]=='trial':trial_words=7 if int(fields[3],16)>=28 else 5
   if len(fields)>=3 and fields[0] in ('player','camera_distance','camera_height','player_respawn_events','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
 core.retro_get_memory_data.argtypes=[C.c_uint];core.retro_get_memory_data.restype=C.c_void_p
 core.retro_get_memory_size.argtypes=[C.c_uint];core.retro_get_memory_size.restype=C.c_size_t
@@ -113,7 +115,7 @@ for tick in range(run_frames):
    if name in symbols:row[name]=struct.unpack('<i',C.string_at(ram+symbols[name],4))[0]
   if 'audio_sfx_events' in symbols:row['sfx_events']=list(struct.unpack('<7i',C.string_at(ram+symbols['audio_sfx_events'],28)))
   if 'trial' in symbols:
-   values=struct.unpack('<5i',C.string_at(ram+symbols['trial'],20));row.update(dict(zip(['trial_mask','trial_active','trial_count','trial_complete','trial_ticks'],values)))
+   values=struct.unpack('<'+str(trial_words)+'i',C.string_at(ram+symbols['trial'],trial_words*4));row.update(dict(zip(['trial_mask','trial_active','trial_count','trial_complete','trial_ticks','trial_best_ticks','trial_best_valid'],values)))
   observed.append(row)
  if tick in shots and frame:
   frame.save(out/f'frame_{tick:04d}.png');print('Captured',tick,frame.size,flush=True)
