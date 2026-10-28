@@ -1,0 +1,78 @@
+{
+  "effects": [
+    {
+      "name": "ui_move",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 10304,
+      "adpcm_bytes": 5952,
+      "snr_db": 31.93,
+      "source_file": "ui_move.wav"
+    },
+    {
+      "name": "ui_accept",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 7616,
+      "adpcm_bytes": 4416,
+      "snr_db": 27.28,
+      "source_file": "ui_accept.wav"
+    },
+    {
+      "name": "jump",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 5088,
+      "adpcm_bytes": 2944,
+      "snr_db": 37.65,
+      "source_file": "jump.wav"
+    },
+    {
+      "name": "land",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 5264,
+      "adpcm_bytes": 3072,
+      "snr_db": 27.18,
+      "source_file": "land.wav"
+    },
+    {
+      "name": "dash",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 26927,
+      "adpcm_bytes": 15424,
+      "snr_db": 30.37,
+      "source_file": "dash.wav"
+    },
+    {
+      "name": "flap",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 10177,
+      "adpcm_bytes": 5888,
+      "snr_db": 37.55,
+      "source_file": "flap.wav"
+    },
+    {
+      "name": "pickup",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 20672,
+      "adpcm_bytes": 11840,
+      "snr_db": 33.42,
+      "source_file": "pickup.wav"
+    },
+    {
+      "name": "cosmic_core",
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_samples": 4317120,
+      "adpcm_bytes": 2469888,
+      "snr_db": 32.66,
+      "source_file": "cosmic_core.wav"
+    }
+  ],
+  "format": "SPU ADPCM, exhaustive filter/shift encoding",
+  "music": "full cosmic_core track, downmixed to mono 22050 Hz; disc-streamed; padded full-track repeat, no authored seamless loop markers"
+}

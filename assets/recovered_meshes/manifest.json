@@ -1,0 +1,6300 @@
+[
+  {
+    "source": "level6",
+    "path_id": 1,
+    "name": "Combined Mesh (root: scene)",
+    "obj": "level6_1_Combined_Mesh__root__scene_.obj",
+    "vertices": 45367,
+    "faces": 21526
+  },
+  {
+    "source": "level1",
+    "path_id": 1,
+    "name": "Combined Mesh (root: scene)",
+    "obj": "level1_1_Combined_Mesh__root__scene_.obj",
+    "vertices": 17939,
+    "faces": 8543
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 17,
+    "name": "Walkable.015",
+    "obj": "sharedassets5_assets_17_Walkable_015.obj",
+    "vertices": 64,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 18,
+    "name": "Walkable.012",
+    "obj": "sharedassets5_assets_18_Walkable_012.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 19,
+    "name": "Walkable.003",
+    "obj": "sharedassets5_assets_19_Walkable_003.obj",
+    "vertices": 170,
+    "faces": 81
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 20,
+    "name": "Walkable.008",
+    "obj": "sharedassets5_assets_20_Walkable_008.obj",
+    "vertices": 48,
+    "faces": 22
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 21,
+    "name": "Walls.054",
+    "obj": "sharedassets5_assets_21_Walls_054.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 22,
+    "name": "Walkable.022",
+    "obj": "sharedassets5_assets_22_Walkable_022.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 23,
+    "name": "Walkable",
+    "obj": "sharedassets5_assets_23_Walkable.obj",
+    "vertices": 26,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 24,
+    "name": "Walkable.032",
+    "obj": "sharedassets5_assets_24_Walkable_032.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 25,
+    "name": "Walkable.006",
+    "obj": "sharedassets5_assets_25_Walkable_006.obj",
+    "vertices": 66,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 26,
+    "name": "Walkable.034",
+    "obj": "sharedassets5_assets_26_Walkable_034.obj",
+    "vertices": 121,
+    "faces": 57
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 27,
+    "name": "Walkable.037",
+    "obj": "sharedassets5_assets_27_Walkable_037.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 28,
+    "name": "Walkable.024",
+    "obj": "sharedassets5_assets_28_Walkable_024.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 29,
+    "name": "Walkable.036",
+    "obj": "sharedassets5_assets_29_Walkable_036.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 30,
+    "name": "Walkable.025",
+    "obj": "sharedassets5_assets_30_Walkable_025.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 31,
+    "name": "Walkable.019",
+    "obj": "sharedassets5_assets_31_Walkable_019.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 32,
+    "name": "Walkable.014",
+    "obj": "sharedassets5_assets_32_Walkable_014.obj",
+    "vertices": 49,
+    "faces": 23
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 33,
+    "name": "Walkable.004",
+    "obj": "sharedassets5_assets_33_Walkable_004.obj",
+    "vertices": 560,
+    "faces": 266
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 34,
+    "name": "Walls.053",
+    "obj": "sharedassets5_assets_34_Walls_053.obj",
+    "vertices": 80,
+    "faces": 40
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 35,
+    "name": "Walkable.016",
+    "obj": "sharedassets5_assets_35_Walkable_016.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 36,
+    "name": "Walkable.007",
+    "obj": "sharedassets5_assets_36_Walkable_007.obj",
+    "vertices": 18,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 37,
+    "name": "Walkable.018",
+    "obj": "sharedassets5_assets_37_Walkable_018.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 38,
+    "name": "Walkable.035",
+    "obj": "sharedassets5_assets_38_Walkable_035.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 39,
+    "name": "Walkable.020",
+    "obj": "sharedassets5_assets_39_Walkable_020.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 40,
+    "name": "Walkable.031",
+    "obj": "sharedassets5_assets_40_Walkable_031.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 41,
+    "name": "Skybox",
+    "obj": "sharedassets5_assets_41_Skybox.obj",
+    "vertices": 4354,
+    "faces": 1780
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 42,
+    "name": "Cube",
+    "obj": "sharedassets5_assets_42_Cube.obj",
+    "vertices": 637,
+    "faces": 312
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 43,
+    "name": "Plane",
+    "obj": "sharedassets5_assets_43_Plane.obj",
+    "vertices": 54,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 44,
+    "name": "Cube",
+    "obj": "sharedassets5_assets_44_Cube.obj",
+    "vertices": 1683,
+    "faces": 986
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 45,
+    "name": "Cube.000",
+    "obj": "sharedassets5_assets_45_Cube_000.obj",
+    "vertices": 415,
+    "faces": 182
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 46,
+    "name": "Shallow",
+    "obj": "sharedassets5_assets_46_Shallow.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 47,
+    "name": "Cube.001",
+    "obj": "sharedassets5_assets_47_Cube_001.obj",
+    "vertices": 954,
+    "faces": 436
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 48,
+    "name": "Shallow.001",
+    "obj": "sharedassets5_assets_48_Shallow_001.obj",
+    "vertices": 63,
+    "faces": 31
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 49,
+    "name": "Waterfall",
+    "obj": "sharedassets5_assets_49_Waterfall.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 50,
+    "name": "Shallow.004",
+    "obj": "sharedassets5_assets_50_Shallow_004.obj",
+    "vertices": 119,
+    "faces": 57
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 51,
+    "name": "Shallow.003",
+    "obj": "sharedassets5_assets_51_Shallow_003.obj",
+    "vertices": 400,
+    "faces": 200
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 52,
+    "name": "Shallow.002",
+    "obj": "sharedassets5_assets_52_Shallow_002.obj",
+    "vertices": 39,
+    "faces": 19
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 53,
+    "name": "Waterfall.009",
+    "obj": "sharedassets5_assets_53_Waterfall_009.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 54,
+    "name": "Waterfall.008",
+    "obj": "sharedassets5_assets_54_Waterfall_008.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 55,
+    "name": "Waterfall.007",
+    "obj": "sharedassets5_assets_55_Waterfall_007.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 56,
+    "name": "Waterfall.006",
+    "obj": "sharedassets5_assets_56_Waterfall_006.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 57,
+    "name": "Waterfall.005",
+    "obj": "sharedassets5_assets_57_Waterfall_005.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 58,
+    "name": "Waterfall.004",
+    "obj": "sharedassets5_assets_58_Waterfall_004.obj",
+    "vertices": 72,
+    "faces": 36
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 59,
+    "name": "Waterfall.003",
+    "obj": "sharedassets5_assets_59_Waterfall_003.obj",
+    "vertices": 108,
+    "faces": 54
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 60,
+    "name": "Waterfall.002",
+    "obj": "sharedassets5_assets_60_Waterfall_002.obj",
+    "vertices": 48,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 61,
+    "name": "Waterfall.001",
+    "obj": "sharedassets5_assets_61_Waterfall_001.obj",
+    "vertices": 96,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 62,
+    "name": "Walls.050",
+    "obj": "sharedassets5_assets_62_Walls_050.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 63,
+    "name": "Walls.049",
+    "obj": "sharedassets5_assets_63_Walls_049.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 64,
+    "name": "Walls.048",
+    "obj": "sharedassets5_assets_64_Walls_048.obj",
+    "vertices": 354,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 65,
+    "name": "Walls.047",
+    "obj": "sharedassets5_assets_65_Walls_047.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 66,
+    "name": "Walls.046",
+    "obj": "sharedassets5_assets_66_Walls_046.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 67,
+    "name": "Walls.045",
+    "obj": "sharedassets5_assets_67_Walls_045.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 68,
+    "name": "Walls.044",
+    "obj": "sharedassets5_assets_68_Walls_044.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 69,
+    "name": "Walls.043",
+    "obj": "sharedassets5_assets_69_Walls_043.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 70,
+    "name": "Walls.042",
+    "obj": "sharedassets5_assets_70_Walls_042.obj",
+    "vertices": 184,
+    "faces": 88
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 71,
+    "name": "Walls.041",
+    "obj": "sharedassets5_assets_71_Walls_041.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 72,
+    "name": "Walls.040",
+    "obj": "sharedassets5_assets_72_Walls_040.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 73,
+    "name": "Walls.039",
+    "obj": "sharedassets5_assets_73_Walls_039.obj",
+    "vertices": 472,
+    "faces": 232
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 74,
+    "name": "Walls.038",
+    "obj": "sharedassets5_assets_74_Walls_038.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 75,
+    "name": "Walls.037",
+    "obj": "sharedassets5_assets_75_Walls_037.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 76,
+    "name": "Walls.036",
+    "obj": "sharedassets5_assets_76_Walls_036.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 77,
+    "name": "Walls.035",
+    "obj": "sharedassets5_assets_77_Walls_035.obj",
+    "vertices": 248,
+    "faces": 120
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 78,
+    "name": "Walls.034",
+    "obj": "sharedassets5_assets_78_Walls_034.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 79,
+    "name": "Walls.033",
+    "obj": "sharedassets5_assets_79_Walls_033.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 80,
+    "name": "Walls.032",
+    "obj": "sharedassets5_assets_80_Walls_032.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 81,
+    "name": "Walls.031",
+    "obj": "sharedassets5_assets_81_Walls_031.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 82,
+    "name": "Walls.030",
+    "obj": "sharedassets5_assets_82_Walls_030.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 83,
+    "name": "Walls.029",
+    "obj": "sharedassets5_assets_83_Walls_029.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 84,
+    "name": "Walls.028",
+    "obj": "sharedassets5_assets_84_Walls_028.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 85,
+    "name": "Walls.027",
+    "obj": "sharedassets5_assets_85_Walls_027.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 86,
+    "name": "Walls.026",
+    "obj": "sharedassets5_assets_86_Walls_026.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 87,
+    "name": "Walls.025",
+    "obj": "sharedassets5_assets_87_Walls_025.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 88,
+    "name": "Walls.024",
+    "obj": "sharedassets5_assets_88_Walls_024.obj",
+    "vertices": 301,
+    "faces": 141
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 89,
+    "name": "Walls.023",
+    "obj": "sharedassets5_assets_89_Walls_023.obj",
+    "vertices": 352,
+    "faces": 168
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 90,
+    "name": "Walls.022",
+    "obj": "sharedassets5_assets_90_Walls_022.obj",
+    "vertices": 1104,
+    "faces": 532
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 91,
+    "name": "Walls.021",
+    "obj": "sharedassets5_assets_91_Walls_021.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 92,
+    "name": "Walls.020",
+    "obj": "sharedassets5_assets_92_Walls_020.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 93,
+    "name": "Walls.019",
+    "obj": "sharedassets5_assets_93_Walls_019.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 94,
+    "name": "Walls.018",
+    "obj": "sharedassets5_assets_94_Walls_018.obj",
+    "vertices": 1104,
+    "faces": 532
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 95,
+    "name": "Walls.017",
+    "obj": "sharedassets5_assets_95_Walls_017.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 96,
+    "name": "Walls.016",
+    "obj": "sharedassets5_assets_96_Walls_016.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 97,
+    "name": "Walls.015",
+    "obj": "sharedassets5_assets_97_Walls_015.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 98,
+    "name": "Walls.014",
+    "obj": "sharedassets5_assets_98_Walls_014.obj",
+    "vertices": 96,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 99,
+    "name": "Walls.013",
+    "obj": "sharedassets5_assets_99_Walls_013.obj",
+    "vertices": 96,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 100,
+    "name": "Walls.012",
+    "obj": "sharedassets5_assets_100_Walls_012.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 101,
+    "name": "Walls.011",
+    "obj": "sharedassets5_assets_101_Walls_011.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 102,
+    "name": "Walls.010",
+    "obj": "sharedassets5_assets_102_Walls_010.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 103,
+    "name": "Walls.009",
+    "obj": "sharedassets5_assets_103_Walls_009.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 104,
+    "name": "Walls.008",
+    "obj": "sharedassets5_assets_104_Walls_008.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 105,
+    "name": "Walls.007",
+    "obj": "sharedassets5_assets_105_Walls_007.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 106,
+    "name": "Walls.006",
+    "obj": "sharedassets5_assets_106_Walls_006.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 107,
+    "name": "Walls.005",
+    "obj": "sharedassets5_assets_107_Walls_005.obj",
+    "vertices": 5067,
+    "faces": 2498
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 108,
+    "name": "Walls.004",
+    "obj": "sharedassets5_assets_108_Walls_004.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 109,
+    "name": "Walls.003",
+    "obj": "sharedassets5_assets_109_Walls_003.obj",
+    "vertices": 2629,
+    "faces": 1293
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 110,
+    "name": "Walls.002",
+    "obj": "sharedassets5_assets_110_Walls_002.obj",
+    "vertices": 1631,
+    "faces": 803
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 111,
+    "name": "Walls.001",
+    "obj": "sharedassets5_assets_111_Walls_001.obj",
+    "vertices": 1360,
+    "faces": 672
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 112,
+    "name": "Walls",
+    "obj": "sharedassets5_assets_112_Walls.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 113,
+    "name": "Walkable.028",
+    "obj": "sharedassets5_assets_113_Walkable_028.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 114,
+    "name": "Walkable.026",
+    "obj": "sharedassets5_assets_114_Walkable_026.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 115,
+    "name": "Walkable.005",
+    "obj": "sharedassets5_assets_115_Walkable_005.obj",
+    "vertices": 174,
+    "faces": 78
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 116,
+    "name": "Walkable.023",
+    "obj": "sharedassets5_assets_116_Walkable_023.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 117,
+    "name": "Walkable.001",
+    "obj": "sharedassets5_assets_117_Walkable_001.obj",
+    "vertices": 31,
+    "faces": 15
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 118,
+    "name": "Walls.051",
+    "obj": "sharedassets5_assets_118_Walls_051.obj",
+    "vertices": 80,
+    "faces": 40
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 119,
+    "name": "Slide",
+    "obj": "sharedassets5_assets_119_Slide.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 120,
+    "name": "Walkable.017",
+    "obj": "sharedassets5_assets_120_Walkable_017.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 121,
+    "name": "Walkable.010",
+    "obj": "sharedassets5_assets_121_Walkable_010.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 122,
+    "name": "Walkable.038",
+    "obj": "sharedassets5_assets_122_Walkable_038.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 123,
+    "name": "Walkable.033",
+    "obj": "sharedassets5_assets_123_Walkable_033.obj",
+    "vertices": 161,
+    "faces": 77
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 124,
+    "name": "Walkable.013",
+    "obj": "sharedassets5_assets_124_Walkable_013.obj",
+    "vertices": 67,
+    "faces": 31
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 125,
+    "name": "Walkable.030",
+    "obj": "sharedassets5_assets_125_Walkable_030.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 126,
+    "name": "Walls.052",
+    "obj": "sharedassets5_assets_126_Walls_052.obj",
+    "vertices": 48,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 127,
+    "name": "Walkable.009",
+    "obj": "sharedassets5_assets_127_Walkable_009.obj",
+    "vertices": 119,
+    "faces": 55
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 128,
+    "name": "Walkable.027",
+    "obj": "sharedassets5_assets_128_Walkable_027.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 129,
+    "name": "Walkable.011",
+    "obj": "sharedassets5_assets_129_Walkable_011.obj",
+    "vertices": 55,
+    "faces": 25
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 130,
+    "name": "Walkable.021",
+    "obj": "sharedassets5_assets_130_Walkable_021.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 131,
+    "name": "Walkable.002",
+    "obj": "sharedassets5_assets_131_Walkable_002.obj",
+    "vertices": 101,
+    "faces": 49
+  },
+  {
+    "source": "sharedassets5.assets",
+    "path_id": 132,
+    "name": "Walkable.029",
+    "obj": "sharedassets5_assets_132_Walkable_029.obj",
+    "vertices": 14,
+    "faces": 6
+  },
+  {
+    "source": "level5",
+    "path_id": 1,
+    "name": "Combined Mesh (root: scene)",
+    "obj": "level5_1_Combined_Mesh__root__scene_.obj",
+    "vertices": 38397,
+    "faces": 18671
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 18,
+    "name": "Walls.030",
+    "obj": "sharedassets3_assets_18_Walls_030.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 19,
+    "name": "Lava.011",
+    "obj": "sharedassets3_assets_19_Lava_011.obj",
+    "vertices": 32,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 20,
+    "name": "Walkable.044",
+    "obj": "sharedassets3_assets_20_Walkable_044.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 21,
+    "name": "Walls.059",
+    "obj": "sharedassets3_assets_21_Walls_059.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 22,
+    "name": "Walls.057",
+    "obj": "sharedassets3_assets_22_Walls_057.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 23,
+    "name": "Lava.006",
+    "obj": "sharedassets3_assets_23_Lava_006.obj",
+    "vertices": 500,
+    "faces": 250
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 24,
+    "name": "Walls.068",
+    "obj": "sharedassets3_assets_24_Walls_068.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 25,
+    "name": "Lava.005",
+    "obj": "sharedassets3_assets_25_Lava_005.obj",
+    "vertices": 48,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 26,
+    "name": "Walkable.015",
+    "obj": "sharedassets3_assets_26_Walkable_015.obj",
+    "vertices": 68,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 27,
+    "name": "Walkable.012",
+    "obj": "sharedassets3_assets_27_Walkable_012.obj",
+    "vertices": 14,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 28,
+    "name": "Walkable.064",
+    "obj": "sharedassets3_assets_28_Walkable_064.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 29,
+    "name": "Walkable.003",
+    "obj": "sharedassets3_assets_29_Walkable_003.obj",
+    "vertices": 101,
+    "faces": 47
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 30,
+    "name": "Walls.025",
+    "obj": "sharedassets3_assets_30_Walls_025.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 31,
+    "name": "Walls.028",
+    "obj": "sharedassets3_assets_31_Walls_028.obj",
+    "vertices": 48,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 32,
+    "name": "Walls.077",
+    "obj": "sharedassets3_assets_32_Walls_077.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 33,
+    "name": "Walkable.008",
+    "obj": "sharedassets3_assets_33_Walkable_008.obj",
+    "vertices": 26,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 34,
+    "name": "Walkable.050",
+    "obj": "sharedassets3_assets_34_Walkable_050.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 35,
+    "name": "Walls.042",
+    "obj": "sharedassets3_assets_35_Walls_042.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 36,
+    "name": "Walls.061",
+    "obj": "sharedassets3_assets_36_Walls_061.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 37,
+    "name": "Walls.054",
+    "obj": "sharedassets3_assets_37_Walls_054.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 38,
+    "name": "Walls.073",
+    "obj": "sharedassets3_assets_38_Walls_073.obj",
+    "vertices": 72,
+    "faces": 36
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 39,
+    "name": "Walls.024",
+    "obj": "sharedassets3_assets_39_Walls_024.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 40,
+    "name": "Walls.095",
+    "obj": "sharedassets3_assets_40_Walls_095.obj",
+    "vertices": 280,
+    "faces": 136
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 41,
+    "name": "Walls.094",
+    "obj": "sharedassets3_assets_41_Walls_094.obj",
+    "vertices": 6461,
+    "faces": 3123
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 42,
+    "name": "Walkable.022",
+    "obj": "sharedassets3_assets_42_Walkable_022.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 43,
+    "name": "Walkable.061",
+    "obj": "sharedassets3_assets_43_Walkable_061.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 44,
+    "name": "Walkable.051",
+    "obj": "sharedassets3_assets_44_Walkable_051.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 45,
+    "name": "Walls.045",
+    "obj": "sharedassets3_assets_45_Walls_045.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 46,
+    "name": "Walls.088",
+    "obj": "sharedassets3_assets_46_Walls_088.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 47,
+    "name": "Walls.009",
+    "obj": "sharedassets3_assets_47_Walls_009.obj",
+    "vertices": 230,
+    "faces": 110
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 48,
+    "name": "Walls.003",
+    "obj": "sharedassets3_assets_48_Walls_003.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 49,
+    "name": "Walls.020",
+    "obj": "sharedassets3_assets_49_Walls_020.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 50,
+    "name": "Walls.093",
+    "obj": "sharedassets3_assets_50_Walls_093.obj",
+    "vertices": 92,
+    "faces": 46
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 51,
+    "name": "Walls.002",
+    "obj": "sharedassets3_assets_51_Walls_002.obj",
+    "vertices": 191,
+    "faces": 89
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 52,
+    "name": "Walls.039",
+    "obj": "sharedassets3_assets_52_Walls_039.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 53,
+    "name": "Walls.066",
+    "obj": "sharedassets3_assets_53_Walls_066.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 54,
+    "name": "Walls.080",
+    "obj": "sharedassets3_assets_54_Walls_080.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 55,
+    "name": "Walkable",
+    "obj": "sharedassets3_assets_55_Walkable.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 56,
+    "name": "Walkable.032",
+    "obj": "sharedassets3_assets_56_Walkable_032.obj",
+    "vertices": 27,
+    "faces": 13
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 57,
+    "name": "Walls.008",
+    "obj": "sharedassets3_assets_57_Walls_008.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 58,
+    "name": "Walkable.063",
+    "obj": "sharedassets3_assets_58_Walkable_063.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 59,
+    "name": "Walls.058",
+    "obj": "sharedassets3_assets_59_Walls_058.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 60,
+    "name": "Walkable.057",
+    "obj": "sharedassets3_assets_60_Walkable_057.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 61,
+    "name": "Walls.007",
+    "obj": "sharedassets3_assets_61_Walls_007.obj",
+    "vertices": 40,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 62,
+    "name": "Walls.090",
+    "obj": "sharedassets3_assets_62_Walls_090.obj",
+    "vertices": 92,
+    "faces": 46
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 63,
+    "name": "Walls.034",
+    "obj": "sharedassets3_assets_63_Walls_034.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 64,
+    "name": "Walkable.006",
+    "obj": "sharedassets3_assets_64_Walkable_006.obj",
+    "vertices": 45,
+    "faces": 21
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 65,
+    "name": "Walls.040",
+    "obj": "sharedassets3_assets_65_Walls_040.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 66,
+    "name": "Lava.002",
+    "obj": "sharedassets3_assets_66_Lava_002.obj",
+    "vertices": 22,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 67,
+    "name": "Walkable.034",
+    "obj": "sharedassets3_assets_67_Walkable_034.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 68,
+    "name": "Walls.065",
+    "obj": "sharedassets3_assets_68_Walls_065.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 69,
+    "name": "Walkable.058",
+    "obj": "sharedassets3_assets_69_Walkable_058.obj",
+    "vertices": 40,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 70,
+    "name": "Walls.049",
+    "obj": "sharedassets3_assets_70_Walls_049.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 71,
+    "name": "Walls.023",
+    "obj": "sharedassets3_assets_71_Walls_023.obj",
+    "vertices": 72,
+    "faces": 36
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 72,
+    "name": "Walkable.053",
+    "obj": "sharedassets3_assets_72_Walkable_053.obj",
+    "vertices": 30,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 73,
+    "name": "Walkable.037",
+    "obj": "sharedassets3_assets_73_Walkable_037.obj",
+    "vertices": 128,
+    "faces": 62
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 74,
+    "name": "Walkable.024",
+    "obj": "sharedassets3_assets_74_Walkable_024.obj",
+    "vertices": 14,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 75,
+    "name": "Lava.008",
+    "obj": "sharedassets3_assets_75_Lava_008.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 76,
+    "name": "Lava.010",
+    "obj": "sharedassets3_assets_76_Lava_010.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 77,
+    "name": "Walls.035",
+    "obj": "sharedassets3_assets_77_Walls_035.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 78,
+    "name": "Walls.019",
+    "obj": "sharedassets3_assets_78_Walls_019.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 79,
+    "name": "Lava.012",
+    "obj": "sharedassets3_assets_79_Lava_012.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 80,
+    "name": "Walkable.067",
+    "obj": "sharedassets3_assets_80_Walkable_067.obj",
+    "vertices": 38,
+    "faces": 18
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 81,
+    "name": "Walls.089",
+    "obj": "sharedassets3_assets_81_Walls_089.obj",
+    "vertices": 92,
+    "faces": 46
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 82,
+    "name": "Walkable.036",
+    "obj": "sharedassets3_assets_82_Walkable_036.obj",
+    "vertices": 69,
+    "faces": 29
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 83,
+    "name": "Walls.014",
+    "obj": "sharedassets3_assets_83_Walls_014.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 84,
+    "name": "Walkable.025",
+    "obj": "sharedassets3_assets_84_Walkable_025.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 85,
+    "name": "Walls.055",
+    "obj": "sharedassets3_assets_85_Walls_055.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 86,
+    "name": "Walls.046",
+    "obj": "sharedassets3_assets_86_Walls_046.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 87,
+    "name": "Walkable.019",
+    "obj": "sharedassets3_assets_87_Walkable_019.obj",
+    "vertices": 68,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 88,
+    "name": "Walkable.014",
+    "obj": "sharedassets3_assets_88_Walkable_014.obj",
+    "vertices": 46,
+    "faces": 22
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 89,
+    "name": "Walls.078",
+    "obj": "sharedassets3_assets_89_Walls_078.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 90,
+    "name": "Walls.031",
+    "obj": "sharedassets3_assets_90_Walls_031.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 91,
+    "name": "Walkable.004",
+    "obj": "sharedassets3_assets_91_Walkable_004.obj",
+    "vertices": 64,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 92,
+    "name": "Walls.036",
+    "obj": "sharedassets3_assets_92_Walls_036.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 93,
+    "name": "Walls.050",
+    "obj": "sharedassets3_assets_93_Walls_050.obj",
+    "vertices": 64,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 94,
+    "name": "Walkable.060",
+    "obj": "sharedassets3_assets_94_Walkable_060.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 95,
+    "name": "Walls.082",
+    "obj": "sharedassets3_assets_95_Walls_082.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 96,
+    "name": "Walls.072",
+    "obj": "sharedassets3_assets_96_Walls_072.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 97,
+    "name": "Walls.069",
+    "obj": "sharedassets3_assets_97_Walls_069.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 98,
+    "name": "Walls.021",
+    "obj": "sharedassets3_assets_98_Walls_021.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 99,
+    "name": "Walls.053",
+    "obj": "sharedassets3_assets_99_Walls_053.obj",
+    "vertices": 64,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 100,
+    "name": "Walls.056",
+    "obj": "sharedassets3_assets_100_Walls_056.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 101,
+    "name": "Walls.092",
+    "obj": "sharedassets3_assets_101_Walls_092.obj",
+    "vertices": 92,
+    "faces": 46
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 102,
+    "name": "Walkable.016",
+    "obj": "sharedassets3_assets_102_Walkable_016.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 103,
+    "name": "Walkable.007",
+    "obj": "sharedassets3_assets_103_Walkable_007.obj",
+    "vertices": 13,
+    "faces": 5
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 104,
+    "name": "Walls.001",
+    "obj": "sharedassets3_assets_104_Walls_001.obj",
+    "vertices": 2995,
+    "faces": 1457
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 105,
+    "name": "Walkable.056",
+    "obj": "sharedassets3_assets_105_Walkable_056.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 106,
+    "name": "Walkable.018",
+    "obj": "sharedassets3_assets_106_Walkable_018.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 107,
+    "name": "Walkable.043",
+    "obj": "sharedassets3_assets_107_Walkable_043.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 108,
+    "name": "Walkable.035",
+    "obj": "sharedassets3_assets_108_Walkable_035.obj",
+    "vertices": 40,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 109,
+    "name": "Walls.048",
+    "obj": "sharedassets3_assets_109_Walls_048.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 110,
+    "name": "Walkable.020",
+    "obj": "sharedassets3_assets_110_Walkable_020.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 111,
+    "name": "Walkable.031",
+    "obj": "sharedassets3_assets_111_Walkable_031.obj",
+    "vertices": 30,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 112,
+    "name": "Walls.006",
+    "obj": "sharedassets3_assets_112_Walls_006.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 113,
+    "name": "Cylinder",
+    "obj": "sharedassets3_assets_113_Cylinder.obj",
+    "vertices": 990,
+    "faces": 726
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 114,
+    "name": "Sphere.001",
+    "obj": "sharedassets3_assets_114_Sphere_001.obj",
+    "vertices": 3592,
+    "faces": 2028
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 115,
+    "name": "Cube",
+    "obj": "sharedassets3_assets_115_Cube.obj",
+    "vertices": 1025,
+    "faces": 480
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 116,
+    "name": "Lava",
+    "obj": "sharedassets3_assets_116_Lava.obj",
+    "vertices": 32,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 117,
+    "name": "Lava.001",
+    "obj": "sharedassets3_assets_117_Lava_001.obj",
+    "vertices": 114,
+    "faces": 52
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 118,
+    "name": "Walkable.028",
+    "obj": "sharedassets3_assets_118_Walkable_028.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 119,
+    "name": "Walls.044",
+    "obj": "sharedassets3_assets_119_Walls_044.obj",
+    "vertices": 64,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 120,
+    "name": "Walkable.026",
+    "obj": "sharedassets3_assets_120_Walkable_026.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 121,
+    "name": "Walkable.062",
+    "obj": "sharedassets3_assets_121_Walkable_062.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 122,
+    "name": "Walls.062",
+    "obj": "sharedassets3_assets_122_Walls_062.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 123,
+    "name": "Walkable.041",
+    "obj": "sharedassets3_assets_123_Walkable_041.obj",
+    "vertices": 36,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 124,
+    "name": "Walls.091",
+    "obj": "sharedassets3_assets_124_Walls_091.obj",
+    "vertices": 92,
+    "faces": 46
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 125,
+    "name": "Walkable.049",
+    "obj": "sharedassets3_assets_125_Walkable_049.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 126,
+    "name": "Walls.060",
+    "obj": "sharedassets3_assets_126_Walls_060.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 127,
+    "name": "Walls.037",
+    "obj": "sharedassets3_assets_127_Walls_037.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 128,
+    "name": "Walkable.005",
+    "obj": "sharedassets3_assets_128_Walkable_005.obj",
+    "vertices": 30,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 129,
+    "name": "Walls.067",
+    "obj": "sharedassets3_assets_129_Walls_067.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 130,
+    "name": "Walls.074",
+    "obj": "sharedassets3_assets_130_Walls_074.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 131,
+    "name": "Walkable.023",
+    "obj": "sharedassets3_assets_131_Walkable_023.obj",
+    "vertices": 41,
+    "faces": 19
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 132,
+    "name": "Walls.079",
+    "obj": "sharedassets3_assets_132_Walls_079.obj",
+    "vertices": 64,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 133,
+    "name": "Walkable.001",
+    "obj": "sharedassets3_assets_133_Walkable_001.obj",
+    "vertices": 100,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 134,
+    "name": "Walls.041",
+    "obj": "sharedassets3_assets_134_Walls_041.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 135,
+    "name": "Walls.038",
+    "obj": "sharedassets3_assets_135_Walls_038.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 136,
+    "name": "Walkable.048",
+    "obj": "sharedassets3_assets_136_Walkable_048.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 137,
+    "name": "Walls",
+    "obj": "sharedassets3_assets_137_Walls.obj",
+    "vertices": 92,
+    "faces": 46
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 138,
+    "name": "Walkable.047",
+    "obj": "sharedassets3_assets_138_Walkable_047.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 139,
+    "name": "Walls.029",
+    "obj": "sharedassets3_assets_139_Walls_029.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 140,
+    "name": "Walls.051",
+    "obj": "sharedassets3_assets_140_Walls_051.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 141,
+    "name": "Walls.017",
+    "obj": "sharedassets3_assets_141_Walls_017.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 142,
+    "name": "Walls.005",
+    "obj": "sharedassets3_assets_142_Walls_005.obj",
+    "vertices": 40,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 143,
+    "name": "Walkable.069",
+    "obj": "sharedassets3_assets_143_Walkable_069.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 144,
+    "name": "Walkable.017",
+    "obj": "sharedassets3_assets_144_Walkable_017.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 145,
+    "name": "Walls.004",
+    "obj": "sharedassets3_assets_145_Walls_004.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 146,
+    "name": "Walls.015",
+    "obj": "sharedassets3_assets_146_Walls_015.obj",
+    "vertices": 68,
+    "faces": 34
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 147,
+    "name": "Walkable.010",
+    "obj": "sharedassets3_assets_147_Walkable_010.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 148,
+    "name": "Walkable.038",
+    "obj": "sharedassets3_assets_148_Walkable_038.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 149,
+    "name": "Walls.013",
+    "obj": "sharedassets3_assets_149_Walls_013.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 150,
+    "name": "Walls.063",
+    "obj": "sharedassets3_assets_150_Walls_063.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 151,
+    "name": "Walkable.033",
+    "obj": "sharedassets3_assets_151_Walkable_033.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 152,
+    "name": "Walls.076",
+    "obj": "sharedassets3_assets_152_Walls_076.obj",
+    "vertices": 96,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 153,
+    "name": "Walkable.054",
+    "obj": "sharedassets3_assets_153_Walkable_054.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 154,
+    "name": "Lava.004",
+    "obj": "sharedassets3_assets_154_Lava_004.obj",
+    "vertices": 103,
+    "faces": 49
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 155,
+    "name": "Walkable.013",
+    "obj": "sharedassets3_assets_155_Walkable_013.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 156,
+    "name": "Walkable.066",
+    "obj": "sharedassets3_assets_156_Walkable_066.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 157,
+    "name": "Walkable.042",
+    "obj": "sharedassets3_assets_157_Walkable_042.obj",
+    "vertices": 84,
+    "faces": 36
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 158,
+    "name": "Walls.018",
+    "obj": "sharedassets3_assets_158_Walls_018.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 159,
+    "name": "Walls.071",
+    "obj": "sharedassets3_assets_159_Walls_071.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 160,
+    "name": "Walls.081",
+    "obj": "sharedassets3_assets_160_Walls_081.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 161,
+    "name": "Walls.016",
+    "obj": "sharedassets3_assets_161_Walls_016.obj",
+    "vertices": 40,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 162,
+    "name": "Walls.043",
+    "obj": "sharedassets3_assets_162_Walls_043.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 163,
+    "name": "Walls.033",
+    "obj": "sharedassets3_assets_163_Walls_033.obj",
+    "vertices": 176,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 164,
+    "name": "Walkable.030",
+    "obj": "sharedassets3_assets_164_Walkable_030.obj",
+    "vertices": 46,
+    "faces": 22
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 165,
+    "name": "Walkable.055",
+    "obj": "sharedassets3_assets_165_Walkable_055.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 166,
+    "name": "Walkable.045",
+    "obj": "sharedassets3_assets_166_Walkable_045.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 167,
+    "name": "Walls.087",
+    "obj": "sharedassets3_assets_167_Walls_087.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 168,
+    "name": "Walls.085",
+    "obj": "sharedassets3_assets_168_Walls_085.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 169,
+    "name": "Walls.011",
+    "obj": "sharedassets3_assets_169_Walls_011.obj",
+    "vertices": 243,
+    "faces": 119
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 170,
+    "name": "Walls.022",
+    "obj": "sharedassets3_assets_170_Walls_022.obj",
+    "vertices": 40,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 171,
+    "name": "Walls.064",
+    "obj": "sharedassets3_assets_171_Walls_064.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 172,
+    "name": "Walls.052",
+    "obj": "sharedassets3_assets_172_Walls_052.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 173,
+    "name": "Walls.032",
+    "obj": "sharedassets3_assets_173_Walls_032.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 174,
+    "name": "Walkable.065",
+    "obj": "sharedassets3_assets_174_Walkable_065.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 175,
+    "name": "Walls.086",
+    "obj": "sharedassets3_assets_175_Walls_086.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 176,
+    "name": "Walkable.009",
+    "obj": "sharedassets3_assets_176_Walkable_009.obj",
+    "vertices": 19,
+    "faces": 9
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 177,
+    "name": "Walls.012",
+    "obj": "sharedassets3_assets_177_Walls_012.obj",
+    "vertices": 270,
+    "faces": 130
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 178,
+    "name": "Walkable.027",
+    "obj": "sharedassets3_assets_178_Walkable_027.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 179,
+    "name": "Walls.047",
+    "obj": "sharedassets3_assets_179_Walls_047.obj",
+    "vertices": 64,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 180,
+    "name": "Walls.097",
+    "obj": "sharedassets3_assets_180_Walls_097.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 181,
+    "name": "Walls.026",
+    "obj": "sharedassets3_assets_181_Walls_026.obj",
+    "vertices": 144,
+    "faces": 72
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 182,
+    "name": "Walkable.011",
+    "obj": "sharedassets3_assets_182_Walkable_011.obj",
+    "vertices": 20,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 183,
+    "name": "Walls.070",
+    "obj": "sharedassets3_assets_183_Walls_070.obj",
+    "vertices": 43,
+    "faces": 19
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 184,
+    "name": "Walkable.021",
+    "obj": "sharedassets3_assets_184_Walkable_021.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 185,
+    "name": "Walkable.068",
+    "obj": "sharedassets3_assets_185_Walkable_068.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 186,
+    "name": "Walkable.002",
+    "obj": "sharedassets3_assets_186_Walkable_002.obj",
+    "vertices": 491,
+    "faces": 225
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 187,
+    "name": "Lava.007",
+    "obj": "sharedassets3_assets_187_Lava_007.obj",
+    "vertices": 56,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 188,
+    "name": "Lava.003",
+    "obj": "sharedassets3_assets_188_Lava_003.obj",
+    "vertices": 57,
+    "faces": 27
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 189,
+    "name": "Walls.027",
+    "obj": "sharedassets3_assets_189_Walls_027.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 190,
+    "name": "Walls.075",
+    "obj": "sharedassets3_assets_190_Walls_075.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 191,
+    "name": "Walkable.046",
+    "obj": "sharedassets3_assets_191_Walkable_046.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 192,
+    "name": "Walls.083",
+    "obj": "sharedassets3_assets_192_Walls_083.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 193,
+    "name": "Walls.010",
+    "obj": "sharedassets3_assets_193_Walls_010.obj",
+    "vertices": 248,
+    "faces": 124
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 194,
+    "name": "Walkable.039",
+    "obj": "sharedassets3_assets_194_Walkable_039.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 195,
+    "name": "Walkable.029",
+    "obj": "sharedassets3_assets_195_Walkable_029.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 196,
+    "name": "Walls.084",
+    "obj": "sharedassets3_assets_196_Walls_084.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 197,
+    "name": "Lava.009",
+    "obj": "sharedassets3_assets_197_Lava_009.obj",
+    "vertices": 276,
+    "faces": 138
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 198,
+    "name": "Walkable.040",
+    "obj": "sharedassets3_assets_198_Walkable_040.obj",
+    "vertices": 52,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 199,
+    "name": "Walkable.059",
+    "obj": "sharedassets3_assets_199_Walkable_059.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 200,
+    "name": "Walls.096",
+    "obj": "sharedassets3_assets_200_Walls_096.obj",
+    "vertices": 603,
+    "faces": 295
+  },
+  {
+    "source": "sharedassets3.assets",
+    "path_id": 201,
+    "name": "Walkable.052",
+    "obj": "sharedassets3_assets_201_Walkable_052.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "level4",
+    "path_id": 1,
+    "name": "Combined Mesh (root: scene)",
+    "obj": "level4_1_Combined_Mesh__root__scene_.obj",
+    "vertices": 58267,
+    "faces": 28159
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 10,
+    "name": "Walls.030",
+    "obj": "sharedassets4_assets_10_Walls_030.obj",
+    "vertices": 56,
+    "faces": 28
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 11,
+    "name": "Walkable.044",
+    "obj": "sharedassets4_assets_11_Walkable_044.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 12,
+    "error": "data must be str, not bool"
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 13,
+    "name": "Walls.057",
+    "obj": "sharedassets4_assets_13_Walls_057.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 14,
+    "name": "Walls.068",
+    "obj": "sharedassets4_assets_14_Walls_068.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 15,
+    "name": "Walkable.015",
+    "obj": "sharedassets4_assets_15_Walkable_015.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 16,
+    "name": "Walkable.012",
+    "obj": "sharedassets4_assets_16_Walkable_012.obj",
+    "vertices": 27,
+    "faces": 13
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 17,
+    "name": "Walkable.064",
+    "obj": "sharedassets4_assets_17_Walkable_064.obj",
+    "vertices": 116,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 18,
+    "name": "Walkable.003",
+    "obj": "sharedassets4_assets_18_Walkable_003.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 19,
+    "name": "Walls.025",
+    "obj": "sharedassets4_assets_19_Walls_025.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 20,
+    "name": "Walls.028",
+    "obj": "sharedassets4_assets_20_Walls_028.obj",
+    "vertices": 512,
+    "faces": 256
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 21,
+    "name": "Walls.077",
+    "obj": "sharedassets4_assets_21_Walls_077.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 22,
+    "name": "Walkable.008",
+    "obj": "sharedassets4_assets_22_Walkable_008.obj",
+    "vertices": 220,
+    "faces": 102
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 23,
+    "name": "Walkable.050",
+    "obj": "sharedassets4_assets_23_Walkable_050.obj",
+    "vertices": 14,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 24,
+    "name": "Walls.042",
+    "obj": "sharedassets4_assets_24_Walls_042.obj",
+    "vertices": 72,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 25,
+    "name": "Walls.061",
+    "obj": "sharedassets4_assets_25_Walls_061.obj",
+    "vertices": 734,
+    "faces": 354
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 26,
+    "name": "Walls.054",
+    "obj": "sharedassets4_assets_26_Walls_054.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 27,
+    "name": "Walls.073",
+    "obj": "sharedassets4_assets_27_Walls_073.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 28,
+    "name": "Walls.024",
+    "obj": "sharedassets4_assets_28_Walls_024.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 29,
+    "name": "Walkable.022",
+    "obj": "sharedassets4_assets_29_Walkable_022.obj",
+    "vertices": 23,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 30,
+    "name": "Walkable.061",
+    "obj": "sharedassets4_assets_30_Walkable_061.obj",
+    "vertices": 19,
+    "faces": 9
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 31,
+    "name": "Walkable.051",
+    "obj": "sharedassets4_assets_31_Walkable_051.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 32,
+    "name": "Walls.045",
+    "obj": "sharedassets4_assets_32_Walls_045.obj",
+    "vertices": 784,
+    "faces": 364
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 33,
+    "name": "Walls.009",
+    "obj": "sharedassets4_assets_33_Walls_009.obj",
+    "vertices": 280,
+    "faces": 136
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 34,
+    "name": "Walls.003",
+    "obj": "sharedassets4_assets_34_Walls_003.obj",
+    "vertices": 368,
+    "faces": 176
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 35,
+    "name": "Walls.020",
+    "obj": "sharedassets4_assets_35_Walls_020.obj",
+    "vertices": 17344,
+    "faces": 8512
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 36,
+    "name": "Walls.002",
+    "obj": "sharedassets4_assets_36_Walls_002.obj",
+    "vertices": 4044,
+    "faces": 2012
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 37,
+    "name": "Walls.039",
+    "obj": "sharedassets4_assets_37_Walls_039.obj",
+    "vertices": 96,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 38,
+    "name": "Walls.066",
+    "obj": "sharedassets4_assets_38_Walls_066.obj",
+    "vertices": 56,
+    "faces": 28
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 39,
+    "name": "Walls.080",
+    "obj": "sharedassets4_assets_39_Walls_080.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 40,
+    "name": "Walkable",
+    "obj": "sharedassets4_assets_40_Walkable.obj",
+    "vertices": 35,
+    "faces": 17
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 41,
+    "name": "Walkable.032",
+    "obj": "sharedassets4_assets_41_Walkable_032.obj",
+    "vertices": 31,
+    "faces": 15
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 42,
+    "name": "Walls.008",
+    "obj": "sharedassets4_assets_42_Walls_008.obj",
+    "vertices": 54,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 43,
+    "name": "Walkable.063",
+    "obj": "sharedassets4_assets_43_Walkable_063.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 44,
+    "name": "Walls.058",
+    "obj": "sharedassets4_assets_44_Walls_058.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 45,
+    "name": "Walkable.057",
+    "obj": "sharedassets4_assets_45_Walkable_057.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 46,
+    "name": "Walls.007",
+    "obj": "sharedassets4_assets_46_Walls_007.obj",
+    "vertices": 322,
+    "faces": 153
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 47,
+    "name": "Walls.034",
+    "obj": "sharedassets4_assets_47_Walls_034.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 48,
+    "name": "Walkable.006",
+    "obj": "sharedassets4_assets_48_Walkable_006.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 49,
+    "name": "Walls.040",
+    "obj": "sharedassets4_assets_49_Walls_040.obj",
+    "vertices": 96,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 50,
+    "name": "Walkable.034",
+    "obj": "sharedassets4_assets_50_Walkable_034.obj",
+    "vertices": 62,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 51,
+    "name": "Walls.065",
+    "obj": "sharedassets4_assets_51_Walls_065.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 52,
+    "name": "Walkable.058",
+    "obj": "sharedassets4_assets_52_Walkable_058.obj",
+    "vertices": 22,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 53,
+    "name": "Walls.049",
+    "obj": "sharedassets4_assets_53_Walls_049.obj",
+    "vertices": 494,
+    "faces": 232
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 54,
+    "name": "Walls.023",
+    "obj": "sharedassets4_assets_54_Walls_023.obj",
+    "vertices": 65,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 55,
+    "name": "Walkable.053",
+    "obj": "sharedassets4_assets_55_Walkable_053.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 56,
+    "name": "Walkable.037",
+    "obj": "sharedassets4_assets_56_Walkable_037.obj",
+    "vertices": 23,
+    "faces": 11
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 57,
+    "name": "Walkable.024",
+    "obj": "sharedassets4_assets_57_Walkable_024.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 58,
+    "name": "Walls.035",
+    "obj": "sharedassets4_assets_58_Walls_035.obj",
+    "vertices": 72,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 59,
+    "name": "Walls.019",
+    "obj": "sharedassets4_assets_59_Walls_019.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 60,
+    "name": "Walkable.067",
+    "obj": "sharedassets4_assets_60_Walkable_067.obj",
+    "vertices": 15,
+    "faces": 7
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 61,
+    "name": "Walkable.072",
+    "obj": "sharedassets4_assets_61_Walkable_072.obj",
+    "vertices": 189,
+    "faces": 90
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 62,
+    "name": "Walkable.036",
+    "obj": "sharedassets4_assets_62_Walkable_036.obj",
+    "vertices": 98,
+    "faces": 46
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 63,
+    "name": "Walls.014",
+    "obj": "sharedassets4_assets_63_Walls_014.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 64,
+    "name": "Walkable.025",
+    "obj": "sharedassets4_assets_64_Walkable_025.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 65,
+    "name": "Walls.055",
+    "obj": "sharedassets4_assets_65_Walls_055.obj",
+    "vertices": 248,
+    "faces": 118
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 66,
+    "name": "Walls.046",
+    "obj": "sharedassets4_assets_66_Walls_046.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 67,
+    "name": "Walkable.019",
+    "obj": "sharedassets4_assets_67_Walkable_019.obj",
+    "vertices": 67,
+    "faces": 29
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 68,
+    "name": "Walkable.014",
+    "obj": "sharedassets4_assets_68_Walkable_014.obj",
+    "vertices": 32,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 69,
+    "name": "Walls.078",
+    "obj": "sharedassets4_assets_69_Walls_078.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 70,
+    "name": "Walls.031",
+    "obj": "sharedassets4_assets_70_Walls_031.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 71,
+    "name": "Walkable.004",
+    "obj": "sharedassets4_assets_71_Walkable_004.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 72,
+    "name": "Walls.036",
+    "obj": "sharedassets4_assets_72_Walls_036.obj",
+    "vertices": 72,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 73,
+    "name": "Walls.050",
+    "obj": "sharedassets4_assets_73_Walls_050.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 74,
+    "name": "Circle",
+    "obj": "sharedassets4_assets_74_Circle.obj",
+    "vertices": 1106,
+    "faces": 614
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 75,
+    "name": "Walkable.060",
+    "obj": "sharedassets4_assets_75_Walkable_060.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 76,
+    "name": "Walls.082",
+    "obj": "sharedassets4_assets_76_Walls_082.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 77,
+    "name": "Walls.072",
+    "obj": "sharedassets4_assets_77_Walls_072.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 78,
+    "name": "Walls.069",
+    "obj": "sharedassets4_assets_78_Walls_069.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 79,
+    "name": "Walls.021",
+    "obj": "sharedassets4_assets_79_Walls_021.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 80,
+    "name": "Walls.053",
+    "obj": "sharedassets4_assets_80_Walls_053.obj",
+    "vertices": 56,
+    "faces": 28
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 81,
+    "name": "Walls.056",
+    "obj": "sharedassets4_assets_81_Walls_056.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 82,
+    "name": "Walkable.016",
+    "obj": "sharedassets4_assets_82_Walkable_016.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 83,
+    "name": "Walkable.007",
+    "obj": "sharedassets4_assets_83_Walkable_007.obj",
+    "vertices": 60,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 84,
+    "name": "Walls.001",
+    "obj": "sharedassets4_assets_84_Walls_001.obj",
+    "vertices": 1072,
+    "faces": 512
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 85,
+    "name": "Walkable.056",
+    "obj": "sharedassets4_assets_85_Walkable_056.obj",
+    "vertices": 108,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 86,
+    "name": "Walkable.018",
+    "obj": "sharedassets4_assets_86_Walkable_018.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 87,
+    "name": "Walkable.043",
+    "obj": "sharedassets4_assets_87_Walkable_043.obj",
+    "vertices": 62,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 88,
+    "name": "Walkable.035",
+    "obj": "sharedassets4_assets_88_Walkable_035.obj",
+    "vertices": 317,
+    "faces": 153
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 89,
+    "name": "Walls.048",
+    "obj": "sharedassets4_assets_89_Walls_048.obj",
+    "vertices": 96,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 90,
+    "name": "Walkable.020",
+    "obj": "sharedassets4_assets_90_Walkable_020.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 91,
+    "name": "Walkable.031",
+    "obj": "sharedassets4_assets_91_Walkable_031.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 92,
+    "name": "Walls.006",
+    "obj": "sharedassets4_assets_92_Walls_006.obj",
+    "vertices": 281,
+    "faces": 134
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 93,
+    "name": "Cube",
+    "obj": "sharedassets4_assets_93_Cube.obj",
+    "vertices": 482,
+    "faces": 500
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 94,
+    "name": "Cube",
+    "obj": "sharedassets4_assets_94_Cube.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 95,
+    "name": "Hitbox",
+    "obj": "sharedassets4_assets_95_Hitbox.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 96,
+    "name": "Sphere",
+    "obj": "sharedassets4_assets_96_Sphere.obj",
+    "vertices": 5922,
+    "faces": 2578
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 97,
+    "name": "Hitbox",
+    "obj": "sharedassets4_assets_97_Hitbox.obj",
+    "vertices": 73,
+    "faces": 40
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 98,
+    "name": "Cube",
+    "obj": "sharedassets4_assets_98_Cube.obj",
+    "vertices": 481,
+    "faces": 216
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 99,
+    "name": "Walkable.028",
+    "obj": "sharedassets4_assets_99_Walkable_028.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 100,
+    "name": "Walls.044",
+    "obj": "sharedassets4_assets_100_Walls_044.obj",
+    "vertices": 3713,
+    "faces": 1847
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 101,
+    "name": "Walkable.026",
+    "obj": "sharedassets4_assets_101_Walkable_026.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 102,
+    "name": "Walkable.062",
+    "obj": "sharedassets4_assets_102_Walkable_062.obj",
+    "vertices": 36,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 103,
+    "name": "Walls.062",
+    "obj": "sharedassets4_assets_103_Walls_062.obj",
+    "vertices": 476,
+    "faces": 228
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 104,
+    "name": "Walkable.041",
+    "obj": "sharedassets4_assets_104_Walkable_041.obj",
+    "vertices": 276,
+    "faces": 124
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 105,
+    "name": "Walkable.049",
+    "obj": "sharedassets4_assets_105_Walkable_049.obj",
+    "vertices": 11,
+    "faces": 5
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 106,
+    "name": "Walls.060",
+    "obj": "sharedassets4_assets_106_Walls_060.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 107,
+    "name": "Walkable.070",
+    "obj": "sharedassets4_assets_107_Walkable_070.obj",
+    "vertices": 87,
+    "faces": 43
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 108,
+    "name": "Walls.037",
+    "obj": "sharedassets4_assets_108_Walls_037.obj",
+    "vertices": 70,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 109,
+    "name": "Walkable.005",
+    "obj": "sharedassets4_assets_109_Walkable_005.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 110,
+    "name": "Walls.067",
+    "obj": "sharedassets4_assets_110_Walls_067.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 111,
+    "name": "Walls.074",
+    "obj": "sharedassets4_assets_111_Walls_074.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 112,
+    "name": "Walkable.023",
+    "obj": "sharedassets4_assets_112_Walkable_023.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 113,
+    "name": "Walls.079",
+    "obj": "sharedassets4_assets_113_Walls_079.obj",
+    "vertices": 72,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 114,
+    "name": "Walkable.001",
+    "obj": "sharedassets4_assets_114_Walkable_001.obj",
+    "vertices": 223,
+    "faces": 111
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 115,
+    "name": "Walls.041",
+    "obj": "sharedassets4_assets_115_Walls_041.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 116,
+    "name": "Walls.038",
+    "obj": "sharedassets4_assets_116_Walls_038.obj",
+    "vertices": 72,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 117,
+    "name": "Walkable.048",
+    "obj": "sharedassets4_assets_117_Walkable_048.obj",
+    "vertices": 39,
+    "faces": 17
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 118,
+    "name": "Walls",
+    "obj": "sharedassets4_assets_118_Walls.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 119,
+    "name": "Walkable.047",
+    "obj": "sharedassets4_assets_119_Walkable_047.obj",
+    "vertices": 18,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 120,
+    "name": "Walls.029",
+    "obj": "sharedassets4_assets_120_Walls_029.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 121,
+    "name": "Walls.051",
+    "obj": "sharedassets4_assets_121_Walls_051.obj",
+    "vertices": 56,
+    "faces": 28
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 122,
+    "name": "Walls.017",
+    "obj": "sharedassets4_assets_122_Walls_017.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 123,
+    "name": "Walls.005",
+    "obj": "sharedassets4_assets_123_Walls_005.obj",
+    "vertices": 206,
+    "faces": 98
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 124,
+    "name": "Walkable.069",
+    "obj": "sharedassets4_assets_124_Walkable_069.obj",
+    "vertices": 81,
+    "faces": 39
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 125,
+    "name": "Walkable.017",
+    "obj": "sharedassets4_assets_125_Walkable_017.obj",
+    "vertices": 32,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 126,
+    "name": "Walls.004",
+    "obj": "sharedassets4_assets_126_Walls_004.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 127,
+    "name": "Walls.015",
+    "obj": "sharedassets4_assets_127_Walls_015.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 128,
+    "name": "Walkable.010",
+    "obj": "sharedassets4_assets_128_Walkable_010.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 129,
+    "name": "Walkable.038",
+    "obj": "sharedassets4_assets_129_Walkable_038.obj",
+    "vertices": 455,
+    "faces": 215
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 130,
+    "name": "Walls.013",
+    "obj": "sharedassets4_assets_130_Walls_013.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 131,
+    "name": "Walls.063",
+    "obj": "sharedassets4_assets_131_Walls_063.obj",
+    "vertices": 56,
+    "faces": 28
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 132,
+    "name": "Walkable.033",
+    "obj": "sharedassets4_assets_132_Walkable_033.obj",
+    "vertices": 154,
+    "faces": 76
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 133,
+    "name": "Walls.076",
+    "obj": "sharedassets4_assets_133_Walls_076.obj",
+    "vertices": 96,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 134,
+    "name": "Walkable.054",
+    "obj": "sharedassets4_assets_134_Walkable_054.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 135,
+    "name": "Walkable.013",
+    "obj": "sharedassets4_assets_135_Walkable_013.obj",
+    "vertices": 96,
+    "faces": 45
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 136,
+    "name": "Walkable.066",
+    "obj": "sharedassets4_assets_136_Walkable_066.obj",
+    "vertices": 48,
+    "faces": 22
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 137,
+    "name": "Walkable.042",
+    "obj": "sharedassets4_assets_137_Walkable_042.obj",
+    "vertices": 27,
+    "faces": 11
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 138,
+    "name": "Walls.018",
+    "obj": "sharedassets4_assets_138_Walls_018.obj",
+    "vertices": 192,
+    "faces": 96
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 139,
+    "name": "Walls.071",
+    "obj": "sharedassets4_assets_139_Walls_071.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 140,
+    "name": "Walls.081",
+    "obj": "sharedassets4_assets_140_Walls_081.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 141,
+    "name": "Walls.016",
+    "obj": "sharedassets4_assets_141_Walls_016.obj",
+    "vertices": 96,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 142,
+    "name": "Walls.043",
+    "obj": "sharedassets4_assets_142_Walls_043.obj",
+    "vertices": 48,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 143,
+    "name": "Walls.033",
+    "obj": "sharedassets4_assets_143_Walls_033.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 144,
+    "name": "Walkable.030",
+    "obj": "sharedassets4_assets_144_Walkable_030.obj",
+    "vertices": 31,
+    "faces": 15
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 145,
+    "name": "Walkable.055",
+    "obj": "sharedassets4_assets_145_Walkable_055.obj",
+    "vertices": 96,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 146,
+    "name": "Walkable.045",
+    "obj": "sharedassets4_assets_146_Walkable_045.obj",
+    "vertices": 186,
+    "faces": 92
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 147,
+    "name": "Walls.011",
+    "obj": "sharedassets4_assets_147_Walls_011.obj",
+    "vertices": 280,
+    "faces": 136
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 148,
+    "name": "Walls.022",
+    "obj": "sharedassets4_assets_148_Walls_022.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 149,
+    "name": "Walls.064",
+    "obj": "sharedassets4_assets_149_Walls_064.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 150,
+    "name": "Walkable.073",
+    "obj": "sharedassets4_assets_150_Walkable_073.obj",
+    "vertices": 12,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 151,
+    "name": "Walls.052",
+    "obj": "sharedassets4_assets_151_Walls_052.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 152,
+    "name": "Walls.032",
+    "obj": "sharedassets4_assets_152_Walls_032.obj",
+    "vertices": 56,
+    "faces": 28
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 153,
+    "name": "Walkable.065",
+    "obj": "sharedassets4_assets_153_Walkable_065.obj",
+    "vertices": 23,
+    "faces": 11
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 154,
+    "name": "Walkable.009",
+    "obj": "sharedassets4_assets_154_Walkable_009.obj",
+    "vertices": 104,
+    "faces": 52
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 155,
+    "name": "Walls.012",
+    "obj": "sharedassets4_assets_155_Walls_012.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 156,
+    "name": "Walkable.027",
+    "obj": "sharedassets4_assets_156_Walkable_027.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 157,
+    "name": "Walls.047",
+    "obj": "sharedassets4_assets_157_Walls_047.obj",
+    "vertices": 85,
+    "faces": 39
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 158,
+    "name": "Walls.026",
+    "obj": "sharedassets4_assets_158_Walls_026.obj",
+    "vertices": 118,
+    "faces": 54
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 159,
+    "name": "Walkable.011",
+    "obj": "sharedassets4_assets_159_Walkable_011.obj",
+    "vertices": 386,
+    "faces": 183
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 160,
+    "name": "Walls.070",
+    "obj": "sharedassets4_assets_160_Walls_070.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 161,
+    "name": "Walkable.021",
+    "obj": "sharedassets4_assets_161_Walkable_021.obj",
+    "vertices": 30,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 162,
+    "name": "Walkable.068",
+    "obj": "sharedassets4_assets_162_Walkable_068.obj",
+    "vertices": 184,
+    "faces": 90
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 163,
+    "name": "Walkable.002",
+    "obj": "sharedassets4_assets_163_Walkable_002.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 164,
+    "name": "Walls.027",
+    "obj": "sharedassets4_assets_164_Walls_027.obj",
+    "vertices": 60,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 165,
+    "name": "Walls.075",
+    "obj": "sharedassets4_assets_165_Walls_075.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 166,
+    "name": "Walkable.046",
+    "obj": "sharedassets4_assets_166_Walkable_046.obj",
+    "vertices": 112,
+    "faces": 48
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 167,
+    "name": "Walls.010",
+    "obj": "sharedassets4_assets_167_Walls_010.obj",
+    "vertices": 280,
+    "faces": 136
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 168,
+    "name": "Walkable.039",
+    "obj": "sharedassets4_assets_168_Walkable_039.obj",
+    "vertices": 114,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 169,
+    "name": "Walkable.029",
+    "obj": "sharedassets4_assets_169_Walkable_029.obj",
+    "vertices": 191,
+    "faces": 91
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 170,
+    "name": "Walkable.040",
+    "obj": "sharedassets4_assets_170_Walkable_040.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 171,
+    "name": "Walkable.071",
+    "obj": "sharedassets4_assets_171_Walkable_071.obj",
+    "vertices": 18,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 172,
+    "name": "Walkable.059",
+    "obj": "sharedassets4_assets_172_Walkable_059.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets4.assets",
+    "path_id": 173,
+    "name": "Walkable.052",
+    "obj": "sharedassets4_assets_173_Walkable_052.obj",
+    "vertices": 8,
+    "faces": 4
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 11,
+    "name": "Walls.030",
+    "obj": "sharedassets6_assets_11_Walls_030.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 12,
+    "name": "Walkable.044",
+    "obj": "sharedassets6_assets_12_Walkable_044.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 13,
+    "name": "Bridges.012",
+    "obj": "sharedassets6_assets_13_Bridges_012.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 14,
+    "name": "Bridges.011",
+    "obj": "sharedassets6_assets_14_Bridges_011.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 15,
+    "name": "Walls.059",
+    "obj": "sharedassets6_assets_15_Walls_059.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 16,
+    "name": "Sliding.001",
+    "obj": "sharedassets6_assets_16_Sliding_001.obj",
+    "vertices": 50,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 17,
+    "name": "Walls.057",
+    "obj": "sharedassets6_assets_17_Walls_057.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 18,
+    "name": "Bridges.013",
+    "obj": "sharedassets6_assets_18_Bridges_013.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 19,
+    "name": "Walkable.015",
+    "obj": "sharedassets6_assets_19_Walkable_015.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 20,
+    "name": "Walkable.012",
+    "obj": "sharedassets6_assets_20_Walkable_012.obj",
+    "vertices": 36,
+    "faces": 16
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 21,
+    "name": "Walkable.003",
+    "obj": "sharedassets6_assets_21_Walkable_003.obj",
+    "vertices": 147,
+    "faces": 71
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 22,
+    "name": "Walls.025",
+    "obj": "sharedassets6_assets_22_Walls_025.obj",
+    "vertices": 324,
+    "faces": 156
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 23,
+    "name": "Walls.028",
+    "obj": "sharedassets6_assets_23_Walls_028.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 24,
+    "name": "Walkable.008",
+    "obj": "sharedassets6_assets_24_Walkable_008.obj",
+    "vertices": 34,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 25,
+    "name": "Walkable.050",
+    "obj": "sharedassets6_assets_25_Walkable_050.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 26,
+    "name": "Walls.042",
+    "obj": "sharedassets6_assets_26_Walls_042.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 27,
+    "name": "Walls.054",
+    "obj": "sharedassets6_assets_27_Walls_054.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 28,
+    "name": "Walls.024",
+    "obj": "sharedassets6_assets_28_Walls_024.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 29,
+    "name": "Bridges.008",
+    "obj": "sharedassets6_assets_29_Bridges_008.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 30,
+    "name": "Walkable.022",
+    "obj": "sharedassets6_assets_30_Walkable_022.obj",
+    "vertices": 26,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 31,
+    "name": "Walkable.051",
+    "obj": "sharedassets6_assets_31_Walkable_051.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 32,
+    "name": "Walls.045",
+    "obj": "sharedassets6_assets_32_Walls_045.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 33,
+    "name": "Walls.009",
+    "obj": "sharedassets6_assets_33_Walls_009.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 34,
+    "name": "Walls.003",
+    "obj": "sharedassets6_assets_34_Walls_003.obj",
+    "vertices": 324,
+    "faces": 156
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 35,
+    "name": "Bridges.005",
+    "obj": "sharedassets6_assets_35_Bridges_005.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 36,
+    "name": "Walls.002",
+    "obj": "sharedassets6_assets_36_Walls_002.obj",
+    "vertices": 4549,
+    "faces": 2148
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 37,
+    "name": "Walls.039",
+    "obj": "sharedassets6_assets_37_Walls_039.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 38,
+    "name": "Walkable",
+    "obj": "sharedassets6_assets_38_Walkable.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 39,
+    "name": "Walkable.032",
+    "obj": "sharedassets6_assets_39_Walkable_032.obj",
+    "vertices": 42,
+    "faces": 18
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 40,
+    "name": "Walls.008",
+    "obj": "sharedassets6_assets_40_Walls_008.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 41,
+    "name": "Walls.058",
+    "obj": "sharedassets6_assets_41_Walls_058.obj",
+    "vertices": 20,
+    "faces": 10
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 42,
+    "name": "Walls.007",
+    "obj": "sharedassets6_assets_42_Walls_007.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 43,
+    "name": "Walls.034",
+    "obj": "sharedassets6_assets_43_Walls_034.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 44,
+    "name": "Walkable.006",
+    "obj": "sharedassets6_assets_44_Walkable_006.obj",
+    "vertices": 113,
+    "faces": 55
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 45,
+    "name": "Walls.040",
+    "obj": "sharedassets6_assets_45_Walls_040.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 46,
+    "name": "Walkable.034",
+    "obj": "sharedassets6_assets_46_Walkable_034.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 47,
+    "name": "Walls.049",
+    "obj": "sharedassets6_assets_47_Walls_049.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 48,
+    "name": "Walls.023",
+    "obj": "sharedassets6_assets_48_Walls_023.obj",
+    "vertices": 28,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 49,
+    "name": "Walkable.053",
+    "obj": "sharedassets6_assets_49_Walkable_053.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 50,
+    "name": "Walkable.037",
+    "obj": "sharedassets6_assets_50_Walkable_037.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 51,
+    "name": "Walkable.024",
+    "obj": "sharedassets6_assets_51_Walkable_024.obj",
+    "vertices": 50,
+    "faces": 22
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 52,
+    "name": "Walls.035",
+    "obj": "sharedassets6_assets_52_Walls_035.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 53,
+    "name": "Walls.019",
+    "obj": "sharedassets6_assets_53_Walls_019.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 54,
+    "name": "Walkable.036",
+    "obj": "sharedassets6_assets_54_Walkable_036.obj",
+    "vertices": 58,
+    "faces": 28
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 55,
+    "name": "Walls.014",
+    "obj": "sharedassets6_assets_55_Walls_014.obj",
+    "vertices": 52,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 56,
+    "name": "Walkable.025",
+    "obj": "sharedassets6_assets_56_Walkable_025.obj",
+    "vertices": 60,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 57,
+    "name": "Walls.055",
+    "obj": "sharedassets6_assets_57_Walls_055.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 58,
+    "name": "Walls.046",
+    "obj": "sharedassets6_assets_58_Walls_046.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 59,
+    "name": "Walkable.019",
+    "obj": "sharedassets6_assets_59_Walkable_019.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 60,
+    "name": "Walkable.014",
+    "obj": "sharedassets6_assets_60_Walkable_014.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 61,
+    "name": "Walls.031",
+    "obj": "sharedassets6_assets_61_Walls_031.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 62,
+    "name": "Walkable.004",
+    "obj": "sharedassets6_assets_62_Walkable_004.obj",
+    "vertices": 19,
+    "faces": 7
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 63,
+    "name": "Walls.036",
+    "obj": "sharedassets6_assets_63_Walls_036.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 64,
+    "name": "Walls.050",
+    "obj": "sharedassets6_assets_64_Walls_050.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 65,
+    "name": "Bridges.009",
+    "obj": "sharedassets6_assets_65_Bridges_009.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 66,
+    "name": "Walls.021",
+    "obj": "sharedassets6_assets_66_Walls_021.obj",
+    "vertices": 40,
+    "faces": 20
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 67,
+    "name": "Walls.053",
+    "obj": "sharedassets6_assets_67_Walls_053.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 68,
+    "name": "Walls.056",
+    "obj": "sharedassets6_assets_68_Walls_056.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 69,
+    "name": "Walkable.016",
+    "obj": "sharedassets6_assets_69_Walkable_016.obj",
+    "vertices": 536,
+    "faces": 250
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 70,
+    "name": "Walkable.007",
+    "obj": "sharedassets6_assets_70_Walkable_007.obj",
+    "vertices": 46,
+    "faces": 22
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 71,
+    "name": "Walls.001",
+    "obj": "sharedassets6_assets_71_Walls_001.obj",
+    "vertices": 2292,
+    "faces": 1108
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 72,
+    "name": "Walkable.056",
+    "obj": "sharedassets6_assets_72_Walkable_056.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 73,
+    "name": "Walkable.018",
+    "obj": "sharedassets6_assets_73_Walkable_018.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 74,
+    "name": "Walkable.043",
+    "obj": "sharedassets6_assets_74_Walkable_043.obj",
+    "vertices": 42,
+    "faces": 18
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 75,
+    "name": "Walkable.035",
+    "obj": "sharedassets6_assets_75_Walkable_035.obj",
+    "vertices": 70,
+    "faces": 30
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 76,
+    "name": "Walls.048",
+    "obj": "sharedassets6_assets_76_Walls_048.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 77,
+    "name": "Walkable.020",
+    "obj": "sharedassets6_assets_77_Walkable_020.obj",
+    "vertices": 54,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 78,
+    "name": "Walkable.031",
+    "obj": "sharedassets6_assets_78_Walkable_031.obj",
+    "vertices": 42,
+    "faces": 18
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 79,
+    "name": "Walls.006",
+    "obj": "sharedassets6_assets_79_Walls_006.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 80,
+    "name": "Circle",
+    "obj": "sharedassets6_assets_80_Circle.obj",
+    "vertices": 273,
+    "faces": 102
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 81,
+    "name": "Sphere.001",
+    "obj": "sharedassets6_assets_81_Sphere_001.obj",
+    "vertices": 3555,
+    "faces": 2066
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 82,
+    "name": "Walkable.028",
+    "obj": "sharedassets6_assets_82_Walkable_028.obj",
+    "vertices": 15,
+    "faces": 7
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 83,
+    "name": "Walls.044",
+    "obj": "sharedassets6_assets_83_Walls_044.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 84,
+    "name": "Walkable.026",
+    "obj": "sharedassets6_assets_84_Walkable_026.obj",
+    "vertices": 15,
+    "faces": 7
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 85,
+    "name": "Bridges.001",
+    "obj": "sharedassets6_assets_85_Bridges_001.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 86,
+    "name": "Walkable.041",
+    "obj": "sharedassets6_assets_86_Walkable_041.obj",
+    "vertices": 11,
+    "faces": 5
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 87,
+    "name": "Walkable.049",
+    "obj": "sharedassets6_assets_87_Walkable_049.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 88,
+    "name": "Walls.060",
+    "obj": "sharedassets6_assets_88_Walls_060.obj",
+    "vertices": 52,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 89,
+    "name": "Walls.037",
+    "obj": "sharedassets6_assets_89_Walls_037.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 90,
+    "name": "Walkable.005",
+    "obj": "sharedassets6_assets_90_Walkable_005.obj",
+    "vertices": 71,
+    "faces": 35
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 91,
+    "name": "Bridges.003",
+    "obj": "sharedassets6_assets_91_Bridges_003.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 92,
+    "name": "Sliding.002",
+    "obj": "sharedassets6_assets_92_Sliding_002.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 93,
+    "name": "Walkable.023",
+    "obj": "sharedassets6_assets_93_Walkable_023.obj",
+    "vertices": 14,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 94,
+    "name": "Walkable.001",
+    "obj": "sharedassets6_assets_94_Walkable_001.obj",
+    "vertices": 187,
+    "faces": 91
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 95,
+    "name": "Walls.041",
+    "obj": "sharedassets6_assets_95_Walls_041.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 96,
+    "name": "Bridges.006",
+    "obj": "sharedassets6_assets_96_Bridges_006.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 97,
+    "name": "Walls.038",
+    "obj": "sharedassets6_assets_97_Walls_038.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 98,
+    "name": "Walkable.048",
+    "obj": "sharedassets6_assets_98_Walkable_048.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 99,
+    "name": "Walls",
+    "obj": "sharedassets6_assets_99_Walls.obj",
+    "vertices": 160,
+    "faces": 80
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 100,
+    "name": "Walkable.047",
+    "obj": "sharedassets6_assets_100_Walkable_047.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 101,
+    "name": "Walls.029",
+    "obj": "sharedassets6_assets_101_Walls_029.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 102,
+    "name": "Walls.051",
+    "obj": "sharedassets6_assets_102_Walls_051.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 103,
+    "name": "Walls.017",
+    "obj": "sharedassets6_assets_103_Walls_017.obj",
+    "vertices": 52,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 104,
+    "name": "Walls.005",
+    "obj": "sharedassets6_assets_104_Walls_005.obj",
+    "vertices": 138,
+    "faces": 62
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 105,
+    "name": "Walkable.017",
+    "obj": "sharedassets6_assets_105_Walkable_017.obj",
+    "vertices": 45,
+    "faces": 21
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 106,
+    "name": "Walls.004",
+    "obj": "sharedassets6_assets_106_Walls_004.obj",
+    "vertices": 10049,
+    "faces": 4731
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 107,
+    "name": "Walls.015",
+    "obj": "sharedassets6_assets_107_Walls_015.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 108,
+    "name": "Walkable.010",
+    "obj": "sharedassets6_assets_108_Walkable_010.obj",
+    "vertices": 71,
+    "faces": 27
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 109,
+    "name": "Walkable.038",
+    "obj": "sharedassets6_assets_109_Walkable_038.obj",
+    "vertices": 67,
+    "faces": 31
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 110,
+    "name": "Walls.013",
+    "obj": "sharedassets6_assets_110_Walls_013.obj",
+    "vertices": 52,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 111,
+    "name": "Walkable.033",
+    "obj": "sharedassets6_assets_111_Walkable_033.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 112,
+    "name": "Walkable.054",
+    "obj": "sharedassets6_assets_112_Walkable_054.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 113,
+    "name": "Walkable.013",
+    "obj": "sharedassets6_assets_113_Walkable_013.obj",
+    "vertices": 135,
+    "faces": 58
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 114,
+    "name": "Walkable.042",
+    "obj": "sharedassets6_assets_114_Walkable_042.obj",
+    "vertices": 42,
+    "faces": 18
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 115,
+    "name": "Walls.018",
+    "obj": "sharedassets6_assets_115_Walls_018.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 116,
+    "name": "Walls.016",
+    "obj": "sharedassets6_assets_116_Walls_016.obj",
+    "vertices": 52,
+    "faces": 26
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 117,
+    "name": "Walls.043",
+    "obj": "sharedassets6_assets_117_Walls_043.obj",
+    "vertices": 2114,
+    "faces": 1004
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 118,
+    "name": "Bridges.002",
+    "obj": "sharedassets6_assets_118_Bridges_002.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 119,
+    "name": "Walls.033",
+    "obj": "sharedassets6_assets_119_Walls_033.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 120,
+    "name": "Sliding.003",
+    "obj": "sharedassets6_assets_120_Sliding_003.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 121,
+    "name": "Walkable.030",
+    "obj": "sharedassets6_assets_121_Walkable_030.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 122,
+    "name": "Walkable.055",
+    "obj": "sharedassets6_assets_122_Walkable_055.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 123,
+    "name": "Walkable.045",
+    "obj": "sharedassets6_assets_123_Walkable_045.obj",
+    "vertices": 56,
+    "faces": 24
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 124,
+    "name": "Sliding",
+    "obj": "sharedassets6_assets_124_Sliding.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 125,
+    "name": "Walls.011",
+    "obj": "sharedassets6_assets_125_Walls_011.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 126,
+    "name": "Walls.022",
+    "obj": "sharedassets6_assets_126_Walls_022.obj",
+    "vertices": 1564,
+    "faces": 766
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 127,
+    "name": "Walls.052",
+    "obj": "sharedassets6_assets_127_Walls_052.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 128,
+    "name": "Walls.032",
+    "obj": "sharedassets6_assets_128_Walls_032.obj",
+    "vertices": 188,
+    "faces": 68
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 129,
+    "name": "Walkable.009",
+    "obj": "sharedassets6_assets_129_Walkable_009.obj",
+    "vertices": 101,
+    "faces": 43
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 130,
+    "name": "Walls.012",
+    "obj": "sharedassets6_assets_130_Walls_012.obj",
+    "vertices": 160,
+    "faces": 70
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 131,
+    "name": "Walkable.027",
+    "obj": "sharedassets6_assets_131_Walkable_027.obj",
+    "vertices": 36,
+    "faces": 18
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 132,
+    "name": "Walls.047",
+    "obj": "sharedassets6_assets_132_Walls_047.obj",
+    "vertices": 16,
+    "faces": 8
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 133,
+    "name": "Walls.026",
+    "obj": "sharedassets6_assets_133_Walls_026.obj",
+    "vertices": 324,
+    "faces": 156
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 134,
+    "name": "Bridges.010",
+    "obj": "sharedassets6_assets_134_Bridges_010.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 135,
+    "name": "Bridges.004",
+    "obj": "sharedassets6_assets_135_Bridges_004.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 136,
+    "name": "Walkable.011",
+    "obj": "sharedassets6_assets_136_Walkable_011.obj",
+    "vertices": 128,
+    "faces": 62
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 137,
+    "name": "Walkable.021",
+    "obj": "sharedassets6_assets_137_Walkable_021.obj",
+    "vertices": 30,
+    "faces": 14
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 138,
+    "name": "Walkable.002",
+    "obj": "sharedassets6_assets_138_Walkable_002.obj",
+    "vertices": 57,
+    "faces": 27
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 139,
+    "name": "Walls.027",
+    "obj": "sharedassets6_assets_139_Walls_027.obj",
+    "vertices": 120,
+    "faces": 56
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 140,
+    "name": "Walkable.046",
+    "obj": "sharedassets6_assets_140_Walkable_046.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 141,
+    "name": "Bridges.007",
+    "obj": "sharedassets6_assets_141_Bridges_007.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 142,
+    "name": "Walls.010",
+    "obj": "sharedassets6_assets_142_Walls_010.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 143,
+    "name": "Walkable.039",
+    "obj": "sharedassets6_assets_143_Walkable_039.obj",
+    "vertices": 84,
+    "faces": 36
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 144,
+    "name": "Walkable.029",
+    "obj": "sharedassets6_assets_144_Walkable_029.obj",
+    "vertices": 26,
+    "faces": 12
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 145,
+    "name": "Walkable.040",
+    "obj": "sharedassets6_assets_145_Walkable_040.obj",
+    "vertices": 14,
+    "faces": 6
+  },
+  {
+    "source": "sharedassets6.assets",
+    "path_id": 146,
+    "name": "Walkable.052",
+    "obj": "sharedassets6_assets_146_Walkable_052.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "level3",
+    "path_id": 1,
+    "name": "Combined Mesh (root: scene)",
+    "obj": "level3_1_Combined_Mesh__root__scene_.obj",
+    "vertices": 36728,
+    "faces": 17828
+  },
+  {
+    "source": "level2",
+    "path_id": 1,
+    "name": "Combined Mesh (root: scene)",
+    "obj": "level2_1_Combined_Mesh__root__scene_.obj",
+    "vertices": 574,
+    "faces": 464
+  },
+  {
+    "source": "sharedassets7.assets",
+    "path_id": 14,
+    "name": "Cylinder",
+    "obj": "sharedassets7_assets_14_Cylinder.obj",
+    "vertices": 1182,
+    "faces": 976
+  },
+  {
+    "source": "sharedassets0.assets",
+    "path_id": 23,
+    "name": "Cube",
+    "obj": "sharedassets0_assets_23_Cube.obj",
+    "vertices": 9296,
+    "faces": 9264
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 272,
+    "name": "Bones",
+    "obj": "resources_assets_272_Bones.obj",
+    "vertices": 408,
+    "faces": 216
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 273,
+    "name": "Vines",
+    "obj": "resources_assets_273_Vines.obj",
+    "vertices": 602,
+    "faces": 268
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 274,
+    "name": "Tower",
+    "obj": "resources_assets_274_Tower.obj",
+    "vertices": 280,
+    "faces": 160
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 275,
+    "name": "Spore",
+    "obj": "resources_assets_275_Spore.obj",
+    "vertices": 656,
+    "faces": 298
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 276,
+    "name": "Book",
+    "obj": "resources_assets_276_Book.obj",
+    "vertices": 300,
+    "faces": 156
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 277,
+    "name": "Cube",
+    "obj": "resources_assets_277_Cube.obj",
+    "vertices": 264,
+    "faces": 376
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 278,
+    "name": "Circle",
+    "obj": "resources_assets_278_Circle.obj",
+    "vertices": 89,
+    "faces": 72
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 279,
+    "name": "Vert.001",
+    "obj": "resources_assets_279_Vert_001.obj",
+    "vertices": 74,
+    "faces": 36
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 280,
+    "name": "Vert.001",
+    "obj": "resources_assets_280_Vert_001.obj",
+    "vertices": 28,
+    "faces": 12
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 281,
+    "name": "Vert",
+    "obj": "resources_assets_281_Vert.obj",
+    "vertices": 76,
+    "faces": 36
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 282,
+    "name": "Vert.001",
+    "obj": "resources_assets_282_Vert_001.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 283,
+    "name": "Cube",
+    "obj": "resources_assets_283_Cube.obj",
+    "vertices": 344,
+    "faces": 174
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 284,
+    "name": "Cube",
+    "obj": "resources_assets_284_Cube.obj",
+    "vertices": 843,
+    "faces": 378
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 285,
+    "name": "Vert",
+    "obj": "resources_assets_285_Vert.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 286,
+    "name": "Vert.001",
+    "obj": "resources_assets_286_Vert_001.obj",
+    "vertices": 48,
+    "faces": 24
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 287,
+    "name": "Cube",
+    "obj": "resources_assets_287_Cube.obj",
+    "vertices": 481,
+    "faces": 448
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 288,
+    "name": "Vert.001",
+    "obj": "resources_assets_288_Vert_001.obj",
+    "vertices": 60,
+    "faces": 28
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 289,
+    "name": "2nd",
+    "obj": "resources_assets_289_2nd.obj",
+    "vertices": 597,
+    "faces": 300
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 290,
+    "name": "Vert.001",
+    "obj": "resources_assets_290_Vert_001.obj",
+    "vertices": 80,
+    "faces": 40
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 291,
+    "name": "Vert.001",
+    "obj": "resources_assets_291_Vert_001.obj",
+    "vertices": 60,
+    "faces": 28
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 292,
+    "name": "Vert.002",
+    "obj": "resources_assets_292_Vert_002.obj",
+    "vertices": 114,
+    "faces": 54
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 293,
+    "name": "Vert.001",
+    "obj": "resources_assets_293_Vert_001.obj",
+    "vertices": 82,
+    "faces": 38
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 294,
+    "name": "Cube",
+    "obj": "resources_assets_294_Cube.obj",
+    "vertices": 448,
+    "faces": 320
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 295,
+    "name": "Vert.001",
+    "obj": "resources_assets_295_Vert_001.obj",
+    "vertices": 74,
+    "faces": 36
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 296,
+    "name": "Snowflake",
+    "obj": "resources_assets_296_Snowflake.obj",
+    "vertices": 384,
+    "faces": 128
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 297,
+    "name": "Cube",
+    "obj": "resources_assets_297_Cube.obj",
+    "vertices": 352,
+    "faces": 160
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 298,
+    "name": "Vert.001",
+    "obj": "resources_assets_298_Vert_001.obj",
+    "vertices": 58,
+    "faces": 28
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 299,
+    "name": "Vert",
+    "obj": "resources_assets_299_Vert.obj",
+    "vertices": 82,
+    "faces": 38
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 300,
+    "name": "Cube",
+    "obj": "resources_assets_300_Cube.obj",
+    "vertices": 17,
+    "faces": 16
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 301,
+    "name": "Vert.001",
+    "obj": "resources_assets_301_Vert_001.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 302,
+    "name": "Vert.001",
+    "obj": "resources_assets_302_Vert_001.obj",
+    "vertices": 84,
+    "faces": 40
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 303,
+    "name": "Vert.001",
+    "obj": "resources_assets_303_Vert_001.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 304,
+    "name": "Vert.001",
+    "obj": "resources_assets_304_Vert_001.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 305,
+    "name": "Cube",
+    "obj": "resources_assets_305_Cube.obj",
+    "vertices": 518,
+    "faces": 344
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 306,
+    "name": "Vert.001",
+    "obj": "resources_assets_306_Vert_001.obj",
+    "vertices": 60,
+    "faces": 28
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 307,
+    "name": "Sphere",
+    "obj": "resources_assets_307_Sphere.obj",
+    "vertices": 192,
+    "faces": 128
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 308,
+    "name": "Vert.001",
+    "obj": "resources_assets_308_Vert_001.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 309,
+    "name": "Vert.001",
+    "obj": "resources_assets_309_Vert_001.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 310,
+    "name": "Cube",
+    "obj": "resources_assets_310_Cube.obj",
+    "vertices": 362,
+    "faces": 280
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 311,
+    "name": "Vert.001",
+    "obj": "resources_assets_311_Vert_001.obj",
+    "vertices": 136,
+    "faces": 64
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 312,
+    "name": "Vert",
+    "obj": "resources_assets_312_Vert.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 313,
+    "name": "Vert.001",
+    "obj": "resources_assets_313_Vert_001.obj",
+    "vertices": 60,
+    "faces": 28
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 314,
+    "name": "Cube_001",
+    "obj": "resources_assets_314_Cube_001.obj",
+    "vertices": 1829,
+    "faces": 806
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 315,
+    "name": "Cube.001",
+    "obj": "resources_assets_315_Cube_001.obj",
+    "vertices": 224,
+    "faces": 84
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 316,
+    "name": "Cube",
+    "obj": "resources_assets_316_Cube.obj",
+    "vertices": 144,
+    "faces": 48
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 317,
+    "name": "Cube",
+    "obj": "resources_assets_317_Cube.obj",
+    "vertices": 566,
+    "faces": 272
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 318,
+    "name": "Cube",
+    "obj": "resources_assets_318_Cube.obj",
+    "vertices": 60,
+    "faces": 30
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 319,
+    "name": "Vert.001",
+    "obj": "resources_assets_319_Vert_001.obj",
+    "vertices": 78,
+    "faces": 40
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 320,
+    "name": "Vert.001",
+    "obj": "resources_assets_320_Vert_001.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 321,
+    "name": "Plane",
+    "obj": "resources_assets_321_Plane.obj",
+    "vertices": 144,
+    "faces": 48
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 322,
+    "name": "Vert.001",
+    "obj": "resources_assets_322_Vert_001.obj",
+    "vertices": 76,
+    "faces": 36
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 323,
+    "name": "Vert.001",
+    "obj": "resources_assets_323_Vert_001.obj",
+    "vertices": 88,
+    "faces": 44
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 324,
+    "name": "Vert",
+    "obj": "resources_assets_324_Vert.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 325,
+    "name": "Comet",
+    "obj": "resources_assets_325_Comet.obj",
+    "vertices": 436,
+    "faces": 198
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 326,
+    "name": "Cube",
+    "obj": "resources_assets_326_Cube.obj",
+    "vertices": 278,
+    "faces": 160
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 327,
+    "name": "Cylinder",
+    "obj": "resources_assets_327_Cylinder.obj",
+    "vertices": 992,
+    "faces": 472
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 328,
+    "name": "Vert",
+    "obj": "resources_assets_328_Vert.obj",
+    "vertices": 88,
+    "faces": 40
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 329,
+    "name": "Vert",
+    "obj": "resources_assets_329_Vert.obj",
+    "vertices": 76,
+    "faces": 36
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 330,
+    "name": "Vert",
+    "obj": "resources_assets_330_Vert.obj",
+    "vertices": 98,
+    "faces": 46
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 331,
+    "name": "Vert.001",
+    "obj": "resources_assets_331_Vert_001.obj",
+    "vertices": 64,
+    "faces": 32
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 332,
+    "name": "Cube.005",
+    "obj": "resources_assets_332_Cube_005.obj",
+    "vertices": 53,
+    "faces": 23
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 333,
+    "name": "Rings",
+    "obj": "resources_assets_333_Rings.obj",
+    "vertices": 288,
+    "faces": 192
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 334,
+    "name": "Vert",
+    "obj": "resources_assets_334_Vert.obj",
+    "vertices": 76,
+    "faces": 36
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 335,
+    "name": "Sphere",
+    "obj": "resources_assets_335_Sphere.obj",
+    "vertices": 128,
+    "faces": 252
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 336,
+    "name": "Cube.000",
+    "obj": "resources_assets_336_Cube_000.obj",
+    "vertices": 46,
+    "faces": 18
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 337,
+    "name": "Cube",
+    "obj": "resources_assets_337_Cube.obj",
+    "vertices": 1497,
+    "faces": 669
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 338,
+    "name": "Vert",
+    "obj": "resources_assets_338_Vert.obj",
+    "vertices": 92,
+    "faces": 44
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 339,
+    "name": "Vert.001",
+    "obj": "resources_assets_339_Vert_001.obj",
+    "vertices": 96,
+    "faces": 46
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 340,
+    "name": "Frac_2",
+    "obj": "resources_assets_340_Frac_2.obj",
+    "vertices": 40,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 341,
+    "name": "Vert.001",
+    "obj": "resources_assets_341_Vert_001.obj",
+    "vertices": 44,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 342,
+    "name": "Cube_000",
+    "obj": "resources_assets_342_Cube_000.obj",
+    "vertices": 198,
+    "faces": 160
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 343,
+    "name": "Feather",
+    "obj": "resources_assets_343_Feather.obj",
+    "vertices": 271,
+    "faces": 120
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 344,
+    "name": "Gateway Face",
+    "obj": "resources_assets_344_Gateway_Face.obj",
+    "vertices": 1312,
+    "faces": 832
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 345,
+    "name": "1st",
+    "obj": "resources_assets_345_1st.obj",
+    "vertices": 797,
+    "faces": 400
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 346,
+    "name": "Feather",
+    "obj": "resources_assets_346_Feather.obj",
+    "vertices": 271,
+    "faces": 120
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 347,
+    "name": "Ornament",
+    "obj": "resources_assets_347_Ornament.obj",
+    "vertices": 260,
+    "faces": 140
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 348,
+    "name": "Cube_001",
+    "obj": "resources_assets_348_Cube_001.obj",
+    "vertices": 16,
+    "faces": 12
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 349,
+    "name": "Cube",
+    "obj": "resources_assets_349_Cube.obj",
+    "vertices": 232,
+    "faces": 112
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 350,
+    "name": "Energy",
+    "obj": "resources_assets_350_Energy.obj",
+    "vertices": 168,
+    "faces": 66
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 351,
+    "name": "Cube.004",
+    "obj": "resources_assets_351_Cube_004.obj",
+    "vertices": 58,
+    "faces": 26
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 352,
+    "name": "Rubble",
+    "obj": "resources_assets_352_Rubble.obj",
+    "vertices": 448,
+    "faces": 224
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 353,
+    "name": "Frac_1",
+    "obj": "resources_assets_353_Frac_1.obj",
+    "vertices": 49,
+    "faces": 24
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 354,
+    "name": "Shroom",
+    "obj": "resources_assets_354_Shroom.obj",
+    "vertices": 272,
+    "faces": 128
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 355,
+    "name": "Platform Bottom",
+    "obj": "resources_assets_355_Platform_Bottom.obj",
+    "vertices": 88,
+    "faces": 40
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 356,
+    "name": "3rd",
+    "obj": "resources_assets_356_3rd.obj",
+    "vertices": 491,
+    "faces": 234
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 357,
+    "name": "Present",
+    "obj": "resources_assets_357_Present.obj",
+    "vertices": 280,
+    "faces": 188
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 358,
+    "name": "Cube.002",
+    "obj": "resources_assets_358_Cube_002.obj",
+    "vertices": 60,
+    "faces": 20
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 359,
+    "name": "String",
+    "obj": "resources_assets_359_String.obj",
+    "vertices": 186,
+    "faces": 98
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 360,
+    "name": "Tree",
+    "obj": "resources_assets_360_Tree.obj",
+    "vertices": 468,
+    "faces": 216
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 361,
+    "name": "Vert.001",
+    "obj": "resources_assets_361_Vert_001.obj",
+    "vertices": 184,
+    "faces": 128
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 362,
+    "name": "Cube",
+    "obj": "resources_assets_362_Cube.obj",
+    "vertices": 821,
+    "faces": 349
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 363,
+    "name": "Cube.003",
+    "obj": "resources_assets_363_Cube_003.obj",
+    "vertices": 66,
+    "faces": 30
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 364,
+    "name": "Crystal",
+    "obj": "resources_assets_364_Crystal.obj",
+    "vertices": 360,
+    "faces": 144
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 365,
+    "name": "Cube.003",
+    "obj": "resources_assets_365_Cube_003.obj",
+    "vertices": 90,
+    "faces": 46
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 366,
+    "name": "Vortex God Ray",
+    "obj": "resources_assets_366_Vortex_God_Ray.obj",
+    "vertices": 672,
+    "faces": 288
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 367,
+    "name": "Candy Cane",
+    "obj": "resources_assets_367_Candy_Cane.obj",
+    "vertices": 196,
+    "faces": 116
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 368,
+    "name": "Fan",
+    "obj": "resources_assets_368_Fan.obj",
+    "vertices": 232,
+    "faces": 104
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 369,
+    "name": "Balloon",
+    "obj": "resources_assets_369_Balloon.obj",
+    "vertices": 108,
+    "faces": 52
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 370,
+    "name": "Planet",
+    "obj": "resources_assets_370_Planet.obj",
+    "vertices": 432,
+    "faces": 208
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 371,
+    "name": "Cube.002",
+    "obj": "resources_assets_371_Cube_002.obj",
+    "vertices": 153,
+    "faces": 69
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 372,
+    "name": "Shard",
+    "obj": "resources_assets_372_Shard.obj",
+    "vertices": 24,
+    "faces": 8
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 373,
+    "name": "Cube.002",
+    "obj": "resources_assets_373_Cube_002.obj",
+    "vertices": 122,
+    "faces": 60
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 374,
+    "name": "Chest",
+    "obj": "resources_assets_374_Chest.obj",
+    "vertices": 708,
+    "faces": 352
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 375,
+    "name": "Cube.001",
+    "obj": "resources_assets_375_Cube_001.obj",
+    "vertices": 32,
+    "faces": 12
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 376,
+    "name": "Cube.001",
+    "obj": "resources_assets_376_Cube_001.obj",
+    "vertices": 92,
+    "faces": 44
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 377,
+    "name": "Vortex God Ray",
+    "obj": "resources_assets_377_Vortex_God_Ray.obj",
+    "vertices": 1024,
+    "faces": 512
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 378,
+    "name": "Cube",
+    "obj": "resources_assets_378_Cube.obj",
+    "vertices": 98,
+    "faces": 44
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 379,
+    "name": "Cube",
+    "obj": "resources_assets_379_Cube.obj",
+    "vertices": 132,
+    "faces": 66
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 380,
+    "name": "Balloon",
+    "obj": "resources_assets_380_Balloon.obj",
+    "vertices": 254,
+    "faces": 120
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 381,
+    "name": "Cube.008",
+    "obj": "resources_assets_381_Cube_008.obj",
+    "vertices": 82,
+    "faces": 38
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 382,
+    "name": "Cylinder",
+    "obj": "resources_assets_382_Cylinder.obj",
+    "vertices": 169,
+    "faces": 142
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 383,
+    "name": "Cube.007",
+    "obj": "resources_assets_383_Cube_007.obj",
+    "vertices": 45,
+    "faces": 21
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 384,
+    "name": "Cube.006",
+    "obj": "resources_assets_384_Cube_006.obj",
+    "vertices": 67,
+    "faces": 31
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 385,
+    "name": "Cube_004",
+    "obj": "resources_assets_385_Cube_004.obj",
+    "vertices": 144,
+    "faces": 48
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 386,
+    "name": "Woah Fruit",
+    "obj": "resources_assets_386_Woah_Fruit.obj",
+    "vertices": 142,
+    "faces": 64
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 387,
+    "name": "Gaia Statue",
+    "obj": "resources_assets_387_Gaia_Statue.obj",
+    "vertices": 402,
+    "faces": 206
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 388,
+    "name": "Icosphere_007",
+    "obj": "resources_assets_388_Icosphere_007.obj",
+    "vertices": 42,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 389,
+    "name": "Goblet",
+    "obj": "resources_assets_389_Goblet.obj",
+    "vertices": 240,
+    "faces": 112
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 390,
+    "name": "Icosphere_006",
+    "obj": "resources_assets_390_Icosphere_006.obj",
+    "vertices": 42,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 391,
+    "name": "Amulet",
+    "obj": "resources_assets_391_Amulet.obj",
+    "vertices": 294,
+    "faces": 138
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 392,
+    "name": "Icosphere_005",
+    "obj": "resources_assets_392_Icosphere_005.obj",
+    "vertices": 42,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 393,
+    "name": "Coin",
+    "obj": "resources_assets_393_Coin.obj",
+    "vertices": 182,
+    "faces": 96
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 394,
+    "name": "Icosphere_004",
+    "obj": "resources_assets_394_Icosphere_004.obj",
+    "vertices": 42,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 395,
+    "name": "Icosphere_003",
+    "obj": "resources_assets_395_Icosphere_003.obj",
+    "vertices": 42,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 396,
+    "name": "Icosphere_002",
+    "obj": "resources_assets_396_Icosphere_002.obj",
+    "vertices": 42,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 397,
+    "name": "Tear",
+    "obj": "resources_assets_397_Tear.obj",
+    "vertices": 200,
+    "faces": 92
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 398,
+    "error": "data must be str, not bool"
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 399,
+    "name": "Rare Gemstone",
+    "obj": "resources_assets_399_Rare_Gemstone.obj",
+    "vertices": 65,
+    "faces": 32
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 400,
+    "name": "Icosphere",
+    "obj": "resources_assets_400_Icosphere.obj",
+    "vertices": 240,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 401,
+    "name": "Crown",
+    "obj": "resources_assets_401_Crown.obj",
+    "vertices": 360,
+    "faces": 216
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 402,
+    "name": "Icosphere_009",
+    "obj": "resources_assets_402_Icosphere_009.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 403,
+    "name": "Busted Blade",
+    "obj": "resources_assets_403_Busted_Blade.obj",
+    "vertices": 234,
+    "faces": 168
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 404,
+    "name": "Icosphere_008",
+    "obj": "resources_assets_404_Icosphere_008.obj",
+    "vertices": 128,
+    "faces": 64
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 405,
+    "name": "Bars",
+    "obj": "resources_assets_405_Bars.obj",
+    "vertices": 72,
+    "faces": 36
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 406,
+    "name": "Icosphere_010",
+    "obj": "resources_assets_406_Icosphere_010.obj",
+    "vertices": 162,
+    "faces": 320
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 407,
+    "name": "Petal",
+    "obj": "resources_assets_407_Petal.obj",
+    "vertices": 168,
+    "faces": 80
+  },
+  {
+    "source": "resources.assets",
+    "path_id": 408,
+    "name": "Flower",
+    "obj": "resources_assets_408_Flower.obj",
+    "vertices": 340,
+    "faces": 142
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 71,
+    "name": "Water",
+    "obj": "sharedassets2_assets_71_Water.obj",
+    "vertices": 225,
+    "faces": 230
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 72,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_72_Cube.obj",
+    "vertices": 1042,
+    "faces": 482
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 73,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_73_Cube.obj",
+    "vertices": 871,
+    "faces": 396
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 74,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_74_Cube.obj",
+    "vertices": 1720,
+    "faces": 760
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 75,
+    "name": "Cube_001",
+    "obj": "sharedassets2_assets_75_Cube_001.obj",
+    "vertices": 1913,
+    "faces": 844
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 76,
+    "name": "Cube_001",
+    "obj": "sharedassets2_assets_76_Cube_001.obj",
+    "vertices": 1659,
+    "faces": 748
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 77,
+    "name": "Walkable.000",
+    "obj": "sharedassets2_assets_77_Walkable_000.obj",
+    "vertices": 31161,
+    "faces": 19039
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 78,
+    "name": "Waterfall",
+    "obj": "sharedassets2_assets_78_Waterfall.obj",
+    "vertices": 784,
+    "faces": 406
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 79,
+    "name": "Cube_001",
+    "obj": "sharedassets2_assets_79_Cube_001.obj",
+    "vertices": 2226,
+    "faces": 992
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 80,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_80_Cube.obj",
+    "vertices": 728,
+    "faces": 570
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 81,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_81_Cube.obj",
+    "vertices": 542,
+    "faces": 566
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 82,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_82_Cube.obj",
+    "vertices": 1080,
+    "faces": 906
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 83,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_83_Cube.obj",
+    "vertices": 1083,
+    "faces": 481
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 84,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_84_Cube.obj",
+    "vertices": 478,
+    "faces": 486
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 85,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_85_Cube.obj",
+    "vertices": 866,
+    "faces": 378
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 86,
+    "name": "Cube_002",
+    "obj": "sharedassets2_assets_86_Cube_002.obj",
+    "vertices": 2343,
+    "faces": 1096
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 87,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_87_Cube.obj",
+    "vertices": 1042,
+    "faces": 474
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 88,
+    "name": "Cube",
+    "obj": "sharedassets2_assets_88_Cube.obj",
+    "vertices": 918,
+    "faces": 424
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 89,
+    "name": "Cube_001",
+    "obj": "sharedassets2_assets_89_Cube_001.obj",
+    "vertices": 1838,
+    "faces": 806
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 90,
+    "name": "Cube_001",
+    "obj": "sharedassets2_assets_90_Cube_001.obj",
+    "vertices": 2001,
+    "faces": 1091
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 91,
+    "name": "Walkable.001",
+    "obj": "sharedassets2_assets_91_Walkable_001.obj",
+    "vertices": 1740,
+    "faces": 1604
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 92,
+    "name": "Slide",
+    "obj": "sharedassets2_assets_92_Slide.obj",
+    "vertices": 110,
+    "faces": 54
+  },
+  {
+    "source": "sharedassets2.assets",
+    "path_id": 93,
+    "name": "Walkable.002",
+    "obj": "sharedassets2_assets_93_Walkable_002.obj",
+    "vertices": 445,
+    "faces": 458
+  },
+  {
+    "source": "sharedassets1.assets",
+    "path_id": 14,
+    "name": "Sphere",
+    "obj": "sharedassets1_assets_14_Sphere.obj",
+    "vertices": 5354,
+    "faces": 2596
+  },
+  {
+    "source": "sharedassets1.assets",
+    "path_id": 15,
+    "name": "WaterLight.006",
+    "obj": "sharedassets1_assets_15_WaterLight_006.obj",
+    "vertices": 384,
+    "faces": 224
+  },
+  {
+    "source": "sharedassets1.assets",
+    "path_id": 16,
+    "name": "WaterLight.005",
+    "obj": "sharedassets1_assets_16_WaterLight_005.obj",
+    "vertices": 388,
+    "faces": 194
+  },
+  {
+    "source": "sharedassets1.assets",
+    "path_id": 17,
+    "name": "WaterLight.004",
+    "obj": "sharedassets1_assets_17_WaterLight_004.obj",
+    "vertices": 388,
+    "faces": 194
+  },
+  {
+    "source": "sharedassets1.assets",
+    "path_id": 18,
+    "name": "WaterLight.003",
+    "obj": "sharedassets1_assets_18_WaterLight_003.obj",
+    "vertices": 668,
+    "faces": 334
+  },
+  {
+    "source": "sharedassets1.assets",
+    "path_id": 19,
+    "name": "WaterLight.002",
+    "obj": "sharedassets1_assets_19_WaterLight_002.obj",
+    "vertices": 190,
+    "faces": 92
+  },
+  {
+    "source": "sharedassets1.assets",
+    "path_id": 20,
+    "name": "WaterLight.001",
+    "obj": "sharedassets1_assets_20_WaterLight_001.obj",
+    "vertices": 138,
+    "faces": 66
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10200,
+    "name": "pSphere1",
+    "obj": "unity_default_resources_10200_pSphere1.obj",
+    "vertices": 439,
+    "faces": 760
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10202,
+    "name": "Cube",
+    "obj": "unity_default_resources_10202_Cube.obj",
+    "vertices": 24,
+    "faces": 12
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10203,
+    "name": "pCylinder1",
+    "obj": "unity_default_resources_10203_pCylinder1.obj",
+    "vertices": 124,
+    "faces": 80
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10204,
+    "name": "pPlane1",
+    "obj": "unity_default_resources_10204_pPlane1.obj",
+    "vertices": 121,
+    "faces": 200
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10205,
+    "name": "polySurface2",
+    "obj": "unity_default_resources_10205_polySurface2.obj",
+    "vertices": 410,
+    "faces": 670
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10206,
+    "name": "Cylinder",
+    "obj": "unity_default_resources_10206_Cylinder.obj",
+    "vertices": 88,
+    "faces": 80
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10207,
+    "name": "Sphere",
+    "obj": "unity_default_resources_10207_Sphere.obj",
+    "vertices": 515,
+    "faces": 768
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10208,
+    "name": "Capsule",
+    "obj": "unity_default_resources_10208_Capsule.obj",
+    "vertices": 550,
+    "faces": 832
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10209,
+    "name": "Plane",
+    "obj": "unity_default_resources_10209_Plane.obj",
+    "vertices": 121,
+    "faces": 200
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10210,
+    "name": "Quad",
+    "obj": "unity_default_resources_10210_Quad.obj",
+    "vertices": 4,
+    "faces": 2
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10211,
+    "name": "Icosphere",
+    "obj": "unity_default_resources_10211_Icosphere.obj",
+    "vertices": 42,
+    "faces": 80
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10212,
+    "name": "icosahedron",
+    "obj": "unity_default_resources_10212_icosahedron.obj",
+    "vertices": 12,
+    "faces": 20
+  },
+  {
+    "source": "unity default resources",
+    "path_id": 10213,
+    "name": "pyramid",
+    "obj": "unity_default_resources_10213_pyramid.obj",
+    "vertices": 5,
+    "faces": 6
+  }
+]

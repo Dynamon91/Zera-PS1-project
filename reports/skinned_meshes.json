@@ -1,0 +1,1220 @@
+[
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 84,
+    "vertices": 478
+  },
+  {
+    "object": "Circle",
+    "mesh": "Circle",
+    "file": "sharedassets6.assets",
+    "path_id": 80,
+    "vertices": 273
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Circle",
+    "mesh": "Circle",
+    "file": "sharedassets6.assets",
+    "path_id": 80,
+    "vertices": 273
+  },
+  {
+    "object": "Circle",
+    "mesh": "Circle",
+    "file": "sharedassets6.assets",
+    "path_id": 80,
+    "vertices": 273
+  },
+  {
+    "object": "Circle",
+    "mesh": "Circle",
+    "file": "sharedassets6.assets",
+    "path_id": 80,
+    "vertices": 273
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 84,
+    "vertices": 478
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 84,
+    "vertices": 478
+  },
+  {
+    "object": "Circle",
+    "mesh": "Circle",
+    "file": "sharedassets6.assets",
+    "path_id": 80,
+    "vertices": 273
+  },
+  {
+    "object": "Circle",
+    "mesh": "Circle",
+    "file": "sharedassets6.assets",
+    "path_id": 80,
+    "vertices": 273
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 314,
+    "vertices": 1829
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 287,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 284,
+    "vertices": 843
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 42,
+    "vertices": 637
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 83,
+    "vertices": 1083
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 83,
+    "vertices": 1083
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 83,
+    "vertices": 1083
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 83,
+    "vertices": 1083
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube.001",
+    "mesh": "Cube.001",
+    "file": "sharedassets5.assets",
+    "path_id": 47,
+    "vertices": 954
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 314,
+    "vertices": 1829
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets5.assets",
+    "path_id": 44,
+    "vertices": 1683
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube.000",
+    "mesh": "Cube.000",
+    "file": "sharedassets5.assets",
+    "path_id": 45,
+    "vertices": 415
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 287,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 284,
+    "vertices": 843
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "resources.assets",
+    "path_id": 327,
+    "vertices": 992
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "resources.assets",
+    "path_id": 327,
+    "vertices": 992
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "resources.assets",
+    "path_id": 327,
+    "vertices": 992
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "resources.assets",
+    "path_id": 327,
+    "vertices": 992
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 314,
+    "vertices": 1829
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 287,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 284,
+    "vertices": 843
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 93,
+    "vertices": 482
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets4.assets",
+    "path_id": 98,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Circle",
+    "mesh": "Circle",
+    "file": "sharedassets4.assets",
+    "path_id": 74,
+    "vertices": 1106
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "sharedassets7.assets",
+    "path_id": 14,
+    "vertices": 1182
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 80,
+    "vertices": 728
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets3.assets",
+    "path_id": 115,
+    "vertices": 1025
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 80,
+    "vertices": 728
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets3.assets",
+    "path_id": 115,
+    "vertices": 1025
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "sharedassets3.assets",
+    "path_id": 113,
+    "vertices": 990
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "sharedassets3.assets",
+    "path_id": 113,
+    "vertices": 990
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 314,
+    "vertices": 1829
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 287,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 284,
+    "vertices": 843
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 88,
+    "vertices": 918
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 80,
+    "vertices": 728
+  },
+  {
+    "object": "Cube_002",
+    "mesh": "Cube_002",
+    "file": "sharedassets2.assets",
+    "path_id": 86,
+    "vertices": 2343
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 84,
+    "vertices": 478
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 83,
+    "vertices": 1083
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 82,
+    "vertices": 1080
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 88,
+    "vertices": 918
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 88,
+    "vertices": 918
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 80,
+    "vertices": 728
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "resources.assets",
+    "path_id": 327,
+    "vertices": 992
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 84,
+    "vertices": 478
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "resources.assets",
+    "path_id": 327,
+    "vertices": 992
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 83,
+    "vertices": 1083
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 314,
+    "vertices": 1829
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 284,
+    "vertices": 843
+  },
+  {
+    "object": "Cylinder",
+    "mesh": "Cylinder",
+    "file": "resources.assets",
+    "path_id": 327,
+    "vertices": 992
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 348,
+    "vertices": 16
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 310,
+    "vertices": 362
+  },
+  {
+    "object": "Sphere",
+    "mesh": "Sphere",
+    "file": "resources.assets",
+    "path_id": 307,
+    "vertices": 192
+  },
+  {
+    "object": "Sphere",
+    "mesh": "Sphere",
+    "file": "resources.assets",
+    "path_id": 307,
+    "vertices": 192
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 314,
+    "vertices": 1829
+  },
+  {
+    "object": "Cube_001",
+    "mesh": "Cube_001",
+    "file": "resources.assets",
+    "path_id": 314,
+    "vertices": 1829
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 287,
+    "vertices": 481
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 337,
+    "vertices": 1497
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 284,
+    "vertices": 843
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 305,
+    "vertices": 518
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "resources.assets",
+    "path_id": 277,
+    "vertices": 264
+  },
+  {
+    "object": "Cube",
+    "mesh": "Cube",
+    "file": "sharedassets2.assets",
+    "path_id": 74,
+    "vertices": 1720
+  }
+]

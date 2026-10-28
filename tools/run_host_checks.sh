@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+check_dir=$(mktemp -d)
+trap 'rm -rf "$check_dir"' EXIT
+cd "$project_dir"
+for module in player collision clip menu animator trial; do
+ cc -Wall -Wextra -Werror -fsanitize=address,undefined "src/$module.c" "tools/test_$module.c" -o "$check_dir/$module"
+ ASAN_OPTIONS=detect_leaks=0 "$check_dir/$module"
+done
+cc -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/world.c src/collision.c tools/test_world.c -o "$check_dir/world"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/world"
+printf 'Host checks passed\n'

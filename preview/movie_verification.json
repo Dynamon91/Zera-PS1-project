@@ -1,0 +1,18 @@
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_type": "video",
+      "nb_frames": "164"
+    },
+    {
+      "codec_type": "audio",
+      "nb_frames": "475"
+    }
+  ],
+  "format": {
+    "duration": "10.998005",
+    "size": "1299816"
+  },
+  "provenance": "actual emulator frames 300 onward, sampled every four frames; matching audio starts at five seconds"
+}

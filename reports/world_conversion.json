@@ -1,0 +1,50 @@
+{
+  "scene": "level2",
+  "area": "original overworld spawn vicinity",
+  "spawn": [
+    -26.510000228881836,
+    21.858999252319336,
+    9.231999397277832
+  ],
+  "ground_height": 21.883107788088076,
+  "source_radius_units": 16.0,
+  "world_scale": 80,
+  "render_triangles": 591,
+  "texture_materials": [
+    "CC_Plate",
+    "CC_Grass",
+    "CC_Metal",
+    "CC_Dirt",
+    "CC_Sand",
+    "CC_Grass_Top",
+    "CC_Brick",
+    "CC_Rock_2",
+    "CC_VineEnd",
+    "CC_Vine"
+  ],
+  "texture_format": "8-bit indexed 256x256 atlas, 64x64 repeating tiles",
+  "source_collision_triangles": 478,
+  "wall_proxies": 345,
+  "instances": [
+    {
+      "object": "Walkable.000",
+      "mesh": "Walkable.000",
+      "triangles_before_clipping": 478,
+      "source_file": "sharedassets2.assets",
+      "mesh_id": 77
+    }
+  ],
+  "heightfield": {
+    "size": 65,
+    "step": 40,
+    "origin": -1280,
+    "missing_sentinel": -32768
+  },
+  "limitations": [
+    "single-valued heightfield",
+    "conservative steep-triangle wall proxies; not full capsule/triangle collision",
+    "original main textures; custom Unity shader effects omitted",
+    "actors and effects omitted",
+    "not full original level"
+  ]
+}

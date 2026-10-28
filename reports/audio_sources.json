@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ui_move",
+    "original_name": "UIFX1",
+    "source": "resources.assets",
+    "path_id": 560,
+    "duration_seconds": 0.4673015773296356,
+    "source_rate": 22050,
+    "source_channels": 1
+  },
+  {
+    "name": "ui_accept",
+    "original_name": "UIFX3",
+    "source": "resources.assets",
+    "path_id": 567,
+    "duration_seconds": 0.34539681673049927,
+    "source_rate": 22050,
+    "source_channels": 1
+  },
+  {
+    "name": "jump",
+    "original_name": "Jump",
+    "source": "resources.assets",
+    "path_id": 575,
+    "duration_seconds": 0.23074829578399658,
+    "source_rate": 22050,
+    "source_channels": 1
+  },
+  {
+    "name": "land",
+    "original_name": "_LandHit",
+    "source": "resources.assets",
+    "path_id": 592,
+    "duration_seconds": 0.23873016238212585,
+    "source_rate": 22050,
+    "source_channels": 1
+  },
+  {
+    "name": "dash",
+    "original_name": "Dash",
+    "source": "resources.assets",
+    "path_id": 608,
+    "duration_seconds": 1.2211564779281616,
+    "source_rate": 44100,
+    "source_channels": 1
+  },
+  {
+    "name": "flap",
+    "original_name": "Flap",
+    "source": "resources.assets",
+    "path_id": 573,
+    "duration_seconds": 0.46154195070266724,
+    "source_rate": 22050,
+    "source_channels": 1
+  },
+  {
+    "name": "pickup",
+    "original_name": "_CollectEssence",
+    "source": "resources.assets",
+    "path_id": 566,
+    "duration_seconds": 0.9375056624412537,
+    "source_rate": 44100,
+    "source_channels": 1
+  },
+  {
+    "name": "cosmic_core",
+    "original_name": "cosmic_core",
+    "source": "resources.assets",
+    "path_id": 584,
+    "duration_seconds": 195.78775024414062,
+    "source_rate": 44100,
+    "source_channels": 2
+  }
+]

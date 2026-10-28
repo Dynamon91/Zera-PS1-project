@@ -1,0 +1,44 @@
+{
+  "source_mesh": {
+    "file": "resources.assets",
+    "path_id": 400,
+    "name": "Icosphere",
+    "vertices": 42,
+    "triangles": 80
+  },
+  "material": "new gold trial material; original shader omitted",
+  "placements": "new test layout, not recovered original placements",
+  "positions": [
+    [
+      70,
+      55,
+      70
+    ],
+    [
+      140,
+      55,
+      140
+    ],
+    [
+      210,
+      55,
+      210
+    ],
+    [
+      280,
+      47,
+      280
+    ],
+    [
+      350,
+      35,
+      350
+    ],
+    [
+      420,
+      23,
+      420
+    ]
+  ],
+  "rule": "collect six tokens once per trial; one point each; no original reward/progression implied"
+}
