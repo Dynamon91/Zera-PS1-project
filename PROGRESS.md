@@ -135,3 +135,22 @@ with separate build-source and binary-hash evidence in CHECKPOINT.json. Its
 original `disc/` directory stays WIP08; use the nested native ZIP for the new build.
 The package checks that the native BIN hash matches both wall and audio captures
 and that the included EXE has a PS-X header before adding it.
+
+## Terrain-aware recovery increment
+
+The spawn-relative -700 safety plane was above some valid recovered heightfield
+samples. Current source derives the plane from the lowest valid sample minus
+700, excluding the -32768 missing-data sentinel and caching the result. For
+this patch the limit is -4077. Host tests check landing on valid low ground at
+-800 and recovery when falling through the safety plane.
+
+`player_tick` now reports automatic respawn so the main loop can reset the view,
+turning, orbit cooldown and animation together. A volatile diagnostic counter is
+read by the capture tool; the tool never edits game RAM. The native controller
+scenario uses read-only Y feedback to release movement after falling starts.
+Its 2,400-frame run sampled Y -3866 and one automatic respawn, then recorded the
+player at spawn and camera distance 850 / height 0. The existing wall-camera and
+audio-toggle scenarios passed on the same build. See `docs/RESPAWN.md`.
+
+No new original-world geometry or authored progression was added. Full-port
+completion remains a provisional approximately 28%.

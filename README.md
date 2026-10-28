@@ -50,6 +50,19 @@ The original `disc/` directory remains WIP08 as a reference. GitHub's automatic
 source-only packages omit this optional native ZIP; native artifacts are also
 available in the corresponding **Native PS1 preview** run.
 
+### Terrain-aware fall recovery
+
+The new build places its fall safety plane at -4077 world units: 700 below the
+lowest valid sample of the recovered heightfield, excluding missing data.
+Host tests verify that valid low ground at -800 can be reached without an early
+reset. The native input-only fall scenario reaches sampled Y -3866, then records
+one automatic respawn with player at spawn and camera restored to distance 850 /
+height 0. Animation and camera reset together; no emulated RAM is edited.
+
+See [actual fall/recovery screenshots and recorded state](docs/RESPAWN.md).
+This is a correction to provisional port behavior, not a recovered original
+checkpoint rule or additional level content. The estimate remains ~28%.
+
 ## Download and resume this checkpoint
 
 The current downloadable package is `Zera_PS1_WIP09_Source_Checkpoint.zip`.
@@ -217,7 +230,8 @@ also restores the default orbit angle.
 Analog mode may be selected manually; rumble/automatic configuration absent.
 Movement is camera-relative, the camera follows horizontal player position,
 and the character turns to the selected movement direction. Collision follows terrain height and slopes, rejects rises above 48 units,
-allows ledge falls, and respawns after falling 700 units below the spawn ground.
+allows ledge falls. The WIP08 reference disc respawns 700 units below spawn;
+the current native preview instead uses the terrain-derived plane described above.
 The packaged WIP08 camera follows horizontal position and eases toward player height.
 Its view path is tested against wall proxies: it retracts immediately and
 extends gradually. The minimum distance is 420 units to keep the character
