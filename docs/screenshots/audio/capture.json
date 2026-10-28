@@ -29,6 +29,9 @@
       "simulation_ticks": 0,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         0,
@@ -75,6 +78,9 @@
       "simulation_ticks": 5,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         0,
@@ -121,6 +127,9 @@
       "simulation_ticks": 9,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         0,
@@ -167,6 +176,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         0,
@@ -213,6 +225,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         0,
@@ -259,6 +274,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 1,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         1,
@@ -305,6 +323,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 1,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -351,6 +372,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -397,6 +421,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -443,6 +470,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -489,6 +519,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -535,6 +568,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -581,6 +617,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -627,6 +666,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -673,6 +715,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -719,6 +764,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -765,6 +813,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -811,6 +862,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -857,6 +911,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -903,6 +960,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -949,6 +1009,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -995,6 +1058,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1041,6 +1107,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1087,6 +1156,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1133,6 +1205,9 @@
       "simulation_ticks": 11,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1179,6 +1254,9 @@
       "simulation_ticks": 12,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1225,6 +1303,9 @@
       "simulation_ticks": 18,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1271,6 +1352,9 @@
       "simulation_ticks": 24,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1317,6 +1401,9 @@
       "simulation_ticks": 30,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1363,6 +1450,9 @@
       "simulation_ticks": 36,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1409,6 +1499,9 @@
       "simulation_ticks": 42,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1455,6 +1548,9 @@
       "simulation_ticks": 46,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1501,6 +1597,9 @@
       "simulation_ticks": 48,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1547,6 +1646,9 @@
       "simulation_ticks": 54,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1593,6 +1695,9 @@
       "simulation_ticks": 60,
       "debug_input_x": 0,
       "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         2,
@@ -1613,7 +1718,7 @@
     }
   ],
   "content": "zera_wip09.cue",
-  "bin_sha256": "7e8a65896a9bf8cd4ba5fc41befeaec184f6f7e5342b7a6019cfd1ffd336c12e",
+  "bin_sha256": "c0d5e312ab287e79193365655bb961a4454ab2d04cf8930c45af17ce4e918039",
   "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
   "gif_samples": 0,
   "audio_output": {

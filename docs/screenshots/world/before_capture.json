@@ -24,6 +24,7 @@
       "audio_refills": 8,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         0,
@@ -63,6 +64,7 @@
       "audio_refills": 9,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 0,
       "yaw": 512,
       "sfx_events": [
         0,
@@ -102,6 +104,7 @@
       "audio_refills": 9,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 0,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -141,6 +144,7 @@
       "audio_refills": 10,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 0,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -180,6 +184,7 @@
       "audio_refills": 10,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 0,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -219,6 +224,7 @@
       "audio_refills": 11,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 0,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -258,6 +264,7 @@
       "audio_refills": 12,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 0,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -297,6 +304,7 @@
       "audio_refills": 13,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 768,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -336,6 +344,7 @@
       "audio_refills": 13,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -375,6 +384,7 @@
       "audio_refills": 14,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -414,6 +424,7 @@
       "audio_refills": 15,
       "audio_wraps": 0,
       "camera_height": 0,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -453,6 +464,7 @@
       "audio_refills": 16,
       "audio_wraps": 0,
       "camera_height": -1,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -492,6 +504,7 @@
       "audio_refills": 16,
       "audio_wraps": 0,
       "camera_height": -8,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -531,6 +544,7 @@
       "audio_refills": 17,
       "audio_wraps": 0,
       "camera_height": -16,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -570,6 +584,7 @@
       "audio_refills": 18,
       "audio_wraps": 0,
       "camera_height": -23,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -609,6 +624,7 @@
       "audio_refills": 18,
       "audio_wraps": 0,
       "camera_height": -26,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -648,6 +664,7 @@
       "audio_refills": 19,
       "audio_wraps": 0,
       "camera_height": -26,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -687,6 +704,7 @@
       "audio_refills": 20,
       "audio_wraps": 0,
       "camera_height": -28,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -726,6 +744,7 @@
       "audio_refills": 20,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -765,6 +784,7 @@
       "audio_refills": 21,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -804,6 +824,7 @@
       "audio_refills": 22,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -843,6 +864,7 @@
       "audio_refills": 23,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -882,6 +904,7 @@
       "audio_refills": 23,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -921,6 +944,7 @@
       "audio_refills": 24,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -960,6 +984,7 @@
       "audio_refills": 25,
       "audio_wraps": 0,
       "camera_height": -32,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -999,6 +1024,7 @@
       "audio_refills": 26,
       "audio_wraps": 0,
       "camera_height": -46,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1038,6 +1064,7 @@
       "audio_refills": 26,
       "audio_wraps": 0,
       "camera_height": -124,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1077,6 +1104,7 @@
       "audio_refills": 27,
       "audio_wraps": 0,
       "camera_height": -290,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1116,6 +1144,7 @@
       "audio_refills": 28,
       "audio_wraps": 0,
       "camera_height": -357,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1155,6 +1184,7 @@
       "audio_refills": 29,
       "audio_wraps": 0,
       "camera_height": -124,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1194,6 +1224,7 @@
       "audio_refills": 29,
       "audio_wraps": 0,
       "camera_height": -50,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1233,6 +1264,7 @@
       "audio_refills": 30,
       "audio_wraps": 0,
       "camera_height": -20,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1272,6 +1304,7 @@
       "audio_refills": 31,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1311,6 +1344,7 @@
       "audio_refills": 32,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1350,6 +1384,7 @@
       "audio_refills": 33,
       "audio_wraps": 0,
       "camera_height": -12,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1389,6 +1424,7 @@
       "audio_refills": 33,
       "audio_wraps": 0,
       "camera_height": -20,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1428,6 +1464,7 @@
       "audio_refills": 34,
       "audio_wraps": 0,
       "camera_height": -27,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1467,6 +1504,7 @@
       "audio_refills": 35,
       "audio_wraps": 0,
       "camera_height": -27,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1506,6 +1544,7 @@
       "audio_refills": 36,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1545,6 +1584,7 @@
       "audio_refills": 36,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1584,6 +1624,7 @@
       "audio_refills": 37,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1623,6 +1664,7 @@
       "audio_refills": 38,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1662,6 +1704,7 @@
       "audio_refills": 39,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1701,6 +1744,7 @@
       "audio_refills": 40,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1740,6 +1784,7 @@
       "audio_refills": 40,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1779,6 +1824,7 @@
       "audio_refills": 41,
       "audio_wraps": 0,
       "camera_height": -35,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1818,6 +1864,7 @@
       "audio_refills": 42,
       "audio_wraps": 0,
       "camera_height": -74,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1857,6 +1904,7 @@
       "audio_refills": 43,
       "audio_wraps": 0,
       "camera_height": -179,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1896,6 +1944,7 @@
       "audio_refills": 43,
       "audio_wraps": 0,
       "camera_height": -384,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1935,6 +1984,7 @@
       "audio_refills": 44,
       "audio_wraps": 0,
       "camera_height": -210,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -1974,6 +2024,7 @@
       "audio_refills": 45,
       "audio_wraps": 0,
       "camera_height": -84,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2013,6 +2064,7 @@
       "audio_refills": 46,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2052,6 +2104,7 @@
       "audio_refills": 46,
       "audio_wraps": 0,
       "camera_height": -14,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2091,6 +2144,7 @@
       "audio_refills": 47,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2130,6 +2184,7 @@
       "audio_refills": 48,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2169,6 +2224,7 @@
       "audio_refills": 49,
       "audio_wraps": 0,
       "camera_height": -16,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2208,6 +2264,7 @@
       "audio_refills": 50,
       "audio_wraps": 0,
       "camera_height": -23,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2247,6 +2304,7 @@
       "audio_refills": 50,
       "audio_wraps": 0,
       "camera_height": -27,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2286,6 +2344,7 @@
       "audio_refills": 51,
       "audio_wraps": 0,
       "camera_height": -28,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2325,6 +2384,7 @@
       "audio_refills": 52,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2364,6 +2424,7 @@
       "audio_refills": 53,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2403,6 +2464,7 @@
       "audio_refills": 53,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2442,6 +2504,7 @@
       "audio_refills": 54,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2481,6 +2544,7 @@
       "audio_refills": 55,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2520,6 +2584,7 @@
       "audio_refills": 56,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2559,6 +2624,7 @@
       "audio_refills": 56,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2598,6 +2664,7 @@
       "audio_refills": 57,
       "audio_wraps": 0,
       "camera_height": -46,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2637,6 +2704,7 @@
       "audio_refills": 58,
       "audio_wraps": 0,
       "camera_height": -112,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2676,6 +2744,7 @@
       "audio_refills": 59,
       "audio_wraps": 0,
       "camera_height": -269,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2715,6 +2784,7 @@
       "audio_refills": 60,
       "audio_wraps": 0,
       "camera_height": -407,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2754,6 +2824,7 @@
       "audio_refills": 60,
       "audio_wraps": 0,
       "camera_height": -141,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2793,6 +2864,7 @@
       "audio_refills": 61,
       "audio_wraps": 0,
       "camera_height": -57,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2832,6 +2904,7 @@
       "audio_refills": 62,
       "audio_wraps": 0,
       "camera_height": -22,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2871,6 +2944,7 @@
       "audio_refills": 63,
       "audio_wraps": 0,
       "camera_height": -11,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2910,6 +2984,7 @@
       "audio_refills": 63,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2949,6 +3024,7 @@
       "audio_refills": 64,
       "audio_wraps": 0,
       "camera_height": -11,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -2988,6 +3064,7 @@
       "audio_refills": 65,
       "audio_wraps": 0,
       "camera_height": -19,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3027,6 +3104,7 @@
       "audio_refills": 66,
       "audio_wraps": 0,
       "camera_height": -26,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3066,6 +3144,7 @@
       "audio_refills": 66,
       "audio_wraps": 0,
       "camera_height": -27,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3105,6 +3184,7 @@
       "audio_refills": 67,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3144,6 +3224,7 @@
       "audio_refills": 68,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3183,6 +3264,7 @@
       "audio_refills": 69,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3222,6 +3304,7 @@
       "audio_refills": 70,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3261,6 +3344,7 @@
       "audio_refills": 70,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3300,6 +3384,7 @@
       "audio_refills": 71,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3339,6 +3424,7 @@
       "audio_refills": 72,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3378,6 +3464,7 @@
       "audio_refills": 73,
       "audio_wraps": 0,
       "camera_height": -34,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3417,6 +3504,7 @@
       "audio_refills": 73,
       "audio_wraps": 0,
       "camera_height": -67,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3456,6 +3544,7 @@
       "audio_refills": 74,
       "audio_wraps": 0,
       "camera_height": -164,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3495,6 +3584,7 @@
       "audio_refills": 75,
       "audio_wraps": 0,
       "camera_height": -359,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3534,6 +3624,7 @@
       "audio_refills": 76,
       "audio_wraps": 0,
       "camera_height": -240,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3573,6 +3664,7 @@
       "audio_refills": 76,
       "audio_wraps": 0,
       "camera_height": -96,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3612,6 +3704,7 @@
       "audio_refills": 77,
       "audio_wraps": 0,
       "camera_height": -35,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3651,6 +3744,7 @@
       "audio_refills": 78,
       "audio_wraps": 0,
       "camera_height": -16,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3690,6 +3784,7 @@
       "audio_refills": 79,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3729,6 +3824,7 @@
       "audio_refills": 80,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3768,6 +3864,7 @@
       "audio_refills": 80,
       "audio_wraps": 0,
       "camera_height": -15,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3807,6 +3904,7 @@
       "audio_refills": 81,
       "audio_wraps": 0,
       "camera_height": -22,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3846,6 +3944,7 @@
       "audio_refills": 82,
       "audio_wraps": 0,
       "camera_height": -27,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3885,6 +3984,7 @@
       "audio_refills": 83,
       "audio_wraps": 0,
       "camera_height": -27,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3924,6 +4024,7 @@
       "audio_refills": 83,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -3963,6 +4064,7 @@
       "audio_refills": 84,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4002,6 +4104,7 @@
       "audio_refills": 85,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4041,6 +4144,7 @@
       "audio_refills": 86,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4080,6 +4184,7 @@
       "audio_refills": 86,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4119,6 +4224,7 @@
       "audio_refills": 87,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4158,6 +4264,7 @@
       "audio_refills": 88,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4197,6 +4304,7 @@
       "audio_refills": 89,
       "audio_wraps": 0,
       "camera_height": -39,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4236,6 +4344,7 @@
       "audio_refills": 89,
       "audio_wraps": 0,
       "camera_height": -101,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4275,6 +4384,7 @@
       "audio_refills": 90,
       "audio_wraps": 0,
       "camera_height": -230,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4314,6 +4424,7 @@
       "audio_refills": 91,
       "audio_wraps": 0,
       "camera_height": -465,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4353,6 +4464,7 @@
       "audio_refills": 92,
       "audio_wraps": 0,
       "camera_height": -161,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4392,6 +4504,7 @@
       "audio_refills": 93,
       "audio_wraps": 0,
       "camera_height": -65,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4431,6 +4544,7 @@
       "audio_refills": 93,
       "audio_wraps": 0,
       "camera_height": -25,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4470,6 +4584,7 @@
       "audio_refills": 94,
       "audio_wraps": 0,
       "camera_height": -12,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4509,6 +4624,7 @@
       "audio_refills": 95,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4548,6 +4664,7 @@
       "audio_refills": 96,
       "audio_wraps": 0,
       "camera_height": -10,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4587,6 +4704,7 @@
       "audio_refills": 96,
       "audio_wraps": 0,
       "camera_height": -18,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4626,6 +4744,7 @@
       "audio_refills": 97,
       "audio_wraps": 0,
       "camera_height": -25,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4665,6 +4784,7 @@
       "audio_refills": 98,
       "audio_wraps": 0,
       "camera_height": -27,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4704,6 +4824,7 @@
       "audio_refills": 99,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4743,6 +4864,7 @@
       "audio_refills": 99,
       "audio_wraps": 0,
       "camera_height": -30,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4782,6 +4904,7 @@
       "audio_refills": 100,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4821,6 +4944,7 @@
       "audio_refills": 101,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4860,6 +4984,7 @@
       "audio_refills": 102,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4899,6 +5024,7 @@
       "audio_refills": 103,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4938,6 +5064,7 @@
       "audio_refills": 103,
       "audio_wraps": 0,
       "camera_height": -31,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -4977,6 +5104,7 @@
       "audio_refills": 104,
       "audio_wraps": 0,
       "camera_height": -33,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5016,6 +5144,7 @@
       "audio_refills": 105,
       "audio_wraps": 0,
       "camera_height": -55,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5055,6 +5184,7 @@
       "audio_refills": 106,
       "audio_wraps": 0,
       "camera_height": -137,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5094,6 +5224,7 @@
       "audio_refills": 106,
       "audio_wraps": 0,
       "camera_height": -312,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5133,6 +5264,7 @@
       "audio_refills": 107,
       "audio_wraps": 0,
       "camera_height": -313,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5172,6 +5304,7 @@
       "audio_refills": 108,
       "audio_wraps": 0,
       "camera_height": -109,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5211,6 +5344,7 @@
       "audio_refills": 109,
       "audio_wraps": 0,
       "camera_height": -44,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5250,6 +5384,7 @@
       "audio_refills": 110,
       "audio_wraps": 0,
       "camera_height": -18,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5289,6 +5424,7 @@
       "audio_refills": 110,
       "audio_wraps": 0,
       "camera_height": -9,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5328,6 +5464,7 @@
       "audio_refills": 111,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5367,6 +5504,7 @@
       "audio_refills": 112,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5406,6 +5544,7 @@
       "audio_refills": 113,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5445,6 +5584,7 @@
       "audio_refills": 113,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5484,6 +5624,7 @@
       "audio_refills": 114,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5523,6 +5664,7 @@
       "audio_refills": 115,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5562,6 +5704,7 @@
       "audio_refills": 116,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5601,6 +5744,7 @@
       "audio_refills": 116,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5640,6 +5784,7 @@
       "audio_refills": 117,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5679,6 +5824,7 @@
       "audio_refills": 118,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5718,6 +5864,7 @@
       "audio_refills": 119,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5757,6 +5904,7 @@
       "audio_refills": 119,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5796,6 +5944,7 @@
       "audio_refills": 120,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5835,6 +5984,7 @@
       "audio_refills": 121,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5874,6 +6024,7 @@
       "audio_refills": 122,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5913,6 +6064,7 @@
       "audio_refills": 123,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
@@ -5952,6 +6104,7 @@
       "audio_refills": 123,
       "audio_wraps": 0,
       "camera_height": -7,
+      "facing": 1024,
       "yaw": 0,
       "sfx_events": [
         0,
