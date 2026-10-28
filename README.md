@@ -1,24 +1,35 @@
 # Zera PS1 adaptation — WIP08
 
+**Estimated full-port completion: approximately 28%.** This is a provisional
+engineering assessment of the complete game adaptation. See [PROGRESS.md](PROGRESS.md)
+for the weighted breakdown, evidence, remaining milestones, and build status.
+
 ## Development after WIP08
 
-The repository now includes a source-level camera collision correction: rays
-running along a wall proxy, and vertical rays on that proxy, detect overlap
-with its segment and height interval. Previously these parallel cases always
-reported no obstruction. Endpoint order and ray direction are handled, with
-Q12 entry rounded into the overlap interval. Ordinary crossing rays retain
-their existing behavior. The 420-unit minimum camera distance and conservative
-wall proxies still apply, so tight-corner occlusion remains possible.
+The source now detects camera rays running along a wall proxy and vertical rays
+on that proxy. Endpoint order and ray direction are handled, with Q12 entry
+rounded into the overlap interval. Ordinary crossing rays retain their behavior.
 
-The host regression suite passes with address/undefined-behavior sanitizers.
-An additional 12,000 parallel-ray cases matched an independent exact-rational
-slab calculation. GitHub Actions runs the host suite for pushes and pull
-requests. These checks do not compile or emulate the PS1 executable.
+The next camera correction removes the 420-unit distance floor that could override
+an obstruction. Pullback now follows the collision fraction immediately, including
+zero when the target itself is obstructed, and recovers at eight units per active
+simulation tick. Pausing prevents outward recovery. The world query now starts at
+the same target height used by the rendered camera, rather than 80 units above it.
+A pure C camera module makes the distance policy testable on the host.
+
+Host checks pass with address/undefined-behavior sanitizers. New regression cases
+cover close walls, pause/recovery, all 4,097 Q12 fractions, and pullback against the
+recovered wall proxies. The earlier parallel-ray correction also matched an
+independent exact-rational calculation in 12,000 cases. GitHub Actions runs the
+host suite on pushes and pull requests. These checks do not compile or emulate
+the PS1 executable. Near the player, character faces can clip; sphere/ceiling
+collision and alternative orbit selection remain pending. Wall proxies are still
+conservative, and a ray is not a camera-volume collision test.
 
 **The files in `disc/`, `preview/` and `diagnostics/` are the original WIP08
-build and captures.** They do not include this source correction. Rebuild with
-PSn00bSDK and validate the resulting image in an emulator before treating it
-as an updated playable release. No WIP09 disc has been produced yet.
+build and captures.** They include neither post-WIP08 source correction. Rebuild
+with PSn00bSDK and validate the resulting image in an emulator before treating
+it as an updated playable release. No WIP09 disc has been produced yet.
 
 Native PSn00bSDK prototype using the recovered Zera mesh and four original
 animation clips. The renderer uses 411 integer vertex positions and 806 triangles.
@@ -124,7 +135,7 @@ Analog mode may be selected manually; rumble/automatic configuration absent.
 Movement is camera-relative, the camera follows horizontal player position,
 and the character turns to the selected movement direction. Collision follows terrain height and slopes, rejects rises above 48 units,
 allows ledge falls, and respawns after falling 700 units below the spawn ground.
-The camera follows horizontal position and eases toward player height.
+The packaged WIP08 camera follows horizontal position and eases toward player height.
 Its view path is tested against wall proxies: it retracts immediately and
 extends gradually. The minimum distance is 420 units to keep the character
 readable; this can override the nearest obstruction. Tight corners can therefore
@@ -248,6 +259,9 @@ To replay the sustained wall test, append tools/scenarios/wall_walk.json to the
 capture command and select a separate output directory.
 
 ## Verified / pending
+The following native build and emulator results describe the packaged WIP08 disc.
+Post-WIP08 source validation is listed above and in PROGRESS.md.
+
 Passed: warning-free native compile/link and disc authoring, host movement
 unit checks with address/undefined-behavior sanitizers, PS-X EXE load range,
 raw-sector/ISO9660/boot records, ZIP integrity, HLE cold boot and scripted

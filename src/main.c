@@ -42,6 +42,7 @@
 #include "pickup_mesh.h"
 #include "world_mesh.h"
 #include "world.h"
+#include "camera.h"
 #include "clip.h"
 #include "world_texture.h"
 
@@ -153,7 +154,7 @@ static SVECTOR pose[411];
 static Animator animator;
 static Menu menu;
 static Trial trial;
-static int facing=0,camera_height=0,camera_distance=850;
+static int facing=0,camera_height=0,camera_distance=CAMERA_DISTANCE;
 static const char *names[]={"GROUND","JUMP","FALL","GLIDE","DASH"};
 /* Clip against near and guarded viewport planes before GTE projection. */
 static int project(const ClipVertex *a,const ClipVertex *b,const ClipVertex *c,short xy[6]){
@@ -226,7 +227,7 @@ int main(void){
   if(before!=MENU_PLAY && (ui&(UI_UP|UI_DOWN)) && menu.selection!=previous_selection)audio_play(SFX_UI_MOVE);
   if(ui&(UI_ACCEPT|UI_BACK|UI_START))if(before!=MENU_PLAY || menu.screen!=MENU_PLAY)audio_play(SFX_UI_ACCEPT);
   if(before==MENU_PLAY && menu.screen==MENU_PLAY && (pressed&PAD_SELECT))action|=MENU_RESET;
-  if(action&MENU_RESET){player_init(&player);animator_init(&animator);camera_height=0;camera_distance=850;facing=0;yaw=512;}
+  if(action&MENU_RESET){player_init(&player);animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;facing=0;yaw=512;}
   if(action&MENU_TRIAL)trial_start(&trial);
   else if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))trial_clear(&trial);
   int paused=menu.screen!=MENU_PLAY || before!=MENU_PLAY || (action&MENU_RESET);
@@ -263,14 +264,14 @@ int main(void){
   if(!paused)camera_height+=(player.y/FP-camera_height)/8;
   VECTOR target={player.x/FP,-camera_height,player.z/FP},turned;
   ApplyMatrixLV(&m,&target,&turned);
-  int offx=(-100*m.m[1][0]-850*m.m[2][0])/4096;
-  int offy=(100*m.m[1][1]+850*m.m[2][1])/4096;
-  int offz=(-100*m.m[1][2]-850*m.m[2][2])/4096;
-  int fraction=world_camera_fraction(player.x/FP,camera_height+80,player.z/FP,offx,offy-80,offz);
-  int desired_distance=850*fraction/4096;if(desired_distance<420)desired_distance=420;
-  if(desired_distance<camera_distance)camera_distance=desired_distance;
-  else if(!paused){camera_distance+=8;if(camera_distance>desired_distance)camera_distance=desired_distance;}
-  VECTOR pos={-turned.vx,100*camera_distance/850-turned.vy,-turned.vz+camera_distance};TransMatrix(&m,&pos);gte_SetRotMatrix(&m);gte_SetTransMatrix(&m);
+  int offx=(-100*m.m[1][0]-CAMERA_DISTANCE*m.m[2][0])/4096;
+  int offy=(100*m.m[1][1]+CAMERA_DISTANCE*m.m[2][1])/4096;
+  int offz=(-100*m.m[1][2]-CAMERA_DISTANCE*m.m[2][2])/4096;
+  /* The rendered camera scales this offset from target, so test that path.
+     The old +80 start traced a different segment after camera retraction. */
+  int fraction=world_camera_fraction(player.x/FP,camera_height,player.z/FP,offx,offy,offz);
+  camera_distance=camera_distance_step(camera_distance,fraction,paused);
+  VECTOR pos={-turned.vx,100*camera_distance/CAMERA_DISTANCE-turned.vy,-turned.vz+camera_distance};TransMatrix(&m,&pos);gte_SetRotMatrix(&m);gte_SetTransMatrix(&m);
   for(int r=0;r<3;r++){for(int c=0;c<3;c++)clip_camera.m[r][c]=m.m[r][c];clip_camera.t[r]=m.t[r];}
   for(int i=0;i<WORLD_UNIQUE_COUNT;i++){const SVECTOR *v=&world_unique[i];ClipVertex q={v->vx,v->vy,v->vz,0,0};world_codes[i]=clip_code(&clip_camera,&q);}
   for(int i=0;i<WORLD_TRIANGLE_COUNT;i++)world_triangle(i);
