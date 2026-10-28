@@ -23,6 +23,8 @@
       "audio_refills": 8,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         0,
         0,
@@ -60,6 +62,8 @@
       "audio_refills": 9,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         0,
         1,
@@ -97,6 +101,8 @@
       "audio_refills": 9,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         0,
         1,
@@ -134,6 +140,8 @@
       "audio_refills": 10,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         0,
         2,
@@ -171,6 +179,8 @@
       "audio_refills": 10,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         0,
         2,
@@ -208,6 +218,8 @@
       "audio_refills": 11,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         1,
         2,
@@ -245,6 +257,8 @@
       "audio_refills": 12,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -282,6 +296,8 @@
       "audio_refills": 13,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -319,6 +335,8 @@
       "audio_refills": 13,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -356,6 +374,8 @@
       "audio_refills": 14,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -393,6 +413,8 @@
       "audio_refills": 14,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -430,6 +452,8 @@
       "audio_refills": 15,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -467,6 +491,8 @@
       "audio_refills": 16,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -504,6 +530,8 @@
       "audio_refills": 16,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -541,6 +569,8 @@
       "audio_refills": 17,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -578,6 +608,8 @@
       "audio_refills": 17,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -615,6 +647,8 @@
       "audio_refills": 18,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -652,6 +686,8 @@
       "audio_refills": 19,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -689,6 +725,8 @@
       "audio_refills": 20,
       "audio_wraps": 0,
       "audio_muted": 1,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         2,
@@ -726,6 +764,8 @@
       "audio_refills": 20,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         3,
@@ -763,6 +803,8 @@
       "audio_refills": 21,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         3,
@@ -800,6 +842,8 @@
       "audio_refills": 22,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         3,
@@ -837,6 +881,8 @@
       "audio_refills": 22,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         3,
@@ -874,6 +920,8 @@
       "audio_refills": 23,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         3,
@@ -911,6 +959,8 @@
       "audio_refills": 23,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         3,
@@ -948,6 +998,8 @@
       "audio_refills": 24,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -985,6 +1037,8 @@
       "audio_refills": 25,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1022,6 +1076,8 @@
       "audio_refills": 26,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1059,6 +1115,8 @@
       "audio_refills": 26,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1096,6 +1154,8 @@
       "audio_refills": 27,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1133,6 +1193,8 @@
       "audio_refills": 28,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1170,6 +1232,8 @@
       "audio_refills": 29,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1207,6 +1271,8 @@
       "audio_refills": 29,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1244,6 +1310,8 @@
       "audio_refills": 30,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1281,6 +1349,8 @@
       "audio_refills": 30,
       "audio_wraps": 0,
       "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
       "sfx_events": [
         2,
         4,
@@ -1298,7 +1368,7 @@
     }
   ],
   "content": "zera_wip09.cue",
-  "bin_sha256": "36c63284f3b2d59a2e2696905afb0e100441b3d41f383b66ad9c524ad1f0c2f6",
+  "bin_sha256": "374c33cf81ed77edfa97ef7b925978112f4a5da81b967705fff3bb8b48d6001a",
   "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
   "gif_samples": 0,
   "audio_output": {

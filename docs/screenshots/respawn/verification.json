@@ -1,0 +1,10 @@
+{
+  "source_commit": "2eec366601997d3174b3e88a8ae13e814d818ecd",
+  "bin_sha256": "374c33cf81ed77edfa97ef7b925978112f4a5da81b967705fff3bb8b48d6001a",
+  "minimum_sampled_y_world_units": -3866,
+  "automatic_respawns": 1,
+  "final_camera_distance": 850,
+  "final_camera_height": 0,
+  "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+  "validation": "Natural input-only fall in HLE; no hardware test"
+}
