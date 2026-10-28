@@ -1,10 +1,14 @@
 #include <stdint.h>
 #include "clip.h"
 static int plane(const ClipCamera *c,const ClipVertex *v,int p){
- int x=(c->m[0][0]*v->x+c->m[0][1]*v->y+c->m[0][2]*v->z)/4096+c->t[0];
- int y=(c->m[1][0]*v->x+c->m[1][1]*v->y+c->m[1][2]*v->z)/4096+c->t[1];
  int z=(c->m[2][0]*v->x+c->m[2][1]*v->y+c->m[2][2]*v->z)/4096+c->t[2];
- switch(p){case 0:return z-96;case 1:return x*256+z*192;case 2:return z*192-x*256;case 3:return y*256+z*142;default:return z*162-y*256;}
+ if(p==0)return z-96;
+ if(p<=2){
+  int x=(c->m[0][0]*v->x+c->m[0][1]*v->y+c->m[0][2]*v->z)/4096+c->t[0];
+  return p==1?x*256+z*192:z*192-x*256;
+ }
+ int y=(c->m[1][0]*v->x+c->m[1][1]*v->y+c->m[1][2]*v->z)/4096+c->t[1];
+ return p==3?y*256+z*142:z*162-y*256;
 }
 unsigned int clip_code(const ClipCamera *c,const ClipVertex *v){
  int x=(c->m[0][0]*v->x+c->m[0][1]*v->y+c->m[0][2]*v->z)/4096+c->t[0];
@@ -26,10 +30,16 @@ int clip_triangle_known(const ClipCamera *c,const ClipVertex in[3],const unsigne
  for(int p=0;p<5;p++){
   if(!(mask&(1u<<p)))continue;
   int count=0;ClipVertex *src=buffers[active],*dst=buffers[active^1];
+  /* Adjacent edges share endpoints. Keep each signed distance instead of
+     transforming both endpoints again for every edge. Preserve world-space
+     interpolation and integer rounding exactly. */
+  int first=plane(c,&src[0],p),da=first;
   for(int i=0;i<n;i++){
-   ClipVertex a=src[i],b=src[(i+1)%n];int da=plane(c,&a,p),db=plane(c,&b,p);
+   ClipVertex a=src[i],b=src[(i+1)%n];
+   int db=i+1<n?plane(c,&b,p):first;
    if(da>=0){if(count>=10)return 0;dst[count++]=a;}
    if((da>=0)!=(db>=0)){if(count>=10)return 0;dst[count++]=intersect(a,b,da,db);}
+   da=db;
   }
   n=count;active^=1;if(!n)return 0;
  }
