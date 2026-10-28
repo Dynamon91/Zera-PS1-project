@@ -23,6 +23,10 @@ After extracting the nested native ZIP, open **`build/zera_level3_preview.cue`**
 for level3 or **`build/zera_wip09.cue`** for the established level2 build.
 [Full level3 evidence, screenshots and limitations](docs/LEVEL3.md).
 
+Level3 now selects support from original collider triangles by player height,
+allowing separate floor heights at the same X/Z. The diagnostic heightfield no
+longer controls its player support. [Layered-floor checks and limitations](docs/FLOORS.md).
+
 ## Latest original-world expansion
 
 The original Windows build's level2 scene was recovered again with its original

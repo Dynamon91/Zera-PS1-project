@@ -50,7 +50,9 @@ matrices compose original rotation, scale, translation and parent hierarchy.
 The report uses original Unity units; conversion to PS1 coordinates and ground
 height has not been applied.
 
-The next content step is a bounded level3 area with its original placements,
-followed by collection/respawn rules and persistent save reconstruction. The
+A [bounded level3 terrain preview](LEVEL3.md) now exists with height-aware
+original collider support. The next content step is connecting traversable
+terrain to original placements, followed by collection/respawn rules and
+persistent save reconstruction. The
 playable build remains the latest verified WIP09, with the camera broad-phase
 optimization. Project completion remains the provisional **29%**.

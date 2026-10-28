@@ -136,7 +136,22 @@ Host checks walk 500 units in all four directions and validate render-cell
 coverage/frustum rejection for this dataset. Both discs build in CI; all existing
 WIP09 native checks still pass. [Screenshots and verification](docs/LEVEL3.md).
 
-The preview omits lava, actors and original progression. It retains the
-single-valued heightfield and spawn+6 source-unit height cap. Completion remains
+The preview omits lava, actors and original progression. Its player support now uses uncapped original collider triangles selected by
+player height; a single-valued heightfield remains for diagnostics. Completion remains
 at the provisional 29%; a complete connected level and original interactions
 are still required for substantive world/progression credit.
+
+
+## Level3 layered floor support
+
+Player support is now selected from 55 original clipped walkable collider
+triangles. Height-aware selection distinguishes stacked surfaces instead of
+following the highest diagnostic grid value. Tests cover two actual recovered
+overlap locations, large-coordinate arithmetic, synthetic stacked-floor jumping
+and landing, and the existing native controller route. The level2 heightfield
+path remains intact. [Evidence and limits](docs/FLOORS.md).
+
+Wall proxies remain conservative and overhead capsule collision is absent.
+Mathematically overlapping surfaces do not establish usable underpass routes.
+The completion estimate remains 29% while these collision and original-content
+requirements remain unfinished.

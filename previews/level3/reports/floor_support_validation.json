@@ -1,0 +1,30 @@
+{
+  "floor_triangles": 55,
+  "sample_grid": {
+    "minimum": -1200,
+    "maximum": 1200,
+    "step": 40,
+    "points_with_multiple_surface_heights": 48
+  },
+  "examples": [
+    {
+      "x": 360,
+      "z": -440,
+      "original_collider_surface_heights": [
+        0,
+        266
+      ],
+      "legacy_grid_height": 266
+    },
+    {
+      "x": 550,
+      "z": 0,
+      "original_collider_surface_heights": [
+        0,
+        261
+      ],
+      "legacy_grid_height": 196
+    }
+  ],
+  "caveat": "Projected surfaces do not establish traversable underpasses; conservative wall proxies and absent overhead capsule collision remain limitations"
+}
