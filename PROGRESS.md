@@ -118,3 +118,5 @@ the optional native ZIP; native artifacts are separately available in Actions.
 Update README and this weighted estimate together when milestone evidence changes.
 
 Clipping optimization: [measured before/after results](docs/PERFORMANCE.md).
+
+Original progression source recovery: [193 relics, 20 essences and 13 checkpoints with original transforms](docs/ORIGINAL_PROGRESSION.md). This is recovered conversion data; the playable runtime is unchanged.
