@@ -1,10 +1,12 @@
 {
-  "source_commit": "63ae35f546b6c9782802b70938a4c22563c8e016",
-  "bin_sha256": "228d0121d78c8c6982faee5081cba742dfddc298a7c3f57ae09ddf9d0a0bae7e",
+  "source_commit": "39df1dc291f980756fd4dc84b8a37cc505da4e37",
+  "bin_sha256": "5c5043e39795847c27cb6d9e1642a3f9e7d354371f3206704c2b99a8b2a58a62",
   "collected_native": 3,
   "value_native": 20,
   "respawn_preserved": true,
   "title_cleared": true,
+  "area_restart_verified": true,
+  "early_restart_ignored": true,
   "automatic_respawns": 0,
   "validation": "Input-only HLE original-position collection prototype; provisional pickup volume and material, session-only progress"
 }

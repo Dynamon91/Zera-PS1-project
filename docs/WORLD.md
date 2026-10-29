@@ -23,7 +23,7 @@ not a frame-matched visual fidelity claim. The new 4,800-frame run finishes at
 **(2207, -241, 0)**, grounded on the recovered
 heightfield beyond the old boundary, with **zero automatic respawns**.
 
-Source tested: `63ae35f546b6c9782802b70938a4c22563c8e016`. Original scene placements and main
+Source tested: `39df1dc291f980756fd4dc84b8a37cc505da4e37`. Original scene placements and main
 textures are used; custom shaders, actors, water/effects, full original level
 flow and authored progression remain omitted. The collision heightfield cannot
 represent overlapping floors and is capped at spawn+6 source units. Validation
