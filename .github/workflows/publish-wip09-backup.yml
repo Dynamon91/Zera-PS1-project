@@ -15,21 +15,21 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: Dynamon91/Zera-PS1-project
-      BACKUP_SOURCE: 558ce6ac4203e648a23a3ffb06e4b9f125661633
-      BACKUP_TAG: wip09-launchpads-558ce6a
+      BACKUP_SOURCE: 92dfcee3cbc0d0ef2f32de6a12c64190b782eeda
+      BACKUP_TAG: wip09-playable-launch-92dfcee
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: 558ce6ac4203e648a23a3ffb06e4b9f125661633
+          ref: 92dfcee3cbc0d0ef2f32de6a12c64190b782eeda
       - name: Retrieve pinned tested native build
         shell: bash
         run: |
-          gh api repos/Dynamon91/Zera-PS1-project/actions/artifacts/12857436356/zip > "$RUNNER_TEMP/native.zip"
+          gh api repos/Dynamon91/Zera-PS1-project/actions/artifacts/12859326573/zip > "$RUNNER_TEMP/native.zip"
           python3 - <<'PY'
           import hashlib, os
           from pathlib import Path
           path = Path(os.environ['RUNNER_TEMP']) / 'native.zip'
-          assert hashlib.sha256(path.read_bytes()).hexdigest() == '2a3940b0969ec9821cb502ed6f42c51a04d347c0b6b229dc6ff05415a43e37d9'
+          assert hashlib.sha256(path.read_bytes()).hexdigest() == '35c95b145f4a55411ae0c44b9aec6b62fb9da77f7b948193fa68a36a8823580f'
           PY
       - name: Reconstruct and verify complete checkpoint
         run: |
@@ -41,21 +41,20 @@ jobs:
           archive = Path('dist/Zera_PS1_WIP09_Source_Checkpoint.zip')
           with zipfile.ZipFile(archive) as z:
               manifest = z.read('zera_ps1/CHECKPOINT.json')
-              assert hashlib.sha256(manifest).hexdigest() == 'a4511e17f0faadbe83bfd3384b2c280c7a076e46d1c09deb2065f9bdd8979f64'
+              assert hashlib.sha256(manifest).hexdigest() == 'eeb9b07333f89941a386a8d1a2923add743ba7fe4003d846064c6236a5a6f50a'
               status = json.loads(manifest)
-              assert len(status['files']) == 1107
+              assert len(status['files']) == 1142
           checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
           archive.with_suffix('.zip.sha256').write_text(checksum + '  ' + archive.name + '\n')
           Path('dist/release-notes.md').write_text(
               'Backup completo WIP09 con recupero dei trampolini originali, 28 ottobre 2026.\n\n'
-              'Recuperati nove trampolini originali con destinazioni, riferimenti del compagno e formula della traiettoria dal codice compilato. Inclusi estrattore riproducibile, validatore CI e mappa del livello 3. Questo e un avanzamento del recupero dati: i trampolini non sono ancora giocabili su PS1.\n\n'
-              'Include sorgenti, asset recuperati, documentazione, screenshot precedenti e i due dischi PS1 gia verificati (level2 e anteprima level3), invariati da questo aggiornamento. Le correzioni a mascotte e telecamera restano incluse.\n\n'
-              'Dopo aver estratto lo ZIP principale, estrarre zera_ps1/native/Zera_PS1_WIP09_Native.zip. Aprire build/zera_wip09.cue per level2 oppure build/zera_level3_preview.cue per level3, lasciando i rispettivi BIN accanto.\n\n'
-              'Snapshot sorgente: 558ce6ac4203e648a23a3ffb06e4b9f125661633. Integrita verificata per tutti i 1107 file, con manifest identico al checkpoint consegnato. Il file SHA-256 permette di controllare il download.\n\n'
+              'Terzo disco PS1 con trampolino originale 7246, traiettoria recuperata, atterraggio sulla piattaforma originale e telecamera corretta in volo. Verificati due lanci, pausa e cancellazione. Triangle sostituisce provvisoriamente il comportamento completo del compagno. Include tre dischi verificati e screenshot reali prima/dopo.\n\n'
+              'Dopo aver estratto lo ZIP principale, estrarre zera_ps1/native/Zera_PS1_WIP09_Native.zip. Aprire build/zera_launchpad_preview.cue per il trampolino (Cross al titolo, Triangle vicino al pad, Start pausa, Select respawn), build/zera_wip09.cue per level2 oppure build/zera_level3_preview.cue per level3, lasciando i rispettivi BIN accanto.\n\n'
+              'Snapshot sorgente: 92dfcee3cbc0d0ef2f32de6a12c64190b782eeda. Integrita verificata per tutti i 1142 file, con manifest identico al checkpoint consegnato. Il file SHA-256 permette di controllare il download.\n\n'
               'Completamento stimato: 29%. Build WIP, verificate in emulazione HLE; progressione originale e fisica completa restano in lavorazione.\n'
           )
           PY
       # Tag the current approved workflow commit; ZIP source remains pinned above.
       - name: Publish downloadable backup release
         run: |
-          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Recupero trampolini, 28 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
+          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Trampolino giocabile, 29 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
