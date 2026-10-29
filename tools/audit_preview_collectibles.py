@@ -1,6 +1,7 @@
 """Map original collectibles into converted previews; does not enable collection."""
 import hashlib
 import json
+import re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -59,6 +60,12 @@ if __name__=='__main__':
     assert [(e['component_path_id'],e['value']) for e in launch['entries']]==[(6594,8),(6596,8),(7178,4)]
     assert [e['item_height_above_floor'] for e in launch['entries']]==[32,32,32]
     assert not next(r for r in result['previews'] if r['preview']=='level3')['entries']
+    header=(ROOT/'src/relics.h').read_text()
+    positions=re.search(r'relic_positions\[RELIC_COUNT\]\[3\]=\{(.*?)\};',header,re.S).group(1)
+    runtime=[list(map(int,row.split(','))) for row in re.findall(r'\{([^{}]+)\}',positions)]
+    values=list(map(int,re.search(r'relic_values\[RELIC_COUNT\]=\{([^}]+)\}',header).group(1).split(',')))
+    assert runtime==[e['ps1_position'] for e in launch['entries']]
+    assert values==[e['value'] for e in launch['entries']]
     if args.check:
         assert json.loads(path.read_text())==result,'Preview collectible audit drifted; regenerate and review'
     else:path.write_text(json.dumps(result,indent=2)+'\n')

@@ -97,3 +97,5 @@ Same controller scenario and video-frame index; source and timing details are
 recorded in [the comparison evidence](screenshots/launch_camera/verification.json).
 
 Verified native source: `23e35b41246c41ac7f1d3b6cdab0e08013a5a173`; [successful native run](https://github.com/Dynamon91/Zera-PS1-project/actions/runs/40785184613). The final scenario recorded **24 matching trajectory/camera samples**, **4 frozen pause samples**, **2 completed flights** and **1 cancellation**, ending grounded without automatic respawns.
+
+The launchpad disc now also includes [original-position relic collection](RELIC_COLLECTION.md), with provisional pickup/material and session-only progress.

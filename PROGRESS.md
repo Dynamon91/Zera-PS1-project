@@ -22,7 +22,7 @@ based on the evidence below; scope discoveries may change the estimate.
 | PS1 rendering and animation | 10 | 6 | Native textured/Gouraud renderer, original mascot eye/spot textures, skinning-aware packing, four sampled character clips, local render cells and vertex-cache checks; overlays, shaders and performance remain incomplete. |
 | Movement, collision and camera | 10 | 6 | Jump/glide/boost, heightfield/wall movement, side-view fallback and terrain-aware respawn; overlapping floors, ceiling/camera-volume tests and broader usability remain. |
 | Full world and level flow | 25 | 3 | Radius-32 level2 patch, grounded native exploration beyond the old boundary, and a separately tested level3 start patch; full levels, connections, actors, props and streaming remain. |
-| Original gameplay and progression | 20 | 0 | One recovered launch arc and destination are playable with provisional manual activation; original companion/Somersault behavior, collection and progression remain unported. The timed trial is separate development content. |
+| Original gameplay and progression | 20 | 0 | One recovered launch arc and destination are playable with provisional manual activation; three authored relic placements now support one-time session collection; original companion/Somersault behavior, full collection/progression and saving remain incomplete. The timed trial is separate development content. |
 | Audio | 10 | 4 | One streamed track, seven effects and verified session mute; broader source content, transitions, persistent settings and hardware checks remain. |
 | Menus and persistent saves | 5 | 1 | Title/pause/controls, session audio and trial records; memory-card persistence and complete original UI remain. |
 | Release validation and performance | 10 | 1 | Sanitizer host checks and native HLE scenarios; retail BIOS, PAL, physical hardware, stress/memory checks and frame budget remain. |
@@ -207,4 +207,6 @@ Recovered all nine serialized LaunchPad components, including two in level3, wit
 
 Added a third native disc with recovered LaunchPad 7246, surrounding terrain and original upper platform. Flight uses source gravity and original travel parameters. Host checks cover the arc, exact endpoint, stable upper-floor support, trigger boundaries, cancellation and retry; native evidence is recorded in [LAUNCH_GAMEPLAY.md](docs/LAUNCH_GAMEPLAY.md). Triangle activation and existing animation/effects are provisional. Full-port estimate stays **29%** until original interaction/progression behavior is integrated more broadly.
 
-Original collectible placement preparation: [three source relics mapped to lower and upper launchpad surfaces](docs/COLLECTIBLE_PLACEMENTS.md). Collection is not yet active; full-port estimate remains 29%.
+Original collectible placement preparation: [three source relics mapped to lower and upper launchpad surfaces](docs/COLLECTIBLE_PLACEMENTS.md). Collection is now active in the [launchpad prototype](docs/RELIC_COLLECTION.md); full-port estimate remains 29%.
+
+Original-position relic collection: three authored positions and values, duplicate protection, session HUD and reset lifecycle. [Native evidence and provisional behavior](docs/RELIC_COLLECTION.md).

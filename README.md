@@ -424,4 +424,6 @@ Original progression source recovery: [193 relics, 20 essences and 13 checkpoint
 
 Original traversal recovery: [nine launchpads, saved destinations and compiled trajectory formula](docs/LAUNCHPADS.md). The recovered arc is now playable in the [dedicated launchpad prototype](docs/LAUNCH_GAMEPLAY.md); full companion activation remains pending.
 
-Original collectible placement preparation: [three source relics mapped to lower and upper launchpad surfaces](docs/COLLECTIBLE_PLACEMENTS.md). Collection is not yet active; full-port estimate remains 29%.
+Original collectible placement preparation: [three source relics mapped to lower and upper launchpad surfaces](docs/COLLECTIBLE_PLACEMENTS.md). Collection is now active in the [launchpad prototype](docs/RELIC_COLLECTION.md); full-port estimate remains 29%.
+
+Original-position relic collection: three authored positions and values, duplicate protection, session HUD and reset lifecycle. [Native evidence and provisional behavior](docs/RELIC_COLLECTION.md).

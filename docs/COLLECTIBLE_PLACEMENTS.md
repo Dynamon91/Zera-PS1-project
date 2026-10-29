@@ -15,8 +15,8 @@ another floor layer at its X/Z, so choosing the highest floor globally would
 misplace the lower collectible. Selection here chooses the highest support below
 the original item's Y, without changing its authored position.
 
-This is a placement/provenance audit. Collection, score and saving are not active
-in the current discs. Point-floor queries do not establish a traversable route
+This is a placement/provenance audit. A subsequent [collection prototype](RELIC_COLLECTION.md) now enables these three
+placements and source values in the launchpad disc. Saving remains pending. Point-floor queries do not establish a traversable route
 from the landing point to each relic. The separate level3 start patch contains
 zero original Relic/Essence placements within its extraction bounds.
 
