@@ -250,7 +250,7 @@ static void draw_menu(void){
  if(menu.screen==MENU_CONTROLS){
   draw_text(&ctx,48,58,0,"CONTROLS\n\nDPAD / LEFT STICK   MOVE\nCROSS              JUMP\nHOLD CROSS         GLIDE\nR1                 DASH\nL2 / R2            CAMERA\nL1                 RECENTER\nSTART              PAUSE\nSELECT             RESPAWN\n\nCROSS / CIRCLE     BACK");
 #ifdef ZERA_LAUNCH_PREVIEW
-  draw_text(&ctx,32,216,0,"TRIANGLE: LAUNCH NEAR TRAMPOLINE");
+  draw_text(&ctx,32,216,0,"TRIANGLE LAUNCH  SQUARE RESTART");
 #endif
   ui_tile(24,42,272,160,14,22,36);ui_tile(22,40,276,164,100,74,110);return;
  }
@@ -288,6 +288,11 @@ int main(void){
   if(before!=MENU_PLAY && (ui&(UI_UP|UI_DOWN)) && menu.selection!=previous_selection)audio_play(SFX_UI_MOVE);
   if(ui&(UI_ACCEPT|UI_BACK|UI_START))if(before!=MENU_PLAY || menu.screen!=MENU_PLAY)audio_play(SFX_UI_ACCEPT);
   if(before==MENU_PLAY && menu.screen==MENU_PLAY && (pressed&PAD_SELECT))action|=MENU_RESET;
+#ifdef ZERA_LAUNCH_PREVIEW
+  if(before==MENU_PLAY && menu.screen==MENU_PLAY && (pressed&PAD_SQUARE) && relics.count==RELIC_COUNT){
+   relics_clear(&relics);action|=MENU_RESET;audio_play(SFX_UI_ACCEPT);
+  }
+#endif
   if(action&MENU_RESET){player_init(&player);reset_view();}
   if(action&MENU_TRIAL)trial_start(&trial);
   else if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))trial_clear(&trial);
@@ -449,7 +454,7 @@ int main(void){
    }
 #ifdef ZERA_LAUNCH_PREVIEW
    char relic_status[96];snprintf(relic_status,sizeof(relic_status),"ORIGINAL RELICS %d/3  VALUE %d/20",relics.count,relics.value);draw_text(&ctx,8,168,0,relic_status);
-   draw_text(&ctx,8,184,0,launch.active?"ORIGINAL LAUNCH ARC\nIN FLIGHT":launch_can_start(&launch,&player,&launch_config)?"TRIANGLE: LAUNCH\nPROTOTYPE ACTIVATION":launch.completed?"LANDING REACHED\nSELECT: RETURN TO PAD":"RETURN NEAR PAD TO LAUNCH");
+   draw_text(&ctx,8,184,0,relics.count==RELIC_COUNT?"AREA RELICS COMPLETE\nSQUARE: RESTART AREA":launch.active?"ORIGINAL LAUNCH ARC\nIN FLIGHT":launch_can_start(&launch,&player,&launch_config)?"TRIANGLE: LAUNCH\nPROTOTYPE ACTIVATION":launch.completed?"LANDING REACHED\nSELECT: RETURN TO PAD":"RETURN NEAR PAD TO LAUNCH");
 #endif
    if(trial.active){
     char status[192],best[40];int tenths=trial.ticks/3;
