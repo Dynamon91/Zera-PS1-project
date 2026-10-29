@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "instances": [
+    {
+      "component_path_id": 6594,
+      "body_transform_path_id": 3431,
+      "mesh_file": "resources.assets",
+      "mesh_path_id": 387,
+      "mesh_name": "Gaia Statue",
+      "material_path_id": 58,
+      "material_name": "5",
+      "source_base_rgb": [
+        0.0,
+        0.6258623600006104,
+        0.75
+      ],
+      "source_body_world_matrix": [
+        [
+          0.10000000149011609,
+          0.0,
+          0.0,
+          7.9785919189453125
+        ],
+        [
+          0.0,
+          0.0,
+          0.10000000149011609,
+          55.26724974066019
+        ],
+        [
+          0.0,
+          -0.10000000149011609,
+          0.0,
+          -78.92182922363281
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_origin": [
+        7.9785919189453125,
+        55.278249740600586,
+        -78.92182922363281
+      ],
+      "source_vertices": 402,
+      "source_triangles": 206,
+      "packed_vertices": 105,
+      "render_triangles": 206
+    },
+    {
+      "component_path_id": 6596,
+      "body_transform_path_id": 3433,
+      "mesh_file": "resources.assets",
+      "mesh_path_id": 387,
+      "mesh_name": "Gaia Statue",
+      "material_path_id": 58,
+      "material_name": "5",
+      "source_base_rgb": [
+        0.0,
+        0.6258623600006104,
+        0.75
+      ],
+      "source_body_world_matrix": [
+        [
+          0.10000000149011609,
+          0.0,
+          0.0,
+          -3.695636749267578
+        ],
+        [
+          0.0,
+          0.0,
+          0.10000000149011609,
+          55.26724974066019
+        ],
+        [
+          0.0,
+          -0.10000000149011609,
+          0.0,
+          -82.53327941894531
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_origin": [
+        -3.695636749267578,
+        55.278249740600586,
+        -82.53327941894531
+      ],
+      "source_vertices": 402,
+      "source_triangles": 206,
+      "packed_vertices": 105,
+      "render_triangles": 206
+    },
+    {
+      "component_path_id": 7178,
+      "body_transform_path_id": 3413,
+      "mesh_file": "resources.assets",
+      "mesh_path_id": 387,
+      "mesh_name": "Gaia Statue",
+      "material_path_id": 57,
+      "material_name": "4",
+      "source_base_rgb": [
+        0.08980738371610641,
+        0.5661764740943909,
+        0.0
+      ],
+      "source_body_world_matrix": [
+        [
+          0.10000000149011609,
+          0.0,
+          0.0,
+          6.538486480712891
+        ],
+        [
+          0.0,
+          0.0,
+          0.10000000149011609,
+          32.50167051702738
+        ],
+        [
+          0.0,
+          -0.10000000149011609,
+          0.0,
+          -98.79122924804688
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_origin": [
+        6.538486480712891,
+        32.51267051696777,
+        -98.79122924804688
+      ],
+      "source_vertices": 402,
+      "source_triangles": 206,
+      "packed_vertices": 105,
+      "render_triangles": 206
+    }
+  ],
+  "source_file_sha256": {
+    "level3": "06324ca85b7a0888b05b823256262f722a8eab261ec3a1e073e2d066e8daba99",
+    "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d"
+  },
+  "conversion": "Original body world transform relative to original relic origin, scale80, mirrored X/Y for PS1 rendering; integer quantization",
+  "limitations": [
+    "Static serialized body pose; original runtime rotation not ported",
+    "Original base material colors with provisional facet lighting",
+    "Reflective/specular shader, flare, shadow and particles omitted",
+    "Pickup locations and behavior unchanged"
+  ]
+}

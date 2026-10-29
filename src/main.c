@@ -48,6 +48,7 @@
 #include "../previews/launchpad/src/launch_config.h"
 static Launch launch;
 #include "relics.h"
+#include "relic_models.h"
 static Relics relics;
 #endif
 #ifdef ZERA_LAUNCH_PREVIEW
@@ -413,14 +414,15 @@ int main(void){
 #ifdef ZERA_LAUNCH_PREVIEW
   for(int id=0;id<RELIC_COUNT;id++){
    if(relics.mask&(1<<id))continue;
-   SVECTOR points[PICKUP_VERTEX_COUNT];
-   for(int k=0;k<PICKUP_VERTEX_COUNT;k++){
-    const SVECTOR *v=&pickup_vertices[k];
+   const unsigned short *span=relic_model_spans[id];
+   SVECTOR points[RELIC_MODEL_MAX_VERTICES];
+   for(int k=0;k<span[1];k++){
+    const SVECTOR *v=&relic_model_vertices[span[0]+k];
     points[k]=(SVECTOR){relic_positions[id][0]+v->vx,80-relic_positions[id][1]+v->vy,relic_positions[id][2]+v->vz,0};
    }
-   for(int k=0;k<PICKUP_FACE_COUNT;k++){
-    const unsigned short *f=pickup_faces[k];int light=150+(k%4)*25;
-    triangle(points[f[0]],points[f[1]],points[f[2]],light,light*4/5,45);
+   for(int k=span[2];k<span[2]+span[3];k++){
+    const unsigned short *f=relic_model_faces[k];const unsigned char *color=relic_model_colors[k];
+    triangle(points[f[0]-span[0]],points[f[1]-span[0]],points[f[2]-span[0]],color[0],color[1],color[2]);
    }
   }
 #endif

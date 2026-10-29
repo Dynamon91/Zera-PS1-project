@@ -26,6 +26,8 @@ for n in [359,850,1300,1900,2450,3300,4000,4700,5000,5150,5420,5699]:shutil.copy
 replay=root/'docs/screenshots/replay';replay.mkdir(parents=True,exist_ok=True)
 shutil.copyfile(folder/'frame_4700.png',replay/'after.png')
 shutil.copyfile(folder/'frame_5150.png',replay/'restart.png')
+model=root/'docs/screenshots/relic_model';model.mkdir(parents=True,exist_ok=True)
+shutil.copyfile(folder/'frame_0850.png',model/'after.png')
 shutil.copyfile(folder/'capture.json',out/'capture.json')
-v={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':h,'collected_native':3,'value_native':20,'respawn_preserved':True,'title_cleared':True,'area_restart_verified':True,'early_restart_ignored':True,'automatic_respawns':0,'validation':'Input-only HLE original-position collection prototype; provisional pickup volume and material, session-only progress'}
+v={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':h,'collected_native':3,'value_native':20,'respawn_preserved':True,'title_cleared':True,'area_restart_verified':True,'original_relic_models':True,'early_restart_ignored':True,'automatic_respawns':0,'validation':'Input-only HLE original-position collection prototype; provisional pickup volume and material, session-only progress'}
 (out/'verification.json').write_text(json.dumps(v,indent=2)+'\n');print(json.dumps(v))
