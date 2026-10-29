@@ -76,13 +76,16 @@ def inp(port,device,index,id):
   if movement_stopped and id in (4,5,6,7):return 0
  if scenario.get("stop_on_trial_complete") and ram and "trial" in symbols and id in (4,5,6,7):
   if C.c_int.from_address(ram+symbols["trial"]+12).value and "menu" in symbols and C.c_int.from_address(ram+symbols["menu"]).value==1:return 0
- if scenario.get('relic_route') and 900<=tick<1900 and ram and 'player' in symbols and id in (4,5,6,7):
-  x,y,z=struct.unpack('<3i',C.string_at(ram+symbols['player'],12));x/=256;z/=256
-  mask=C.c_int.from_address(ram+symbols['relics']).value
-  target=(-256,786) if not(mask&1) else (678,497)
-  if mask&1:return 0
-  dx=target[0]-x;dz=target[1]-z
-  return int((id==7 and dx>12) or (id==6 and dx< -12) or (id==4 and dz>12) or (id==5 and dz< -12))
+ if scenario.get('relic_route') and ram and 'player' in symbols:
+  phase=0 if 900<=tick<1900 else 1 if 2300<=tick<3300 else 2 if 3700<=tick<4700 else -1
+  if phase>=0 and id in (0,4,5,6,7):
+   x,y,z=struct.unpack('<3i',C.string_at(ram+symbols['player'],12));x/=256;z/=256
+   mask=C.c_int.from_address(ram+symbols['relics']).value
+   if mask&(1<<phase):return 0
+   target=[(-256,786),(678,497),(-141,-804)][phase]
+   if id==0:return int(phase==2 and z< -430)
+   dx=target[0]-x;dz=target[1]-z
+   return int((id==7 and dx>12) or (id==6 and dx< -12) or (id==4 and dz>12) or (id==5 and dz< -12))
  if 'actions' in scenario:
   return int(any(a['start']<=tick<a['end'] and id in a['buttons'] for a in scenario['actions']))
  # Start from title, then move, jump and glide.

@@ -35,3 +35,5 @@ printf 'Launch trajectory, landing, cancellation and render-cell checks passed\n
 
 cc -Wall -Wextra -Werror -fsanitize=address,undefined src/relics.c tools/test_relics.c -o "$check_dir/relics"
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/relics"
+cc -DZERA_LEVEL3_PREVIEW -DZERA_LAUNCH_PREVIEW -Wall -Wextra -Werror -Wno-misleading-indentation -fsanitize=address,undefined src/relics.c src/launch.c src/player.c src/world.c src/surface.c src/collision.c tools/test_relic_routes.c -o "$check_dir/relic_routes"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/relic_routes"
