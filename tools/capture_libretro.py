@@ -80,7 +80,7 @@ def inp(port,device,index,id):
   x,y,z=struct.unpack('<3i',C.string_at(ram+symbols['player'],12));x/=256;z/=256
   mask=C.c_int.from_address(ram+symbols['relics']).value
   target=(-256,786) if not(mask&1) else (678,497)
-  if mask&3==3:return 0
+  if mask&1:return 0
   dx=target[0]-x;dz=target[1]-z
   return int((id==7 and dx>12) or (id==6 and dx< -12) or (id==4 and dz>12) or (id==5 and dz< -12))
  if 'actions' in scenario:
