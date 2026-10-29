@@ -15,21 +15,21 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: Dynamon91/Zera-PS1-project
-      BACKUP_SOURCE: 956ce8d3c240435825a490791ac1fe2976a83b4a
-      BACKUP_TAG: wip09-area-replay-20261029
+      BACKUP_SOURCE: 8bd404cae8293ad5bd593428654f658fa1468e98
+      BACKUP_TAG: wip09-relic-models-20261029
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: 956ce8d3c240435825a490791ac1fe2976a83b4a
+          ref: 8bd404cae8293ad5bd593428654f658fa1468e98
       - name: Retrieve pinned tested native build
         shell: bash
         run: |
-          gh api repos/Dynamon91/Zera-PS1-project/actions/artifacts/12904584643/zip > "$RUNNER_TEMP/native.zip"
+          gh api repos/Dynamon91/Zera-PS1-project/actions/artifacts/12908675111/zip > "$RUNNER_TEMP/native.zip"
           python3 - <<'PY'
           import hashlib, os
           from pathlib import Path
           path = Path(os.environ['RUNNER_TEMP']) / 'native.zip'
-          assert hashlib.sha256(path.read_bytes()).hexdigest() == 'ba770c90b6bee0d2eecf2c788daa5a35240a01a7a79ba177cf29ca2c0f48c1a5'
+          assert hashlib.sha256(path.read_bytes()).hexdigest() == '3ed788af17b67fca9826c0720a8ad6b350decfa40670ee23acdbb999d1f40a7e'
           PY
       - name: Reconstruct and verify complete checkpoint
         run: |
@@ -41,14 +41,14 @@ jobs:
           archive = Path('dist/Zera_PS1_WIP09_Source_Checkpoint.zip')
           with zipfile.ZipFile(archive) as z:
               manifest = z.read('zera_ps1/CHECKPOINT.json')
-              assert hashlib.sha256(manifest).hexdigest() == 'cc4ecc36dde849b257050e4f8263860fb176803bc7c7acf914c6f99577deedba'
+              assert hashlib.sha256(manifest).hexdigest() == '95bc331357b82909ea39db6f2b3820d59387b44135d6ef158b745dd2505c9d89'
               status = json.loads(manifest)
-              assert len(status['files']) == 1172
+              assert len(status['files']) == 1178
           checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
           archive.with_suffix('.zip.sha256').write_text(checksum + '  ' + archive.name + '\n')
-          Path('dist/release-notes.md').write_text('# Zera PS1\n\n**Progresso stimato: 29% · WIP09**\n\nArea completata dopo 3/3 reliquie. Quadrato permette di ricominciare.\n\n| Prima | Dopo |\n| --- | --- |\n| ![Prima](https://raw.githubusercontent.com/Dynamon91/Zera-PS1-project/956ce8d3c240435825a490791ac1fe2976a83b4a/docs/screenshots/replay/before.png) | ![Dopo](https://raw.githubusercontent.com/Dynamon91/Zera-PS1-project/956ce8d3c240435825a490791ac1fe2976a83b4a/docs/screenshots/replay/after.png) |\n')
+          Path('dist/release-notes.md').write_text('# Zera PS1\n\n**Progresso stimato: 29% · WIP09**\n\nRipristinati il corpo originale delle reliquie e i colori di base ciano/verde. Shader ancora in lavorazione.\n\n| Prima | Dopo |\n| --- | --- |\n| ![Prima](https://raw.githubusercontent.com/Dynamon91/Zera-PS1-project/8bd404cae8293ad5bd593428654f658fa1468e98/docs/screenshots/relic_model/before.png) | ![Dopo](https://raw.githubusercontent.com/Dynamon91/Zera-PS1-project/8bd404cae8293ad5bd593428654f658fa1468e98/docs/screenshots/relic_model/after.png) |\n')
           PY
       # Tag the current approved workflow commit; ZIP source remains pinned above.
       - name: Publish downloadable backup release
         run: |
-          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Area completata e riavvio, 29 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
+          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Reliquie originali, 29 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
