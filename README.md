@@ -6,30 +6,16 @@ Un progetto ambizioso: realizzare un **port completo di Zera da Unity a PlayStat
 
 **Progresso stimato: 29% · WIP09 · In sviluppo**
 
-Attualmente: Zera giocabile con animazioni, musica, tre aree di prova, trampolino e raccolta delle prime reliquie. Il port completo resta l’obiettivo finale.
+Personaggio giocabile, animazioni, musica, tre aree di prova, trampolino e raccolta delle reliquie.
 
-### Telecamera durante il lancio
+### Ultimo progresso
 
-| Prima | Dopo |
-| --- | --- |
-| ![Prima](docs/screenshots/launch_camera/before.png) | ![Dopo](docs/screenshots/launch_camera/after.png) |
-
-### Raccolta di tutte e tre le reliquie
-
-**3/3 reliquie · valore totale 20.**
-
-| Prima della raccolta | Dopo la raccolta |
-| --- | --- |
-| ![Prima](docs/screenshots/relics/frame_0850.png) | ![Dopo](docs/screenshots/relics/frame_4700.png) |
-
-### Area completata e nuova partita
-
-Dopo le tre reliquie, **Quadrato** riavvia l’area.
+Ripristinati il corpo originale delle reliquie e i colori di base ciano/verde. Raccolta di tutte e tre verificata: **3/3, valore 20/20**.
 
 | Prima | Dopo |
 | --- | --- |
-| ![Prima](docs/screenshots/replay/before.png) | ![Dopo](docs/screenshots/replay/after.png) |
+| ![Prima](docs/screenshots/relic_model/before.png) | ![Dopo](docs/screenshots/relic_model/after.png) |
 
-Screenshot reali delle build in emulazione.
+Screenshot reali in emulazione. Shader ed effetti riflettenti ancora in lavorazione.
 
-[Scarica il WIP](https://github.com/Dynamon91/Zera-PS1-project/releases/tag/wip09-area-replay-20261029)
+[Scarica il WIP](https://github.com/Dynamon91/Zera-PS1-project/releases/tag/wip09-relic-models-20261029)

@@ -166,13 +166,14 @@ def make_package(root, output, source_commit, native_artifact=None):
                         if (relics["bin_sha256"] != relic_hash or relics["source_commit"] != check["source_commit"]
                                 or relics["collected_native"] != 3 or relics["value_native"] != 20
                                 or not relics["respawn_preserved"] or not relics["title_cleared"]
+                                or not relics.get("original_relic_models")
                                 or not relics.get("area_restart_verified") or not relics.get("early_restart_ignored")
                                 or relics["automatic_respawns"] != 0):
                             raise ValueError("relic collection build/lifecycle validation mismatch")
                         manifest["additional_native_preview"]["original_relic_collection"] = {
                             "source_commit": relics["source_commit"], "bin_sha256": relic_hash,
                             "native_route_collected": 3, "native_route_value": 20,
-                            "completed_area_replay_verified": True,
+                            "completed_area_replay_verified": True, "original_body_models": True,
                             "status": "Three authored placements/values; provisional pickup and presentation, session-only progress",
                         }
                 write_entry(archive, name, data)

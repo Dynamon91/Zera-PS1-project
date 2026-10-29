@@ -8,6 +8,7 @@
 - Tre aree di prova giocabili.
 - Trampolino originale con atterraggio e telecamera migliorata.
 - Raccolta delle tre reliquie nelle posizioni originali; tutte e tre raccolte in emulazione, totale 20.
+- Corpo originale delle reliquie e colori di base ciano/verde; shader ancora in lavorazione.
 - Messaggio di area completata e riavvio con Quadrato dopo 3/3 reliquie.
 - Prossimi passi: altri percorsi, progressione completa e salvataggio.
 
