@@ -15,21 +15,21 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: Dynamon91/Zera-PS1-project
-      BACKUP_SOURCE: 50a22b1b4e30b43ed2e0e5f6a3cae3ef2f87c015
-      BACKUP_TAG: wip09-relic-play-50a22b1
+      BACKUP_SOURCE: 57384ee752f352680d1302563469b5f1496901fc
+      BACKUP_TAG: wip09-all-relics-20261029
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: 50a22b1b4e30b43ed2e0e5f6a3cae3ef2f87c015
+          ref: 57384ee752f352680d1302563469b5f1496901fc
       - name: Retrieve pinned tested native build
         shell: bash
         run: |
-          gh api repos/Dynamon91/Zera-PS1-project/actions/artifacts/12899924749/zip > "$RUNNER_TEMP/native.zip"
+          gh api repos/Dynamon91/Zera-PS1-project/actions/artifacts/12904922123/zip > "$RUNNER_TEMP/native.zip"
           python3 - <<'PY'
           import hashlib, os
           from pathlib import Path
           path = Path(os.environ['RUNNER_TEMP']) / 'native.zip'
-          assert hashlib.sha256(path.read_bytes()).hexdigest() == '552a9ab89c5a9b6f16cc6a24672ceae410d615855759946b5179cf213fdcf6b9'
+          assert hashlib.sha256(path.read_bytes()).hexdigest() == '3ca64ab49ac01ada25e7451c5d3c426eb840342e7b1acd8edd38866ba347c18c'
           PY
       - name: Reconstruct and verify complete checkpoint
         run: |
@@ -41,20 +41,14 @@ jobs:
           archive = Path('dist/Zera_PS1_WIP09_Source_Checkpoint.zip')
           with zipfile.ZipFile(archive) as z:
               manifest = z.read('zera_ps1/CHECKPOINT.json')
-              assert hashlib.sha256(manifest).hexdigest() == 'd1568c98563668bbbef8e64aa9b578cc61da4ce59eb9b1211e51491d8f0a5328'
+              assert hashlib.sha256(manifest).hexdigest() == '9d2f28771789fd82f075b502d963ea1b9ff975da99356b1b84eb431468cc5634'
               status = json.loads(manifest)
-              assert len(status['files']) == 1160
+              assert len(status['files']) == 1168
           checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
           archive.with_suffix('.zip.sha256').write_text(checksum + '  ' + archive.name + '\n')
-          Path('dist/release-notes.md').write_text(
-              'Backup completo WIP09 con raccolta delle reliquie, 29 ottobre 2026.\n\n'
-              'Raccolta attiva nelle tre posizioni originali, con valori 8, 8 e 4, HUD, protezione dai duplicati e stato di sessione. Prova PS1: prima reliquia raccolta, valore 8 conservato al respawn e azzerato tornando al titolo. Volume di raccolta e materiale provvisori; memory card non implementata. Terzo disco PS1 con trampolino originale 7246, traiettoria recuperata, atterraggio sulla piattaforma originale e telecamera corretta in volo. Verificati due lanci, pausa e cancellazione. Triangle sostituisce provvisoriamente il comportamento completo del compagno. Include tre dischi verificati e screenshot reali prima/dopo.\n\n'
-              'Dopo aver estratto lo ZIP principale, estrarre zera_ps1/native/Zera_PS1_WIP09_Native.zip. Aprire build/zera_launchpad_preview.cue per il trampolino (Cross al titolo, Triangle vicino al pad, Start pausa, Select respawn), build/zera_wip09.cue per level2 oppure build/zera_level3_preview.cue per level3, lasciando i rispettivi BIN accanto.\n\n'
-              'Snapshot sorgente: 50a22b1b4e30b43ed2e0e5f6a3cae3ef2f87c015. Integrita verificata per tutti i 1160 file, con manifest identico al checkpoint consegnato. Il file SHA-256 permette di controllare il download.\n\n'
-              'Completamento stimato: 29%. Build WIP, verificate in emulazione HLE; progressione originale e fisica completa restano in lavorazione.\n'
-          )
+          Path('dist/release-notes.md').write_text('# Zera PS1\n\nObiettivo: port completo da Unity a PS1. Un progetto ambizioso, un passo alla volta.\n\n**Progresso stimato: 29% · WIP09**\n\n**3/3 reliquie raccolte · valore 20/20.**\n\n| Prima | Dopo |\n| --- | --- |\n| ![Prima](https://raw.githubusercontent.com/Dynamon91/Zera-PS1-project/57384ee752f352680d1302563469b5f1496901fc/docs/screenshots/relics/frame_0850.png) | ![Dopo](https://raw.githubusercontent.com/Dynamon91/Zera-PS1-project/57384ee752f352680d1302563469b5f1496901fc/docs/screenshots/relics/frame_4700.png) |\n')
           PY
       # Tag the current approved workflow commit; ZIP source remains pinned above.
       - name: Publish downloadable backup release
         run: |
-          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Raccolta reliquie, 29 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
+          gh release create "$BACKUP_TAG" dist/Zera_PS1_WIP09_Source_Checkpoint.zip dist/Zera_PS1_WIP09_Source_Checkpoint.zip.sha256 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Zera PS1 WIP09 - Tre reliquie completate, 29 ottobre 2026" --notes-file dist/release-notes.md --prerelease --latest=false
