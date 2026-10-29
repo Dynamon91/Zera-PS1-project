@@ -164,13 +164,13 @@ def make_package(root, output, source_commit, native_artifact=None):
                         relics = json.loads(native.read("docs/screenshots/relics/verification.json"))
                         relic_hash = hashlib.sha256(native.read("build/zera_launchpad_preview.bin")).hexdigest()
                         if (relics["bin_sha256"] != relic_hash or relics["source_commit"] != check["source_commit"]
-                                or relics["collected_native"] != 1 or relics["value_native"] != 8
+                                or relics["collected_native"] != 3 or relics["value_native"] != 20
                                 or not relics["respawn_preserved"] or not relics["title_cleared"]
                                 or relics["automatic_respawns"] != 0):
                             raise ValueError("relic collection build/lifecycle validation mismatch")
                         manifest["additional_native_preview"]["original_relic_collection"] = {
                             "source_commit": relics["source_commit"], "bin_sha256": relic_hash,
-                            "native_route_collected": 1, "native_route_value": 8,
+                            "native_route_collected": 3, "native_route_value": 20,
                             "status": "Three authored placements/values; provisional pickup and presentation, session-only progress",
                         }
                 write_entry(archive, name, data)
