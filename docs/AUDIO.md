@@ -1,6 +1,6 @@
 # Audio on/off — native verification
 
-Source: `39df1dc291f980756fd4dc84b8a37cc505da4e37`. Build hash: `6f0a7cfafb5c9d052777e23d1478de1faa1831e183a925e64f6c0e3fced94098`.
+Source: `7fdee8ba3f48d175728488c383ae56c72e1fc86f`. Build hash: `9bd1a364f184cadfb015032b0cf419a85d20fd9b9552a08138939f61ef9c157f`.
 
 | Muted | Restored |
 | --- | --- |

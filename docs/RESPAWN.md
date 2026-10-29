@@ -1,6 +1,6 @@
 # Terrain-relative fall recovery
 
-Native source: `39df1dc291f980756fd4dc84b8a37cc505da4e37`.
+Native source: `7fdee8ba3f48d175728488c383ae56c72e1fc86f`.
 
 The safety plane is now 700 units below the lowest valid heightfield sample
 (-4077 in this recovered patch), instead of -700 relative to spawn.
