@@ -86,6 +86,8 @@ jobs:
           python3 tools/check_mascot_capture.py build/mascot-preview
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_launchpad_preview.cue build/launchpad-preview tools/scenarios/launchpad_preview.json
           python3 tools/check_launch_capture.py build/launchpad-preview
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_launchpad_preview.cue build/relic-preview tools/scenarios/relic_preview.json
+          python3 tools/check_relic_capture.py build/relic-preview
       - name: Preserve failed capture diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -113,6 +115,8 @@ jobs:
             build/zera_launchpad_preview.bin
             build/zera_launchpad_preview.cue
             build/launchpad-preview/
+            build/relic-preview/
+            docs/screenshots/relics/
             docs/screenshots/launchpad/
             build/zera_level3.exe
             build/zera_level3.elf
@@ -153,7 +157,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/NATIVE_COMPARISON.md docs/screenshots/wip09 docs/AUDIO.md docs/screenshots/audio docs/RESPAWN.md docs/screenshots/respawn docs/TRIAL.md docs/screenshots/trial docs/WORLD.md docs/screenshots/world docs/LEVEL3.md docs/screenshots/level3 docs/screenshots/mascot docs/screenshots/launchpad
+          git add docs/NATIVE_COMPARISON.md docs/screenshots/wip09 docs/AUDIO.md docs/screenshots/audio docs/RESPAWN.md docs/screenshots/respawn docs/TRIAL.md docs/screenshots/trial docs/WORLD.md docs/screenshots/world docs/LEVEL3.md docs/screenshots/level3 docs/screenshots/mascot docs/screenshots/launchpad docs/screenshots/relics
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Add verified native WIP09 wall-camera screenshots'
           git push origin HEAD:main

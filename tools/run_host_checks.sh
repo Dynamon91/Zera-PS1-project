@@ -32,3 +32,6 @@ ASAN_OPTIONS=detect_leaks=0 "$check_dir/launch"
 cc -DZERA_LAUNCH_PREVIEW -Wall -Wextra -Werror -fsanitize=address,undefined src/clip.c tools/test_render_cells.c -o "$check_dir/launch_cells"
 ASAN_OPTIONS=detect_leaks=0 "$check_dir/launch_cells"
 printf 'Launch trajectory, landing, cancellation and render-cell checks passed\n'
+
+cc -Wall -Wextra -Werror -fsanitize=address,undefined src/relics.c tools/test_relics.c -o "$check_dir/relics"
+ASAN_OPTIONS=detect_leaks=0 "$check_dir/relics"

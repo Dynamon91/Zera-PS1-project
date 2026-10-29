@@ -47,6 +47,8 @@
 #include "launch.h"
 #include "../previews/launchpad/src/launch_config.h"
 static Launch launch;
+#include "relics.h"
+static Relics relics;
 #endif
 #ifdef ZERA_LAUNCH_PREVIEW
 #include "../previews/launchpad/src/world_mesh.h"
@@ -289,6 +291,9 @@ int main(void){
   if(action&MENU_RESET){player_init(&player);reset_view();}
   if(action&MENU_TRIAL)trial_start(&trial);
   else if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))trial_clear(&trial);
+#ifdef ZERA_LAUNCH_PREVIEW
+  if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))relics_clear(&relics);
+#endif
   int paused=menu.screen!=MENU_PLAY || before!=MENU_PLAY || (action&MENU_RESET);
   Input in={(!!(held&PAD_RIGHT))-(!!(held&PAD_LEFT)),(!!(held&PAD_UP))-(!!(held&PAD_DOWN)),!!(pressed&PAD_CROSS),!!(held&PAD_CROSS),!!(pressed&PAD_R1)};
   if(pad->stat==0 && (pad->type==PAD_ID_ANALOG || pad->type==PAD_ID_ANALOG_STICK)){
@@ -320,6 +325,9 @@ int main(void){
    if(!olddash && player.dash_ticks)audio_play(SFX_DASH);
    if(oldstate!=GLIDE && player.state==GLIDE)audio_play(SFX_FLAP);
   }
+#ifdef ZERA_LAUNCH_PREVIEW
+  if(relics_update(&relics,&player,!paused))audio_play(SFX_PICKUP);
+#endif
   if(trial_update(&trial,&player,!paused))audio_play(SFX_PICKUP);
   audio_update(menu.screen!=MENU_PLAY);
   int moved=!paused && !respawned && (player.x!=oldx || player.z!=oldz);
@@ -397,6 +405,20 @@ int main(void){
     }
    }
   }
+#ifdef ZERA_LAUNCH_PREVIEW
+  for(int id=0;id<RELIC_COUNT;id++){
+   if(relics.mask&(1<<id))continue;
+   SVECTOR points[PICKUP_VERTEX_COUNT];
+   for(int k=0;k<PICKUP_VERTEX_COUNT;k++){
+    const SVECTOR *v=&pickup_vertices[k];
+    points[k]=(SVECTOR){relic_positions[id][0]+v->vx,80-relic_positions[id][1]+v->vy,relic_positions[id][2]+v->vz,0};
+   }
+   for(int k=0;k<PICKUP_FACE_COUNT;k++){
+    const unsigned short *f=pickup_faces[k];int light=150+(k%4)*25;
+    triangle(points[f[0]],points[f[1]],points[f[2]],light,light*4/5,45);
+   }
+  }
+#endif
   int x=player.x/FP,y=80-player.y/FP,z=player.z/FP;
   if(mascot_visible)for(int order=0;order<ZERA_FACE_COUNT;order++){
    int i=mascot_draw_order[order];
@@ -426,6 +448,7 @@ int main(void){
     draw_text(&ctx,8,8,0,text);
    }
 #ifdef ZERA_LAUNCH_PREVIEW
+   char relic_status[96];snprintf(relic_status,sizeof(relic_status),"ORIGINAL RELICS %d/3  VALUE %d/20",relics.count,relics.value);draw_text(&ctx,8,168,0,relic_status);
    draw_text(&ctx,8,184,0,launch.active?"ORIGINAL LAUNCH ARC\nIN FLIGHT":launch_can_start(&launch,&player,&launch_config)?"TRIANGLE: LAUNCH\nPROTOTYPE ACTIVATION":launch.completed?"LANDING REACHED\nSELECT: RETURN TO PAD":"RETURN NEAR PAD TO LAUNCH");
 #endif
    if(trial.active){

@@ -76,6 +76,13 @@ def inp(port,device,index,id):
   if movement_stopped and id in (4,5,6,7):return 0
  if scenario.get("stop_on_trial_complete") and ram and "trial" in symbols and id in (4,5,6,7):
   if C.c_int.from_address(ram+symbols["trial"]+12).value and "menu" in symbols and C.c_int.from_address(ram+symbols["menu"]).value==1:return 0
+ if scenario.get('relic_route') and 900<=tick<1900 and ram and 'player' in symbols and id in (4,5,6,7):
+  x,y,z=struct.unpack('<3i',C.string_at(ram+symbols['player'],12));x/=256;z/=256
+  mask=C.c_int.from_address(ram+symbols['relics']).value
+  target=(-256,786) if not(mask&1) else (678,497)
+  if mask&3==3:return 0
+  dx=target[0]-x;dz=target[1]-z
+  return int((id==7 and dx>12) or (id==6 and dx< -12) or (id==4 and dz>12) or (id==5 and dz< -12))
  if 'actions' in scenario:
   return int(any(a['start']<=tick<a['end'] and id in a['buttons'] for a in scenario['actions']))
  # Start from title, then move, jump and glide.
@@ -96,7 +103,7 @@ if mapfile.exists():
  for line in mapfile.read_text().splitlines():
   fields=line.split()
   if len(fields)>=4 and fields[0]=='trial':trial_words=7 if int(fields[3],16)>=28 else 5
-  if len(fields)>=3 and fields[0] in ('player','camera_distance','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','debug_movement_yaw','debug_actual_moving','facing','mascot_visible','launch','yaw','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
+  if len(fields)>=3 and fields[0] in ('player','camera_distance','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','debug_movement_yaw','debug_actual_moving','facing','mascot_visible','launch','relics','yaw','menu','animator','audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','audio_sfx_events','trial'):symbols[fields[0]]=int(fields[2],16)&0x1fffff
 core.retro_get_memory_data.argtypes=[C.c_uint];core.retro_get_memory_data.restype=C.c_void_p
 core.retro_get_memory_size.argtypes=[C.c_uint];core.retro_get_memory_size.restype=C.c_size_t
 ram=core.retro_get_memory_data(2);ramsize=core.retro_get_memory_size(2)
@@ -117,6 +124,8 @@ for tick in range(run_frames):
   for name in ('audio_music_ready','audio_underruns','audio_cd_errors','audio_refills','audio_wraps','audio_muted','camera_height','player_respawn_events','simulation_ticks','debug_input_x','debug_input_z','debug_movement_yaw','debug_actual_moving','facing','mascot_visible','yaw'):
    if name in symbols:row[name]=struct.unpack('<i',C.string_at(ram+symbols[name],4))[0]
   if 'audio_sfx_events' in symbols:row['sfx_events']=list(struct.unpack('<7i',C.string_at(ram+symbols['audio_sfx_events'],28)))
+  if 'relics' in symbols:
+   values=struct.unpack('<3i',C.string_at(ram+symbols['relics'],12));row.update(dict(zip(['relic_mask','relic_count','relic_value'],values)))
   if 'launch' in symbols:
    values=struct.unpack('<5i',C.string_at(ram+symbols['launch'],20));row.update(dict(zip(['launch_active','launch_time','launch_started','launch_completed','launch_cancelled'],values)))
   if 'trial' in symbols:
