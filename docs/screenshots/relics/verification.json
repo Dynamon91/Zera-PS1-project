@@ -1,0 +1,10 @@
+{
+  "source_commit": "715c601784ea63cea1eb7b3e61f81f91fd5a285b",
+  "bin_sha256": "46fd98aec0179148ec462f53b2f8c7eed12aeb89d064f0ede35080dc1166f8c7",
+  "collected_native": 1,
+  "value_native": 8,
+  "respawn_preserved": true,
+  "title_cleared": true,
+  "automatic_respawns": 0,
+  "validation": "Input-only HLE original-position collection prototype; provisional pickup volume and material, session-only progress"
+}
