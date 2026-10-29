@@ -423,3 +423,5 @@ Clipping optimization: [measured before/after results](docs/PERFORMANCE.md).
 Original progression source recovery: [193 relics, 20 essences and 13 checkpoints with original transforms](docs/ORIGINAL_PROGRESSION.md). This is recovered conversion data; the playable runtime is unchanged.
 
 Original traversal recovery: [nine launchpads, saved destinations and compiled trajectory formula](docs/LAUNCHPADS.md). The recovered arc is now playable in the [dedicated launchpad prototype](docs/LAUNCH_GAMEPLAY.md); full companion activation remains pending.
+
+Original collectible placement preparation: [three source relics mapped to lower and upper launchpad surfaces](docs/COLLECTIBLE_PLACEMENTS.md). Collection is not yet active; full-port estimate remains 29%.

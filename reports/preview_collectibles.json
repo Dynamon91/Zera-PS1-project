@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "progression_source_sha256": "2369c297b39e69ea6591b2660c79e0596e67ac36156139769f769436335ec2df",
+  "position_conversion": "XZ mirrored/scaled relative to preview origin; Y relative to recovered ground, rounded to integer world units",
+  "limitations": [
+    "Spatial inclusion and point support are not a traversable-route or pickup proof",
+    "Collection, inventory and saving are not enabled by this audit",
+    "Original source hierarchy flags do not prove runtime availability"
+  ],
+  "previews": [
+    {
+      "preview": "level3",
+      "scene": "level3",
+      "world_source_sha256": "1289963f91842d7d240b51b43300fdbc94a665dd858723abc38a92549de000d4",
+      "entries": []
+    },
+    {
+      "preview": "launchpad",
+      "scene": "level3",
+      "world_source_sha256": "4176a0a7b5126f12affc630aae42e038f1c92dac08246b253da31e4f6c85c47c",
+      "entries": [
+        {
+          "kind": "Relic",
+          "component_path_id": 6594,
+          "name": "_Relic_8 (8)",
+          "value": 8,
+          "source_world_position": [
+            7.9785919189453125,
+            55.278249740600586,
+            -78.92182922363281
+          ],
+          "ps1_position": [
+            -256,
+            1927,
+            786
+          ],
+          "source_component_enabled": true,
+          "source_hierarchy_active": true,
+          "floor_layers_at_quantized_xz": [
+            73,
+            1895
+          ],
+          "highest_floor_below_item": 1895,
+          "item_height_above_floor": 32
+        },
+        {
+          "kind": "Relic",
+          "component_path_id": 6596,
+          "name": "_Relic_8 (7)",
+          "value": 8,
+          "source_world_position": [
+            -3.695636749267578,
+            55.278249740600586,
+            -82.53327941894531
+          ],
+          "ps1_position": [
+            678,
+            1927,
+            497
+          ],
+          "source_component_enabled": true,
+          "source_hierarchy_active": true,
+          "floor_layers_at_quantized_xz": [
+            74,
+            1895
+          ],
+          "highest_floor_below_item": 1895,
+          "item_height_above_floor": 32
+        },
+        {
+          "kind": "Relic",
+          "component_path_id": 7178,
+          "name": "_Relic_4 (5)",
+          "value": 4,
+          "source_world_position": [
+            6.538486480712891,
+            32.51267051696777,
+            -98.79122924804688
+          ],
+          "ps1_position": [
+            -141,
+            106,
+            -804
+          ],
+          "source_component_enabled": true,
+          "source_hierarchy_active": true,
+          "floor_layers_at_quantized_xz": [
+            74,
+            1895
+          ],
+          "highest_floor_below_item": 74,
+          "item_height_above_floor": 32
+        }
+      ]
+    }
+  ]
+}

@@ -18,6 +18,7 @@ jobs:
           python3 tools/check_progression_recovery.py
           python3 tools/check_launchpad_recovery.py
           python3 tools/check_launch_assets.py
+          python3 tools/audit_preview_collectibles.py --check
       - name: Check resumable package integrity and reproducibility
         run: python3 tools/test_package.py
       - name: Package current source and the labeled WIP08 playable checkpoint

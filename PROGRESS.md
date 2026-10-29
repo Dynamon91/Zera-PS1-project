@@ -206,3 +206,5 @@ Recovered all nine serialized LaunchPad components, including two in level3, wit
 ### Playable original launchpad area
 
 Added a third native disc with recovered LaunchPad 7246, surrounding terrain and original upper platform. Flight uses source gravity and original travel parameters. Host checks cover the arc, exact endpoint, stable upper-floor support, trigger boundaries, cancellation and retry; native evidence is recorded in [LAUNCH_GAMEPLAY.md](docs/LAUNCH_GAMEPLAY.md). Triangle activation and existing animation/effects are provisional. Full-port estimate stays **29%** until original interaction/progression behavior is integrated more broadly.
+
+Original collectible placement preparation: [three source relics mapped to lower and upper launchpad surfaces](docs/COLLECTIBLE_PLACEMENTS.md). Collection is not yet active; full-port estimate remains 29%.
