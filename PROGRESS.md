@@ -8,6 +8,7 @@
 - Tre aree di prova giocabili.
 - Trampolino originale con atterraggio e telecamera migliorata.
 - Raccolta delle tre reliquie nelle posizioni originali; tutte e tre raccolte in emulazione, totale 20.
+- Messaggio di area completata e riavvio con Quadrato dopo 3/3 reliquie.
 - Prossimi passi: altri percorsi, progressione completa e salvataggio.
 
 [Screenshot prima e dopo e download del WIP](README.md)

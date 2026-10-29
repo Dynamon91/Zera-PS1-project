@@ -22,6 +22,14 @@ Attualmente: Zera giocabile con animazioni, musica, tre aree di prova, trampolin
 | --- | --- |
 | ![Prima](docs/screenshots/relics/frame_0850.png) | ![Dopo](docs/screenshots/relics/frame_4700.png) |
 
+### Area completata e nuova partita
+
+Dopo le tre reliquie, **Quadrato** riavvia l’area.
+
+| Prima | Dopo |
+| --- | --- |
+| ![Prima](docs/screenshots/replay/before.png) | ![Dopo](docs/screenshots/replay/after.png) |
+
 Screenshot reali delle build in emulazione.
 
-[Scarica il WIP](https://github.com/Dynamon91/Zera-PS1-project/releases/tag/wip09-all-relics-20261029)
+[Scarica il WIP](https://github.com/Dynamon91/Zera-PS1-project/releases/tag/wip09-area-replay-20261029)
