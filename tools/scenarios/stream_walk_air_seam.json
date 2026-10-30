@@ -1,0 +1,46 @@
+{
+  "frames": 6000,
+  "audio": false,
+  "gif": true,
+  "gif_start_frame": 2300,
+  "gif_end_frame": 3400,
+  "gif_sample_step": 6,
+  "map_file": "zera_walk.map",
+  "sample_interval": 5,
+  "stop_movement_at_z": -2000,
+  "shots": [
+    900,
+    2300,
+    2800,
+    3300,
+    4500,
+    5999
+  ],
+  "actions": [
+    {
+      "start": 450,
+      "end": 460,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 1000,
+      "end": 5500,
+      "buttons": [
+        5
+      ]
+    }
+  ],
+  "stream_jump_start": -1180,
+  "stream_jump_end": -1600,
+  "capture_events": [
+    {
+      "name": "airborne_sector",
+      "max_z": -1290,
+      "min_collision_loads": 3,
+      "player_state": 3,
+      "delay_frames": 24
+    }
+  ]
+}

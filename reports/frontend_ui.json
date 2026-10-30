@@ -1,0 +1,994 @@
+{
+  "scene": "level1",
+  "source_files_sha256": {
+    "globalgamemanagers.assets": "1b730746d100c1bcbdd60a99e0e9124b86ea76e773edb420e162f6086a1a2eb6",
+    "level1": "476a443330f4428d75159178da7fde68c548eb35201beff5a98dc9d614593b43"
+  },
+  "entries": [
+    {
+      "component": 1028,
+      "name": "FOV",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Video",
+        "FOV"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Field of View",
+      "payload_sha256": "976ee8ba675663be64aefa1e45cce27fade75b1dc2c921ab326ebcc687d99f1e"
+    },
+    {
+      "component": 1035,
+      "name": "Fill",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Music (1)",
+        "Fill"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "~",
+      "payload_sha256": "faf6732bf9e3ace71596fffc783928c1088b90b8890776b793684ee581811525"
+    },
+    {
+      "component": 1039,
+      "name": "Sensitivity",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Gameplay",
+        "Sensitivity"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Camera Sensitivity",
+      "payload_sha256": "1733bf6c2394801a47f0728a5168cc0e5098f313a5038630b8505e85c8cb7788"
+    },
+    {
+      "component": 1044,
+      "name": "Label (1)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Video",
+        "Toggle",
+        "Label (1)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Classic",
+      "payload_sha256": "160453b9893c0b8bd2dd8210948967aeea029eff3ee222253325bd91e46c74af"
+    },
+    {
+      "component": 1049,
+      "name": "1.4s",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "1.4s"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v1.4.1:\n\n-re-fixed a couple of Crates in Gaia's Castle that could be broken by screech that somehow didn't actually get fixed last time\n-fixed a serious bug that was preventing the new Somersault boost mechanic from working in a lot of instances\n-kiwi will now properly face the camera during Zera's death, regardless of angle\n\nnew in v1.4:\n\n\n-fixed a couple of Crates in Gaia's Castle that could be broken by screech\n-Somersault now gives you an upwards boost for breaking containers with it\n-adjusted the positioning of some relics and containers in Gaia's Castle\n-adjusted Gaia's Castle level mesh slightly, to reflect the Somersault changes and some of the container layout changes\n-camera collision and general camera movement has been GREATLY improved and should now actually properly function!\n-the input for Handspring Jump can now be executed earlier, *and* later than before!\n-save games now get saved to a folder called \"Saves\" inside the games Data folder!\n-level fade-ins now properly work 100% of the time",
+      "payload_sha256": "6ed56ee8d81532d31b4860ada1218e4ccc0ad9bb7b24bcbe1d6480bc338ca7b5"
+    },
+    {
+      "component": 1050,
+      "name": "2.4s",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "2.4s"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v2.4.1:\n\n-added an option in the main menu to Erase Save, which will remove all save data for level progress and unlocks (will not change Audio/Video/Gameplay settings however!)\n-Fixed a bug with the previously added delay for quitting, as doing so while in the pause menu of any actual level would cause the game to not quit until the game was unpaused for a few seconds\n-reduced the Quit delay to be minimal\n-\"Normal Mode\" on the title screen menu has been simply renamed to \"Play\"\n-\"Start Game\" text on title screen replaced with \"Press Any Key\"\n\n\nnew in v2.4:\n\n\n-extended/modified intro cutscene\n-new native NPCs added to Cosmic Core\n-game set to no longer pause while in background\n-collectables and totals now saved/loaded\n-Cosmic Core hub overhauled, levels now have their own terrarium location in the hub, locked behind progress gates\n-levels will now have requirements to unlock going forward, starting with Dark Rift\n-reverted Font used for dialogue back to the same used for menus\n-3D infinity symbols added for Gates blocking currently undeveloped areas added\n-Zera's sound when bonking has been changed, and she now emits an \"OOWF\" sound on top of sounding like she's hit something solid\n-general dialogue/story changes/additions\n-made NPC animation transitions smoother\n-FOV min/max changed\n-new \"Gameplay\" section of the Options menu added, with 2 new options under it (Camera Sensitivity slider, and Automatic or Manual camera control)\n-Gateways now display a cubemap image like when they were originally shown, rather than just a static image like they have been\n-\"Level Complete\" dialogue temporarily disabled across all levels\n-some relics have been added to Cosmic Core (you will not be able to 100% Cosmic Core anytime soon however, as the amount present currently is not the full amount, and more will be locked away behind other yet to be implemented level gates)\n-Quitting now has a slight delay to ensure proper saving\n-you can now press ANY key to \"Start Game\" on the title screen, and you can skip waiting on the logo to appear as well\n",
+      "payload_sha256": "dac211d59193d5581a4365fcfa6f7e35a3dc25e2087983acedf8cebed7e67ca2"
+    },
+    {
+      "component": 1067,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "1cb2121805d9a77d5f862086e657383c629b1b8a4ee1dbe97564917323ae4c42"
+    },
+    {
+      "component": 1068,
+      "name": "bg",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Credits",
+        "Scrollbox",
+        "GameObject",
+        "Scrollbar",
+        "bg"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "~",
+      "payload_sha256": "f26d917c24d4cb09600201b2f37e4d0c6c2ab9223b1072299842bc83a690565d"
+    },
+    {
+      "component": 1073,
+      "name": "Gameplay",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Options",
+        "Gameplay"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Gameplay",
+      "payload_sha256": "c3f57286e9440606be9f11b73c157b7b7af2baa557fce43fcfbc5012b88de2d1"
+    },
+    {
+      "component": 1088,
+      "name": "credits",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Credits",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "credits"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\rTeam:\r\n\r\nCyreides\r\nNetrum\r\n\r\nAdditional Help/Resources:\r\n\r\nFranklyGD, RubbberRabbbit2, FaithSDK, DeadJosey, Nahamut, Ouli, CrystalFissure, Jordan Fringe, JuraraJupiter, Ghostie, Luminize, Rob, Zethical, Beatz, InfinateXtremer, the Zera community, Freesound.org...\r\n\r\n...and you! Thanks for playing <3\r",
+      "payload_sha256": "03db93e90fb129ba5ad3770540b67676dee4968f3a8b2de372bf2e3a92b6715c"
+    },
+    {
+      "component": 1089,
+      "name": "Options",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Main Menu",
+        "Options"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Options",
+      "payload_sha256": "cab077cc308b57fde56f25d07844be070794649ae48730d6e3c6182c380e13ef"
+    },
+    {
+      "component": 1090,
+      "name": "1.5",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "1.5"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v1.5:\n\n-Enemies have now finally gotten proper code behind them beyond just Snappy, so they've now been implemented into Gaia's Castle! Be on the lookout for mischievous little Mushbooms and mean old Crushrooms!\n-updated the level mesh for Gaia's Castle, mostly around the beginning areas\n-relics/containers adjusted for mesh changes and some replaced by enemies\n-smoke particles for the spicy-water\n-increased invincibility timer for Zera when taking burning damage, as previously it was possible to take multiple hits in less than a second due to how short the timer was for this type of damage\n-removed black smoke particles from broken crate pieces that were a remnant from S:MA\n-slightly increased relic collecting range\n-moved a checkpoint\n-free look now has its own button (middle click on mouse, assignable for controller in the input tab as normal!\n-adjusted death poofing particles for enemies and gave it a sound\n-fixed a long standing issue of Gaia's checkpoint particles not rendering over the skybox, which makes them far more visible now\n-relic and reality cog count for Gaia's Castle has been increased to 1000 and 5 respectively",
+      "payload_sha256": "65d43ab4f56001f6198965bf34a500714b7f9364320403b637ef978575ffb2f3"
+    },
+    {
+      "component": 1091,
+      "name": "padding",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Credits",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "padding"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\n",
+      "payload_sha256": "b7b766ab71f97b0ec3eee14a5713fd1203f96f6b384e5fe6c6b93140aeb5a150"
+    },
+    {
+      "component": 1097,
+      "name": "Quit",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Main Menu",
+        "Quit"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Quit",
+      "payload_sha256": "8fd853d2b525d4b8be26e0a0d5a85a0a5e654dc1faf369be829d55048c7c5c16"
+    },
+    {
+      "component": 1102,
+      "name": "Fill (3)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Dialogue",
+        "Fill (3)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "|",
+      "payload_sha256": "d467203931a392aa6d9730dc290ea1308a3800a1d451ee79f987453175de4b1a"
+    },
+    {
+      "component": 1104,
+      "name": "Sound Effects (1)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Sound Effects (1)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Sound Effects",
+      "payload_sha256": "27ea63a850909948d07d236a351c97701cd889a2b927312f5bf78a7db0976e66"
+    },
+    {
+      "component": 1105,
+      "name": "Controls",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Options",
+        "Controls"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Controls",
+      "payload_sha256": "eff02fdf52fcf60bc957c0a37df1ff2307431c51d8e24ee4a6bb202db6a7cc73"
+    },
+    {
+      "component": 1114,
+      "name": "For now...",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Controls",
+        "For now..."
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "For now, controls can be changed via the \"Input\" tab in the game's launcher, before you hit \"Play\".",
+      "payload_sha256": "6460d25ed3ff3116099a504b9c1a888313bed7505d8f38c6151ccefce7f4ee8e"
+    },
+    {
+      "component": 1115,
+      "name": "Changelog",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Main Menu",
+        "Changelog"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Changelog",
+      "payload_sha256": "dd4f25a72e7360a714998cc35637492a3186c899bc2d89fd77810814ad01462f"
+    },
+    {
+      "component": 1116,
+      "name": "EraseData",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Options",
+        "EraseData"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Erase Save",
+      "payload_sha256": "d24c49123bb65873ad1a264f8a6d01feb0a9ac625a4323626ceecc39bc3b98de"
+    },
+    {
+      "component": 1117,
+      "name": "Credits",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Main Menu",
+        "Credits"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "View Credits",
+      "payload_sha256": "24a32f1507b527510afbe0772863332f99f4b29566d451e13f08059b781689c2"
+    },
+    {
+      "component": 1121,
+      "name": "Fill",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Sound Effects (1)",
+        "Fill"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "~",
+      "payload_sha256": "602ae344d11add5acf1d24d6f6a1e7f4e0a1e9174a64943aac2bca6bf4fa715c"
+    },
+    {
+      "component": 1122,
+      "name": "For now...",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "EraseData",
+        "For now..."
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Erasing Save data will reset all level progress and unlocks back to their defaults. Only click \"Erase\" if you're sure this is what you want to do!",
+      "payload_sha256": "01b343fdfa4c94d09068d68f2cb51a62faf8b36cec9ad6c5953443c5404ec14d"
+    },
+    {
+      "component": 1125,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Credits",
+        "Scrollbox",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "07a28f022046a4f52cea5806ee861bd2cc4133be109dc0758b58ada2b7bd7084"
+    },
+    {
+      "component": 1135,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Controls",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "1c106c805a01e546457f28b976fd01776c9bde3aca3fe23277aa6cb4396fb22e"
+    },
+    {
+      "component": 1138,
+      "name": "Fill (1)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Video",
+        "FOV",
+        "Fill (1)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "|",
+      "payload_sha256": "a871944e8d67ca204951e6011249c1508208289a518773d5327c5097b363ee73"
+    },
+    {
+      "component": 1149,
+      "name": "Fill",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Video",
+        "FOV",
+        "Fill"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "~",
+      "payload_sha256": "688eaa385e659e39ff1d42717022a54009280d54d83cecce136cdf4a718f55fb"
+    },
+    {
+      "component": 1151,
+      "name": "5.0",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "5.0"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v5.0:\n\n-Dreary Valley has been added, and comes directly after Mystic Towers in the level order now\n-Upgraded from Unity 2017 to 2019, and with it comes the removal of the launcher of the game, and.... drumroll please.... controller support! This means you should now be able to plug in most controllers and just play without the need of input setup or a launcher!\n-Controller menu navigation is now possible!\n-Camera sensativity should now be roughly the same speed for both mouse and gamepads, instead of too fast for one or too slow for the other when adjusted or left at default!\n-made the Freecam work better in general and also work with full functionality on controller!\n-Water shaders have been updated to now have movement on the surface!\n-Glide decent rate has been lowered slightly, and glide speed has been increased slightly, meaning your glides should take you slightly farther now!\n-the way rain particles look/fall has been redone/improved\n-3D level names have been adjusted to appear on multiple lines rather than a singular one to prevent them from getting cutoff on peoples screens (especially if you play on something like 4:3 resolution)\n-Gateways now unlock automatically if you get near them with the correct amount of Essence/Relics\n-changed particle effect that rippled under Zeras feet when using an in-air jump so that it's brighter and more noticeable\n-Dark Rift is now known as Crystal Rift\n-Compendium has been temporarily disabled until it can be properly implemented\n-fixed a bug that would cause level names to not disappear properly after initially unlocking said level",
+      "payload_sha256": "5c27e6bbc50a71777a54cb74fc103c2b264b9df1f6ec0a5be1a34f3493f74b33"
+    },
+    {
+      "component": 1153,
+      "name": "3.1",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "3.1"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v3.1:\r\n\r\n-NPCs that stand by Gateways in Cosmic Core now progress once you've been into the level, and will move to a different spot with new dialogue in the hub world\r\n-adjusted some platforming in Frigid Bluffs\r\n-adjusted relics/containers in several levels\r\n-enemies have finally been added to Dark Rift!\r\n-fixed a typo in some dialogue\r\n-fixed a bug that could cause Ianua to show up in front of both the Dark Rift and Frigid Bluffs doors at the same time\r\n-knockback from bonking with moves like dash/somersault/being hit by certain types of attacks etc. has been increased substantially\r\n-water mechanics/underwater camera have been dramatically adjusted/overhauled\r\n-changed some dialogue in Dark Rift\r\n-Zera's maximum jump height has been increased very slightly\r\n-new damage type/animation has been added for Zera\r\n-added more detail to Frigid Bluffs' level and adjusted some lighting/shading\r",
+      "payload_sha256": "270585125f5a7ac3d97134ebba00794b1ddbd628ddebe3e03b4388046cf30f54"
+    },
+    {
+      "component": 1159,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Video",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "0df598e01369ab522f46a3cbca1b2d395642c761346cff6b328a9c89196a672a"
+    },
+    {
+      "component": 1160,
+      "name": "Tutorial",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Main Menu",
+        "Tutorial"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Tutorial",
+      "payload_sha256": "ae6c9eec2f4ac27687a97a05a3125eabed6c115e76723a76ab2e71e6f883f131"
+    },
+    {
+      "component": 1173,
+      "name": "1.3.1-1s",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "1.3.1-1s"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\r\nnew in v1.3.1:\r\n\r\n-fixed UI for Level Complete screen being smushed together and unreadable\r\n-fixed a specific NPCs dialogue not updating after collecting a Reality Cog in Gaia's Castle \n\n\r\nnew in v1.3:\r\n\r\n-fixed a secret\r\n-camera jitters FAR less than before when getting close to a wall/corner\r\n-Zeras rotation speed while standing still has been increased\r\n-fixed a bug that would cause Zera to stay in her idle animation while moving\r\n-flipped the interior portrait of Gaia inside her castle so it's correctly mirrored when viewed from the back\r\n-increased the distance you can hear Essence from\r\n-Essence replaced with Reality Cogs (for Other Worlds only)\r\n-shrunk down some areas in beginning of Gaia's Castle, and moved things like relics/NPCs etc. accordingly\r\n-updated lighting in Gaia's Castle to make edges of platforms more clear\r\n-updated lighting in Cosmic Core\r\n-redid part of the bridge in Gaia's Castle\r\n-adjusted position of relic counter on HUD\r\n-adjusted the positioning of the Linked Chests in Gaia's Castle\r\n-video settings are now saved between levels and game launches\n\n\r\nnew in v1.2:\r\n\r\n-fixed a crash that was caused by the 64bit version of 1.1 including the UnityPlayer.dll file for a 32bit version instead\r\n-Snappy hitbox increased\r\n-Screech hitbox improved\r\n-moved a checkpoint in Gaia's Castle\r\n-When starting dialogue, Zera will move into position now before dialogue window opens/the camera moves into place\r\n-made more dialogue camera angles \"unique\"\r\n-Zera no longer zooms at high speed into the correct talking position, but will gradually move at a normal pace to it now\n\n\r\nnew in v1.1:\r\n\r\n-relabeled a number of input options to make setting controller inputs MUCH easier than before, so rebinding your controller should be VERY straight forward now\r\n-32bit build option on Gamejolt\r\n-D-Pad now can be used as an input method properly\r\n-right analog stick can *sort of* work now to rotate the camera, but this is a bit finicky at times, due to the fact that the manual camera rotation is only horizontal\n\nnew in v1.0:\r\n\r\n-initial release as Zera: Other Worlds!\r\n",
+      "payload_sha256": "d8bc8c332d80a7e95b6df9115dedc7093f00b84159cc915b69ef157b69301f8c"
+    },
+    {
+      "component": 1175,
+      "name": "4.0",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "4.0"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v4.0:\r\n\r\n-Cosmic Core has been majorly overhauled, and as a result, swimming is finally here for you all to try out! \r\n-Unlocking new levels is not currently implemented in the new version of Cosmic Core, so temporarily you may come and go freely between ALL the available ones (this will change in another update!)\r\n-Levium/Ianua have been hidden temporarily while unlocking levels/things in Cosmic Core are being reworked\r\n-relics/containers in Cosmic Core have been adjusted to reflect the new changes and future ones\r\n-\"Chonk\" costume added for Zera and Kiwi\r\n-new screen fade transition added\r\n-Zera can now \"Skip\" across swimmable surfaces like a stone by first Somersaulting at said surface\r\n-when bouncing off objects with Somersault or when Skipping, the camera now zooms out a bit and is less tight to give a better view/more control\r\n-you can perform a Handspring from when you Skip (done when touching the water surface)\r\n-fixed a bug that would cause *all* NPCs to play their talking animation whenever any one of them was being talked to\r\n-fixed a longstanding bug that would cause Zera to sometimes be unable to swim in a certain direction on a water surface or up a \"hill\" of water\r\n-fixed a longstanding bug that would cause Zera to not always align with the ground visually and also somtimes slowly slide on the ground while at a standstill which could cause the freelook camera to jitter like crazy if used\r\n-fixed incorrect name on starting NPCs secondary dialogue in Dark Rift",
+      "payload_sha256": "c8dc1b638ca4fc5db7216a6dd6f54bca81ff2dd4034d2183ffa07f731e5248ca"
+    },
+    {
+      "component": 1178,
+      "name": "Video",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Options",
+        "Video"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Video",
+      "payload_sha256": "c1752a76012d2d8e8796d364664cdd282207b16fdab1a85eef9de2dc7c5420e3"
+    },
+    {
+      "component": 1179,
+      "name": "Label",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Gameplay",
+        "Toggle",
+        "Label"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Camera:",
+      "payload_sha256": "c24f3fd26adae37dffb07c5636c23c6e2e7a3c568349658f5f7cd397a71c6ee4"
+    },
+    {
+      "component": 1180,
+      "name": "2.5s",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "2.5s"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v2.5.2:\n\n-changed Unity .NET api compatibility level from 2.0 subset to 4.6 in order to fix issues preventing some users from progressing past the title screen\n-fixed a bug that would allow Ianua to take Relics/Reality Cogs from the player continously by talking to her again and again after unlocking a level that has a requirement\n-reverted to the old dialogue scroll visuals, which should fix an issue some players were having with text scaling in their OS making dialogue invisible\n-brought back the black cinematic bars when in dialogue\n-increased dialogue scroll opening and closing speed\n-de-halloween'd Zera/Kiwi\n-added new Costume option in Options menu, used to select the players preferred Costume for Zera/Kiwi (assuming they're unlocked)\n-adjusted certain bigger enemies so that they use their previously unused \"awakening\" animation\n-slightly decreased range for Checkpoints to be picked up by Kiwi\n-slightly decreased range for Trampolines to be attached to by Kiwi\n-slightly decreased range for Zera to trigger Trampolines with a Somersault\n-adjusted various pause menu options/layout\n-slightly increased height gained from Handspring\n-fixed the Relic and Reality Cog counters so that they stay on screen during ALL pause menus/options, rather than just the initial one\n-smoothed out camera movement slightly and increased \"panning\" when moving toward the right or left side of the screen\n\nnew in v2.5.1:\n\n\n-removed an out of bounds checkpoint in Dark Rift that could softlock players due to the range increase for Kiwi/Checkpoints in the last version\n-adjusted several Golemites positions/names/dialogue in Dark Rift\n-fixed some slider \"notches\" in the menus not being aligned with the default value positions\n-fixed default audio volumes not matching the default slider values, causing a sudden jump of the volumes when adjusting for the first time\n-fixed some inconsistencies with saving/loading\n-fixed a bug that would cause Level Complete to not display if the last thing collected for 100% of the level was from an Enemy\n-fixed an issue that could cause levels to reset if you quit out of the game with Alt+F4\n-temporarily disabled cutscene in Cosmic Core while the way cutscenes function is worked on\n\nnew in v2.5:\n\n\n-temporary halloween costumes for Zera and Kiwi!\n-when replaying the game, you will now load into the last level you were in\n-\"Exit Level\" option is now greyed out until after the first time you exit through that levels Gateway\n-\"Main Menu\" option is now available while inside a level, rather than only while inside of Cosmic Core\n-\"Tome\" and \"Help\" were unused in the pause menus and have been removed\n-the \"Level Complete\" dialogue has been reimplemented and now has a sound!\n-increased range for Kiwi to grab a Heartfruit and change your checkpoint\n-Dark Rift and Cosmic Core now have level specific Relics!\n-The \"Shard\" and \"Crystal\" Generic Relic shapes have been moved to be Dark Rift exclusive Level Relic shapes\n-Level Relic shapes now have a 60% chance of spawning vs the Generic Relic shapes, up from 40% in previous versions\n-fixed a bug with containers that allowed them to be broken with any type of damage\n-adjusted how \"Press Any Key\" on the title screen works to hopefully fix an issue some people had where it would instantly skip to opening the menu\n-temporarily disabled an easter egg\n-adjusted the positioning of a few vases in Leap Castle",
+      "payload_sha256": "fa19dc831c818b91ed869190b91f5f205334a40a42dab007c69ebc7ccc577b55"
+    },
+    {
+      "component": 1188,
+      "name": "Audio",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Options",
+        "Audio"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Audio",
+      "payload_sha256": "c3fc7204ab2aa40c6985511a45885ff233577582b2905ccb57d72c23ffac7c36"
+    },
+    {
+      "component": 1189,
+      "name": "EraseData",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "EraseData",
+        "EraseData"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Erase",
+      "payload_sha256": "7383d19e93d257b06692a277bc6e076f7683003b45cf849fea874608d5710338"
+    },
+    {
+      "component": 1190,
+      "name": "Fill",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Gameplay",
+        "Sensitivity",
+        "Fill"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "~",
+      "payload_sha256": "df9ffb8b4944418bf5e5f8fa78061827adf5507a225c5157ec673eb3b2e0071f"
+    },
+    {
+      "component": 1197,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "10cf96a1c6d1dd7cad2312ba19ab1a323e75609a705a64b826bd96d57bb1ce2b"
+    },
+    {
+      "component": 1200,
+      "name": "Fill (2)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Sound Effects (1)",
+        "Fill (2)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "|",
+      "payload_sha256": "b34cffc89358f63c08c4a8fb17cd268d7fd762051a5ee941b0b02255bedc7571"
+    },
+    {
+      "component": 1206,
+      "name": "Music (1)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Music (1)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Music",
+      "payload_sha256": "6058ab1dadb771eb3905126981cea95d0edb066f33f14751be68f81e0e807248"
+    },
+    {
+      "component": 1210,
+      "name": "3.0",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "3.0"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v3.0:\n\n-things have been combined behind the scenes and tweaked, and so what was planned to be two games have now merged into one, and so this game will now be called Zera: Myths Awaken!\n-the level Frigid Bluffs is now available to unlock and play!\n-Zera's model has been slimmed down a tiny bit and adjusted overall (she also has thumbs now!)\n-Reality Cogs are no more, they have been replaced with Essence\n-a new, more fitting custom cursor has been added to replace the previous one!\n-Linux build now available!\n-fixed an issue with the mouse cursor being huge on screen in Mac builds (and previously unreleased Linux versions!)\n-fixed \"Exit Level\" button in Dark Rift menu options to properly take you back to Cosmic Core, as it was previously returning players to the Main Menu\n-balloon target chests have had their models updated, and have an additional function after being broken, as well as an increase in hitbox size\n-slight increase in height gain from Somersaults performed out of a normal jump or a Flap\n-\"Credits\" button on the main menu now functions\n-adjusted model/material for Relic \"flares\", to increase their visibility from a distance\n-fixed a bug with Snappy that would cause Level Complete to not show if his relic was the last thing collected for 100% of a level\n-time before you can talk to an NPC after damaging them has been slightly increased to compensate for some NPCs damage animation length\n-NPCs can now be bounced off of with Somersault\n-dialogue changes in Cosmic Core",
+      "payload_sha256": "91e17d837e6305a7365a758e3787e6aa9c2e12e27ec40a98b9fdc64ffbd65261"
+    },
+    {
+      "component": 1218,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "EraseData",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "1207837f59fc00a97be2f07c2bb7aa24c59e4c29cc7a42c0bf98f0fdae85b9b1"
+    },
+    {
+      "component": 1224,
+      "name": "Fill (4)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Music (1)",
+        "Fill (4)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "|",
+      "payload_sha256": "982206f6693798378c85256b82ab8f06696644bbc4c0c76687ab45a0407a5918"
+    },
+    {
+      "component": 1226,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Gameplay",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "b1b1873c18917e494cb995f36e50a0de09036f0cb0fc55acc47216576bd6c675"
+    },
+    {
+      "component": 1228,
+      "name": "2.2-2s",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "2.2-2s"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v2.2:\r\n\r\n-somethings were retextured in Dark Rift, including with some new texture variants\r\n-level model for Dark Rift adjusted/entire \"cave\" area redone/replaced\r\n-more lighting updates in Dark Rift\r\n-some slight adjustments to Zera's model (bigger eyes/teeth/ears/gills) and detail shading on inner part of wings and belly/nose color adjusted\r\n-some slight animation adjustments to reflect Zera changes\r\n-gill rows now visibly \"drop\" from Zera when she takes damage\r\n-increased the range at which Kiwi can track Reality Cogs\r\n-added a safetey measure for Relics, so if they should ever fall into the void somehow, they'll home into Zera and be collected instead\r\n-moved a Reality Cog, adjusted some relic/container placements in Dark Rift\r\n-alternate idle animation for Zera was added, which will occasionally play\r\n-Updrafts have been replaced by Trampolines!\r\n-new dialogue scroll visuals\r\n-heartfruit visuals/particle updated\r\n-relic/reality cog count for Dark Rift increased to 1000 and 5 respectively\r\n\nnew in v2.1.1:\r\n\r\n-adjusted starting platform height of Dark Rift\r\n-moved a couple of relics in Dark Rift that were spawning inside of two platforms that got moved in the previous version, preventing 100%\n\nnew in v2.1:\r\n\r\n-removed input delay after falling and jumping, which now allows you to instantly perform certain actions in the air after them (like gliding and somersaulting respectively)\r\n-moved a checkpoint in Dark Rift and added another\r\n-modified/added to Dark Rift level model/lighting in various places, including edge shading/more prop detail/unique crystals \r\n-adjusted placement of containers/collectables in Dark Rift\r\n-added another NPC in Dark Rift\r\n-added a \"Balloon Lift\" in Dark Rift\r\n-pressing any button during the \"bootup\" sequence will skip it and load to the main menu\r\n-visual tilting while turning during glides has been increased slightly\r\n-it is now possible to \"hop\" in the air, but only if you have not already jumped yet\r\n-it is now possible to handspring directly out of a charge instead of having to let go first\r\n-handspring timing has been adjusted\n\nnew in v2.0.1:\r\n\r\n-Fixed a softlock that happened when you collected the first Reality Cog in Leap Castle and talked to the corresponding Froag after\n\n\r\nnew in v2.0:\r\n\r\n-The Gateway to Dark Rift has been opened!\r\n-Heartfruit Plant has been introduced as the new Checkpoint system, no longer does Gaia handle this function. Kiwi will pick the fruit from a nearby plant when you are in range, and toss it to Zera to eat (which heals her and saves your current progress in the level)\r\n-you can no longer be healed by your currently active checkpoint (which is indicated by a Wilted Heartfruit Plant)\r\n-Kiwi now has a glowing indicator when a Reality Cog is nearby\r\n-Gaia's Castle has been modified slightly and renamed to \"Leap Castle\" for future story/consistency reasons\r\n-NPC Dialogue adjusted in Leap Castle\r\n-Visuals for how Zera goes \"through\" Gateways have been overhauled\r\n-Fixed a couple bugs related to Mushbooms bombs falling through the ground and also being able to leave a lingering damage hitbox\r\n-There is no longer a delay before you can re-enter a Gateway you've exited from\r\n-\"Bootup\" Sequence added\r\n-Main Menu added\r\n-Fixed a bug with Gateways being triggerable via the camera",
+      "payload_sha256": "18c12bdc47a6c239a75652d620ed81d58af54061291d300f07eb936d57e25b94"
+    },
+    {
+      "component": 1232,
+      "name": "Label (1)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Gameplay",
+        "Toggle",
+        "Label (1)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Automatic",
+      "payload_sha256": "cb2176c748e3c87f80b7d869e10df0e44d3be0dec67a62594c1007bbc3b156da"
+    },
+    {
+      "component": 1237,
+      "name": "Back",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Options",
+        "Back"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Back",
+      "payload_sha256": "6913b795477bc75367ad1579d9211e82e677cb2dee7689c52c0da480775f8795"
+    },
+    {
+      "component": 1239,
+      "name": "Label",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Video",
+        "Toggle",
+        "Label"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Style:",
+      "payload_sha256": "f333370abbe781b6ed41ae5431b5b92717f43438ca9097219a9c62f915886484"
+    },
+    {
+      "component": 1240,
+      "name": "Play",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Main Menu",
+        "Play"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Play",
+      "payload_sha256": "e5e0ca3c779ef5d9eb39fda8e6649f042156924f07a78398c4458e5e1f2cdddd"
+    },
+    {
+      "component": 1241,
+      "name": "Dialogue",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Dialogue"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "Voice Acting",
+      "payload_sha256": "4d93a2219d031d0f787e83f875f12a3b278f774e535e3a3a55a9b3b7caf64534"
+    },
+    {
+      "component": 1245,
+      "name": "Fill (1)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Gameplay",
+        "Sensitivity",
+        "Fill (1)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "|",
+      "payload_sha256": "901cc2486e1e2810c7ecef2072cdb86976769d94526ce44dec94a804bc630549"
+    },
+    {
+      "component": 1251,
+      "name": "1.6",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "1.6"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v1.6:\n\n-Enemies in Gaia's Castle now track you faster and sooner, attack faster, and in quicker succession\n-Mushbooms no longer taunt unless you've been hit\n-Hitbox for Crushrooms tree attack has been increased\n-A TON of new texture changes/updates for the level, and adjustments to the level mesh/lighting once again\n-some enemy/relic/container placements switched around/adjusted\n-newest Reality Cog in Gaia's Castle has been moved to a better location\n-Somersault's upward boost has been decreased slightly when hitting things with it, but gains a bit of a forward boost as well now\n-Golemite added to Cosmic Core in advance of 2.0\n-Zera's flap height has been slightly increased",
+      "payload_sha256": "8667dc2a0c467d74e31952848660ff9d8cc73cd4e5b31ec7356256468b09e8b3"
+    },
+    {
+      "component": 1254,
+      "name": "2.3",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "2.3"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v2.3:\r\n\r\n-main menu button re-added to in the options for Cosmic Core (it was accidentally replaced in v2.2 with \"Exit Level\")\r\n-fixed a respawning bug in Dark Rift\r\n-adjustments to color o\tf dialogue scroll to make text stand out a bit better, as well as making sure dialogue now properly scales and you don't end up with big \"yelling\" text on single line screens\r\n-triangle shaped button indicator for dialogue replaced with shaking dialogue scroll\r\n-audio settings now save and load like the video ones do!\r\n-intro \"cutscene\"\r\n-replaced an Updraft in Cosmic Core that was missed in 2.2\r\n-Gaia's model/animations redone\r\n",
+      "payload_sha256": "7af2dc5a2fa1843cc1196608e0671fab81a7571e0f45fab8dffea417b3555402"
+    },
+    {
+      "component": 1255,
+      "name": "padding",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "padding"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\n",
+      "payload_sha256": "4229bcd71572760022e52527c7ff7ceb30cff2f266fbc17d426005d8dc89658c"
+    },
+    {
+      "component": 1258,
+      "name": "bg",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrollbar",
+        "bg"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "~",
+      "payload_sha256": "3e574de9ebe08ce55b438c779fc964dcbc08a81aaad7007a71f1ff5f0b28839d"
+    },
+    {
+      "component": 1262,
+      "name": "Fill",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Audio",
+        "Dialogue",
+        "Fill"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "~",
+      "payload_sha256": "93f06617fb652fb2f642809817205ea3ec16eb00ed74a2fa7000ef754e831fc0"
+    },
+    {
+      "component": 1265,
+      "name": "4.1",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "4.1"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\r\nnew in v4.1:\r\n\r\n-Changelog added to main menu, no longer simply a text file bundled with each release!\r\n-Credits screen adjusted\r\n-Menu/dialogue font has been replaced with one with more readability!\r\n-Main Menu screen now has more \"motion\" to it with a view of Cosmic Core!\r\n-updownleftrightsquarecircle\n-Froags have been replaced with a new NPC species, the Lilyai!\r\n-clickable buttons in menus now grow when you mouseover them, as well as text now having a slight random tilt to it, so it all feels less static\r\n-the Compendium has now been partially implemented\r\n-Leap Castle has been overhauled into something more unique in aesthetic, and is now known as Mystic Towers!\r\n-Somersault/Flap/Handspring height gains increased\r\n-\"Classic\" video setting has redone so that it now effects the UI as well as the startup screen!\r\n-Color limiting/Dithering are also now a feature of the \"Classic\" setting\r\n-Freelook has been replaced by Photo Mode, which can be used to look around much easier, as well as capture screenshots to a folder called Screenshots!\r\n-Camera can now be rotated up and down instead of only left to right!\n-there is now a very small amount of coyote time for platforming\n-when Screeching, if something is within a certain range but not too close, the closest relic, container or enemy (if there is one) will \"Echo\", letting you know it is nearby\r\n-after bouncing off of something with a Somersault, or after Skipping, you can now cancel out of it by jumping!\r\n-added \"Comfort\" costume for Zera and Kiwi!\r\n-Zera's Screech is now different underwater!\r\n-Kiwi now spins whenever Zera performs an in air jump!\n-removed bubbles that were spawning in front of Zera's mouth while underwater, as she is aquatic so this didn't really make sense, instead, bubbles now appear around her/her movement in general!\r\n-Zera and Kiwi's \"wind\" trails appear longer underwater to emphasise water movement!\r\n-increased ambient underwater loop volume\r\n-Level unlocking is back, and you'll notice things are working a bit differently than how it all previously did!\r Linear progression is not fully gated however!\n-Smoothed out a couple textures in Dark Rifts LOD\r\n-Levium has returned to Cosmic Core with a new look/animations to set them apart from Ianua visually\r\n-\"Press Any Key\" on main menu replaced with moving 3D text!\r\n-Handspring no longer causes knockback when used against immovable objects\r",
+      "payload_sha256": "4c21789bc982f165aca1bd790fce312faf47ed66d473314d8dce8a701c8861bd"
+    },
+    {
+      "component": 1269,
+      "name": "5.1",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "5.1"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v5.1:\n\n-new \"bootup\" sequence\n-new logo/icon for the game!\n-new holiday themed costume for Zera/Kiwi, \"Chrimis\"\n-redone classic mode visual effects\n-redone death animation/transition/sped up respawning for Zera\n-unique level specific relics added for Dreary Valley and Mystic Towers\n-\"common\" relic shapes no longer used, only level specific ones!\n-reworked/added to Frigid Bluffs level mesh!\n-implemented Critters (for now just in Cosmic Core, Mystic Towers and Crystal Rift), creatures that only spawn in areas of levels where the enemies have been defeated! They serve as a marker of your progress, and are also very bouncy (and you can even bounce off of them)! Each level, including the hub has their own unique Critter, and eventually these will be an objective for 100%ing levels!\n-reworked balloon mechanics so it's significantly less awkward to use now and feels just like bouncing off a container\n-bouncing off of enemies has been adjusted to work similarly to the new balloon mechanics\n-you can now bounce off the dead bodies of your foes before they disappear!\n-falling now lets you somersault out of it, but it also now remembers if you were gliding previously, allowing you to flap out of it first if you were, this should help give people a bit more leeway when performing aerial feats!\n-changed all of the dialogue in Mystic Towers\n-changed some dialogue in Cosmic Core, Frigid Bluffs, and Crystal Rift\n-reordered the levels, Dreary Valley is now the first level, with Crystal Rift second, Mystic Towers third, and Frigid Bluffs remaining the fourth\n-adjusted bouncing off of objects for Zera so that there's a bit of a center point she \"snaps\" toward, to help keep things consistent\n-adjusted slope maximums to help Zera avoid bonking on random polygons as often\n-adjusted coyote time slightly\n-adjusted momentum from Zera's actions\n-increased deadzone for controllers slightly\n-changed zera's collider to a sphere collider instead of a custom mesh one\n-fixed occasional clipping through the ground where bits of the world extend below the surfaces you walk on\n-fixed missing lava \"smoke\" particles in Dreary Valley\n-fixed smoke particles on Snappies that weren't being left behind but instead just clouding around their feet when being chased\n-fixed a pool of lava that didn't damage the player in Dreary Valley\n-fixed a bug that allowed inputs to go through the pause menu\n-fixed a bug that allowed the player to jump out of the forced walking that occurs when initiating dialogue with an NPC\n-fixed not being able to exit out of the base pause menu and resume the game with anything other than actually pressing resume\n-fixed a bug that was introduced in 5.0 that allowed you to instantly flap when starting to glide if you were already holding the button to flap\n-potentially fixed a black screen bug that could happen on Linux versions of the game",
+      "payload_sha256": "334e6eb6556bcbf17287de4a94fc1c6f69d44eed5c594c1dcfaf4a4374bcea59"
+    },
+    {
+      "component": 1270,
+      "name": "4.1 p3",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "4.1 p3"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "-adjusted the island in Cosmic Core that the Frigid Bluffs Gateway is on in order to make platforming there less awkward and give the player a bit more space to maneuver\n-adjusted platform heights/several edges in Cosmic Core in general to give the players more room to manuever and make certain earlier jumps easier\n-moved another enemy in Dark Rift slightly\n-Gargoyle's attack in Dark Rift now works by aiming at where the player last was, and also has a smaller hitbox and does not pass through objects\n-Beetoyle hitboxes have been redone to make hitting them with somersault much more consistent\n-Beetoyle's can now be killed with dash attack damage, however their attack reach will mean trading damage if you go at them head on with it, so try to dash at them from above if you desire to kill them with that attack!\n-magic waterfall in Cosmic Core\n-added a couple checkpoints in Cosmic Core\n-secret dev code(s) c:\n-fixed an exploit that allowed the player to infinitely gain height from a water skip\n-fixed inverted normals on heartfruit model thrown by Kiwi\n-fixed a bug that could sometimes cause Zera to fall after just the first water skip\n-fixed a longstanding bug that could cause the player to get temporarily stuck when respawning\n-fixed longstanding issue with Kiwis rotation sometimes not properly lining up with a trampoline she's currently on\n-fixed particle effects for an Essence in Cosmic Core that was incorrectly showing up above where it actually was\n-fixed discord rich prescence incorrectly showing the games old name/logo (Other Worlds) in Dark Rift/Mystic Towers\n-fixed a soft lock that would happen when talking to the second instance of the Dark Rift NPC in Cosmic Core and adjusted how the game checks for the position of Zera so that this can't accidentally happen in the future\n-fixed a typo in Leviums dialogue that incorrectly referred to their species as \"Airrays\" instead of Wingrays\n-fixed the recently added fade in/out image to cover entire screen even on non-16:9 resolutions\n-fixed a bug that would often cause the player to audibly bounce on an object with a somersault, but because the hit occured with the player so close to the ground, it would cancel the actual bounce out, this will no longer happen and should make somersaulting off of things more consistent!",
+      "payload_sha256": "507efcc4e661fe288ad4d9228415928be6c28a1161ac7dde2bcfcaa3b9e652ba"
+    },
+    {
+      "component": 1277,
+      "name": "5.2",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "5.2"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v5.2:\n\n\n-changed various mechanics so that horizontal momentum is preserved from previous states and gradually goes down, this should help movement feel less stiff\n-a change has been made to the in-air jump so that previous states vertical momentum is partially kept and added, while the overall default height has been decreased\n-changed gliding so that after a short amount of time you will start gaining speed and going faster (caps at a certain point and you don't go farther than you would've before, just get there quicker on longer glides!)\n-added a new costume called \"Afoongus\", based on the protagonist of fellow indie 3D platformer PsiloSybil and the boar enemies from it\n-current costume is no longer cleared upon resetting save data\n-fixed two relics that were embedded in the ground in both Mystic and Dreary\n-fixed a ton of inefficient code, which should hopefully help improve performance",
+      "payload_sha256": "284027f58e8794044174af1eaff991f118c3b4c7b9a5fb3d415ae4fcfe1d72c9"
+    },
+    {
+      "component": 1282,
+      "name": "4.1 (1)",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "4.1 (1)"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "-3D Text on Gateways has been altered a bit visually and completely overhauled behind the scenes to allow them to be typed into place rather than manually placed character by character in 3D space in the editor\n-particle effects for when bouncing numbers and container pieces disappear have been changed\n-Mystic Towers now has new music!\n-Frigid Bluffs finally has it's own original track!\n-Zera's shadow now changes size to show distance and match her shape as she moves!\n-added some new sounds and particles to Crushrooms, also adjusted their overall look along with the Mushbooms\n-dashing after jumping now doesn't send the player immediately downwards, which should help with platforming",
+      "payload_sha256": "21b3ac965e8ad02e79230b0f4448d7a88e126d74c62de0d17acad6e42c9e5d71"
+    },
+    {
+      "component": 1284,
+      "name": "4.1.1",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "4.1.1"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "\nnew in v4.1.1:\n\n-Emulated video setting now turns OFF vertex snapping/jittering effect, while Classic keeps it on!\n-raised up a checkpoint in Mystic Towers that was partially embedded in the ground and adjusted the positioning of another\n-increased the size of the Crushroom enemies' shadows\n-adjusted a few bits of platforming in Mystic Towers\n-adjusted the shading of Mystic Towers in a few areas\n-added missing shimmering \"waterlight\" effect to Mystic Towers\n-fixed a longstanding physics bug that could cause players to clip through the ground in certain spots",
+      "payload_sha256": "46fcac2ca09ce2619d0147789bc7d344a95dee4671b47b96750cd7ed7266136c"
+    },
+    {
+      "component": 1286,
+      "name": "4.1 p2",
+      "hierarchy": [
+        "Canvas Main Menu",
+        "Changelog",
+        "Scrollbox",
+        "GameObject",
+        "Scrolling",
+        "Content",
+        "4.1 p2"
+      ],
+      "active_in_serialized_hierarchy": false,
+      "text_offset": 128,
+      "text": "-Vase/Crate models have been slightly simplified, and their broken pieces have been redone and can now be \"interacted\" with as well\n-\"cloud\"/\"dust\" particles for Zera have been replaced\n-Enemies no longer \"overkill\"!\n-added a color change to level Gateways \"godrays\" to show the state of completion(red is locked, blue is available, and green is 100%'d, while gold is reserved for Gateways that return you to Cosmic Core)\r\n-Gateways now have an ambient loop they play if you're close enough to them to hear it, which differs in pitch depending on whether or not the level is unlocked or not\r\n-3D text on Gateways now have sound when appearing and disappearing!\r\n-split level meshes up into chunks and added occlusion culling to all maps, this will increase file size by including the new occlusion data, but the tradeoff is a performance boost!\r\n-drastically altered the way precipitation is handled with particle effects and lowered the amount for rain and snow to help boost performance on older machines!\r\n-removed some unused UI elements in scenes that were causing a dip in performance on slower machines!\r\n-changed the way music is loaded in the game, which should make load times almost instant when changing level!\n-adjusted the vertex snapping or \"jitter\" effect to be slightly more noticeable\n-added a couple new sounds for Zera (taking damage/death) that were done by DeadJosey!\n-Zera now flashes briefly after taking damage to better signify that she has\n-relics now have a colored trail as they fly towards Zera and also shrink as they're able to be collected!\n-made standalone crystals in both Dark Rift and Cosmic Core float up and down and rotate around as well as the green \"fire\" in Frigid Bluffs!\r\n-made a platform in both Dark Rift and Frigid Bluffs easier to reach, and adjusted the enemy placement on the one in Dark Rift\r",
+      "payload_sha256": "b75ff3fc6d483c6e452b1c12a56b9a012004ab0ab03b99d87c0164772ac860da"
+    }
+  ],
+  "credits_component": 1088,
+  "changelog_components": [
+    1049,
+    1050,
+    1090,
+    1151,
+    1153,
+    1173,
+    1175,
+    1180,
+    1210,
+    1228,
+    1251,
+    1254,
+    1265,
+    1269,
+    1270,
+    1277,
+    1282,
+    1284,
+    1286
+  ],
+  "credits_pages": 1,
+  "changelog_pages": 71,
+  "catalog_sha256": "3abda69cb06e4c1662ea32920a7209a79264e30f9b466847f59aa04503b165fa",
+  "limitations": [
+    "UI.Text string tails recovered using the original UI.Text schema; button UnityEvents and timeline bindings are not decoded",
+    "Includes serialized inactive menu pages and historical patch notes, not proof of currently implemented mechanics",
+    "Wrapping/page navigation adapted to the PS1 font; original scroll and visual layout not reproduced"
+  ]
+}

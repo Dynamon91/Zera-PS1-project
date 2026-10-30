@@ -1,0 +1,34 @@
+{
+  "frames": 3600,
+  "audio": false,
+  "gif": true,
+  "gif_start_frame": 1200,
+  "gif_end_frame": 1650,
+  "gif_sample_step": 6,
+  "map_file": "zera_campaign.map",
+  "sample_interval": 1,
+  "shots": [
+    900,
+    1700,
+    2100,
+    2700,
+    3599
+  ],
+  "actions": [
+    {
+      "start": 450,
+      "end": 460,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 1600,
+      "end": 2400,
+      "buttons": [
+        0
+      ]
+    }
+  ],
+  "frontend_auto_start": true
+}

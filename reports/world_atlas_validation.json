@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "source_recovery": {
+    "scenes": 6,
+    "sectors": 3437,
+    "source_triangles": 248369,
+    "data_sha256": "3d38d6a8a1c271f4d9045f9cc6541206f69afe35c82c45f844820263680b1673",
+    "maximum_resident_triangles": 9728,
+    "original_source_checked": true,
+    "coverage": "Full supported static geometry, including inactive states; actors/UI/sky/skinned and gameplay excluded"
+  },
+  "static_memory": {
+    "elf": "zera_atlas.elf",
+    "elf_sha256": "8cbbd9237df1782aa27d0b42bb05c243a951a72ee3bbaf80a5107866594cdec9",
+    "text": 190276,
+    "data": 2210,
+    "bss": 554540,
+    "static_bytes": 747026,
+    "budget_bytes": 1572864,
+    "limitation": "Static sections only; BIOS, dynamic allocation, stack and runtime performance require separate validation"
+  },
+  "native": {
+    "level2": {
+      "frames": 2100,
+      "bin_sha256": "7b785ecb804cf40fbb75f495262fa5f1353da4d93a30acfea43b6acc92a9ee98",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "scene": 0,
+      "loaded_tiles": 24,
+      "resident_triangles": 2627,
+      "load_events": 1,
+      "cd_errors": 0,
+      "final_gpu_budget_drops": 0,
+      "peak_sampled_gpu_budget_drops": 0,
+      "streaming_movement_and_map_change": false,
+      "final_state": {
+        "frame": 2099,
+        "scenario_movement_stopped": false,
+        "atlas_scene": 0,
+        "atlas_menu": 0,
+        "atlas_ready": 1,
+        "atlas_loaded_tiles": 24,
+        "atlas_triangle_count": 2627,
+        "atlas_load_events": 1,
+        "atlas_errors": 0,
+        "atlas_current_tile": 214,
+        "atlas_show_inactive": 0,
+        "atlas_drawn": 324,
+        "atlas_budget_drops": 0,
+        "atlas_camera": [
+          -640,
+          -600,
+          0
+        ],
+        "yaw": 3072
+      },
+      "limitation": "HLE free-camera geometry inspection; no player physics or complete level gameplay"
+    },
+    "level3": {
+      "frames": 2100,
+      "bin_sha256": "7b785ecb804cf40fbb75f495262fa5f1353da4d93a30acfea43b6acc92a9ee98",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "scene": 1,
+      "loaded_tiles": 25,
+      "resident_triangles": 3590,
+      "load_events": 1,
+      "cd_errors": 0,
+      "final_gpu_budget_drops": 0,
+      "peak_sampled_gpu_budget_drops": 0,
+      "streaming_movement_and_map_change": false,
+      "final_state": {
+        "frame": 2099,
+        "scenario_movement_stopped": false,
+        "atlas_scene": 1,
+        "atlas_menu": 0,
+        "atlas_ready": 1,
+        "atlas_loaded_tiles": 25,
+        "atlas_triangle_count": 3590,
+        "atlas_load_events": 1,
+        "atlas_errors": 0,
+        "atlas_current_tile": 941,
+        "atlas_show_inactive": 0,
+        "atlas_drawn": 696,
+        "atlas_budget_drops": 0,
+        "atlas_camera": [
+          -20,
+          -600,
+          640
+        ],
+        "yaw": 2068
+      },
+      "limitation": "HLE free-camera geometry inspection; no player physics or complete level gameplay"
+    },
+    "level4": {
+      "frames": 2100,
+      "bin_sha256": "7b785ecb804cf40fbb75f495262fa5f1353da4d93a30acfea43b6acc92a9ee98",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "scene": 2,
+      "loaded_tiles": 20,
+      "resident_triangles": 2891,
+      "load_events": 1,
+      "cd_errors": 0,
+      "final_gpu_budget_drops": 0,
+      "peak_sampled_gpu_budget_drops": 0,
+      "streaming_movement_and_map_change": false,
+      "final_state": {
+        "frame": 2099,
+        "scenario_movement_stopped": false,
+        "atlas_scene": 2,
+        "atlas_menu": 0,
+        "atlas_ready": 1,
+        "atlas_loaded_tiles": 20,
+        "atlas_triangle_count": 2891,
+        "atlas_load_events": 1,
+        "atlas_errors": 0,
+        "atlas_current_tile": 1281,
+        "atlas_show_inactive": 0,
+        "atlas_drawn": 577,
+        "atlas_budget_drops": 0,
+        "atlas_camera": [
+          -434,
+          -600,
+          -471
+        ],
+        "yaw": 3611
+      },
+      "limitation": "HLE free-camera geometry inspection; no player physics or complete level gameplay"
+    },
+    "level5": {
+      "frames": 2100,
+      "bin_sha256": "7b785ecb804cf40fbb75f495262fa5f1353da4d93a30acfea43b6acc92a9ee98",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "scene": 3,
+      "loaded_tiles": 25,
+      "resident_triangles": 7027,
+      "load_events": 1,
+      "cd_errors": 0,
+      "final_gpu_budget_drops": 0,
+      "peak_sampled_gpu_budget_drops": 0,
+      "streaming_movement_and_map_change": false,
+      "final_state": {
+        "frame": 2099,
+        "scenario_movement_stopped": false,
+        "atlas_scene": 3,
+        "atlas_menu": 0,
+        "atlas_ready": 1,
+        "atlas_loaded_tiles": 25,
+        "atlas_triangle_count": 7027,
+        "atlas_load_events": 1,
+        "atlas_errors": 0,
+        "atlas_current_tile": 2131,
+        "atlas_show_inactive": 0,
+        "atlas_drawn": 517,
+        "atlas_budget_drops": 0,
+        "atlas_camera": [
+          -323,
+          -600,
+          -552
+        ],
+        "yaw": 3751
+      },
+      "limitation": "HLE free-camera geometry inspection; no player physics or complete level gameplay"
+    },
+    "level6": {
+      "frames": 2100,
+      "bin_sha256": "7b785ecb804cf40fbb75f495262fa5f1353da4d93a30acfea43b6acc92a9ee98",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "scene": 4,
+      "loaded_tiles": 21,
+      "resident_triangles": 2404,
+      "load_events": 1,
+      "cd_errors": 0,
+      "final_gpu_budget_drops": 0,
+      "peak_sampled_gpu_budget_drops": 0,
+      "streaming_movement_and_map_change": false,
+      "final_state": {
+        "frame": 2099,
+        "scenario_movement_stopped": false,
+        "atlas_scene": 4,
+        "atlas_menu": 0,
+        "atlas_ready": 1,
+        "atlas_loaded_tiles": 21,
+        "atlas_triangle_count": 2404,
+        "atlas_load_events": 1,
+        "atlas_errors": 0,
+        "atlas_current_tile": 2655,
+        "atlas_show_inactive": 0,
+        "atlas_drawn": 298,
+        "atlas_budget_drops": 0,
+        "atlas_camera": [
+          -265,
+          -600,
+          -583
+        ],
+        "yaw": 3818
+      },
+      "limitation": "HLE free-camera geometry inspection; no player physics or complete level gameplay"
+    },
+    "level7": {
+      "frames": 2100,
+      "bin_sha256": "7b785ecb804cf40fbb75f495262fa5f1353da4d93a30acfea43b6acc92a9ee98",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "scene": 5,
+      "loaded_tiles": 16,
+      "resident_triangles": 134,
+      "load_events": 1,
+      "cd_errors": 0,
+      "final_gpu_budget_drops": 0,
+      "peak_sampled_gpu_budget_drops": 0,
+      "streaming_movement_and_map_change": false,
+      "final_state": {
+        "frame": 2099,
+        "scenario_movement_stopped": false,
+        "atlas_scene": 5,
+        "atlas_menu": 0,
+        "atlas_ready": 1,
+        "atlas_loaded_tiles": 16,
+        "atlas_triangle_count": 134,
+        "atlas_load_events": 1,
+        "atlas_errors": 0,
+        "atlas_current_tile": 3266,
+        "atlas_show_inactive": 0,
+        "atlas_drawn": 40,
+        "atlas_budget_drops": 0,
+        "atlas_camera": [
+          -47,
+          -600,
+          -638
+        ],
+        "yaw": 4048
+      },
+      "limitation": "HLE free-camera geometry inspection; no player physics or complete level gameplay"
+    },
+    "streaming": {
+      "frames": 5000,
+      "bin_sha256": "7b785ecb804cf40fbb75f495262fa5f1353da4d93a30acfea43b6acc92a9ee98",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "scene": 1,
+      "loaded_tiles": 25,
+      "resident_triangles": 3590,
+      "load_events": 7,
+      "cd_errors": 0,
+      "final_gpu_budget_drops": 0,
+      "peak_sampled_gpu_budget_drops": 0,
+      "streaming_movement_and_map_change": true,
+      "final_state": {
+        "frame": 4999,
+        "scenario_movement_stopped": false,
+        "atlas_scene": 1,
+        "atlas_menu": 0,
+        "atlas_ready": 1,
+        "atlas_loaded_tiles": 25,
+        "atlas_triangle_count": 3590,
+        "atlas_load_events": 7,
+        "atlas_errors": 0,
+        "atlas_current_tile": 941,
+        "atlas_show_inactive": 0,
+        "atlas_drawn": 696,
+        "atlas_budget_drops": 0,
+        "atlas_camera": [
+          -20,
+          -600,
+          640
+        ],
+        "yaw": 2068
+      },
+      "limitation": "HLE free-camera geometry inspection; no player physics or complete level gameplay"
+    }
+  },
+  "host_checks": "Full ASAN/UBSAN suite, original Euler quaternion regression and shader-tag transparency regression passed",
+  "package_check": "Source checkpoint integrity/reproducibility test passed; build-character excluded",
+  "character_regression": {
+    "bin_sha256": "df7cb329635cd1b9f6bd2a737cb9d99cd3e3781a78cdd58c927fbf55fb2c5251",
+    "frames": 2200,
+    "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+    "animation_clips_observed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "player_states_observed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "automatic_respawns": 0,
+    "source_sha256": {
+      "src/main.c": "6fed7184ba1441c9dfcfa0a9a6663ff7329624565e79b6794d1ae0c7181d450e",
+      "src/character.c": "ee59c50a93b3fe4c847c613a58c340aa537acb09795aac66d53d1d053d883b3b",
+      "src/character.h": "37929a6e7897cb611e04bcc9318cb970fad990589ae676fa120a4e473cec1ca8",
+      "tools/bake_animation.py": "9947c72a5c910303ae2d3195f4f96bf9849e9894117fb699f3992ffe7158fa4a",
+      "tools/character_rotations.py": "0b6a3cc2dc55424b6928f76356b051a34ed9e1f3975f0be26bed271f7ad909fa",
+      "tools/test_character_rotations.py": "5f9bb0545a778904623dd02d416d0d4fcb473571255884dfde27e6e4489de5bf",
+      "reports/animation_conversion.json": "416710ec51b45a460e844d29d567d3034c1b8e29812ab984894121ee60c20774",
+      "src/zera_mesh.h": "f891ffaaf7feb9c392d26528604c9603c672e698d190ec5c6c5b64b41f4f10f7",
+      "src/zera_anim.h": "6e8f977000ce1fdf2b76ba1f339ae77e8e67979e1a0e0c74f741e2c8dfd65a19",
+      "src/mascot_materials.h": "4015cc76aab3a9d808a973d374c90c9886b950c5d6a56fd4cbe792005d36d3a7",
+      "tools/test_character_motion.c": "7008bf3796fcde084dd76d64f6e725b59c7478387b473a3cd7892caa8bdd7b92",
+      "tools/scenarios/character_model.json": "2ea993497376399a29ca184ebafee9509dd36a0d8feb282f0cf0e55f8db3523d"
+    },
+    "geometry": {
+      "packed_vertices": 412,
+      "triangles": 806,
+      "original_clips": 4
+    },
+    "corrections": [
+      "Reject inward and edge-on projected mascot faces",
+      "Sort mascot faces by precise GTE depth within each coarse OT bucket",
+      "Keep eye and spot priority at equal precise depth"
+    ],
+    "limitations": [
+      "Visual inspection uses emulator screenshots; no original Unity reference comparison",
+      "Painter ordering remains approximate for intersecting triangles",
+      "Original shaders, soft eye alpha and animation transition graph remain incomplete",
+      "HLE only; hardware performance not certified"
+    ],
+    "next_milestone": "Recover and render the original checkpoint plant in the connected area"
+  },
+  "cd_world_data_sha256": "3d38d6a8a1c271f4d9045f9cc6541206f69afe35c82c45f844820263680b1673",
+  "source_files_sha256": {
+    "src/atlas_main.c": "a934fa598d41c74937c9569a63e86de2f54ae2d827468c856c0fc5798b2bf362",
+    "src/atlas_format.h": "5d8acfce1c48ca1da32327f71af3be344c046de24f4b7cea503b38ba0327e51d",
+    "src/clip.c": "58f7f693ce0c10e7c1979d7c4591366006f96871e469b16842e6e0cf301502c5",
+    "src/clip.h": "3efc6cc2d4d1fd8dcf771498c4ee27edb9be61605561b05e5cf6eaabd6415a7f",
+    "tools/capture_libretro.py": "29142b4eb8bd489b38c03bf952ea93f270af50a863f2914bc40d61272a225842",
+    "tools/recover_world_atlas.py": "1de24344a65cd3718e1d4bc30d70bd7bef48b7bebc2e96ede4fd1022c5d7667d",
+    "tools/atlas_materials.py": "20ba967ab0046582de87964ee270a71c087845d1b1baf396bdb9529c741e2020",
+    "tools/check_world_atlas.py": "7b16f2838606083f714c7bdefc68839e9cc3ca92eed3a95978cbafa6bfc81278",
+    "tools/check_atlas_capture.py": "1caece18e5fd89c60b09e1f84ffc06c67096cffdc8b64793499dbf73e055647c",
+    "tools/test_atlas_materials.py": "29ff73376d41ddf4fb940527ec29b08c7940bd70d588be53f3c0e2f8de14e2aa",
+    "iso_atlas.xml": "bd0836357c77032139e86ae3a5bbf8813592c463a39e763090ecf9cfaa384155",
+    "CMakeLists.txt": "39b589b62b99b6712cb9d50f6b152e676df2f5fdf474f2146de303153309d2b9"
+  },
+  "images_sha256": {
+    "level5.png": "ef9f2b663dab49f0e216ebc7b06db996a5a3d4fd1d5706c6f46b768964b7fae5",
+    "level7.png": "200be07cc0a052d16a718e9159bf77eb21bc6e1295a4dc7693f881dd1b8bcf4f",
+    "level2.png": "5c43860cf25163211b54f330d4a7e61f51cd0c12768558fcf1d32f473d425b6a",
+    "level3.png": "b9d1e0e61fb2a13b6e046fb678280c3f3e991182e51ecdd87009810d8744581b",
+    "level4.png": "0d290db488d24b856142ae5fd3b8bf731f1a6c24abc47f103eefaf8cd1224341",
+    "gameplay.gif": "389a44fdf432dff610bad6b3698fd5b761991323e47ecb51a2f9626581e576fb",
+    "level6.png": "474f48150f804d6eab0284fb575664360dcc218d0718d16815eef39394292db8"
+  },
+  "review_fixes": [
+    "Publish draw/budget counters only after a completed render; expose complete CD-load readiness",
+    "Read custom shader queue/RenderType tags before stale saved Standard-shader defaults",
+    "Validate binary catalog rows and header tag against all exported data sectors",
+    "Explicitly align CD DMA geometry buffer to four bytes and assert padding/resident capacity",
+    "Exclude generated build-character from resumable source packages"
+  ],
+  "limitations": [
+    "Free-camera inspection only; full-level player physics, enemies, behavior and transitions absent",
+    "Geometry includes supported static MeshRenderers and inactive states; skinned actors, UI and sky shells excluded",
+    "Textures sampled into colors; original shaders, water and alpha still require adaptation",
+    "HLE only; hardware performance, retail BIOS and complete game behavior not certified"
+  ],
+  "next_milestone": "Integrate streamed original colliders and character movement, starting with Dreary Valley",
+  "review_date": "2026-10-30",
+  "standalone_source_build": "Independent atlas-only CMake Release build and data validation passed"
+}

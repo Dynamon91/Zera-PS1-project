@@ -5,6 +5,21 @@ on:
     paths:
       - 'src/**'
       - 'previews/level3/src/**'
+      - 'previews/checkpoint/**'
+      - 'previews/atlas/**'
+      - 'previews/walk/**'
+      - 'previews/frontend/**'
+      - 'previews/cosmic/**'
+      - 'previews/levium/**'
+      - 'tools/check_levium.py'
+      - 'tools/recover_levium.py'
+      - 'tools/check_frontend_ui.py'
+      - 'reports/frontend_ui.json'
+      - 'tools/check_frontend_assets.py'
+      - 'tools/recover_stream_collision.py'
+      - 'tools/check_stream_collision.py'
+      - 'tools/recover_world_atlas.py'
+      - 'tools/check_world_atlas.py'
       - 'previews/launchpad/src/**'
       - 'previews/launchpad/reports/launch_config.json'
       - 'previews/level3/assets/world_chunk_source.json'
@@ -18,6 +33,11 @@ on:
       - 'CMakeLists.txt'
       - 'iso.xml'
       - 'iso_level3.xml'
+      - 'iso_checkpoint.xml'
+      - 'iso_atlas.xml'
+      - 'iso_walk.xml'
+      - 'iso_game.xml'
+      - 'iso_campaign.xml'
       - 'iso_launchpad.xml'
       - '.github/workflows/native-preview.yml'
   workflow_dispatch:
@@ -26,7 +46,7 @@ permissions:
 jobs:
   native-preview:
     runs-on: ubuntu-22.04
-    timeout-minutes: 20
+    timeout-minutes: 35
     permissions:
       contents: write
     steps:
@@ -59,6 +79,7 @@ jobs:
           sh tools/run_host_checks.sh
           cmake --preset default -DCMAKE_BUILD_TYPE=Release -DPSN00BSDK_TC="$PS1_TC"
           cmake --build build
+          python3 tools/check_static_budget.py build/zera_level3.elf
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: libretro/pcsx_rearmed
@@ -82,12 +103,103 @@ jobs:
           python3 tools/check_world_capture.py build/world-before build/world-after
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/level3-preview tools/scenarios/level3_preview.json
           python3 tools/check_level3_capture.py build/level3-preview
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/jump-preview tools/scenarios/level3_jump.json
+          python3 tools/check_jump_capture.py build/jump-preview
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/wall-collider-preview tools/scenarios/level3_wall.json
+          python3 tools/check_wall_capture.py build/wall-collider-preview > build/wall-collider-preview/verification.json
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/corridor-preview tools/scenarios/level3_corridor.json
+          python3 tools/check_corridor_capture.py build/corridor-preview > build/corridor-preview/verification.json
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/corridor-relic-preview tools/scenarios/corridor_relic.json
+          python3 tools/check_corridor_relic_capture.py build/corridor-relic-preview > build/corridor-relic-preview/verification.json
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/corridor-two-relics tools/scenarios/corridor_two_relics.json
+          python3 tools/check_two_corridor_relics.py build/corridor-two-relics > build/corridor-two-relics/verification.json
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_level3_preview.cue build/connected-checkpoint tools/scenarios/connected_checkpoint.json
+          python3 tools/check_connected_checkpoint.py build/connected-checkpoint > build/connected-checkpoint/verification.json
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_checkpoint_preview.cue build/checkpoint-preview tools/scenarios/checkpoint_preview.json
+          python3 tools/check_checkpoint_capture.py build/checkpoint-preview > build/checkpoint-preview/verification.json
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_wip09.cue build/mascot-preview tools/scenarios/mascot_preview.json
           python3 tools/check_mascot_capture.py build/mascot-preview
+      - name: Verify corrected mascot surface ordering and animation coverage
+        run: |
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_wip09.cue build/character-model-preview tools/scenarios/character_model.json
+          python3 tools/check_character_model_capture.py build/character-model-preview > build/character-model-preview/verification.json
+      - name: Verify recovered launchpad and relics
+        run: |
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_launchpad_preview.cue build/launchpad-preview tools/scenarios/launchpad_preview.json
           python3 tools/check_launch_capture.py build/launchpad-preview
           python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_launchpad_preview.cue build/relic-preview tools/scenarios/relic_preview.json
           python3 tools/check_relic_capture.py build/relic-preview
+      - name: Inspect corrected rig from four sides in a separate close-camera build
+        run: |
+          cmake -S . -B build-character -G Ninja -DCMAKE_TOOLCHAIN_FILE="$PSN00BSDK_LIBS/cmake/sdk.cmake" -DPSN00BSDK_TC="$PS1_TC" -DCMAKE_BUILD_TYPE=Release -DZERA_CHARACTER_CLOSEUP=ON
+          cmake --build build-character --target iso
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build-character/zera_wip09.cue build-character/turntable tools/scenarios/character_turntable.json
+          python3 tools/check_character_turntable.py build-character/turntable > build-character/turntable/verification.json
+      - name: Verify all six CD-streamed original-world maps
+        run: |
+          cmake -S . -B build -DZERA_WORLD_ATLAS=ON
+          cmake --build build --target iso_atlas
+          python3 tools/check_static_budget.py build/zera_atlas.elf
+          python3 tools/check_world_atlas.py
+          for level in 2 3 4 5 6 7; do
+            python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_world_atlas.cue "build/atlas-level$level" "tools/scenarios/atlas_level$level.json"
+            python3 tools/check_atlas_capture.py "build/atlas-level$level" --level "$level" > "build/atlas-level$level/verification.json"
+          done
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_world_atlas.cue build/atlas-streaming tools/scenarios/atlas_streaming.json
+          python3 tools/check_atlas_capture.py build/atlas-streaming --streaming > build/atlas-streaming/verification.json
+      - name: Verify original-collider streamed walking and airborne sector changes
+        run: |
+          cmake -S . -B build -DZERA_STREAM_WALK=ON
+          cmake --build build --target iso_walk
+          python3 tools/check_static_budget.py build/zera_walk.elf
+          python3 tools/check_stream_collision.py
+          for kind in ground wall jump air; do
+            scenario="tools/scenarios/stream_walk_$kind.json"
+            if [ "$kind" = air ]; then scenario=tools/scenarios/stream_walk_air_seam.json; fi
+            python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_stream_walk.cue "build/stream-walk-$kind" "$scenario"
+            python3 tools/check_stream_walk_capture.py "build/stream-walk-$kind" --kind "$kind" > "build/stream-walk-$kind/verification.json"
+          done
+      - name: Verify streamed relics, checkpoint return and new game
+        run: |
+          python3 tools/prepare_stream_progress.py --check
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_stream_walk.cue build/stream-walk-progress tools/scenarios/stream_walk_progress.json
+          python3 tools/check_stream_progress_capture.py build/stream-walk-progress > build/stream-walk-progress/verification.json
+      - name: Verify original startup media, pause, audio and integrated gameplay
+        run: |
+          cmake -S . -B build -DZERA_FULL_FRONTEND=ON
+          cmake --build build --target iso_game
+          python3 tools/check_static_budget.py build/zera_game.elf
+          python3 tools/check_frontend_assets.py
+          for kind in boot flow skip; do
+            python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_gameplay.cue "build/frontend-$kind" "tools/scenarios/frontend_$kind.json"
+            python3 tools/check_frontend_capture.py "build/frontend-$kind" --kind "$kind" > "build/frontend-$kind/verification.json"
+          done
+          for kind in ground wall jump air; do
+            python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_gameplay.cue "build/frontend-walk_$kind" "tools/scenarios/frontend_walk_$kind.json"
+            python3 tools/check_stream_walk_capture.py "build/frontend-walk_$kind" --kind "$kind" > "build/frontend-walk_$kind/verification.json"
+          done
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_gameplay.cue build/frontend-progress tools/scenarios/frontend_progress.json
+          python3 tools/check_stream_progress_capture.py build/frontend-progress > build/frontend-progress/verification.json
+      - name: Verify source menu pages and Cosmic Core campaign entry
+        run: |
+          cmake -S . -B build -DZERA_CAMPAIGN_ENTRY=ON -DZERA_LEVIUM_DIALOGUE=ON
+          cmake --build build --target iso_campaign
+          python3 tools/check_static_budget.py build/zera_campaign.elf
+          python3 tools/check_frontend_ui.py
+          python3 tools/check_stream_collision.py --area previews/cosmic
+          for kind in ground air jump; do
+            python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_campaign.cue "build/cosmic_$kind" "tools/scenarios/cosmic_$kind.json"
+            python3 tools/check_campaign_capture.py "build/cosmic_$kind" --kind "$kind" > "build/cosmic_$kind/verification.json"
+          done
+          python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_campaign.cue build/campaign_ui tools/scenarios/campaign_ui.json
+          python3 tools/check_campaign_capture.py build/campaign_ui --kind ui > build/campaign_ui/verification.json
+      - name: Verify original Levium conversation, repeat and pause
+        run: |
+          python3 tools/check_levium.py
+          for kind in conversation pause; do
+            python3 tools/capture_libretro.py build/emulator/pcsx_rearmed_libretro.so build/zera_campaign.cue "build/levium_$kind" "tools/scenarios/levium_$kind.json"
+            python3 tools/check_levium_capture.py "build/levium_$kind" --kind "$kind" > "build/levium_$kind/verification.json"
+          done
       - name: Preserve failed capture diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -126,8 +238,45 @@ jobs:
             build/zera_level3_preview.bin
             build/zera_level3_preview.cue
             build/level3-preview/
+            build/jump-preview/
+            build/wall-collider-preview/
+            build/corridor-preview/
+            build/corridor-relic-preview/
+            build/corridor-two-relics/
+            build/connected-checkpoint/
+            build/zera_checkpoint.exe
+            build/zera_checkpoint.elf
+            build/zera_checkpoint.map
+            build/zera_checkpoint_preview.bin
+            build/zera_checkpoint_preview.cue
+            build/checkpoint-preview/
             docs/screenshots/mascot/
             build/mascot-preview/
+            build/character-model-preview/
+            build/zera_world_atlas.bin
+            build/zera_world_atlas.cue
+            build/zera_atlas.elf
+            build/zera_atlas.map
+            build/atlas-level*/
+            build/atlas-streaming/
+            build/zera_campaign.bin
+            build/zera_campaign.cue
+            build/zera_campaign.elf
+            build/zera_campaign.map
+            build/cosmic_*/
+            build/campaign_ui/
+            build/levium_*/
+            build/zera_gameplay.bin
+            build/zera_gameplay.cue
+            build/zera_game.elf
+            build/zera_game.map
+            build/frontend-*/
+            build/zera_stream_walk.bin
+            build/zera_stream_walk.cue
+            build/zera_walk.elf
+            build/zera_walk.map
+            build/stream-walk-*/
+            build-character/turntable/
             docs/LEVEL3.md
             docs/screenshots/level3/
             build/native-preview/

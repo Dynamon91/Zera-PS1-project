@@ -1,0 +1,14 @@
+{
+  "reference_archive": "Zera_PS1_WIP09_Dreary_Valley_reliquie_checkpoint_streaming.zip",
+  "reference_archive_sha256": "f575b5ab3465d4978a2245571135a68f0ad6bdbc3c43f8c0735d57956c17873f",
+  "files_sha256": {
+    "src/zera_mesh.h": "f891ffaaf7feb9c392d26528604c9603c672e698d190ec5c6c5b64b41f4f10f7",
+    "src/zera_anim.h": "6e8f977000ce1fdf2b76ba1f339ae77e8e67979e1a0e0c74f741e2c8dfd65a19",
+    "src/mascot_materials.h": "4015cc76aab3a9d808a973d374c90c9886b950c5d6a56fd4cbe792005d36d3a7",
+    "src/mascot_texture.h": "8af037fca8f9eafec0ae508e3c07c2c2b2993455e200e9541ce304fb169e88ae",
+    "src/character.c": "ee59c50a93b3fe4c847c613a58c340aa537acb09795aac66d53d1d053d883b3b",
+    "src/character.h": "37929a6e7897cb611e04bcc9318cb970fad990589ae676fa120a4e473cec1ca8",
+    "previews/level3/src/relic_models.h": "7eb471bdf03b94b00357637c2a8dab790999a30ea9c1b661df6a82d5363c2ebb"
+  },
+  "requirement": "Intentional model changes require validation against original transforms, materials, animation and native multi-angle views; do not update this baseline merely to silence the guard"
+}

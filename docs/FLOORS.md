@@ -41,8 +41,11 @@ The [native workflow](https://github.com/Dynamon91/Zera-PS1-project/actions/runs
 also passes the established level2 camera, audio, respawn, trial and exploration
 checks. Native game source: `7cdeb50ee99c84becbfb2be1607fc88f15a63882`.
 
-Conservative vertical wall proxies remain and can block routes that support
-queries alone permit. This is point support, not a swept character capsule:
-head/ceiling collisions, complete wall geometry and robust slope handling still
-need work. Original collectible interactions and persistence remain unported.
+The camera retains conservative vertical wall proxies; current player wall
+collision clips the original steep faces to body height ([details](SLOPED_WALLS.md)).
+This is point support, not a swept character capsule.
+The current source additionally stops upward head motion against projected
+overhead collider triangles (see [ceiling collision](CEILINGS.md)). Complete
+wall geometry, horizontal head sweeps and robust slope handling still need
+work. Original collectible interactions and persistence remain unported.
 Completion stays at the provisional **29%**.

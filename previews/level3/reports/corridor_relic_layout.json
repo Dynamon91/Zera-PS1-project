@@ -1,0 +1,44 @@
+{
+  "component_path_id": 6606,
+  "value": 1,
+  "position": [
+    -49,
+    -148,
+    -3794
+  ],
+  "source_position": [
+    44.606346130371094,
+    20.997663497924805,
+    63.578399658203125
+  ],
+  "floor_y": -204,
+  "source_audit_sha256": "616727c13ca7ececd19400fae1499d0b8a26acfe79d9e48f7f8556b4c4221e1b",
+  "model_report_sha256": "88926a00b7eccf4a30554a78b45d1f1481337e67af4f619ceae6d2598ea2cfac",
+  "items": [
+    {
+      "component_path_id": 6606,
+      "position": [
+        -49,
+        -148,
+        -3794
+      ],
+      "value": 1,
+      "height_above_floor": 56
+    },
+    {
+      "component_path_id": 6898,
+      "position": [
+        -980,
+        -471,
+        -6473
+      ],
+      "value": 16,
+      "height_above_floor": 103
+    }
+  ],
+  "limitations": [
+    "Only these two relics are enabled in the corridor",
+    "Provisional pickup radius/height; original homing and effects absent",
+    "Session collection only; no memory-card persistence"
+  ]
+}

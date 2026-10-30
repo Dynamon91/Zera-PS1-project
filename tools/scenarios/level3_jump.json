@@ -1,0 +1,15 @@
+{
+  "frames": 1250,
+  "gif": false,
+  "audio": false,
+  "map_file": "zera_level3.map",
+  "sample_interval": 1,
+  "stop_movement_at_x": 500,
+  "shots": [359, 950, 1020, 1040, 1249],
+  "actions": [
+    {"start": 300, "end": 320, "buttons": [0]},
+    {"start": 340, "end": 350, "buttons": [10]},
+    {"start": 460, "end": 1400, "buttons": [7]},
+    {"start": 1000, "end": 1004, "buttons": [0]}
+  ]
+}

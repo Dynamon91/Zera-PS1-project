@@ -1,4 +1,7 @@
 {
+  "renderer_scene": "level2",
+  "renderer_path_id": 5571,
+  "euler_convention": "intrinsic ZXY; validated against serialized source Transform quaternion",
   "clips": [
     {
       "name": "Idle",
@@ -37,7 +40,5 @@
     "Unity custom shader effects omitted",
     "root motion ignored",
     "no original-Unity visual reference comparison yet"
-  ],
-  "runtime_transition": "six simulation ticks, frozen source pose to moving destination; interrupted blends restart from current pose",
-  "packing": "bind positions plus nonzero joint influences; shared mesh/animation mapping"
+  ]
 }

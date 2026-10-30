@@ -1,0 +1,32 @@
+{
+  "frames": 4000,
+  "audio": false,
+  "gif": false,
+  "gif_start_frame": 1200,
+  "gif_end_frame": 1650,
+  "gif_sample_step": 6,
+  "map_file": "zera_walk.map",
+  "sample_interval": 10,
+  "shots": [
+    900,
+    2000,
+    3000,
+    3999
+  ],
+  "actions": [
+    {
+      "start": 450,
+      "end": 460,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 1000,
+      "end": 3700,
+      "buttons": [
+        7
+      ]
+    }
+  ]
+}

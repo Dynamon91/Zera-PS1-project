@@ -1,0 +1,27 @@
+/* Generated original startup media. */
+#ifndef FRONTEND_ASSETS_H
+#define FRONTEND_ASSETS_H
+#define FRONT_LOGO_WIDTH 160
+#define FRONT_LOGO_HEIGHT 90
+#define FRONT_LOGO_FPS 8
+#define FRONT_LOGO_FRAMES 69
+#define FRONT_LOGO_TICKS 520
+#define FRONT_FRAME_BYTES 7232
+#define FRONT_LOGO_SECTOR 201
+#define FRONT_LOGO_SECTORS 244
+#define FRONT_STAGING_BYTES 499712
+#define FRONT_TITLE_SECTOR 1
+#define FRONT_TITLE_SECTORS 36
+static const unsigned char frontend_tag[16]={247,11,181,17,124,114,240,198,191,12,109,157,187,41,95,119};
+static const struct {int sector,sectors,size,address,rate,loop;} frontend_samples[]={
+{37,54,108672,4112,22050,0},
+{91,83,168448,112784,22050,1},
+{174,3,5952,281232,22050,0},
+{177,3,4416,287184,22050,0},
+{180,2,2944,291600,22050,0},
+{182,2,3072,294544,22050,0},
+{184,8,15424,297616,22050,0},
+{192,3,5888,313040,22050,0},
+{195,6,11840,318928,22050,0},
+};
+#endif

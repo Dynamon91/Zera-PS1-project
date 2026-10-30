@@ -1,0 +1,22 @@
+{
+  "frames": 1750, "gif": false, "audio": false,
+  "map_file": "zera_checkpoint.map", "sample_interval": 1,
+  "shots": [359, 760, 850, 1060, 1220, 1600, 1749],
+  "actions": [
+    {"start": 300, "end": 320, "buttons": [0]},
+    {"start": 340, "end": 350, "buttons": [10]},
+    {"start": 460, "end": 760, "buttons": [7]},
+    {"start": 800, "end": 810, "buttons": [2]},
+    {"start": 900, "end": 910, "buttons": [10]},
+    {"start": 920, "end": 1040, "buttons": [7]},
+    {"start": 1100, "end": 1110, "buttons": [3]},
+    {"start": 1140, "end": 1150, "buttons": [5]},
+    {"start": 1180, "end": 1190, "buttons": [0]},
+    {"start": 1400, "end": 1410, "buttons": [3]},
+    {"start": 1440, "end": 1450, "buttons": [5]},
+    {"start": 1480, "end": 1490, "buttons": [5]},
+    {"start": 1520, "end": 1530, "buttons": [5]},
+    {"start": 1560, "end": 1570, "buttons": [0]},
+    {"start": 1640, "end": 1650, "buttons": [0]}
+  ]
+}

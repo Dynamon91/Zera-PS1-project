@@ -1,0 +1,638 @@
+{
+  "schema_version": 1,
+  "components": [
+    6606,
+    6898
+  ],
+  "native_count": 2,
+  "native_value": 17,
+  "frames": 7400,
+  "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+  "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+  "automatic_respawns": 0,
+  "respawn_preserves": true,
+  "title_clears": true,
+  "pickup_sounds": 2,
+  "event_captures": [
+    {
+      "name": "first_approach",
+      "frame": 3162,
+      "trigger_frame": 3162,
+      "position_fp": [
+        38010,
+        -40448,
+        -884070
+      ],
+      "relic_mask": 0,
+      "checkpoint_id": 0
+    },
+    {
+      "name": "first_collected",
+      "frame": 3365,
+      "trigger_frame": 3350,
+      "position_fp": [
+        -10860,
+        -52224,
+        -968780
+      ],
+      "relic_mask": 1,
+      "checkpoint_id": 0
+    },
+    {
+      "name": "second_approach",
+      "frame": 4775,
+      "trigger_frame": 4775,
+      "position_fp": [
+        -139370,
+        -134400,
+        -1588810
+      ],
+      "relic_mask": 1,
+      "checkpoint_id": 0
+    },
+    {
+      "name": "second_collected",
+      "frame": 5056,
+      "trigger_frame": 5041,
+      "position_fp": [
+        -241430,
+        -117504,
+        -1657590
+      ],
+      "relic_mask": 3,
+      "checkpoint_id": 0
+    }
+  ],
+  "image_sha256": {
+    "first_approach": "85b92d6091ee66586eb183d96433a56cef54e90def7d0de58986e042463959fe",
+    "first_collected": "5132a78294f09f99fbb3744c84c1b55c3fbc9813dbb58bf8dd6698db0e6aefa9",
+    "second_approach": "c760faa3b92dbd8136bc54c20fbef343c5e4431f39ee33874430bba09c517496",
+    "second_collected": "8af922f8d1b5cf5b83f99f2f94d4048399684ff139d777a2c74964fa556f64b5"
+  },
+  "source_files_sha256": {
+    "src/relics.c": "4cf8b0bd06c9b465ca776a51c9e81a8c3240ce15d0de8e13bb0feed6ad2a1e14",
+    "src/relics.h": "95c128284ac482481111c33460d2a47d52e9e513361c1ec04eb6dadd07ce6aa1",
+    "src/main.c": "42a360de7b4d4a0452e77d9c1281fe18d034dc3b48c86c54f445806429635666",
+    "previews/level3/src/relic_layout.h": "264ce1237c3739431aeac61ae192a0193151311a290af2daf7d3ca69695721b4",
+    "previews/level3/src/relic_models.h": "7eb471bdf03b94b00357637c2a8dab790999a30ea9c1b661df6a82d5363c2ebb",
+    "tools/scenarios/corridor_two_relics.json": "92ccacec7adc43e133fc86937ffc2e008d3fff5254b3597151322867209d92af"
+  },
+  "milestones": [
+    {
+      "x_fp": 0,
+      "y_fp": 0,
+      "z_fp": 0,
+      "vy_fp": 0,
+      "dash_ticks": 0,
+      "state": 0,
+      "frame": 359,
+      "scenario_movement_stopped": false,
+      "camera_distance": 850,
+      "menu_screen": 1,
+      "menu_selection": 0,
+      "menu_return": 0,
+      "diagnostics": 0,
+      "animation_clip": 0,
+      "animation_tick": 10,
+      "blend_tick": 6,
+      "audio_music_ready": 1,
+      "audio_underruns": 0,
+      "audio_cd_errors": 0,
+      "audio_refills": 9,
+      "audio_wraps": 0,
+      "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
+      "simulation_ticks": 10,
+      "debug_input_x": 0,
+      "debug_input_z": 0,
+      "debug_movement_yaw": 0,
+      "debug_actual_moving": 0,
+      "facing": 0,
+      "mascot_visible": 1,
+      "yaw": 0,
+      "sfx_events": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relic_mask": 0,
+      "relic_count": 0,
+      "relic_value": 0,
+      "checkpoint_id": 0,
+      "checkpoint_x": 0,
+      "checkpoint_y": 0,
+      "checkpoint_z": 0,
+      "checkpoint_yaw": 0,
+      "checkpoint_activations": 0,
+      "trial_mask": 0,
+      "trial_active": 0,
+      "trial_count": 0,
+      "trial_complete": 0,
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
+    },
+    {
+      "x_fp": -241430,
+      "y_fp": -146688,
+      "z_fp": -1657590,
+      "vy_fp": 0,
+      "dash_ticks": 0,
+      "state": 0,
+      "frame": 6500,
+      "scenario_movement_stopped": false,
+      "camera_distance": 543,
+      "menu_screen": 1,
+      "menu_selection": 0,
+      "menu_return": 0,
+      "diagnostics": 0,
+      "animation_clip": 0,
+      "animation_tick": 22,
+      "blend_tick": 6,
+      "audio_music_ready": 1,
+      "audio_underruns": 0,
+      "audio_cd_errors": 0,
+      "audio_refills": 167,
+      "audio_wraps": 0,
+      "audio_muted": 0,
+      "camera_height": -566,
+      "player_respawn_events": 0,
+      "simulation_ticks": 1177,
+      "debug_input_x": 0,
+      "debug_input_z": 0,
+      "debug_movement_yaw": 2048,
+      "debug_actual_moving": 0,
+      "facing": 3072,
+      "mascot_visible": 1,
+      "yaw": 2048,
+      "sfx_events": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "relic_mask": 3,
+      "relic_count": 2,
+      "relic_value": 17,
+      "checkpoint_id": 0,
+      "checkpoint_x": 0,
+      "checkpoint_y": 0,
+      "checkpoint_z": 0,
+      "checkpoint_yaw": 0,
+      "checkpoint_activations": 0,
+      "trial_mask": 0,
+      "trial_active": 0,
+      "trial_count": 0,
+      "trial_complete": 0,
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
+    },
+    {
+      "x_fp": 0,
+      "y_fp": 0,
+      "z_fp": 0,
+      "vy_fp": 0,
+      "dash_ticks": 0,
+      "state": 0,
+      "frame": 6700,
+      "scenario_movement_stopped": false,
+      "camera_distance": 850,
+      "menu_screen": 1,
+      "menu_selection": 0,
+      "menu_return": 0,
+      "diagnostics": 0,
+      "animation_clip": 0,
+      "animation_tick": 20,
+      "blend_tick": 6,
+      "audio_music_ready": 1,
+      "audio_underruns": 0,
+      "audio_cd_errors": 0,
+      "audio_refills": 172,
+      "audio_wraps": 0,
+      "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
+      "simulation_ticks": 1216,
+      "debug_input_x": 0,
+      "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
+      "mascot_visible": 1,
+      "yaw": 512,
+      "sfx_events": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "relic_mask": 3,
+      "relic_count": 2,
+      "relic_value": 17,
+      "checkpoint_id": 0,
+      "checkpoint_x": 0,
+      "checkpoint_y": 0,
+      "checkpoint_z": 0,
+      "checkpoint_yaw": 0,
+      "checkpoint_activations": 0,
+      "trial_mask": 0,
+      "trial_active": 0,
+      "trial_count": 0,
+      "trial_complete": 0,
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
+    },
+    {
+      "x_fp": 0,
+      "y_fp": 0,
+      "z_fp": 0,
+      "vy_fp": 0,
+      "dash_ticks": 0,
+      "state": 0,
+      "frame": 7200,
+      "scenario_movement_stopped": false,
+      "camera_distance": 850,
+      "menu_screen": 0,
+      "menu_selection": 0,
+      "menu_return": 0,
+      "diagnostics": 0,
+      "animation_clip": 0,
+      "animation_tick": 0,
+      "blend_tick": 6,
+      "audio_music_ready": 1,
+      "audio_underruns": 0,
+      "audio_cd_errors": 0,
+      "audio_refills": 185,
+      "audio_wraps": 0,
+      "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
+      "simulation_ticks": 1276,
+      "debug_input_x": 0,
+      "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
+      "mascot_visible": 1,
+      "yaw": 512,
+      "sfx_events": [
+        3,
+        3,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "relic_mask": 0,
+      "relic_count": 0,
+      "relic_value": 0,
+      "checkpoint_id": 0,
+      "checkpoint_x": 0,
+      "checkpoint_y": 0,
+      "checkpoint_z": 0,
+      "checkpoint_yaw": 0,
+      "checkpoint_activations": 0,
+      "trial_mask": 0,
+      "trial_active": 0,
+      "trial_count": 0,
+      "trial_complete": 0,
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
+    },
+    {
+      "x_fp": 0,
+      "y_fp": 0,
+      "z_fp": 0,
+      "vy_fp": 0,
+      "dash_ticks": 0,
+      "state": 0,
+      "frame": 7399,
+      "scenario_movement_stopped": false,
+      "camera_distance": 850,
+      "menu_screen": 1,
+      "menu_selection": 0,
+      "menu_return": 0,
+      "diagnostics": 0,
+      "animation_clip": 0,
+      "animation_tick": 32,
+      "blend_tick": 6,
+      "audio_music_ready": 1,
+      "audio_underruns": 0,
+      "audio_cd_errors": 0,
+      "audio_refills": 190,
+      "audio_wraps": 0,
+      "audio_muted": 0,
+      "camera_height": 0,
+      "player_respawn_events": 0,
+      "simulation_ticks": 1308,
+      "debug_input_x": 0,
+      "debug_input_z": 0,
+      "debug_movement_yaw": 512,
+      "debug_actual_moving": 0,
+      "facing": 0,
+      "mascot_visible": 1,
+      "yaw": 512,
+      "sfx_events": [
+        3,
+        4,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "relic_mask": 0,
+      "relic_count": 0,
+      "relic_value": 0,
+      "checkpoint_id": 0,
+      "checkpoint_x": 0,
+      "checkpoint_y": 0,
+      "checkpoint_z": 0,
+      "checkpoint_yaw": 0,
+      "checkpoint_activations": 0,
+      "trial_mask": 0,
+      "trial_active": 0,
+      "trial_count": 0,
+      "trial_complete": 0,
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
+    }
+  ],
+  "limitations": [
+    "Two active relics only, not full level completion",
+    "Provisional pickup volume and movement tuning; original homing/effects/shaders absent",
+    "Session only; no memory-card save",
+    "HLE only, no frame-rate or hardware certification"
+  ],
+  "next_milestone": "Recover and render the original checkpoint plant in the connected area",
+  "host_suite": {
+    "command": "sh tools/run_host_checks.sh",
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "status": "passed",
+    "automatic_fall_recovery": "host-tested"
+  },
+  "regressions": {
+    "corridor": {
+      "frames": 2400,
+      "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "final_position": [
+        0,
+        -16,
+        -2000
+      ],
+      "previous_boundary_z": -1280,
+      "automatic_respawns": 0,
+      "validation": "Continuous controller-only walk from original start, beyond previous patch, grounded on recovered original colliders",
+      "limitations": [
+        "This scenario demonstrates only the first 2000 units; later relic/checkpoint routes have separate checks",
+        "Full original level progression remains incomplete",
+        "HLE only; performance and hardware not certified"
+      ]
+    },
+    "wall": {
+      "frames": 1100,
+      "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "wall_x_at_ground": 574,
+      "wall_x_at_head": 562,
+      "previous_proxy_x": 547,
+      "player_radius": 24,
+      "final_position": [
+        537.0,
+        0.0,
+        0.0
+      ],
+      "blocked_while_holding_right": true,
+      "automatic_respawns": 0,
+      "limitations": [
+        "One sloped wall route in a bounded patch",
+        "Height-clipped triangle projection, not a continuous capsule sweep",
+        "HLE only; does not demonstrate the path to the original checkpoint"
+      ]
+    },
+    "jump": {
+      "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+      "position": [
+        500,
+        0,
+        0
+      ],
+      "jump_peak": 153,
+      "automatic_respawns": 0,
+      "frames": 1250,
+      "validation": "Controller-only HLE unobstructed jump and landing regression; does not demonstrate an overhead collision"
+    },
+    "standalone_checkpoint": {
+      "frames": 1750,
+      "bin_sha256": "a1ece41188c3d0e5e258b11c8bef75a2b95d9bbf3dd81ef2aa05e3642813e988",
+      "select_respawn": true,
+      "pause_respawn": true,
+      "camera_yaw": 1447
+    },
+    "launch_relic": {
+      "frames": 5700,
+      "bin_sha256": "1de5c478f47dc5dff1c79677ae62c785bd7e81d9aad9c752d4febd9f3a14a218",
+      "count": 3,
+      "value": 20,
+      "restart_and_title_clear": true
+    }
+  },
+  "static_memory": {
+    "elf": "zera_level3.elf",
+    "elf_sha256": "f321b0ad221c639d31783269f3c84bf7a22e6bae12a432770f291ed074e43f85",
+    "text": 834124,
+    "data": 2274,
+    "bss": 295896,
+    "static_bytes": 1132294,
+    "budget_bytes": 1572864,
+    "limitation": "Static sections only; BIOS, dynamic allocation, stack and runtime performance require separate validation"
+  },
+  "preview": {
+    "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+    "gif_sha256": "1a20a98c867532b77ec7c2804fc91d11d73eb094ef7d929696a55ca3bc531e36",
+    "gif_dimensions": [
+      640,
+      480
+    ],
+    "gif_frames": 88,
+    "gif_duration_ms": 7670,
+    "capture_settings": {
+      "frames": 7400,
+      "gif": true,
+      "audio": false,
+      "map_file": "zera_level3.map",
+      "sample_interval": 5,
+      "corridor_relic_route": true,
+      "corridor_camera_yaw": 2048,
+      "corridor_route_end": 6400,
+      "corridor_target_mask": 3,
+      "shots": [
+        359,
+        6500,
+        6700,
+        7200,
+        7399
+      ],
+      "capture_events": [
+        {
+          "name": "first_approach",
+          "max_z": -3450,
+          "relic_mask": 0
+        },
+        {
+          "name": "first_collected",
+          "relic_mask": 1,
+          "delay_frames": 15
+        },
+        {
+          "name": "second_approach",
+          "max_z": -6200,
+          "relic_mask": 1
+        },
+        {
+          "name": "second_collected",
+          "relic_mask": 3,
+          "delay_frames": 15
+        }
+      ],
+      "actions": [
+        {
+          "start": 300,
+          "end": 320,
+          "buttons": [
+            0
+          ]
+        },
+        {
+          "start": 340,
+          "end": 350,
+          "buttons": [
+            10
+          ]
+        },
+        {
+          "start": 6600,
+          "end": 6610,
+          "buttons": [
+            2
+          ]
+        },
+        {
+          "start": 7000,
+          "end": 7010,
+          "buttons": [
+            3
+          ]
+        },
+        {
+          "start": 7040,
+          "end": 7050,
+          "buttons": [
+            5
+          ]
+        },
+        {
+          "start": 7080,
+          "end": 7090,
+          "buttons": [
+            5
+          ]
+        },
+        {
+          "start": 7120,
+          "end": 7130,
+          "buttons": [
+            5
+          ]
+        },
+        {
+          "start": 7160,
+          "end": 7170,
+          "buttons": [
+            0
+          ]
+        },
+        {
+          "start": 7240,
+          "end": 7250,
+          "buttons": [
+            0
+          ]
+        }
+      ],
+      "gif_start_frame": 4685,
+      "gif_end_frame": 5146
+    },
+    "event_captures": [
+      {
+        "name": "first_approach",
+        "frame": 3162,
+        "trigger_frame": 3162,
+        "position_fp": [
+          38010,
+          -40448,
+          -884070
+        ],
+        "relic_mask": 0,
+        "checkpoint_id": 0
+      },
+      {
+        "name": "first_collected",
+        "frame": 3365,
+        "trigger_frame": 3350,
+        "position_fp": [
+          -10860,
+          -52224,
+          -968780
+        ],
+        "relic_mask": 1,
+        "checkpoint_id": 0
+      },
+      {
+        "name": "second_approach",
+        "frame": 4775,
+        "trigger_frame": 4775,
+        "position_fp": [
+          -139370,
+          -134400,
+          -1588810
+        ],
+        "relic_mask": 1,
+        "checkpoint_id": 0
+      },
+      {
+        "name": "second_collected",
+        "frame": 5056,
+        "trigger_frame": 5041,
+        "position_fp": [
+          -241430,
+          -117504,
+          -1657590
+        ],
+        "relic_mask": 3,
+        "checkpoint_id": 0
+      }
+    ],
+    "validation": "Continuous emulator frames from a separately verified run of the same two-relic controller scenario"
+  }
+}

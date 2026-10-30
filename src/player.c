@@ -2,7 +2,7 @@
 #include "world.h"
 void player_init(Player *p){p->x=p->y=p->z=p->vy=p->dash_ticks=0;p->state=GROUND;}
 /* Provisional tuning at 30 Hz, not recovered original constants. */
-int player_tick(Player *p,Input i){
+static int player_step(Player *p,Input i){
  int speed=10*FP,ox=p->x,oz=p->z,oy=p->y;
  if(i.jump_pressed && p->state==GROUND){p->vy=18*FP;p->state=JUMP;}
  if(i.dash_pressed && !p->dash_ticks)p->dash_ticks=8;
@@ -31,8 +31,21 @@ int player_tick(Player *p,Input i){
   if(i.jump_held && p->vy<0){if(p->vy < -3*FP)p->vy=-3*FP;p->state=GLIDE;}
   else p->state=p->vy>0?JUMP:FALL;
   p->y+=p->vy;
+  if(p->vy>0){
+   int head=oy+PLAYER_HEIGHT*FP,minimum=head/FP,roof;
+   /* Ceil the old fixed-point head height, including negative coordinates. */
+   if(head%FP>0)minimum++;
+   if(world_ceiling(p->x/FP,p->z/FP,minimum,&roof) && p->y+PLAYER_HEIGHT*FP>=roof*FP){
+    p->y=(roof-PLAYER_HEIGHT)*FP;p->vy=0;p->state=FALL;
+   }
+  }
   if(hasfloor && p->vy<=0 && oy>=height-8*FP && p->y<=height){p->y=height;p->vy=0;p->state=GROUND;}
  }
  if(p->y < world_fall_limit()*FP){player_init(p);return 1;}
  return 0;
+}
+int player_tick(Player *p,Input i){
+ /* Keep tentative movement local: controller-only diagnostics may sample
+    between video frames while the CPU is still resolving a wall contact. */
+ Player next=*p;int respawn=player_step(&next,i);*p=next;return respawn;
 }

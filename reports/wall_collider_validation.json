@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "source_files_sha256": {
+    "tools/convert_world.py": "ee97858d5db6891b1b2aac413ae33fa4c6623d5167957db55e4f1bac46e67a7d",
+    "tools/check_wall_sources.py": "c5f22e4e87a63d4f817765d1f53549eaeca386388daa9a2b7ca8faa298956d46",
+    "src/world.c": "1cd9d39154ed4d1b17390293bac9f1da6a9b1f00d73c7f055514bf891dc9b36c",
+    "src/collision.c": "32ba2890ca1931f5f9fdc6ddb8a057bb73c8aad52f4121a27a3220c89b10e4be",
+    "tools/test_level3.c": "9afb013897bee56cd173914838008e6adfa28d00d014fe0ab9addd0652aa5c3d",
+    "tools/scenarios/level3_wall.json": "f0bdc1c17a920b48b927b62fe47cc825321ac3cb40f03838b1c248299626214d"
+  },
+  "source_audit": {
+    "schema_version": 1,
+    "originals_verified": true,
+    "areas": [
+      {
+        "area": "level3",
+        "wall_count": 436,
+        "source_colliders": 26,
+        "world_sha256": "262b0567f2bf69d487a1e9d4fba701d12123f5cb870d358cde6e46acacc5c074",
+        "header_sha256": "202f7836dd76dfd1013cc9dfdfbf1fd6a1fad3a276e09a84f6b91aadf8db292c"
+      },
+      {
+        "area": "launchpad",
+        "wall_count": 542,
+        "source_colliders": 20,
+        "world_sha256": "0c8c6aa7b23aad30b91c52dce9b1de57d6e581dd6bc6d09dd190b6a6e87a07ee",
+        "header_sha256": "a788d5203225547302926a8db482308e3c066d41dd5f1a2360a40518c53de3e6"
+      },
+      {
+        "area": "checkpoint",
+        "wall_count": 90,
+        "source_colliders": 10,
+        "world_sha256": "c6852a40ef17358a88e50c063d79ec846f01210935da6b053b07eae6927177d8",
+        "header_sha256": "1602aca7a02a8faf672449655b3aaa79bb6f1ccc42a0b1ab2d8e6b4c6e415809"
+      }
+    ]
+  },
+  "native_solid_wall": {
+    "frames": 1100,
+    "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+    "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+    "wall_x_at_ground": 574,
+    "wall_x_at_head": 562,
+    "previous_proxy_x": 547,
+    "player_radius": 24,
+    "final_position": [
+      537.0,
+      0.0,
+      0.0
+    ],
+    "blocked_while_holding_right": true,
+    "automatic_respawns": 0,
+    "limitations": [
+      "One sloped wall route in a bounded patch",
+      "Height-clipped triangle projection, not a continuous capsule sweep",
+      "HLE only; does not demonstrate the path to the original checkpoint"
+    ]
+  },
+  "native_jump_regression": {
+    "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+    "position": [
+      500,
+      0,
+      0
+    ],
+    "jump_peak": 153,
+    "automatic_respawns": 0,
+    "frames": 1250,
+    "validation": "Controller-only HLE unobstructed jump and landing regression; does not demonstrate an overhead collision"
+  },
+  "native_checkpoint_regression": {
+    "frames": 1750,
+    "bin_sha256": "a1ece41188c3d0e5e258b11c8bef75a2b95d9bbf3dd81ef2aa05e3642813e988",
+    "select_respawn": true,
+    "pause_respawn": true,
+    "camera_yaw": 1447
+  },
+  "native_relic_regression": {
+    "frames": 5700,
+    "bin_sha256": "1de5c478f47dc5dff1c79677ae62c785bd7e81d9aad9c752d4febd9f3a14a218",
+    "count": 3,
+    "value": 20,
+    "restart_and_title_clear": true
+  },
+  "host_suite": {
+    "command": "sh tools/run_host_checks.sh",
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "status": "passed"
+  },
+  "limitations": [
+    "Vertical proxies still approximate original collider triangles",
+    "Bounded preview areas only; no continuous level route demonstrated",
+    "HLE only; no hardware or retail BIOS validation"
+  ],
+  "current_player_collision": "Height-clipped original steep triangles; vertical proxies retained for camera"
+}

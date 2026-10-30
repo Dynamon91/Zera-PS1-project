@@ -1,0 +1,186 @@
+{
+  "source_files_sha256": {
+    "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d",
+    "resources.resource": "994b0107fb7de800436740639824ba0d6b6b7921e7ce23988c50856cb11c1af5",
+    "sharedassets0.assets": "c00a0d970e86e83577efcddffe1483366efaa8f7920843613156d3ff78e32dbc",
+    "sharedassets0.resource": "8abfcdf1abec3e64bca688f1ffac8d9430ce7940638e9b243f1638d1114ef691",
+    "sharedassets1.assets": "9909cc11b7c7883e6c81ef91bd8b02da5ba27b0b8bca1539465be939df877ea1",
+    "sharedassets1.resource": "10c4d6d6686a931d94fbf8ba4b4cfdf4b3abab700c347a973225386021bca996"
+  },
+  "original_movie_sha256": "a2e63640b6980319e9950139b2d442a428d688667048d190881eeb4726f9c7a8",
+  "logo": {
+    "frames": 69,
+    "width": 160,
+    "height": 90,
+    "fps": 8,
+    "duration_ticks": 520,
+    "frame_bytes": 7232,
+    "format": "per-frame 16-color RGB555 palette + 4-bit indexed pixels"
+  },
+  "sections": [
+    {
+      "name": "title",
+      "sector": 1,
+      "sectors": 36,
+      "bytes": 73728,
+      "sha256": "89dc1763998c535c7652d08bce5ac470c197addaa64ad35d30b6fd347cb17824"
+    },
+    {
+      "name": "logo",
+      "sector": 37,
+      "sectors": 54,
+      "bytes": 108672,
+      "sha256": "2ca343d66c2fb75e5e7fca96fe5dec3079daf30d4045426aa796c8b0fd6a94d1",
+      "address": 4112,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 190042,
+      "snr_db": 25.86,
+      "source": null
+    },
+    {
+      "name": "menu",
+      "sector": 91,
+      "sectors": 83,
+      "bytes": 168448,
+      "sha256": "0c300d07379196916de4d88c54c9b893394e43a5e02200373e20feeafce70624",
+      "address": 112784,
+      "rate": 22050,
+      "loop": true,
+      "pcm_samples": 294706,
+      "snr_db": 37.64,
+      "source": [
+        "sharedassets1.assets",
+        25
+      ]
+    },
+    {
+      "name": "ui_move",
+      "sector": 174,
+      "sectors": 3,
+      "bytes": 5952,
+      "sha256": "8f43bf3d20154e40f705916bddae40f98757743b2664c8628c0e8959abaa1393",
+      "address": 281232,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 10304,
+      "snr_db": 31.89,
+      "source": [
+        "resources.assets",
+        560
+      ]
+    },
+    {
+      "name": "ui_accept",
+      "sector": 177,
+      "sectors": 3,
+      "bytes": 4416,
+      "sha256": "6d4de1f1abab72f66637aea087d112c3ea91f54fe2fc19ec30d2b449ed83c278",
+      "address": 287184,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 7616,
+      "snr_db": 27.18,
+      "source": [
+        "resources.assets",
+        567
+      ]
+    },
+    {
+      "name": "jump",
+      "sector": 180,
+      "sectors": 2,
+      "bytes": 2944,
+      "sha256": "4f27188107aa5e3ec1af30a9ca96a9be1e23ba860986d35df234b88786fc873f",
+      "address": 291600,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 5088,
+      "snr_db": 37.59,
+      "source": [
+        "resources.assets",
+        575
+      ]
+    },
+    {
+      "name": "land",
+      "sector": 182,
+      "sectors": 2,
+      "bytes": 3072,
+      "sha256": "cf9263a920b5f8562115b190c49f78d1177489b7c17b52f2601307d32d629d94",
+      "address": 294544,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 5264,
+      "snr_db": 27.28,
+      "source": [
+        "resources.assets",
+        592
+      ]
+    },
+    {
+      "name": "dash",
+      "sector": 184,
+      "sectors": 8,
+      "bytes": 15424,
+      "sha256": "5c19c4796773c2f4a429986f9145829927b59a1480113985d36e23c3c53e8ce5",
+      "address": 297616,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 26927,
+      "snr_db": 30.4,
+      "source": [
+        "resources.assets",
+        608
+      ]
+    },
+    {
+      "name": "flap",
+      "sector": 192,
+      "sectors": 3,
+      "bytes": 5888,
+      "sha256": "79c07df54b460aa32ead21cc5dc992e971c276607124412d267e2b184b3dd308",
+      "address": 313040,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 10177,
+      "snr_db": 36.83,
+      "source": [
+        "resources.assets",
+        573
+      ]
+    },
+    {
+      "name": "pickup",
+      "sector": 195,
+      "sectors": 6,
+      "bytes": 11840,
+      "sha256": "5639f6c76840ae70a404c2c0abf2511e7f1828ba6de4a24ec6ea3e4f1b93226c",
+      "address": 318928,
+      "rate": 22050,
+      "loop": false,
+      "pcm_samples": 20672,
+      "snr_db": 33.07,
+      "source": [
+        "resources.assets",
+        566
+      ]
+    },
+    {
+      "name": "logo_frames",
+      "sector": 201,
+      "sectors": 244,
+      "bytes": 499008,
+      "sha256": "7e3ee1be0752a230efbab1d96525237790f210bfea5cf2dd721fcfebed502816"
+    }
+  ],
+  "spu_end": 330768,
+  "data_sha256": "7df779c02b29e82efcf2ad79687ae39cdb5ec00ae2055125b5dc4b346f16368a",
+  "catalog_sha256": "8cb407baf83037322b755cb15c36f9ee331db32957ad4d3b7f21362bff797b14",
+  "limitations": [
+    "Logo resampled from original 1200x675 movie to 160x90 at 8 fps, 16 colors per frame",
+    "All audio downmixed to mono 22050 Hz SPU ADPCM",
+    "Full Glass Arp track repeats at file boundary; no authored seamless loop markers recovered",
+    "Title logo retained; menu layout and available actions are a PS1 adaptation, not full original UI equivalence"
+  ]
+}

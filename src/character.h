@@ -9,4 +9,9 @@ int character_animation(int state,int moved);
 #define CHARACTER_HIDE_DISTANCE 320
 #define CHARACTER_SHOW_DISTANCE 400
 int character_visible_step(int visible,int camera_distance);
+/* Projected mascot faces: exact depth resolves ties inside a coarse PS1 OT
+   bucket. Keys sort near first because GPU primitives are prepended. */
+typedef struct {int key;short xy[6],next,face;} CharacterDrawFace;
+int character_front_face(const short xy[6]);
+void character_link_face(CharacterDrawFace *faces,short *head,short index);
 #endif

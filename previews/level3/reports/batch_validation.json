@@ -3,6 +3,48 @@
   "tolerance_source_units": 0.1,
   "results": [
     {
+      "object": "Walkable.006",
+      "collider_mesh_path_id": 64,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.02154263075254903
+    },
+    {
+      "object": "Walkable.003",
+      "collider_mesh_path_id": 29,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.026009853332439548
+    },
+    {
+      "object": "Walkable.027",
+      "collider_mesh_path_id": 178,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.014498401537174743
+    },
+    {
+      "object": "Walkable.008",
+      "collider_mesh_path_id": 33,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.011411276575216789
+    },
+    {
+      "object": "Walkable.007",
+      "collider_mesh_path_id": 103,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.020726440828383375
+    },
+    {
+      "object": "Walkable.028",
+      "collider_mesh_path_id": 118,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.029558461209816755
+    },
+    {
+      "object": "Walkable.018",
+      "collider_mesh_path_id": 106,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.007506547035958988
+    },
+    {
       "object": "Walkable.002",
       "collider_mesh_path_id": 186,
       "collider_source_file": "sharedassets3.assets",
@@ -13,6 +55,42 @@
       "collider_mesh_path_id": 133,
       "collider_source_file": "sharedassets3.assets",
       "batch_vs_collider_bounds_max_error_source_units": 0.027334404850066107
+    },
+    {
+      "object": "Walkable.024",
+      "collider_mesh_path_id": 74,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.026395082473754883
+    },
+    {
+      "object": "Walkable.017",
+      "collider_mesh_path_id": 144,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.006089673729206879
+    },
+    {
+      "object": "Walkable.013",
+      "collider_mesh_path_id": 155,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.023304343223571777
+    },
+    {
+      "object": "Walkable.016",
+      "collider_mesh_path_id": 102,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.015539154410362244
+    },
+    {
+      "object": "Walkable.025",
+      "collider_mesh_path_id": 84,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.023585986093337397
+    },
+    {
+      "object": "Walkable.026",
+      "collider_mesh_path_id": 120,
+      "collider_source_file": "sharedassets3.assets",
+      "batch_vs_collider_bounds_max_error_source_units": 0.029365543025591023
     }
   ]
 }

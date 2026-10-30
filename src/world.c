@@ -1,14 +1,19 @@
 #include "world.h"
+#include "player.h"
 #ifdef ZERA_LEVEL3_PREVIEW
 #include "surface.h"
-#ifdef ZERA_LAUNCH_PREVIEW
+#ifdef ZERA_CHECKPOINT_PREVIEW
+#include "../previews/checkpoint/src/world_floors.h"
+#elif defined(ZERA_LAUNCH_PREVIEW)
 #include "../previews/launchpad/src/world_floors.h"
 #else
 #include "../previews/level3/src/world_floors.h"
 #endif
 #endif
 #ifdef ZERA_LEVEL3_PREVIEW
-#ifdef ZERA_LAUNCH_PREVIEW
+#ifdef ZERA_CHECKPOINT_PREVIEW
+#include "../previews/checkpoint/src/world_height.h"
+#elif defined(ZERA_LAUNCH_PREVIEW)
 #include "../previews/launchpad/src/world_height.h"
 #else
 #include "../previews/level3/src/world_height.h"
@@ -47,7 +52,18 @@ int world_height(int x,int z,int *height){
 }
 #include "collision.h"
 #ifdef ZERA_LEVEL3_PREVIEW
-#ifdef ZERA_LAUNCH_PREVIEW
+#ifdef ZERA_CHECKPOINT_PREVIEW
+#include "../previews/checkpoint/src/world_wall_triangles.h"
+#elif defined(ZERA_LAUNCH_PREVIEW)
+#include "../previews/launchpad/src/world_wall_triangles.h"
+#else
+#include "../previews/level3/src/world_wall_triangles.h"
+#endif
+#endif
+#ifdef ZERA_LEVEL3_PREVIEW
+#ifdef ZERA_CHECKPOINT_PREVIEW
+#include "../previews/checkpoint/src/world_walls.h"
+#elif defined(ZERA_LAUNCH_PREVIEW)
 #include "../previews/launchpad/src/world_walls.h"
 #else
 #include "../previews/level3/src/world_walls.h"
@@ -62,7 +78,13 @@ void world_move(int oldx,int oldz,int *x,int *z,int feet){
  for(int s=0;s<steps;s++){
   int ox=px,oz=pz;
   px+=dx*(s+1)/steps-dx*s/steps;pz+=dz*(s+1)/steps-dz*s/steps;
-  for(int pass=0;pass<2;pass++)for(int i=0;i<WORLD_WALL_COUNT;i++)collision_push(&px,&pz,ox,oz,feet,120,24,world_walls[i]);
+  for(int pass=0;pass<2;pass++){
+#ifdef ZERA_LEVEL3_PREVIEW
+   for(int i=0;i<WORLD_WALL_TRIANGLE_COUNT;i++)collision_triangle_push(&px,&pz,ox,oz,feet,PLAYER_HEIGHT,24,world_wall_triangles[i]);
+#else
+   for(int i=0;i<WORLD_WALL_COUNT;i++)collision_push(&px,&pz,ox,oz,feet,PLAYER_HEIGHT,24,world_walls[i]);
+#endif
+  }
  }
  *x=px;*z=pz;
 }
@@ -82,5 +104,13 @@ int world_floor(int x,int z,int ceiling,int *height){
  return surface_height(world_floors,WORLD_FLOOR_COUNT,x,z,ceiling,height);
 #else
  (void)ceiling;return world_height(x,z,height);
+#endif
+}
+int world_ceiling(int x,int z,int minimum,int *height){
+#ifdef ZERA_LEVEL3_PREVIEW
+ if(x<WORLD_ORIGIN || z<WORLD_ORIGIN || x>=-WORLD_ORIGIN || z>=-WORLD_ORIGIN)return 0;
+ return surface_ceiling(world_floors,WORLD_FLOOR_COUNT,x,z,minimum,height);
+#else
+ (void)x;(void)z;(void)minimum;(void)height;return 0;
 #endif
 }

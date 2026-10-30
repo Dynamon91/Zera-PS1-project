@@ -1,0 +1,10 @@
+<iso_project><track type="data">
+<identifiers system="PLAYSTATION" application="PLAYSTATION" volume="ZERA_CAMPAIGN" volume_set="ZERA_CAMPAIGN" publisher="HOMEBREW" data_preparer="PSN00BSDK"/>
+<directory_tree>
+<file name="SYSTEM.CNF" type="data" source="${PROJECT_SOURCE_DIR}/system.cnf"/>
+<file name="ZERA.EXE" type="data" source="zera_campaign.exe"/>
+<file name="WORLD.DAT" type="data" source="${PROJECT_SOURCE_DIR}/previews/atlas/assets/WORLD.DAT"/>
+<file name="COSMIC.DAT" type="data" source="${PROJECT_SOURCE_DIR}/previews/cosmic/assets/COLLIDE.DAT"/>
+<file name="FRONT.DAT" type="data" source="${PROJECT_SOURCE_DIR}/previews/frontend/assets/FRONT.DAT"/>
+<dummy sectors="1024"/>
+</directory_tree></track></iso_project>

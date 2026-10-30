@@ -40,13 +40,16 @@ result={'source_commit':os.environ['GITHUB_SHA'],'bin_sha256':capture['bin_sha25
         'floor_support':'original uncapped collider triangles selected by player height','overhead_surface_heights':sorted(set(v for v in all_heights if v>height)),'render_triangles':report['render_triangles'],'source_patch_triangles':report['source_patch_triangles_before_render_partition'],
         'validation':'Separate level3 bounded terrain preview; input-only HLE smoke test; no original progression implemented'}
 (out/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
+bounds=report.get('source_bounds_units',[-report['source_radius_units'],report['source_radius_units']]*2)
+footprint=f"{bounds[1]-bounds[0]:g}×{bounds[3]-bounds[2]:g}"
 (root/'docs/LEVEL3.md').write_text(f'''# Original level3 terrain preview
 
 A second PS1 disc now opens a bounded patch around the original level3 named
 start spawn at (44, 22.82, 111) in Unity coordinates. It uses original static
 terrain and vertex colors/main texture, with {result['source_patch_triangles']} globally clipped source triangles
-and {result['render_triangles']} cell-partitioned render triangles. The extraction square is 32×32
+and {result['render_triangles']} cell-partitioned render triangles. The extraction region is {footprint}
 source units; this is an early terrain preview, not a complete level.
+The extended route beyond the previous patch is documented in [Dreary Valley corridor](DREARY_CORRIDOR.md).
 
 | Existing WIP09 level2 start | New level3 start |
 | --- | --- |
@@ -70,21 +73,29 @@ existing CMake preset; it now produces both disc images.
 
 The preview title identifies level3, and its pause menu omits the six-token
 trial because that new test layout belongs to the level2 patch. The main
-character, animation, controls and audio are shared adaptations. Original relics,
-essences, checkpoints, lava hazards, enemies, level flow and saving are not active.
+character, animation, controls and audio are shared adaptations. Original relic
+6606 and 6898 now have session collection ([evidence](TWO_CORRIDOR_RELICS.md)). Other original
+relics, essences, lava hazards, enemies, complete level flow and
+saving remain inactive in this disc.
+Checkpoint 6752 now connects to the lower relic route with provisional proximity
+activation ([evidence](CONNECTED_CHECKPOINT.md)); original Kiwi interaction is absent.
 Floor support now uses original uncapped collider triangles and selects the
 highest support below the player's step/landing ceiling. The legacy diagnostic
 heightfield remains single-valued; it no longer determines level3 player support.
-This supports stacked surfaces, but overhead capsule/ceiling collision is still
-absent and steep-wall proxies remain conservative.
+This supports stacked surfaces. Current source also stops upward head motion
+against projected overhead collider triangles; see [validation and limits](CEILINGS.md).
+Full capsule collision is still absent and steep-wall proxies remain conservative.
 Only the source area's static environment root is converted; lava is omitted.
+Current level3 walls now come from the original enabled, non-trigger static
+MeshColliders, including `Walls.*`, instead of the render mesh. See
+[wall provenance and tests](WALL_COLLIDERS.md). Vertical proxies remain an approximation.
 
 ## Static batch recovery
 
 The source uses Unity scene-space static batches. Conversion selects only each
 renderer’s declared `firstSubMesh`/`subMeshCount`, applies no individual-object
 transform to scene-space vertices, and maps material slots relative to that
-range. Non-scene batch roots are rejected. Two walkable render bounds are checked
+range. Non-scene batch roots are rejected. All converted walkable render bounds are checked
 against separately stored collider-local meshes transformed by their original
 hierarchy; maximum differences are below 0.041 source units. This cross-check
 supports the batch transform/submesh interpretation, not full Unity physics.
@@ -94,7 +105,7 @@ supports the batch transform/submesh interpretation, not full Unity physics.
 [Native verification](screenshots/level3/verification.json).
 
 ```sh
-python3 tools/convert_world.py "/path/to/Zera Myths Awaken_Data" --scene level3 --radius 16 --output-root previews/level3
+python3 tools/convert_world.py "/path/to/Zera Myths Awaken_Data" --scene level3 --radius 96 --bounds -24 24 -96 16 --output-root previews/level3
 python3 tools/check_level3_batch_source.py "/path/to/Zera Myths Awaken_Data"
 ```
 

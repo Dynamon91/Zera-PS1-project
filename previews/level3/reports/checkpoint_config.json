@@ -1,0 +1,33 @@
+{
+  "component_path_id": 6752,
+  "scene": "level3",
+  "spawn": [
+    1356,
+    -115,
+    -7101
+  ],
+  "trigger": [
+    1356,
+    -113,
+    -7101
+  ],
+  "original_camera_position": [
+    1659,
+    73,
+    -6870
+  ],
+  "camera_yaw": 1447,
+  "test_entry": [
+    0,
+    0,
+    0
+  ],
+  "source_recovery_sha256": "2369c297b39e69ea6591b2660c79e0596e67ac36156139769f769436335ec2df",
+  "world_source_sha256": "262b0567f2bf69d487a1e9d4fba701d12123f5cb870d358cde6e46acacc5c074",
+  "adaptations": [
+    "Retains original converted level start; continuous route checked separately",
+    "Grounded proximity radius 160 and vertical tolerance 80 replace the unported Kiwi interaction",
+    "Original camera horizontal direction adapted to existing orbit camera; distance/pitch remain provisional",
+    "Session-only checkpoint, no memory-card save"
+  ]
+}

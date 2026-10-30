@@ -1,0 +1,92 @@
+{
+  "frames": 24000,
+  "audio": false,
+  "gif": true,
+  "map_file": "zera_game.map",
+  "sample_interval": 5,
+  "corridor_relic_route": true,
+  "corridor_camera_yaw": 0,
+  "corridor_route_end": 20000,
+  "corridor_target_mask": 3,
+  "corridor_to_checkpoint": true,
+  "capture_events": [
+    {
+      "name": "first_relic",
+      "relic_mask": 1,
+      "delay_frames": 24
+    },
+    {
+      "name": "two_relics",
+      "relic_mask": 3,
+      "delay_frames": 24
+    },
+    {
+      "name": "checkpoint_active",
+      "relic_mask": 3,
+      "checkpoint_id": 6752,
+      "delay_frames": 36
+    },
+    {
+      "name": "checkpoint_return",
+      "min_frame": 21600,
+      "relic_mask": 3,
+      "checkpoint_id": 6752,
+      "delay_frames": 24
+    },
+    {
+      "name": "new_game",
+      "min_frame": 23300,
+      "relic_mask": 0,
+      "checkpoint_id": 0,
+      "delay_frames": 24
+    }
+  ],
+  "shots": [
+    900,
+    20999,
+    21999,
+    23999
+  ],
+  "actions": [
+    {
+      "start": 21000,
+      "end": 21010,
+      "buttons": [
+        2
+      ]
+    },
+    {
+      "start": 22000,
+      "end": 22010,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 22040,
+      "end": 22050,
+      "buttons": [
+        4
+      ]
+    },
+    {
+      "start": 22080,
+      "end": 22090,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 22500,
+      "end": 22510,
+      "buttons": [
+        0
+      ]
+    }
+  ],
+  "gif_start_frame": 4300,
+  "gif_end_frame": 5000,
+  "gif_sample_step": 6,
+  "frontend_auto_start": true,
+  "frontend_auto_start_end": 1000
+}

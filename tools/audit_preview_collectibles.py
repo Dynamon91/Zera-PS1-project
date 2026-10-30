@@ -28,11 +28,12 @@ def build():
         world=json.loads(path.read_text());r=world['report']
         scene=next(s for s in recovery['scenes'] if s['scene']==r['scene'])
         sx,sy,sz=r['spawn'];radius=r['source_radius_units'];scale=r['world_scale'];ground=r['ground_height']
+        bounds=r.get('source_bounds_units',[-radius,radius,-radius,radius])
         entries=[]
         for e in scene['entries']:
             if e['kind'] not in ('Relic','Essence'):continue
             x,y,z=e['source_world_position']
-            if abs(x-sx)>radius or abs(z-sz)>radius:continue
+            if not bounds[0]<=x-sx<=bounds[1] or not bounds[2]<=z-sz<=bounds[3]:continue
             p=[round(-(x-sx)*scale),round((y-ground)*scale),round((z-sz)*scale)]
             layers=floor_layers(world['floor_triangles'],p[0],p[2])
             below=[h for h in layers if h<=p[1]]
@@ -59,7 +60,7 @@ if __name__=='__main__':
     launch=next(r for r in result['previews'] if r['preview']=='launchpad')
     assert [(e['component_path_id'],e['value']) for e in launch['entries']]==[(6594,8),(6596,8),(7178,4)]
     assert [e['item_height_above_floor'] for e in launch['entries']]==[32,32,32]
-    assert not next(r for r in result['previews'] if r['preview']=='level3')['entries']
+    # The expanded corridor contains placements; this audit does not activate them.
     header=(ROOT/'src/relics.h').read_text()
     positions=re.search(r'relic_positions\[RELIC_COUNT\]\[3\]=\{(.*?)\};',header,re.S).group(1)
     runtime=[list(map(int,row.split(','))) for row in re.findall(r'\{([^{}]+)\}',positions)]

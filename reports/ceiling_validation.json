@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "source_files_sha256": {
+    "src/player.c": "86f247d458222a9fd9cbd1c6818f38fffb70f72f4e8b3a7e8492ca91725ac3a7",
+    "src/player.h": "d5b15b933c752c0d0c87d537c9d635ac383c2b0c3c1efae1026c0fa6a7e514f8",
+    "src/world.c": "1cd9d39154ed4d1b17390293bac9f1da6a9b1f00d73c7f055514bf891dc9b36c",
+    "src/world.h": "d634a861ed8616192a5632c2f350636213830e0f3281bac5255aba0b5cfae311",
+    "src/surface.c": "90af968a757e513dbe4134d1d92b5b9ae08b0b9b8655806c9af203d4527b6eec",
+    "src/surface.h": "d277778344c42a18c27bba9589c85d1dfb00ea61ffe7700553c42c4c16a6fa5d",
+    "tools/test_player.c": "45d0059d6fd7ff881e706fa09a91b1d1fff049fe80ed496b4ff98b5010ca6f02",
+    "tools/test_surface.c": "4886dda1a389c307ef2db01dc34a39bb2f6aa9af58385cb6bb72b7aeaa1bda1c",
+    "tools/test_level3.c": "9afb013897bee56cd173914838008e6adfa28d00d014fe0ab9addd0652aa5c3d",
+    "tools/scenarios/level3_jump.json": "533466bb58f80c8027a91e9c5040f9d89a7d9f639fc1382bb7cee89480d69b90"
+  },
+  "host_tests": {
+    "suite": "tools/run_host_checks.sh",
+    "address_sanitizer": true,
+    "undefined_behavior_sanitizer": true,
+    "status": "passed",
+    "superseded_fixture": "Player at X550,Z0 lies inside original sloped wall; placement test removed. Original ceiling query and synthetic player ceiling tests retained."
+  },
+  "native_jump": {
+    "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+    "frames": 1250,
+    "peak_feet_y": 153,
+    "final_sample": {
+      "x_fp": 128000,
+      "y_fp": 0,
+      "z_fp": 0,
+      "vy_fp": 0,
+      "dash_ticks": 0,
+      "state": 0,
+      "frame": 1249,
+      "scenario_movement_stopped": true,
+      "camera_distance": 850,
+      "menu_screen": 1,
+      "menu_selection": 0,
+      "menu_return": 0,
+      "diagnostics": 0,
+      "animation_clip": 0,
+      "animation_tick": 24,
+      "blend_tick": 6,
+      "audio_music_ready": 1,
+      "audio_underruns": 0,
+      "audio_cd_errors": 0,
+      "audio_refills": 32,
+      "audio_wraps": 0,
+      "audio_muted": 0,
+      "camera_height": 7,
+      "player_respawn_events": 0,
+      "simulation_ticks": 208,
+      "debug_input_x": 0,
+      "debug_input_z": 0,
+      "debug_movement_yaw": -512,
+      "debug_actual_moving": 0,
+      "facing": 1024,
+      "mascot_visible": 1,
+      "yaw": -512,
+      "sfx_events": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "relic_mask": 0,
+      "relic_count": 0,
+      "relic_value": 0,
+      "checkpoint_id": 0,
+      "checkpoint_x": 0,
+      "checkpoint_y": 0,
+      "checkpoint_z": 0,
+      "checkpoint_yaw": 0,
+      "checkpoint_activations": 0,
+      "trial_mask": 0,
+      "trial_active": 0,
+      "trial_count": 0,
+      "trial_complete": 0,
+      "trial_ticks": 0,
+      "trial_best_ticks": 0,
+      "trial_best_valid": 0
+    },
+    "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+    "ceiling_hit_proven": false
+  },
+  "native_relic_regression": {
+    "bin_sha256": "1de5c478f47dc5dff1c79677ae62c785bd7e81d9aad9c752d4febd9f3a14a218",
+    "frames": 5700,
+    "milestones": [
+      {
+        "frame": 1900,
+        "relic_count": 1,
+        "relic_value": 8,
+        "menu_screen": 1,
+        "audio_cd_errors": 0
+      },
+      {
+        "frame": 3300,
+        "relic_count": 2,
+        "relic_value": 16,
+        "menu_screen": 1,
+        "audio_cd_errors": 0
+      },
+      {
+        "frame": 4700,
+        "relic_count": 3,
+        "relic_value": 20,
+        "menu_screen": 1,
+        "audio_cd_errors": 0
+      },
+      {
+        "frame": 5000,
+        "relic_count": 3,
+        "relic_value": 20,
+        "menu_screen": 1,
+        "audio_cd_errors": 0
+      },
+      {
+        "frame": 5150,
+        "relic_count": 0,
+        "relic_value": 0,
+        "menu_screen": 1,
+        "audio_cd_errors": 0
+      },
+      {
+        "frame": 5420,
+        "relic_count": 0,
+        "relic_value": 0,
+        "menu_screen": 0,
+        "audio_cd_errors": 0
+      },
+      {
+        "frame": 5699,
+        "relic_count": 0,
+        "relic_value": 0,
+        "menu_screen": 1,
+        "audio_cd_errors": 0
+      }
+    ]
+  },
+  "limitations": [
+    "Native tests use controller input and read-only state; no head impact reached in emulation",
+    "Host original-collider test places the player at a test position, not a verified traversal route",
+    "HLE only; no hardware or retail BIOS validation",
+    "Head clearance is a provisional vertical point sweep, not a full capsule"
+  ]
+}

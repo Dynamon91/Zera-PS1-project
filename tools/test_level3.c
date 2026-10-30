@@ -24,7 +24,23 @@ int main(void){
  Player under;player_init(&under);
  for(int i=0;i<50;i++)assert(!player_tick(&under,(Input){.x=1,.camera_c=4096}));
  assert(under.x==500*FP && under.z==0 && under.y==0 && under.state==GROUND);
+ /* Original wall slopes from X=574 at Y=0 to X=547 at Y=265.
+    The body-height slice reaches X=562, rather than the old full-height 547. */
+ Player wall;player_init(&wall);
+ for(int i=0;i<150;i++)assert(!player_tick(&wall,(Input){.x=1,.camera_c=4096}));
+ assert(wall.x/FP>=537 && wall.x/FP<=538 && wall.z==0 && wall.y==0 && wall.state==GROUND);
+ /* Jump under an actual recovered overhead collider and land below it. */
+ int roof;
+ assert(world_ceiling(550,0,PLAYER_HEIGHT,&roof) && roof==261);
+ assert(!world_ceiling(99999,0,0,&roof));
+ /* X=550 is inside the actual sloped wall. It is a query fixture, not a
+    valid starting point for the player head-sweep test (covered separately). */
  Menu m;menu_init(&m);assert(menu_update(&m,UI_ACCEPT)==MENU_RESET);
+ /* Walk the recovered corridor beyond the former -1280 boundary. */
+ Player corridor;player_init(&corridor);
+ for(int i=0;i<200;i++)assert(!player_tick(&corridor,(Input){.z=-1,.camera_c=4096}));
+ assert(corridor.x==0 && corridor.z==-2000*FP && corridor.state==GROUND);
+ assert(world_floor(0,-2000,corridor.y/FP+48,&height) && corridor.y==height*FP);
  menu_update(&m,UI_START);menu_update(&m,UI_UP);
  assert(m.screen==MENU_PAUSE && m.selection==5);
  assert(menu_update(&m,UI_ACCEPT)==0 && m.muted);

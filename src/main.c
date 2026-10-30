@@ -51,7 +51,23 @@ static Launch launch;
 #include "relic_models.h"
 static Relics relics;
 #endif
-#ifdef ZERA_LAUNCH_PREVIEW
+#ifdef ZERA_CORRIDOR_RELICS
+#include "relics.h"
+#include "../previews/level3/src/relic_models.h"
+static Relics relics;
+#include "checkpoint.h"
+#include "../previews/level3/src/checkpoint_config.h"
+static Checkpoint checkpoint;
+#endif
+#ifdef ZERA_CHECKPOINT_PREVIEW
+#include "checkpoint.h"
+#include "../previews/checkpoint/src/checkpoint_config.h"
+static Checkpoint checkpoint;
+#include "../previews/checkpoint/src/world_mesh.h"
+#define PREVIEW_TITLE "ZERA\nCHECKPOINT PROTOTYPE"
+#define EXPLORE_TEXT "EXPLORE CHECKPOINT AREA"
+#define PAUSE_ITEMS 6
+#elif defined(ZERA_LAUNCH_PREVIEW)
 #include "../previews/launchpad/src/world_mesh.h"
 #define PREVIEW_TITLE "ZERA\nLAUNCHPAD PROTOTYPE"
 #define EXPLORE_TEXT "EXPLORE TRAMPOLINE AREA"
@@ -70,7 +86,9 @@ static Relics relics;
 #include "world.h"
 #include "camera.h"
 #include "clip.h"
-#ifdef ZERA_LAUNCH_PREVIEW
+#ifdef ZERA_CHECKPOINT_PREVIEW
+#include "../previews/checkpoint/src/world_texture.h"
+#elif defined(ZERA_LAUNCH_PREVIEW)
 #include "../previews/launchpad/src/world_texture.h"
 #elif defined(ZERA_LEVEL3_PREVIEW)
 #include "../previews/level3/src/world_texture.h"
@@ -184,6 +202,8 @@ static uint8_t pads[2][34];
 static Player player;
 static int yaw=512;
 static SVECTOR pose[ANIM_VERTICES];
+static CharacterDrawFace mascot_faces[ZERA_FACE_COUNT];
+static short mascot_heads[OT_LENGTH];
 static Animator animator;
 static Menu menu;
 static Trial trial;
@@ -197,6 +217,17 @@ static void reset_view(void){
 launch_cancel(&launch);
 #endif
 animator_init(&animator);camera_height=0;camera_distance=CAMERA_DISTANCE;camera_orbit_cooldown=0;facing=0;yaw=512;mascot_visible=1;}
+static void reset_player(void){
+ player_init(&player);reset_view();
+#if defined(ZERA_CHECKPOINT_PREVIEW) || defined(ZERA_CORRIDOR_RELICS)
+ if(checkpoint_respawn(&checkpoint,&player)){yaw=checkpoint.yaw;camera_height=player.y/FP;camera_orbit_cooldown=30;}
+ else{player.x=CHECKPOINT_ENTRY_X*FP;player.y=CHECKPOINT_ENTRY_Y*FP;player.z=CHECKPOINT_ENTRY_Z*FP;camera_height=player.y/FP;
+#ifdef ZERA_CHECKPOINT_PREVIEW
+ yaw=0;
+#endif
+ }
+#endif
+}
 static int camera_view(int angle,int height,MATRIX *m){
  SVECTOR rot={280,angle,0,0};RotMatrix(&rot,m);
  int x=(-100*m->m[1][0]-CAMERA_DISTANCE*m->m[2][0])/4096;
@@ -278,7 +309,7 @@ int main(void){
  LoadImage(&mascotrect,mascot_texture);LoadImage(&mascotpal,mascot_clut);DrawSync(0);
  FntLoad(960,0);setup_context(&ctx,320,240,24,32,56);
  InitPAD(pads[0],34,pads[1],34);StartPAD();ChangeClearPAD(0);
- player_init(&player);animator_init(&animator);menu_init(&menu);trial_clear(&trial);audio_init();uint16_t old=0;
+ reset_player();animator_init(&animator);menu_init(&menu);trial_clear(&trial);audio_init();uint16_t old=0;
  for(;;){
   PADTYPE *pad=(PADTYPE*)pads[0];uint16_t held=0;
   if(pad->stat==0 && (pad->type==PAD_ID_DIGITAL || pad->type==PAD_ID_ANALOG || pad->type==PAD_ID_ANALOG_STICK))held=(uint16_t)~pad->btn;
@@ -294,10 +325,13 @@ int main(void){
    relics_clear(&relics);action|=MENU_RESET;audio_play(SFX_UI_ACCEPT);
   }
 #endif
-  if(action&MENU_RESET){player_init(&player);reset_view();}
+#if defined(ZERA_CHECKPOINT_PREVIEW) || defined(ZERA_CORRIDOR_RELICS)
+  if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))checkpoint_clear(&checkpoint);
+#endif
+  if(action&MENU_RESET)reset_player();
   if(action&MENU_TRIAL)trial_start(&trial);
   else if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))trial_clear(&trial);
-#ifdef ZERA_LAUNCH_PREVIEW
+#if defined(ZERA_LAUNCH_PREVIEW) || defined(ZERA_CORRIDOR_RELICS)
   if((action&MENU_RESET) && (before==MENU_TITLE || menu.screen==MENU_TITLE))relics_clear(&relics);
 #endif
   int paused=menu.screen!=MENU_PLAY || before!=MENU_PLAY || (action&MENU_RESET);
@@ -322,7 +356,7 @@ int main(void){
     }
    }else
 #endif
-   if(player_tick(&player,in)){reset_view();player_respawn_events++;respawned=1;}
+   if(player_tick(&player,in)){reset_player();player_respawn_events++;respawned=1;}
    if(held&PAD_L2)yaw-=16;if(held&PAD_R2)yaw+=16;if(pressed&PAD_L1)yaw=0;
   }
   if(!paused){
@@ -331,10 +365,19 @@ int main(void){
    if(!olddash && player.dash_ticks)audio_play(SFX_DASH);
    if(oldstate!=GLIDE && player.state==GLIDE)audio_play(SFX_FLAP);
   }
-#ifdef ZERA_LAUNCH_PREVIEW
+#if defined(ZERA_LAUNCH_PREVIEW) || defined(ZERA_CORRIDOR_RELICS)
   if(relics_update(&relics,&player,!paused))audio_play(SFX_PICKUP);
 #endif
   if(trial_update(&trial,&player,!paused))audio_play(SFX_PICKUP);
+#if defined(ZERA_CHECKPOINT_PREVIEW) || defined(ZERA_CORRIDOR_RELICS)
+  if(checkpoint_update(&checkpoint,&checkpoint_config,&player,!paused)){
+#ifdef ZERA_CORRIDOR_RELICS
+   audio_play(SFX_UI_ACCEPT);
+#else
+   audio_play(SFX_PICKUP);
+#endif
+  }
+#endif
   audio_update(menu.screen!=MENU_PLAY);
   int moved=!paused && !respawned && (player.x!=oldx || player.z!=oldz);
   debug_actual_moving=moved;
@@ -411,9 +454,13 @@ int main(void){
     }
    }
   }
-#ifdef ZERA_LAUNCH_PREVIEW
+#if defined(ZERA_LAUNCH_PREVIEW) || defined(ZERA_CORRIDOR_RELICS)
   for(int id=0;id<RELIC_COUNT;id++){
    if(relics.mask&(1<<id))continue;
+#ifdef ZERA_CORRIDOR_RELICS
+   int dx=relic_positions[id][0]-player.x/FP,dz=relic_positions[id][2]-player.z/FP;
+   if(dx< -1280 || dx>1280 || dz< -1280 || dz>1280)continue;
+#endif
    const unsigned short *span=relic_model_spans[id];
    SVECTOR points[RELIC_MODEL_MAX_VERTICES];
    for(int k=0;k<span[1];k++){
@@ -427,6 +474,8 @@ int main(void){
   }
 #endif
   int x=player.x/FP,y=80-player.y/FP,z=player.z/FP;
+  int mascot_count=0;
+  for(int bucket=0;bucket<OT_LENGTH;bucket++)mascot_heads[bucket]=-1;
   if(mascot_visible)for(int order=0;order<ZERA_FACE_COUNT;order++){
    int i=mascot_draw_order[order];
    const unsigned short *f=zera_faces[i];
@@ -434,6 +483,21 @@ int main(void){
    a.vx+=x;b.vx+=x;c.vx+=x;a.vy+=y;b.vy+=y;c.vy+=y;a.vz+=z;b.vz+=z;c.vz+=z;
    ClipVertex va={a.vx,a.vy,a.vz,0,0},vb={b.vx,b.vy,b.vz,0,0},vc={c.vx,c.vy,c.vz,0,0};
    short xy[6];int depth=project(&va,&vb,&vc,xy);if(!depth)continue;
+   /* The recovered OBJ has clockwise outward faces after mirrored-X export.
+      Interior faces must not overwrite the skin in the painter renderer. */
+   if(!character_front_face(xy))continue;
+   int z0,z1,z2;gte_stsz3(&z0,&z1,&z2);
+   CharacterDrawFace *face=&mascot_faces[mascot_count];
+   face->face=i;
+   for(int k=0;k<6;k++)face->xy[k]=xy[k];
+   /* Retain eye/spot priority only at equal exact depth. Static material
+      order alone lets rear skin overwrite front skin in the same OT bucket. */
+   face->key=(z0+z1+z2)*4+(2-mascot_material[i]);
+   character_link_face(mascot_faces,&mascot_heads[depth],mascot_count++);
+  }
+  for(int depth=1;depth<OT_LENGTH;depth++)for(int index=mascot_heads[depth];index>=0;index=mascot_faces[index].next){
+   const CharacterDrawFace *face=&mascot_faces[index];
+   int i=face->face;const short *xy=face->xy;
    const unsigned char *col=mascot_corner_colors[i];int material=mascot_material[i];
    if(material){
     POLY_GT3 *p=new_primitive(&ctx,depth,sizeof(*p));if(!p)continue;
@@ -450,6 +514,10 @@ int main(void){
    }
   }
   if(menu.screen==MENU_PLAY){
+#ifdef ZERA_CHECKPOINT_PREVIEW
+   draw_text(&ctx,8,168,0,checkpoint.active?"CHECKPOINT ACTIVE\nSELECT: RETURN TO CHECKPOINT":"APPROACH CHECKPOINT\nMOVE RIGHT FROM ENTRY");
+   draw_text(&ctx,8,200,0,"PROTOTYPE PROXIMITY TRIGGER");
+#endif
    if(menu.debug){
     char text[256];snprintf(text,sizeof(text),"ZERA PS1 WIP09\n%s X:%d Y:%d Z:%d\nCLIP:%d BLEND:%d CAM:%d",names[player.state],x,player.y/FP,z,animator.clip,animator.blend_tick,camera_distance);
     draw_text(&ctx,8,8,0,text);
@@ -457,6 +525,11 @@ int main(void){
 #ifdef ZERA_LAUNCH_PREVIEW
    char relic_status[96];snprintf(relic_status,sizeof(relic_status),"ORIGINAL RELICS %d/3  VALUE %d/20",relics.count,relics.value);draw_text(&ctx,8,168,0,relic_status);
    draw_text(&ctx,8,184,0,relics.count==RELIC_COUNT?"AREA RELICS COMPLETE\nSQUARE: RESTART AREA":launch.active?"ORIGINAL LAUNCH ARC\nIN FLIGHT":launch_can_start(&launch,&player,&launch_config)?"TRIANGLE: LAUNCH\nPROTOTYPE ACTIVATION":launch.completed?"LANDING REACHED\nSELECT: RETURN TO PAD":"RETURN NEAR PAD TO LAUNCH");
+#endif
+#ifdef ZERA_CORRIDOR_RELICS
+   char corridor_status[96];snprintf(corridor_status,sizeof(corridor_status),"CORRIDOR RELICS %d/%d VALUE %d/%d",relics.count,RELIC_COUNT,relics.value,RELIC_TOTAL_VALUE);
+   draw_text(&ctx,8,168,0,corridor_status);
+   draw_text(&ctx,8,184,0,checkpoint.active?"CHECKPOINT ACTIVE\nSELECT: RETURN KEEPS RELICS":relics.count==RELIC_COUNT?"ENABLED RELICS COLLECTED\nCHECKPOINT AHEAD":relics.count?"FIRST RELIC COLLECTED\nLOWER RELIC AHEAD":"ORIGINAL RELIC AHEAD\nJUMP AND GLIDE ACROSS GAP");
 #endif
    if(trial.active){
     char status[192],best[40];int tenths=trial.ticks/3;

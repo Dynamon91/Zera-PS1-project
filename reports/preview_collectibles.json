@@ -11,13 +11,83 @@
     {
       "preview": "level3",
       "scene": "level3",
-      "world_source_sha256": "1289963f91842d7d240b51b43300fdbc94a665dd858723abc38a92549de000d4",
-      "entries": []
+      "world_source_sha256": "262b0567f2bf69d487a1e9d4fba701d12123f5cb870d358cde6e46acacc5c074",
+      "entries": [
+        {
+          "kind": "Relic",
+          "component_path_id": 6606,
+          "name": "_Relic_1",
+          "value": 1,
+          "source_world_position": [
+            44.606346130371094,
+            20.997663497924805,
+            63.578399658203125
+          ],
+          "ps1_position": [
+            -49,
+            -148,
+            -3794
+          ],
+          "source_component_enabled": true,
+          "source_hierarchy_active": true,
+          "floor_layers_at_quantized_xz": [
+            -204
+          ],
+          "highest_floor_below_item": -204,
+          "item_height_above_floor": 56
+        },
+        {
+          "kind": "Relic",
+          "component_path_id": 6898,
+          "name": "_Relic_16 (3)",
+          "value": 16,
+          "source_world_position": [
+            56.25260925292969,
+            16.970075607299805,
+            30.088287353515625
+          ],
+          "ps1_position": [
+            -980,
+            -471,
+            -6473
+          ],
+          "source_component_enabled": true,
+          "source_hierarchy_active": true,
+          "floor_layers_at_quantized_xz": [
+            -574
+          ],
+          "highest_floor_below_item": -574,
+          "item_height_above_floor": 103
+        },
+        {
+          "kind": "Relic",
+          "component_path_id": 7174,
+          "name": "_Relic_4 (2)",
+          "value": 4,
+          "source_world_position": [
+            64.80642700195312,
+            52.92359733581543,
+            81.44036865234375
+          ],
+          "ps1_position": [
+            -1665,
+            2406,
+            -2365
+          ],
+          "source_component_enabled": true,
+          "source_hierarchy_active": true,
+          "floor_layers_at_quantized_xz": [
+            2375
+          ],
+          "highest_floor_below_item": 2375,
+          "item_height_above_floor": 31
+        }
+      ]
     },
     {
       "preview": "launchpad",
       "scene": "level3",
-      "world_source_sha256": "4176a0a7b5126f12affc630aae42e038f1c92dac08246b253da31e4f6c85c47c",
+      "world_source_sha256": "0c8c6aa7b23aad30b91c52dce9b1de57d6e581dd6bc6d09dd190b6a6e87a07ee",
       "entries": [
         {
           "kind": "Relic",

@@ -1,0 +1,13 @@
+{
+  "frames":2900,"audio":false,"gif":true,"sample_interval":10,
+  "gif_start_frame":1200,"gif_end_frame":1900,"gif_sample_step":6,
+  "shots":[650,1250,1850,2450,2899],
+  "actions":[{"start":300,"end":320,"buttons":[0]}],
+  "camera_targets":[
+    {"start":340,"end":700,"yaw":0},
+    {"start":700,"end":1300,"yaw":1024},
+    {"start":1300,"end":1900,"yaw":2048},
+    {"start":1900,"end":2500,"yaw":3072},
+    {"start":2500,"end":2900,"yaw":0}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "frames":7400,"gif":false,"audio":false,"map_file":"zera_level3.map",
+  "sample_interval":5,"corridor_relic_route":true,"corridor_camera_yaw":2048,
+  "corridor_route_end":6400,"corridor_target_mask":3,
+  "shots":[359,6500,6700,7200,7399],
+  "capture_events":[
+    {"name":"first_approach","max_z":-3450,"relic_mask":0},
+    {"name":"first_collected","relic_mask":1,"delay_frames":15},
+    {"name":"second_approach","max_z":-6200,"relic_mask":1},
+    {"name":"second_collected","relic_mask":3,"delay_frames":15}
+  ],
+  "actions":[
+    {"start":300,"end":320,"buttons":[0]},
+    {"start":340,"end":350,"buttons":[10]},
+    {"start":6600,"end":6610,"buttons":[2]},
+    {"start":7000,"end":7010,"buttons":[3]},
+    {"start":7040,"end":7050,"buttons":[5]},
+    {"start":7080,"end":7090,"buttons":[5]},
+    {"start":7120,"end":7130,"buttons":[5]},
+    {"start":7160,"end":7170,"buttons":[0]},
+    {"start":7240,"end":7250,"buttons":[0]}
+  ]
+}

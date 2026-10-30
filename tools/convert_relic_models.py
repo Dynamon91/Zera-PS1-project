@@ -1,4 +1,4 @@
-"""Recover the original body mesh/material for the three launch-area relics."""
+"""Recover original Relic body meshes/materials for selected scene components."""
 import argparse,hashlib,json
 from pathlib import Path
 import numpy as np
@@ -7,7 +7,7 @@ import UnityPy
 from UnityPy.helpers.MeshHelper import MeshHandler
 ROOT=Path(__file__).resolve().parents[1]
 
-def convert(data):
+def convert(data,components=None,output_root=ROOT):
     data=Path(data);env=UnityPy.load(str(data));scene=next(f for f in env.files.values() if getattr(f,'name','')=='level3')
     cache={}
     def matrix(t):
@@ -23,7 +23,7 @@ def convert(data):
         yield t
         for child in t.m_Children:yield from descendants(child.read())
     vertices=[];faces=[];colors=[];spans=[];records=[]
-    for component_id in [6594,6596,7178]:
+    for component_id in (components or [6594,6596,7178]):
         d=scene.objects[component_id].read(check_read=False);script=d.m_Script.read()
         assert (script.m_Namespace,script.m_ClassName)==('NewZera','Relic')
         root=transform(d.m_GameObject.read());origin=matrix(root)[:3,3]
@@ -56,17 +56,20 @@ def convert(data):
                         'source_vertices':len(v),'source_triangles':len(h.m_IndexBuffer)//3,'packed_vertices':len(unique),'render_triangles':len(faces)-firstf})
     def rows(items):return ''.join('{'+','.join(map(str,p))+'},\n' for p in items)
     header='/* Original Relic body meshes/material base colors; reflective shader omitted. */\n'
-    header+='#define RELIC_MODEL_COUNT 3\n#define RELIC_MODEL_MAX_VERTICES %d\n'%max(s[1] for s in spans)
+    header+='#define RELIC_MODEL_COUNT %d\n#define RELIC_MODEL_MAX_VERTICES %d\n'%(len(spans),max(s[1] for s in spans))
     header+='static const SVECTOR relic_model_vertices[]={\n'+''.join('{%d,%d,%d,0},\n'%p for p in vertices)+'};\n'
     header+='static const unsigned short relic_model_faces[][3]={\n'+rows(faces)+'};\n'
     header+='static const unsigned char relic_model_colors[][3]={\n'+rows(colors)+'};\n'
-    header+='static const unsigned short relic_model_spans[3][4]={\n'+rows(spans)+'};\n'
-    (ROOT/'src/relic_models.h').write_text(header)
+    header+='static const unsigned short relic_model_spans[%d][4]={\n'%len(spans)+rows(spans)+'};\n'
+    output_root=Path(output_root)
+    (output_root/'src').mkdir(parents=True,exist_ok=True);(output_root/'reports').mkdir(parents=True,exist_ok=True)
+    (output_root/'src/relic_models.h').write_text(header)
     report={'schema_version':1,'instances':records,'source_file_sha256':{name:hashlib.sha256((data/name).read_bytes()).hexdigest() for name in ['level3','resources.assets']},
             'conversion':'Original body world transform relative to original relic origin, scale80, mirrored X/Y for PS1 rendering; integer quantization',
             'limitations':['Static serialized body pose; original runtime rotation not ported','Original base material colors with provisional facet lighting','Reflective/specular shader, flare, shadow and particles omitted','Pickup locations and behavior unchanged']}
-    (ROOT/'reports/relic_models.json').write_text(json.dumps(report,indent=2)+'\n')
+    (output_root/'reports/relic_models.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'vertices':len(vertices),'triangles':len(faces),'instances':len(records)}))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('data');convert(p.parse_args().data)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('data');p.add_argument('--components',type=int,nargs='+');p.add_argument('--output-root',type=Path,default=ROOT)
+    a=p.parse_args();convert(a.data,a.components,a.output_root)

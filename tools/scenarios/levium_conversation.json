@@ -1,0 +1,79 @@
+{
+  "frames": 22000,
+  "map_file": "zera_campaign.map",
+  "sample_interval": 5,
+  "audio": false,
+  "gif": true,
+  "frontend_auto_start": true,
+  "frontend_auto_start_end": 1000,
+  "levium_route": true,
+  "levium_route_until": 18000,
+  "shots": [
+    900,
+    3500,
+    18000,
+    19400,
+    21999
+  ],
+  "capture_events": [
+    {
+      "name": "first_dialogue",
+      "dialogue_phase": 2,
+      "dialogue_page": 0,
+      "dialogue_completions": 0,
+      "delay_frames": 180
+    },
+    {
+      "name": "repeat_dialogue",
+      "dialogue_phase": 2,
+      "dialogue_page": 6,
+      "delay_frames": 90
+    },
+    {
+      "name": "conversation_complete",
+      "dialogue_completions": 2,
+      "dialogue_phase": 0,
+      "delay_frames": 30
+    }
+  ],
+  "actions": [
+    {
+      "start": 19000,
+      "end": 19008,
+      "buttons": [
+        2
+      ]
+    },
+    {
+      "start": 20000,
+      "end": 20008,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 20040,
+      "end": 20048,
+      "buttons": [
+        4
+      ]
+    },
+    {
+      "start": 20080,
+      "end": 20088,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 20500,
+      "end": 20508,
+      "buttons": [
+        0
+      ]
+    }
+  ],
+  "gif_start_frame": 4400,
+  "gif_end_frame": 5300,
+  "gif_sample_step": 6
+}

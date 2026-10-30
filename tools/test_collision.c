@@ -32,5 +32,27 @@ int main(void){
  assert(collision_ray(-200,80,-200,400,0,400,reversed)==1024);
  /* Entry rounds up rather than returning a point just before the wall. */
  assert(collision_ray(0,80,-201,0,0,3,wall)==1366);
+ /* A triangular wall rises along Z. Its old full-height rectangle blocks
+    below the actual face; clipping the face to the body leaves that path free. */
+ const short triangular[]={0,0,0,0,400,0,0,400,400};
+ const short reverse_triangle[]={0,400,400,0,400,0,0,0,0};
+ const short rectangle[]={0,0,0,400,0,400};
+ x=-5;z=300;assert(collision_push(&x,&z,-40,300,0,120,24,rectangle));
+ x=-5;z=300;assert(!collision_triangle_push(&x,&z,-40,300,0,120,24,triangular));assert(x==-5 && z==300);
+ x=-5;z=300;assert(!collision_triangle_push(&x,&z,-40,300,0,120,24,reverse_triangle));
+ x=-5;z=300;assert(collision_triangle_push(&x,&z,-40,300,250,120,24,triangular));assert(x<=-24);
+ x=5;z=300;assert(collision_triangle_push(&x,&z,40,300,250,120,24,reverse_triangle));assert(x>=24);
+ x=-5;z=300;assert(!collision_triangle_push(&x,&z,-40,300,500,120,24,triangular));
+ const short slope[]={0,0,0,100,400,0,0,0,400};
+ x=5;z=50;assert(collision_triangle_push(&x,&z,-40,50,0,120,24,slope));assert(x<0);
+ x=500;z=500;assert(!collision_triangle_push(&x,&z,490,500,0,120,24,slope));
+ const short original_slope[]={574,0,181,574,0,-190,547,265,-161};
+ const short old_slope_proxy[]={547,-161,547,185,0,265};
+ x=530;z=0;assert(collision_push(&x,&z,500,0,0,120,24,old_slope_proxy));
+ x=530;z=0;assert(!collision_triangle_push(&x,&z,500,0,0,120,24,original_slope));assert(x==530 && z==0);
+ x=545;z=0;assert(collision_triangle_push(&x,&z,500,0,0,120,24,original_slope));assert(x<=538 && x>=536);
+ /* Large short-coordinate edges must not overflow distance/root arithmetic. */
+ const short large_wall[]={-32768,-32768,32767,32767,0,400};
+ x=-5;z=5;assert(collision_push(&x,&z,-40,40,0,120,24,large_wall));assert(x< -16 && z>16);
  return 0;
 }

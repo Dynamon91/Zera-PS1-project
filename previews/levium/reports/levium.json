@@ -1,0 +1,3826 @@
+{
+  "component": 6279,
+  "renderer": 5551,
+  "mesh": {
+    "file": "sharedassets2.assets",
+    "path_id": 82,
+    "vertices": 1080,
+    "faces": 906,
+    "bones": 45,
+    "weight_sum_error": 1.2456439435482025e-07,
+    "independent_skin_error": 0.0,
+    "local_physics_bounds": [
+      [
+        -131,
+        -255,
+        -160
+      ],
+      [
+        182,
+        19,
+        181
+      ]
+    ]
+  },
+  "source_origin": [
+    -26.510000228881836,
+    21.858999252319336,
+    9.231999397277832
+  ],
+  "source_position": [
+    -90.2998046875,
+    17.360000610351562,
+    12.9183349609375
+  ],
+  "physics_position": [
+    5103,
+    -360,
+    295
+  ],
+  "trigger": {
+    "component": 5466,
+    "center": [
+      4910,
+      -300,
+      235
+    ],
+    "radius": 117,
+    "half_segment": 35,
+    "source_matrix": [
+      [
+        0.0,
+        0.294040285491178,
+        0.9557930270242956,
+        -87.88164835647399
+      ],
+      [
+        0.9999999999999996,
+        0.0,
+        0.0,
+        18.110000610351562
+      ],
+      [
+        0.0,
+        0.9557930270242956,
+        -0.294040285491178,
+        12.17441304705738
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "axis_endpoints": [
+      [
+        4920,
+        -300,
+        202
+      ],
+      [
+        4899,
+        -300,
+        269
+      ]
+    ]
+  },
+  "talk_point": {
+    "file": "level2",
+    "path_id": 537,
+    "type": "GameObject",
+    "name": "ZeraPosition (1)",
+    "position": [
+      -86.7060229150038,
+      16.738000631332397,
+      11.812743490294856
+    ],
+    "matrix": [
+      [
+        0.29404028549117806,
+        0.0,
+        -0.9557930270242958,
+        -86.7060229150038
+      ],
+      [
+        0.0,
+        0.9999999999999998,
+        0.0,
+        16.738000631332397
+      ],
+      [
+        0.9557930270242958,
+        0.0,
+        0.29404028549117806,
+        11.812743490294856
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "camera": {
+    "file": "level2",
+    "path_id": 12,
+    "type": "GameObject",
+    "name": "CameraPosition",
+    "position": [
+      -83.48529622692016,
+      19.44475555419922,
+      14.42919819508914
+    ],
+    "matrix": [
+      [
+        -0.3697012194764597,
+        -0.18281854087285354,
+        -0.9109875901628622,
+        -83.48529622692016
+      ],
+      [
+        -5.42103283850126e-06,
+        0.9804523554620601,
+        -0.19675664827270672,
+        19.44475555419922
+      ],
+      [
+        0.9291506919161339,
+        -0.0727362343128788,
+        -0.36247542251820464,
+        14.42919819508914
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "first": {
+    "name": "Levium",
+    "clips": [
+      [
+        2,
+        583
+      ],
+      [
+        2,
+        583
+      ],
+      [
+        2,
+        583
+      ],
+      [
+        2,
+        583
+      ],
+      [
+        2,
+        583
+      ],
+      [
+        2,
+        583
+      ]
+    ],
+    "positions": [
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        12
+      ]
+    ],
+    "sentences": [
+      "How curious... I was not aware we were to be expecting guests. The timing of this can't possibly be a coincidence however.",
+      "Gaia, the mother of all life, has recently been captured and locked away in Mystic Towers. She must have sent you to help.",
+      "I'm surprised she was able to conjour up a new Guardian. We thought she'd used up all of her Essence, but clearly that's not the case.",
+      "I suppose a welcome is in order. This is Cosmic Core, one of many links to the worlds across the stars, and it is home to us Wingrays, as well as... Dolus.",
+      "He's been conveniently absent since Gaia's disappearance. I suspect he might have something to do with it all...",
+      "Anyway, I'm not sure what you can do at this point, or what anyone can. I suppose all we can do is wait."
+    ]
+  },
+  "repeat": {
+    "name": "Levium",
+    "clips": [
+      [
+        2,
+        583
+      ]
+    ],
+    "positions": [
+      [
+        0,
+        12
+      ]
+    ],
+    "sentences": [
+      "Be careful out there."
+    ]
+  },
+  "voice_references": [
+    {
+      "file": "resources.assets",
+      "path_id": 583,
+      "type": "AudioClip",
+      "name": "Silence",
+      "length": 29.5384578704834
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 583,
+      "type": "AudioClip",
+      "name": "Silence",
+      "length": 29.5384578704834
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 583,
+      "type": "AudioClip",
+      "name": "Silence",
+      "length": 29.5384578704834
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 583,
+      "type": "AudioClip",
+      "name": "Silence",
+      "length": 29.5384578704834
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 583,
+      "type": "AudioClip",
+      "name": "Silence",
+      "length": 29.5384578704834
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 583,
+      "type": "AudioClip",
+      "name": "Silence",
+      "length": 29.5384578704834
+    },
+    {
+      "file": "resources.assets",
+      "path_id": 583,
+      "type": "AudioClip",
+      "name": "Silence",
+      "length": 29.5384578704834
+    }
+  ],
+  "completion_callbacks": [
+    {
+      "target": [
+        0,
+        6279
+      ],
+      "method": "NewDialogue",
+      "mode": 1,
+      "object_argument": [
+        0,
+        0
+      ],
+      "object_type": "UnityEngine.Object, UnityEngine",
+      "int_argument": 0,
+      "float_argument_bits": 0,
+      "string_argument": "",
+      "bool_argument": 0,
+      "state": 2
+    }
+  ],
+  "methods": [
+    {
+      "owner": "NewZera.DM",
+      "name": "StartDialogue",
+      "method_token": 100665002,
+      "body_sha256": "298d108cb7e4eeb97bc24b8ae3dc304eab8f755e4ee31e7e004dc8adb41df8b4",
+      "instructions": [
+        {
+          "offset": 12,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 13,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 14,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110123,
+            "symbol": "NewZera.DM::dialogueActive"
+          }
+        },
+        {
+          "offset": 19,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 20,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 21,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110122,
+            "symbol": "NewZera.DM::firstSentence"
+          }
+        },
+        {
+          "offset": 26,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 27,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110115,
+            "symbol": "NewZera.DM::cam"
+          }
+        },
+        {
+          "offset": 32,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420438,
+            "symbol": "UnityEngine.GameObject::GetComponent<0a01128588>"
+          }
+        },
+        {
+          "offset": 37,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 38,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772245,
+            "symbol": "UnityEngine.Behaviour::set_enabled"
+          }
+        },
+        {
+          "offset": 43,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 48,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420439,
+            "symbol": "UnityEngine.Component::GetComponent<0a01128560>"
+          }
+        },
+        {
+          "offset": 53,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 54,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772245,
+            "symbol": "UnityEngine.Behaviour::set_enabled"
+          }
+        },
+        {
+          "offset": 59,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 60,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110106,
+            "symbol": "NewZera.DM::scrollSound"
+          }
+        },
+        {
+          "offset": 65,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772234,
+            "symbol": "UnityEngine.AudioSource::Play"
+          }
+        },
+        {
+          "offset": 70,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 71,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 72,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110107,
+            "symbol": "NewZera.DM::music"
+          }
+        },
+        {
+          "offset": 77,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773233,
+            "symbol": "UnityEngine.AudioSource::get_volume"
+          }
+        },
+        {
+          "offset": 82,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110116,
+            "symbol": "NewZera.DM::volumeBackup"
+          }
+        },
+        {
+          "offset": 87,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 88,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110107,
+            "symbol": "NewZera.DM::music"
+          }
+        },
+        {
+          "offset": 93,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 94,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110107,
+            "symbol": "NewZera.DM::music"
+          }
+        },
+        {
+          "offset": 99,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773233,
+            "symbol": "UnityEngine.AudioSource::get_volume"
+          }
+        },
+        {
+          "offset": 104,
+          "opcode": "ldc.r4",
+          "operand": 3.0
+        },
+        {
+          "offset": 109,
+          "opcode": "div",
+          "operand": null
+        },
+        {
+          "offset": 110,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773234,
+            "symbol": "UnityEngine.AudioSource::set_volume"
+          }
+        },
+        {
+          "offset": 115,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 116,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110111,
+            "symbol": "NewZera.DM::DialogueWindow"
+          }
+        },
+        {
+          "offset": 121,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 122,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772217,
+            "symbol": "UnityEngine.GameObject::SetActive"
+          }
+        },
+        {
+          "offset": 127,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 128,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110112,
+            "symbol": "NewZera.DM::CinematicBars"
+          }
+        },
+        {
+          "offset": 133,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 134,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772217,
+            "symbol": "UnityEngine.GameObject::SetActive"
+          }
+        },
+        {
+          "offset": 139,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 140,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110109,
+            "symbol": "NewZera.DM::nameText"
+          }
+        },
+        {
+          "offset": 145,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 146,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67109114,
+            "symbol": "Dialogue::name"
+          }
+        },
+        {
+          "offset": 151,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772535,
+            "symbol": "UnityEngine.UI.Text::set_text"
+          }
+        },
+        {
+          "offset": 156,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 157,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110126,
+            "symbol": "NewZera.DM::sentences"
+          }
+        },
+        {
+          "offset": 162,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773235,
+            "symbol": "signature:151282fd010e::Clear"
+          }
+        },
+        {
+          "offset": 167,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 168,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110125,
+            "symbol": "NewZera.DM::positions"
+          }
+        },
+        {
+          "offset": 173,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773236,
+            "symbol": "signature:151282fd011231::Clear"
+          }
+        },
+        {
+          "offset": 178,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 179,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110127,
+            "symbol": "NewZera.DM::sentenceClips"
+          }
+        },
+        {
+          "offset": 184,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773237,
+            "symbol": "signature:151282fd01128139::Clear"
+          }
+        },
+        {
+          "offset": 189,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 190,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67109117,
+            "symbol": "Dialogue::sentences"
+          }
+        },
+        {
+          "offset": 195,
+          "opcode": "stloc.0",
+          "operand": null
+        },
+        {
+          "offset": 196,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 197,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 198,
+          "opcode": "br.s",
+          "operand": 220
+        },
+        {
+          "offset": 200,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 201,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 202,
+          "opcode": "ldelem.ref",
+          "operand": null
+        },
+        {
+          "offset": 203,
+          "opcode": "stloc.2",
+          "operand": null
+        },
+        {
+          "offset": 204,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 205,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110126,
+            "symbol": "NewZera.DM::sentences"
+          }
+        },
+        {
+          "offset": 210,
+          "opcode": "ldloc.2",
+          "operand": null
+        },
+        {
+          "offset": 211,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773238,
+            "symbol": "signature:151282fd010e::Enqueue"
+          }
+        },
+        {
+          "offset": 216,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 217,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 218,
+          "opcode": "add",
+          "operand": null
+        },
+        {
+          "offset": 219,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 220,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 221,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 222,
+          "opcode": "ldlen",
+          "operand": null
+        },
+        {
+          "offset": 223,
+          "opcode": "conv.i4",
+          "operand": null
+        },
+        {
+          "offset": 224,
+          "opcode": "blt.s",
+          "operand": 200
+        },
+        {
+          "offset": 226,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 227,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67109115,
+            "symbol": "Dialogue::sentenceClips"
+          }
+        },
+        {
+          "offset": 232,
+          "opcode": "stloc.3",
+          "operand": null
+        },
+        {
+          "offset": 233,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 234,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 235,
+          "opcode": "br.s",
+          "operand": 259
+        },
+        {
+          "offset": 237,
+          "opcode": "ldloc.3",
+          "operand": null
+        },
+        {
+          "offset": 238,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 239,
+          "opcode": "ldelem.ref",
+          "operand": null
+        },
+        {
+          "offset": 240,
+          "opcode": "stloc.s",
+          "operand": "local(0x0004)"
+        },
+        {
+          "offset": 242,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 243,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110127,
+            "symbol": "NewZera.DM::sentenceClips"
+          }
+        },
+        {
+          "offset": 248,
+          "opcode": "ldloc.s",
+          "operand": "local(0x0004)"
+        },
+        {
+          "offset": 250,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773239,
+            "symbol": "signature:151282fd01128139::Enqueue"
+          }
+        },
+        {
+          "offset": 255,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 256,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 257,
+          "opcode": "add",
+          "operand": null
+        },
+        {
+          "offset": 258,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 259,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 260,
+          "opcode": "ldloc.3",
+          "operand": null
+        },
+        {
+          "offset": 261,
+          "opcode": "ldlen",
+          "operand": null
+        },
+        {
+          "offset": 262,
+          "opcode": "conv.i4",
+          "operand": null
+        },
+        {
+          "offset": 263,
+          "opcode": "blt.s",
+          "operand": 237
+        },
+        {
+          "offset": 265,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 266,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67109116,
+            "symbol": "Dialogue::positions"
+          }
+        },
+        {
+          "offset": 271,
+          "opcode": "stloc.s",
+          "operand": "local(0x0005)"
+        },
+        {
+          "offset": 273,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 274,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 275,
+          "opcode": "br.s",
+          "operand": 300
+        },
+        {
+          "offset": 277,
+          "opcode": "ldloc.s",
+          "operand": "local(0x0005)"
+        },
+        {
+          "offset": 279,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 280,
+          "opcode": "ldelem.ref",
+          "operand": null
+        },
+        {
+          "offset": 281,
+          "opcode": "stloc.s",
+          "operand": "local(0x0006)"
+        },
+        {
+          "offset": 283,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 284,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110125,
+            "symbol": "NewZera.DM::positions"
+          }
+        },
+        {
+          "offset": 289,
+          "opcode": "ldloc.s",
+          "operand": "local(0x0006)"
+        },
+        {
+          "offset": 291,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773240,
+            "symbol": "signature:151282fd011231::Enqueue"
+          }
+        },
+        {
+          "offset": 296,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 297,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 298,
+          "opcode": "add",
+          "operand": null
+        },
+        {
+          "offset": 299,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 300,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 301,
+          "opcode": "ldloc.s",
+          "operand": "local(0x0005)"
+        },
+        {
+          "offset": 303,
+          "opcode": "ldlen",
+          "operand": null
+        },
+        {
+          "offset": 304,
+          "opcode": "conv.i4",
+          "operand": null
+        },
+        {
+          "offset": 305,
+          "opcode": "blt.s",
+          "operand": 277
+        },
+        {
+          "offset": 307,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 308,
+          "opcode": "call",
+          "operand": {
+            "token": 100665003,
+            "symbol": "NewZera.DM::DisplayNextSentence"
+          }
+        },
+        {
+          "offset": 313,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    {
+      "owner": "NewZera.DM",
+      "name": "DisplayNextSentence",
+      "method_token": 100665003,
+      "body_sha256": "4d2c48117ad368f0151b2c022b0cd2b6cd1c4c4f6cf1f065f528bd588925d294",
+      "instructions": [
+        {
+          "offset": 12,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 13,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110126,
+            "symbol": "NewZera.DM::sentences"
+          }
+        },
+        {
+          "offset": 18,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773241,
+            "symbol": "signature:151282fd010e::get_Count"
+          }
+        },
+        {
+          "offset": 23,
+          "opcode": "brtrue.s",
+          "operand": 58
+        },
+        {
+          "offset": 25,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 26,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110127,
+            "symbol": "NewZera.DM::sentenceClips"
+          }
+        },
+        {
+          "offset": 31,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773242,
+            "symbol": "signature:151282fd01128139::get_Count"
+          }
+        },
+        {
+          "offset": 36,
+          "opcode": "brtrue.s",
+          "operand": 58
+        },
+        {
+          "offset": 38,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 39,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110125,
+            "symbol": "NewZera.DM::positions"
+          }
+        },
+        {
+          "offset": 44,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773243,
+            "symbol": "signature:151282fd011231::get_Count"
+          }
+        },
+        {
+          "offset": 49,
+          "opcode": "brtrue.s",
+          "operand": 58
+        },
+        {
+          "offset": 51,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 52,
+          "opcode": "call",
+          "operand": {
+            "token": 100665005,
+            "symbol": "NewZera.DM::EndDialogue"
+          }
+        },
+        {
+          "offset": 57,
+          "opcode": "ret",
+          "operand": null
+        },
+        {
+          "offset": 58,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 59,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110122,
+            "symbol": "NewZera.DM::firstSentence"
+          }
+        },
+        {
+          "offset": 64,
+          "opcode": "brfalse.s",
+          "operand": 79
+        },
+        {
+          "offset": 66,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 67,
+          "opcode": "ldstr",
+          "operand": {
+            "string": "OpenScroll"
+          }
+        },
+        {
+          "offset": 72,
+          "opcode": "call",
+          "operand": {
+            "token": 167772523,
+            "symbol": "UnityEngine.MonoBehaviour::StartCoroutine"
+          }
+        },
+        {
+          "offset": 77,
+          "opcode": "pop",
+          "operand": null
+        },
+        {
+          "offset": 78,
+          "opcode": "ret",
+          "operand": null
+        },
+        {
+          "offset": 79,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 80,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110122,
+            "symbol": "NewZera.DM::firstSentence"
+          }
+        },
+        {
+          "offset": 85,
+          "opcode": "brtrue.s",
+          "operand": 107
+        },
+        {
+          "offset": 87,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 88,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110121,
+            "symbol": "NewZera.DM::scrollOpen"
+          }
+        },
+        {
+          "offset": 93,
+          "opcode": "brfalse.s",
+          "operand": 107
+        },
+        {
+          "offset": 95,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 96,
+          "opcode": "ldstr",
+          "operand": {
+            "string": "NextDialogueScroll"
+          }
+        },
+        {
+          "offset": 101,
+          "opcode": "call",
+          "operand": {
+            "token": 167772523,
+            "symbol": "UnityEngine.MonoBehaviour::StartCoroutine"
+          }
+        },
+        {
+          "offset": 106,
+          "opcode": "pop",
+          "operand": null
+        },
+        {
+          "offset": 107,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    {
+      "owner": "NewZera.DM",
+      "name": "EndDialogue",
+      "method_token": 100665005,
+      "body_sha256": "197b1e337f79e0f8bbc0fde0ab8b7f0f1fe1a7a5acd7baf7cdbe3ddcfac9982c",
+      "instructions": [
+        {
+          "offset": 12,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 17,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 18,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110896,
+            "symbol": "NewZera.ZC::hasMoved"
+          }
+        },
+        {
+          "offset": 23,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 24,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110121,
+            "symbol": "NewZera.DM::scrollOpen"
+          }
+        },
+        {
+          "offset": 29,
+          "opcode": "brfalse.s",
+          "operand": 122
+        },
+        {
+          "offset": 31,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 32,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 33,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110123,
+            "symbol": "NewZera.DM::dialogueActive"
+          }
+        },
+        {
+          "offset": 38,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 39,
+          "opcode": "ldstr",
+          "operand": {
+            "string": "CloseScroll"
+          }
+        },
+        {
+          "offset": 44,
+          "opcode": "call",
+          "operand": {
+            "token": 167772523,
+            "symbol": "UnityEngine.MonoBehaviour::StartCoroutine"
+          }
+        },
+        {
+          "offset": 49,
+          "opcode": "pop",
+          "operand": null
+        },
+        {
+          "offset": 50,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 51,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110107,
+            "symbol": "NewZera.DM::music"
+          }
+        },
+        {
+          "offset": 56,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 57,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110116,
+            "symbol": "NewZera.DM::volumeBackup"
+          }
+        },
+        {
+          "offset": 62,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773234,
+            "symbol": "UnityEngine.AudioSource::set_volume"
+          }
+        },
+        {
+          "offset": 67,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 68,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110106,
+            "symbol": "NewZera.DM::scrollSound"
+          }
+        },
+        {
+          "offset": 73,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772234,
+            "symbol": "UnityEngine.AudioSource::Play"
+          }
+        },
+        {
+          "offset": 78,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 79,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110108,
+            "symbol": "NewZera.DM::voiceSource"
+          }
+        },
+        {
+          "offset": 84,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167773245,
+            "symbol": "UnityEngine.AudioSource::Stop"
+          }
+        },
+        {
+          "offset": 89,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 94,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420439,
+            "symbol": "UnityEngine.Component::GetComponent<0a01128560>"
+          }
+        },
+        {
+          "offset": 99,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 100,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772245,
+            "symbol": "UnityEngine.Behaviour::set_enabled"
+          }
+        },
+        {
+          "offset": 105,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 106,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110115,
+            "symbol": "NewZera.DM::cam"
+          }
+        },
+        {
+          "offset": 111,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420438,
+            "symbol": "UnityEngine.GameObject::GetComponent<0a01128588>"
+          }
+        },
+        {
+          "offset": 116,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 117,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772245,
+            "symbol": "UnityEngine.Behaviour::set_enabled"
+          }
+        },
+        {
+          "offset": 122,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    {
+      "owner": "NewZera.NPCDialogue",
+      "name": "Update",
+      "method_token": 100665135,
+      "body_sha256": "fe2c05cee923343d140cf52b45c6ca010b39d92e6beb0436d07ec8e0abcad79e",
+      "instructions": [
+        {
+          "offset": 12,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 13,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 18,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110911,
+            "symbol": "NewZera.ZC::specialInteraction"
+          }
+        },
+        {
+          "offset": 23,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110324,
+            "symbol": "NewZera.NPCDialogue::triangle"
+          }
+        },
+        {
+          "offset": 28,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 33,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772212,
+            "symbol": "UnityEngine.Component::get_transform"
+          }
+        },
+        {
+          "offset": 38,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772214,
+            "symbol": "UnityEngine.Transform::get_position"
+          }
+        },
+        {
+          "offset": 43,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 167772229,
+            "symbol": "UnityEngine.Vector3::z"
+          }
+        },
+        {
+          "offset": 48,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 49,
+          "opcode": "call",
+          "operand": {
+            "token": 167772212,
+            "symbol": "UnityEngine.Component::get_transform"
+          }
+        },
+        {
+          "offset": 54,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772214,
+            "symbol": "UnityEngine.Transform::get_position"
+          }
+        },
+        {
+          "offset": 59,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 167772229,
+            "symbol": "UnityEngine.Vector3::z"
+          }
+        },
+        {
+          "offset": 64,
+          "opcode": "sub",
+          "operand": null
+        },
+        {
+          "offset": 65,
+          "opcode": "call",
+          "operand": {
+            "token": 167772405,
+            "symbol": "UnityEngine.Mathf::Abs"
+          }
+        },
+        {
+          "offset": 70,
+          "opcode": "ldc.r4",
+          "operand": 75.0
+        },
+        {
+          "offset": 75,
+          "opcode": "ble.un.s",
+          "operand": 114
+        },
+        {
+          "offset": 77,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 78,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110318,
+            "symbol": "NewZera.NPCDialogue::meshes"
+          }
+        },
+        {
+          "offset": 83,
+          "opcode": "stloc.0",
+          "operand": null
+        },
+        {
+          "offset": 84,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 85,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 86,
+          "opcode": "br.s",
+          "operand": 106
+        },
+        {
+          "offset": 88,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 89,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 90,
+          "opcode": "ldelem.ref",
+          "operand": null
+        },
+        {
+          "offset": 91,
+          "opcode": "castclass",
+          "operand": {
+            "token": 16777339,
+            "symbol": "UnityEngine.SkinnedMeshRenderer"
+          }
+        },
+        {
+          "offset": 96,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 97,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772573,
+            "symbol": "UnityEngine.Renderer::set_enabled"
+          }
+        },
+        {
+          "offset": 102,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 103,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 104,
+          "opcode": "add",
+          "operand": null
+        },
+        {
+          "offset": 105,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 106,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 107,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 108,
+          "opcode": "ldlen",
+          "operand": null
+        },
+        {
+          "offset": 109,
+          "opcode": "conv.i4",
+          "operand": null
+        },
+        {
+          "offset": 110,
+          "opcode": "blt.s",
+          "operand": 88
+        },
+        {
+          "offset": 112,
+          "opcode": "br.s",
+          "operand": 149
+        },
+        {
+          "offset": 114,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 115,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110318,
+            "symbol": "NewZera.NPCDialogue::meshes"
+          }
+        },
+        {
+          "offset": 120,
+          "opcode": "stloc.0",
+          "operand": null
+        },
+        {
+          "offset": 121,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 122,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 123,
+          "opcode": "br.s",
+          "operand": 143
+        },
+        {
+          "offset": 125,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 126,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 127,
+          "opcode": "ldelem.ref",
+          "operand": null
+        },
+        {
+          "offset": 128,
+          "opcode": "castclass",
+          "operand": {
+            "token": 16777339,
+            "symbol": "UnityEngine.SkinnedMeshRenderer"
+          }
+        },
+        {
+          "offset": 133,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 134,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772573,
+            "symbol": "UnityEngine.Renderer::set_enabled"
+          }
+        },
+        {
+          "offset": 139,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 140,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 141,
+          "opcode": "add",
+          "operand": null
+        },
+        {
+          "offset": 142,
+          "opcode": "stloc.1",
+          "operand": null
+        },
+        {
+          "offset": 143,
+          "opcode": "ldloc.1",
+          "operand": null
+        },
+        {
+          "offset": 144,
+          "opcode": "ldloc.0",
+          "operand": null
+        },
+        {
+          "offset": 145,
+          "opcode": "ldlen",
+          "operand": null
+        },
+        {
+          "offset": 146,
+          "opcode": "conv.i4",
+          "operand": null
+        },
+        {
+          "offset": 147,
+          "opcode": "blt.s",
+          "operand": 125
+        },
+        {
+          "offset": 149,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 150,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110308,
+            "symbol": "NewZera.NPCDialogue::wasDamaged"
+          }
+        },
+        {
+          "offset": 155,
+          "opcode": "brfalse.s",
+          "operand": 240
+        },
+        {
+          "offset": 157,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 158,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 159,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110309,
+            "symbol": "NewZera.NPCDialogue::damageTimer"
+          }
+        },
+        {
+          "offset": 164,
+          "opcode": "call",
+          "operand": {
+            "token": 167772219,
+            "symbol": "UnityEngine.Time::get_deltaTime"
+          }
+        },
+        {
+          "offset": 169,
+          "opcode": "sub",
+          "operand": null
+        },
+        {
+          "offset": 170,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110309,
+            "symbol": "NewZera.NPCDialogue::damageTimer"
+          }
+        },
+        {
+          "offset": 175,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 176,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110309,
+            "symbol": "NewZera.NPCDialogue::damageTimer"
+          }
+        },
+        {
+          "offset": 181,
+          "opcode": "ldc.r4",
+          "operand": 0.0
+        },
+        {
+          "offset": 186,
+          "opcode": "bgt.un.s",
+          "operand": 240
+        },
+        {
+          "offset": 188,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 189,
+          "opcode": "call",
+          "operand": {
+            "token": 721420452,
+            "symbol": "UnityEngine.Component::GetComponentInChildren<0a011271>"
+          }
+        },
+        {
+          "offset": 194,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 195,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772235,
+            "symbol": "UnityEngine.Collider::set_enabled"
+          }
+        },
+        {
+          "offset": 200,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 201,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 202,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110308,
+            "symbol": "NewZera.NPCDialogue::wasDamaged"
+          }
+        },
+        {
+          "offset": 207,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 208,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110321,
+            "symbol": "NewZera.NPCDialogue::isSign"
+          }
+        },
+        {
+          "offset": 213,
+          "opcode": "brtrue.s",
+          "operand": 228
+        },
+        {
+          "offset": 215,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 216,
+          "opcode": "ldc.r4",
+          "operand": 0.8500000238418579
+        },
+        {
+          "offset": 221,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110309,
+            "symbol": "NewZera.NPCDialogue::damageTimer"
+          }
+        },
+        {
+          "offset": 226,
+          "opcode": "br.s",
+          "operand": 240
+        },
+        {
+          "offset": 228,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 229,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 230,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110310,
+            "symbol": "NewZera.NPCDialogue::timeTillMoreDamage"
+          }
+        },
+        {
+          "offset": 235,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110309,
+            "symbol": "NewZera.NPCDialogue::damageTimer"
+          }
+        },
+        {
+          "offset": 240,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 241,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110319,
+            "symbol": "NewZera.NPCDialogue::isInRange"
+          }
+        },
+        {
+          "offset": 246,
+          "opcode": "brfalse.s",
+          "operand": 360
+        },
+        {
+          "offset": 248,
+          "opcode": "ldstr",
+          "operand": {
+            "string": "Photo Mode"
+          }
+        },
+        {
+          "offset": 253,
+          "opcode": "call",
+          "operand": {
+            "token": 167772210,
+            "symbol": "UnityEngine.Input::GetButton"
+          }
+        },
+        {
+          "offset": 258,
+          "opcode": "brtrue.s",
+          "operand": 360
+        },
+        {
+          "offset": 260,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 261,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110320,
+            "symbol": "NewZera.NPCDialogue::isTalking"
+          }
+        },
+        {
+          "offset": 266,
+          "opcode": "brtrue.s",
+          "operand": 360
+        },
+        {
+          "offset": 268,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 269,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110328,
+            "symbol": "NewZera.NPCDialogue::autoStart"
+          }
+        },
+        {
+          "offset": 274,
+          "opcode": "brtrue.s",
+          "operand": 360
+        },
+        {
+          "offset": 276,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 277,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110308,
+            "symbol": "NewZera.NPCDialogue::wasDamaged"
+          }
+        },
+        {
+          "offset": 282,
+          "opcode": "brtrue.s",
+          "operand": 360
+        },
+        {
+          "offset": 284,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 289,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 100663933,
+            "symbol": "FiniteStateMachine::get_activeRootState"
+          }
+        },
+        {
+          "offset": 294,
+          "opcode": "isinst",
+          "operand": {
+            "token": 33554844,
+            "symbol": "NewZera.Zera.States.Ground"
+          }
+        },
+        {
+          "offset": 299,
+          "opcode": "brfalse.s",
+          "operand": 360
+        },
+        {
+          "offset": 301,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 306,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 100663931,
+            "symbol": "FiniteStateMachine::get_activeState"
+          }
+        },
+        {
+          "offset": 311,
+          "opcode": "isinst",
+          "operand": {
+            "token": 33554839,
+            "symbol": "NewZera.Zera.States.Charge"
+          }
+        },
+        {
+          "offset": 316,
+          "opcode": "brtrue.s",
+          "operand": 360
+        },
+        {
+          "offset": 318,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 323,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110111,
+            "symbol": "NewZera.DM::DialogueWindow"
+          }
+        },
+        {
+          "offset": 328,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772370,
+            "symbol": "UnityEngine.GameObject::get_activeSelf"
+          }
+        },
+        {
+          "offset": 333,
+          "opcode": "brtrue.s",
+          "operand": 360
+        },
+        {
+          "offset": 335,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 340,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 341,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110932,
+            "symbol": "NewZera.ZC::currentNPC"
+          }
+        },
+        {
+          "offset": 346,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 347,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110316,
+            "symbol": "NewZera.NPCDialogue::pressTriangle"
+          }
+        },
+        {
+          "offset": 352,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 353,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772217,
+            "symbol": "UnityEngine.GameObject::SetActive"
+          }
+        },
+        {
+          "offset": 358,
+          "opcode": "br.s",
+          "operand": 401
+        },
+        {
+          "offset": 360,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 365,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110932,
+            "symbol": "NewZera.ZC::currentNPC"
+          }
+        },
+        {
+          "offset": 370,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 371,
+          "opcode": "call",
+          "operand": {
+            "token": 167772216,
+            "symbol": "UnityEngine.Object::op_Equality"
+          }
+        },
+        {
+          "offset": 376,
+          "opcode": "brfalse.s",
+          "operand": 389
+        },
+        {
+          "offset": 378,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 383,
+          "opcode": "ldnull",
+          "operand": null
+        },
+        {
+          "offset": 384,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110932,
+            "symbol": "NewZera.ZC::currentNPC"
+          }
+        },
+        {
+          "offset": 389,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 390,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110316,
+            "symbol": "NewZera.NPCDialogue::pressTriangle"
+          }
+        },
+        {
+          "offset": 395,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 396,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772217,
+            "symbol": "UnityEngine.GameObject::SetActive"
+          }
+        },
+        {
+          "offset": 401,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 402,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110328,
+            "symbol": "NewZera.NPCDialogue::autoStart"
+          }
+        },
+        {
+          "offset": 407,
+          "opcode": "brtrue",
+          "operand": 543
+        },
+        {
+          "offset": 412,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 413,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110320,
+            "symbol": "NewZera.NPCDialogue::isTalking"
+          }
+        },
+        {
+          "offset": 418,
+          "opcode": "brtrue",
+          "operand": 668
+        },
+        {
+          "offset": 423,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 424,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110319,
+            "symbol": "NewZera.NPCDialogue::isInRange"
+          }
+        },
+        {
+          "offset": 429,
+          "opcode": "brfalse",
+          "operand": 668
+        },
+        {
+          "offset": 434,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 435,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110324,
+            "symbol": "NewZera.NPCDialogue::triangle"
+          }
+        },
+        {
+          "offset": 440,
+          "opcode": "brfalse",
+          "operand": 668
+        },
+        {
+          "offset": 445,
+          "opcode": "ldstr",
+          "operand": {
+            "string": "Photo Mode"
+          }
+        },
+        {
+          "offset": 450,
+          "opcode": "call",
+          "operand": {
+            "token": 167772210,
+            "symbol": "UnityEngine.Input::GetButton"
+          }
+        },
+        {
+          "offset": 455,
+          "opcode": "brtrue",
+          "operand": 668
+        },
+        {
+          "offset": 460,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 465,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 100663933,
+            "symbol": "FiniteStateMachine::get_activeRootState"
+          }
+        },
+        {
+          "offset": 470,
+          "opcode": "isinst",
+          "operand": {
+            "token": 33554844,
+            "symbol": "NewZera.Zera.States.Ground"
+          }
+        },
+        {
+          "offset": 475,
+          "opcode": "brfalse",
+          "operand": 668
+        },
+        {
+          "offset": 480,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 485,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 100663931,
+            "symbol": "FiniteStateMachine::get_activeState"
+          }
+        },
+        {
+          "offset": 490,
+          "opcode": "isinst",
+          "operand": {
+            "token": 33554839,
+            "symbol": "NewZera.Zera.States.Charge"
+          }
+        },
+        {
+          "offset": 495,
+          "opcode": "brtrue",
+          "operand": 668
+        },
+        {
+          "offset": 500,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 501,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110308,
+            "symbol": "NewZera.NPCDialogue::wasDamaged"
+          }
+        },
+        {
+          "offset": 506,
+          "opcode": "brtrue",
+          "operand": 668
+        },
+        {
+          "offset": 511,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 516,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110111,
+            "symbol": "NewZera.DM::DialogueWindow"
+          }
+        },
+        {
+          "offset": 521,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772370,
+            "symbol": "UnityEngine.GameObject::get_activeSelf"
+          }
+        },
+        {
+          "offset": 526,
+          "opcode": "brtrue",
+          "operand": 668
+        },
+        {
+          "offset": 531,
+          "opcode": "call",
+          "operand": {
+            "token": 167772554,
+            "symbol": "UnityEngine.Time::get_timeScale"
+          }
+        },
+        {
+          "offset": 536,
+          "opcode": "ldc.r4",
+          "operand": 1.0
+        },
+        {
+          "offset": 541,
+          "opcode": "bne.un.s",
+          "operand": 668
+        },
+        {
+          "offset": 543,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 544,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110328,
+            "symbol": "NewZera.NPCDialogue::autoStart"
+          }
+        },
+        {
+          "offset": 549,
+          "opcode": "brtrue.s",
+          "operand": 558
+        },
+        {
+          "offset": 551,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 552,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 553,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110328,
+            "symbol": "NewZera.NPCDialogue::autoStart"
+          }
+        },
+        {
+          "offset": 558,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 563,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 564,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110313,
+            "symbol": "NewZera.NPCDialogue::zeraTalkPos"
+          }
+        },
+        {
+          "offset": 569,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110923,
+            "symbol": "NewZera.ZC::zeraTalkPoint"
+          }
+        },
+        {
+          "offset": 574,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 579,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 580,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110895,
+            "symbol": "NewZera.ZC::forceMove"
+          }
+        },
+        {
+          "offset": 585,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 590,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110896,
+            "symbol": "NewZera.ZC::hasMoved"
+          }
+        },
+        {
+          "offset": 595,
+          "opcode": "brfalse.s",
+          "operand": 668
+        },
+        {
+          "offset": 597,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 598,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 599,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110326,
+            "symbol": "NewZera.NPCDialogue::moveCam"
+          }
+        },
+        {
+          "offset": 604,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 605,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110323,
+            "symbol": "NewZera.NPCDialogue::alreadyTalked"
+          }
+        },
+        {
+          "offset": 610,
+          "opcode": "brfalse.s",
+          "operand": 638
+        },
+        {
+          "offset": 612,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 613,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110322,
+            "symbol": "NewZera.NPCDialogue::newDialogue"
+          }
+        },
+        {
+          "offset": 618,
+          "opcode": "brfalse.s",
+          "operand": 638
+        },
+        {
+          "offset": 620,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 625,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 626,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110315,
+            "symbol": "NewZera.NPCDialogue::text2"
+          }
+        },
+        {
+          "offset": 631,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 100665002,
+            "symbol": "NewZera.DM::StartDialogue"
+          }
+        },
+        {
+          "offset": 636,
+          "opcode": "br.s",
+          "operand": 654
+        },
+        {
+          "offset": 638,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 643,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 644,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110314,
+            "symbol": "NewZera.NPCDialogue::text"
+          }
+        },
+        {
+          "offset": 649,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 100665002,
+            "symbol": "NewZera.DM::StartDialogue"
+          }
+        },
+        {
+          "offset": 654,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 655,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 656,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110328,
+            "symbol": "NewZera.NPCDialogue::autoStart"
+          }
+        },
+        {
+          "offset": 661,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 662,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 663,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110320,
+            "symbol": "NewZera.NPCDialogue::isTalking"
+          }
+        },
+        {
+          "offset": 668,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 669,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110326,
+            "symbol": "NewZera.NPCDialogue::moveCam"
+          }
+        },
+        {
+          "offset": 674,
+          "opcode": "brfalse",
+          "operand": 819
+        },
+        {
+          "offset": 679,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 680,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110317,
+            "symbol": "NewZera.NPCDialogue::cam"
+          }
+        },
+        {
+          "offset": 685,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772218,
+            "symbol": "UnityEngine.GameObject::get_transform"
+          }
+        },
+        {
+          "offset": 690,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772214,
+            "symbol": "UnityEngine.Transform::get_position"
+          }
+        },
+        {
+          "offset": 695,
+          "opcode": "stloc.2",
+          "operand": null
+        },
+        {
+          "offset": 696,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 697,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110317,
+            "symbol": "NewZera.NPCDialogue::cam"
+          }
+        },
+        {
+          "offset": 702,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772218,
+            "symbol": "UnityEngine.GameObject::get_transform"
+          }
+        },
+        {
+          "offset": 707,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772299,
+            "symbol": "UnityEngine.Transform::get_rotation"
+          }
+        },
+        {
+          "offset": 712,
+          "opcode": "stloc.3",
+          "operand": null
+        },
+        {
+          "offset": 713,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 714,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110317,
+            "symbol": "NewZera.NPCDialogue::cam"
+          }
+        },
+        {
+          "offset": 719,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772218,
+            "symbol": "UnityEngine.GameObject::get_transform"
+          }
+        },
+        {
+          "offset": 724,
+          "opcode": "ldloc.2",
+          "operand": null
+        },
+        {
+          "offset": 725,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 730,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110124,
+            "symbol": "NewZera.DM::camPos"
+          }
+        },
+        {
+          "offset": 735,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772218,
+            "symbol": "UnityEngine.GameObject::get_transform"
+          }
+        },
+        {
+          "offset": 740,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772214,
+            "symbol": "UnityEngine.Transform::get_position"
+          }
+        },
+        {
+          "offset": 745,
+          "opcode": "ldc.r4",
+          "operand": 0.75
+        },
+        {
+          "offset": 750,
+          "opcode": "call",
+          "operand": {
+            "token": 167772219,
+            "symbol": "UnityEngine.Time::get_deltaTime"
+          }
+        },
+        {
+          "offset": 755,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 756,
+          "opcode": "call",
+          "operand": {
+            "token": 167772220,
+            "symbol": "UnityEngine.Vector3::Lerp"
+          }
+        },
+        {
+          "offset": 761,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772221,
+            "symbol": "UnityEngine.Transform::set_position"
+          }
+        },
+        {
+          "offset": 766,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 767,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110317,
+            "symbol": "NewZera.NPCDialogue::cam"
+          }
+        },
+        {
+          "offset": 772,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772218,
+            "symbol": "UnityEngine.GameObject::get_transform"
+          }
+        },
+        {
+          "offset": 777,
+          "opcode": "ldloc.3",
+          "operand": null
+        },
+        {
+          "offset": 778,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 783,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110124,
+            "symbol": "NewZera.DM::camPos"
+          }
+        },
+        {
+          "offset": 788,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772218,
+            "symbol": "UnityEngine.GameObject::get_transform"
+          }
+        },
+        {
+          "offset": 793,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772299,
+            "symbol": "UnityEngine.Transform::get_rotation"
+          }
+        },
+        {
+          "offset": 798,
+          "opcode": "ldc.r4",
+          "operand": 0.75
+        },
+        {
+          "offset": 803,
+          "opcode": "call",
+          "operand": {
+            "token": 167772219,
+            "symbol": "UnityEngine.Time::get_deltaTime"
+          }
+        },
+        {
+          "offset": 808,
+          "opcode": "mul",
+          "operand": null
+        },
+        {
+          "offset": 809,
+          "opcode": "call",
+          "operand": {
+            "token": 167772691,
+            "symbol": "UnityEngine.Quaternion::Lerp"
+          }
+        },
+        {
+          "offset": 814,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772398,
+            "symbol": "UnityEngine.Transform::set_rotation"
+          }
+        },
+        {
+          "offset": 819,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 820,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110320,
+            "symbol": "NewZera.NPCDialogue::isTalking"
+          }
+        },
+        {
+          "offset": 825,
+          "opcode": "brfalse.s",
+          "operand": 910
+        },
+        {
+          "offset": 827,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 828,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110325,
+            "symbol": "NewZera.NPCDialogue::x"
+          }
+        },
+        {
+          "offset": 833,
+          "opcode": "brfalse.s",
+          "operand": 910
+        },
+        {
+          "offset": 835,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 840,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 100665003,
+            "symbol": "NewZera.DM::DisplayNextSentence"
+          }
+        },
+        {
+          "offset": 845,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 850,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110123,
+            "symbol": "NewZera.DM::dialogueActive"
+          }
+        },
+        {
+          "offset": 855,
+          "opcode": "brtrue.s",
+          "operand": 910
+        },
+        {
+          "offset": 857,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 858,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 859,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110326,
+            "symbol": "NewZera.NPCDialogue::moveCam"
+          }
+        },
+        {
+          "offset": 864,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 865,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 866,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110320,
+            "symbol": "NewZera.NPCDialogue::isTalking"
+          }
+        },
+        {
+          "offset": 871,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 872,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110312,
+            "symbol": "NewZera.NPCDialogue::NPC"
+          }
+        },
+        {
+          "offset": 877,
+          "opcode": "ldstr",
+          "operand": {
+            "string": "Idle"
+          }
+        },
+        {
+          "offset": 882,
+          "opcode": "ldc.r4",
+          "operand": 0.75
+        },
+        {
+          "offset": 887,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772566,
+            "symbol": "UnityEngine.Animator::CrossFadeInFixedTime"
+          }
+        },
+        {
+          "offset": 892,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 893,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110329,
+            "symbol": "NewZera.NPCDialogue::trigger"
+          }
+        },
+        {
+          "offset": 898,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772205,
+            "symbol": "UnityEngine.Events.UnityEvent::Invoke"
+          }
+        },
+        {
+          "offset": 903,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 904,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 905,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110323,
+            "symbol": "NewZera.NPCDialogue::alreadyTalked"
+          }
+        },
+        {
+          "offset": 910,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 915,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420292,
+            "symbol": "UnityEngine.Component::GetComponent<0a01126d>"
+          }
+        },
+        {
+          "offset": 920,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772373,
+            "symbol": "UnityEngine.AudioSource::get_isPlaying"
+          }
+        },
+        {
+          "offset": 925,
+          "opcode": "brtrue.s",
+          "operand": 942
+        },
+        {
+          "offset": 927,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 928,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110327,
+            "symbol": "NewZera.NPCDialogue::audioPlaying"
+          }
+        },
+        {
+          "offset": 933,
+          "opcode": "brfalse.s",
+          "operand": 942
+        },
+        {
+          "offset": 935,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 936,
+          "opcode": "call",
+          "operand": {
+            "token": 100665137,
+            "symbol": "NewZera.NPCDialogue::StopTalking"
+          }
+        },
+        {
+          "offset": 941,
+          "opcode": "ret",
+          "operand": null
+        },
+        {
+          "offset": 942,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 947,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420292,
+            "symbol": "UnityEngine.Component::GetComponent<0a01126d>"
+          }
+        },
+        {
+          "offset": 952,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772373,
+            "symbol": "UnityEngine.AudioSource::get_isPlaying"
+          }
+        },
+        {
+          "offset": 957,
+          "opcode": "brfalse.s",
+          "operand": 981
+        },
+        {
+          "offset": 959,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 960,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110327,
+            "symbol": "NewZera.NPCDialogue::audioPlaying"
+          }
+        },
+        {
+          "offset": 965,
+          "opcode": "brtrue.s",
+          "operand": 981
+        },
+        {
+          "offset": 967,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 968,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110320,
+            "symbol": "NewZera.NPCDialogue::isTalking"
+          }
+        },
+        {
+          "offset": 973,
+          "opcode": "brfalse.s",
+          "operand": 981
+        },
+        {
+          "offset": 975,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 976,
+          "opcode": "call",
+          "operand": {
+            "token": 100665138,
+            "symbol": "NewZera.NPCDialogue::StartTalking"
+          }
+        },
+        {
+          "offset": 981,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    {
+      "owner": "NewZera.NPCDialogue",
+      "name": "NewDialogue",
+      "method_token": 100665140,
+      "body_sha256": "fec9e2a083087a593ef65bf099d43ac22e188962b2006f377d3bd5cc95d57042",
+      "instructions": [
+        {
+          "offset": 1,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 2,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 3,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110322,
+            "symbol": "NewZera.NPCDialogue::newDialogue"
+          }
+        },
+        {
+          "offset": 8,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    {
+      "owner": "NewZera.NPCDialogue",
+      "name": "OnTriggerEnter",
+      "method_token": 100665143,
+      "body_sha256": "293221b242e667b8e1c931017c793782b68677d458b95b3c17de5fbac86dfb54",
+      "instructions": [
+        {
+          "offset": 1,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 2,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772372,
+            "symbol": "UnityEngine.Collider::get_attachedRigidbody"
+          }
+        },
+        {
+          "offset": 7,
+          "opcode": "call",
+          "operand": {
+            "token": 167772256,
+            "symbol": "UnityEngine.Object::op_Implicit"
+          }
+        },
+        {
+          "offset": 12,
+          "opcode": "brfalse.s",
+          "operand": 50
+        },
+        {
+          "offset": 14,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 15,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772372,
+            "symbol": "UnityEngine.Collider::get_attachedRigidbody"
+          }
+        },
+        {
+          "offset": 20,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420309,
+            "symbol": "UnityEngine.Component::GetComponent<0a011285ec>"
+          }
+        },
+        {
+          "offset": 25,
+          "opcode": "call",
+          "operand": {
+            "token": 167772256,
+            "symbol": "UnityEngine.Object::op_Implicit"
+          }
+        },
+        {
+          "offset": 30,
+          "opcode": "brfalse.s",
+          "operand": 50
+        },
+        {
+          "offset": 32,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 33,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 34,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110319,
+            "symbol": "NewZera.NPCDialogue::isInRange"
+          }
+        },
+        {
+          "offset": 39,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 44,
+          "opcode": "ldc.i4.1",
+          "operand": null
+        },
+        {
+          "offset": 45,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110894,
+            "symbol": "NewZera.ZC::isTalking"
+          }
+        },
+        {
+          "offset": 50,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    },
+    {
+      "owner": "NewZera.NPCDialogue",
+      "name": "OnTriggerExit",
+      "method_token": 100665144,
+      "body_sha256": "9e010c62054a81a2fa02487647d5aae92df74ad6e81524f4de3a0e4fb1936363",
+      "instructions": [
+        {
+          "offset": 1,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 2,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772372,
+            "symbol": "UnityEngine.Collider::get_attachedRigidbody"
+          }
+        },
+        {
+          "offset": 7,
+          "opcode": "call",
+          "operand": {
+            "token": 167772256,
+            "symbol": "UnityEngine.Object::op_Implicit"
+          }
+        },
+        {
+          "offset": 12,
+          "opcode": "brfalse.s",
+          "operand": 62
+        },
+        {
+          "offset": 14,
+          "opcode": "ldarg.1",
+          "operand": null
+        },
+        {
+          "offset": 15,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 167772372,
+            "symbol": "UnityEngine.Collider::get_attachedRigidbody"
+          }
+        },
+        {
+          "offset": 20,
+          "opcode": "callvirt",
+          "operand": {
+            "token": 721420309,
+            "symbol": "UnityEngine.Component::GetComponent<0a011285ec>"
+          }
+        },
+        {
+          "offset": 25,
+          "opcode": "call",
+          "operand": {
+            "token": 167772256,
+            "symbol": "UnityEngine.Object::op_Implicit"
+          }
+        },
+        {
+          "offset": 30,
+          "opcode": "brfalse.s",
+          "operand": 62
+        },
+        {
+          "offset": 32,
+          "opcode": "ldarg.0",
+          "operand": null
+        },
+        {
+          "offset": 33,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 34,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110319,
+            "symbol": "NewZera.NPCDialogue::isInRange"
+          }
+        },
+        {
+          "offset": 39,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110105,
+            "symbol": "NewZera.DM::dm"
+          }
+        },
+        {
+          "offset": 44,
+          "opcode": "ldfld",
+          "operand": {
+            "token": 67110123,
+            "symbol": "NewZera.DM::dialogueActive"
+          }
+        },
+        {
+          "offset": 49,
+          "opcode": "brtrue.s",
+          "operand": 62
+        },
+        {
+          "offset": 51,
+          "opcode": "ldsfld",
+          "operand": {
+            "token": 67110843,
+            "symbol": "NewZera.ZC::zera"
+          }
+        },
+        {
+          "offset": 56,
+          "opcode": "ldc.i4.0",
+          "operand": null
+        },
+        {
+          "offset": 57,
+          "opcode": "stfld",
+          "operand": {
+            "token": 67110894,
+            "symbol": "NewZera.ZC::isTalking"
+          }
+        },
+        {
+          "offset": 62,
+          "opcode": "ret",
+          "operand": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "slot": 0,
+      "name": "NoTexture",
+      "file": "sharedassets2.assets",
+      "path_id": 8,
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slot": 1,
+      "name": "Eyes 3",
+      "file": "sharedassets2.assets",
+      "path_id": 4,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.19999998807907104
+      ],
+      "texture": {
+        "file": "sharedassets2.assets",
+        "path_id": 41,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "slot": 2,
+      "name": "Doublesided",
+      "file": "resources.assets",
+      "path_id": 80,
+      "base_color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "pages": [
+    "How curious... I was not aware we\nwere to be expecting guests. The\ntiming of this can't possibly be a\ncoincidence however.",
+    "Gaia, the mother of all life, has\nrecently been captured and locked\naway in Mystic Towers. She must have\nsent you to help.",
+    "I'm surprised she was able to\nconjour up a new Guardian. We\nthought she'd used up all of her\nEssence, but clearly that's not the\ncase.",
+    "I suppose a welcome is in order.\nThis is Cosmic Core, one of many\nlinks to the worlds across the\nstars, and it is home to us\nWingrays, as well as... Dolus.",
+    "He's been conveniently absent since\nGaia's disappearance. I suspect he\nmight have something to do with it\nall...",
+    "Anyway, I'm not sure what you can do\nat this point, or what anyone can. I\nsuppose all we can do is wait.",
+    "Be careful out there."
+  ],
+  "sentence_page_ranges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      1
+    ]
+  ],
+  "source_payload_sha256": "f3fa70dfd874f6696f4f1eeeb0a22a3a719d53ec99cec4736ff439bc821c414a",
+  "model_header_sha256": "7a6001cf776adccf9f459cf60189c616f92ccdeb84cd8f537e6bb3439ca46be0",
+  "dialogue_header_sha256": "d52c95d7d3d9ed7483751114fe53823ad152cf61c8e32919ce0fdb57ffc4d2cd",
+  "source_files_sha256": {
+    "Managed/Assembly-CSharp.dll": "68b1c2a086ff4245795a30a46517fb3540d16db283d125c33e0c1476aa65f225",
+    "globalgamemanagers.assets": "1b730746d100c1bcbdd60a99e0e9124b86ea76e773edb420e162f6086a1a2eb6",
+    "level2": "f9563c7125bcb9e6f35c92ab76c85fb98aa25ed5a2d64aba7f3f5a73067293e1",
+    "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d",
+    "sharedassets2.assets": "180ce00b531de9c7e4f3179e9fb544e9325214bb95eb2162405ebccd4b6438ae"
+  },
+  "limitations": [
+    "Serialized posed skin only; original Idle/Talking animations not yet baked",
+    "Eye texture alpha adapted to PS1 cutout; custom source shaders and soft alpha omitted",
+    "Silence is the actual assigned AudioClip; no invented voice track",
+    "Movement-to-talk point, capsule contact and scroll timings require PS1 adaptations",
+    "Only this NPC is enabled; source dialogue/callback recovery does not implement every NPC or tutorial cutscene"
+  ]
+}

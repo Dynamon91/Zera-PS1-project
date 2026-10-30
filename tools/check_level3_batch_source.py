@@ -23,7 +23,9 @@ for instance in report['instances']:
  results.append({'object':instance['object'],'collider_mesh_path_id':collider.m_Mesh.path_id,
                  'collider_source_file':collider.m_Mesh.deref().assets_file.name,
                  'batch_vs_collider_bounds_max_error_source_units':error})
-assert len(results)==2
+expected=sum(i['object'].startswith('Walkable') for i in report['instances'])
+assert len(results)==expected and expected>=2
+assert {'Walkable.001','Walkable.002'}<={r['object'] for r in results}
 out={'validation':'Independent collider-local mesh transformed by original object hierarchy vs scene-space static-batch render bounds',
      'tolerance_source_units':.1,'results':results}
 (root/'previews/level3/reports/batch_validation.json').write_text(json.dumps(out,indent=2)+'\n')

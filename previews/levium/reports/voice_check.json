@@ -1,0 +1,17 @@
+{
+  "source_clip": {
+    "file": "resources.assets",
+    "path_id": 583,
+    "name": "Silence"
+  },
+  "decoded_pcm_rate": 44100,
+  "decoded_channels": 1,
+  "decoded_frames": 1302646,
+  "decoded_peak_pcm16": 1,
+  "decoded_rms_pcm16": 0.062028649545671416,
+  "source_files_sha256": {
+    "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d",
+    "resources.resource": "994b0107fb7de800436740639824ba0d6b6b7921e7ce23988c50856cb11c1af5"
+  },
+  "interpretation": "The assigned source has no audible speech; decoded amplitude is at most 1 PCM16 unit. No spoken voice track is synthesized or substituted."
+}

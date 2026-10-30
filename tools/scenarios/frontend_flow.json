@@ -1,0 +1,199 @@
+{
+  "frames": 5400,
+  "map_file": "zera_game.map",
+  "sample_interval": 5,
+  "audio": true,
+  "gif": true,
+  "gif_start_frame": 1600,
+  "gif_end_frame": 2500,
+  "gif_sample_step": 6,
+  "shots": [
+    900,
+    1100,
+    1850,
+    2050,
+    2550,
+    3100,
+    3500,
+    4050,
+    4500,
+    5399
+  ],
+  "actions": [
+    {
+      "start": 960,
+      "end": 968,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 1000,
+      "end": 1008,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 1040,
+      "end": 1048,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 1160,
+      "end": 1168,
+      "buttons": [
+        8
+      ]
+    },
+    {
+      "start": 1200,
+      "end": 1208,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 1900,
+      "end": 1908,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 2300,
+      "end": 2308,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 2700,
+      "end": 2708,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 2750,
+      "end": 2758,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 2800,
+      "end": 2808,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 3200,
+      "end": 3208,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 3240,
+      "end": 3248,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 3280,
+      "end": 3288,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 3320,
+      "end": 3328,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 3400,
+      "end": 3408,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 3700,
+      "end": 3708,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 3800,
+      "end": 3808,
+      "buttons": [
+        8
+      ]
+    },
+    {
+      "start": 3900,
+      "end": 3908,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 4200,
+      "end": 4208,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 4250,
+      "end": 4258,
+      "buttons": [
+        4
+      ]
+    },
+    {
+      "start": 4300,
+      "end": 4308,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 4700,
+      "end": 4708,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 1600,
+      "end": 1800,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 2000,
+      "end": 2200,
+      "buttons": [
+        7
+      ]
+    },
+    {
+      "start": 2400,
+      "end": 2550,
+      "buttons": [
+        5
+      ]
+    }
+  ]
+}

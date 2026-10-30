@@ -19,7 +19,7 @@ class PackageTests(unittest.TestCase):
                 p.write_bytes(b'FILE "zera_wip08.bin" BINARY\n' if name.endswith(".cue") else name.encode())
             # Metadata from a previously unpacked checkpoint must be refreshed.
             (root / "CHECKPOINT.json").write_text("old metadata")
-            for name in ("build/stale.exe", ".git/config", "tools/__pycache__/x.pyc"):
+            for name in ("build/stale.exe", "build-character/stale.bin", ".git/config", "tools/__pycache__/x.pyc"):
                 p = root / name
                 p.parent.mkdir(parents=True, exist_ok=True)
                 p.write_text("excluded")

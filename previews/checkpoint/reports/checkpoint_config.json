@@ -1,0 +1,33 @@
+{
+  "component_path_id": 6752,
+  "scene": "level3",
+  "spawn": [
+    0,
+    -2,
+    0
+  ],
+  "trigger": [
+    0,
+    0,
+    0
+  ],
+  "original_camera_position": [
+    304,
+    185,
+    230
+  ],
+  "camera_yaw": 1447,
+  "test_entry": [
+    -400,
+    0,
+    0
+  ],
+  "source_recovery_sha256": "2369c297b39e69ea6591b2660c79e0596e67ac36156139769f769436335ec2df",
+  "world_source_sha256": "c6852a40ef17358a88e50c063d79ec846f01210935da6b053b07eae6927177d8",
+  "adaptations": [
+    "Test entry is 400 PS1 units left of the original checkpoint, on recovered floor; not an original level spawn",
+    "Grounded proximity radius 160 and vertical tolerance 80 replace the unported Kiwi interaction",
+    "Original camera horizontal direction adapted to existing orbit camera; distance/pitch remain provisional",
+    "Session-only checkpoint, no memory-card save"
+  ]
+}

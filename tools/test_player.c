@@ -10,6 +10,13 @@ int world_height(int x,int z,int *h){
  return 1;
 }
 int world_floor(int x,int z,int ceiling,int *h){if(terrain==5){*h=ceiling>=200?200:0;return ceiling>=0;}return world_height(x,z,h);}
+int world_ceiling(int x,int z,int minimum,int *h){
+ (void)x;(void)z;
+ if(terrain==5 && minimum<=200){*h=200;return 1;}
+ if(terrain==6 && minimum<=PLAYER_HEIGHT){*h=PLAYER_HEIGHT;return 1;}
+ if(terrain==7 && minimum<=-100){*h=-100;return 1;}
+ return 0;
+}
 int main(void){
  Player p;player_init(&p);assert(p.state==GROUND);
  player_tick(&p,(Input){.jump_pressed=1});assert(p.y>0 && p.state==JUMP);
@@ -31,11 +38,24 @@ int main(void){
  /* Stacked support: a jump below an upper floor must return to the lower one;
     falling from above must land on the upper one rather than pass through. */
  terrain=5;player_init(&p);player_tick(&p,(Input){.jump_pressed=1});
+ int hit=0;
+ for(int n=0;n<20;n++){
+  assert(p.y+PLAYER_HEIGHT*FP<=200*FP);
+  if(p.state==FALL && !p.vy){assert(p.y==80*FP);hit=1;}
+  player_tick(&p,(Input){0});
+ }
+ assert(hit);
  for(int n=0;n<100;n++)player_tick(&p,(Input){0});
  assert(p.state==GROUND && p.y==0);
  p.y=300*FP;p.vy=0;p.state=FALL;
  for(int n=0;n<100;n++)player_tick(&p,(Input){0});
  assert(p.state==GROUND && p.y==200*FP);
+ /* A head already touching the roof cannot jump through it. */
+ terrain=6;player_init(&p);player_tick(&p,(Input){.jump_pressed=1});
+ assert(p.y==0 && p.vy==0 && p.state==GROUND);
+ /* Fractional negative head heights must query the next integer roof. */
+ terrain=7;player_init(&p);p.y=(-100-PLAYER_HEIGHT)*FP-FP/2;p.state=JUMP;p.vy=4*FP;
+ player_tick(&p,(Input){0});assert(p.y==(-100-PLAYER_HEIGHT)*FP && p.vy==0 && p.state==FALL);
  /* Valid low ground must not trigger the old spawn-relative safety plane. */
  terrain=4;player_init(&p);
  for(int n=0;n<100;n++)player_tick(&p,(Input){0});

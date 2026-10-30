@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "native_route": {
+    "frames": 2400,
+    "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+    "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+    "final_position": [
+      0,
+      -16,
+      -2000
+    ],
+    "previous_boundary_z": -1280,
+    "automatic_respawns": 0,
+    "validation": "Continuous controller-only walk from original start, beyond previous patch, grounded on recovered original colliders",
+    "limitations": [
+      "This scenario demonstrates only the first 2000 units; later relic/checkpoint routes have separate checks",
+      "Full original level progression remains incomplete",
+      "HLE only; performance and hardware not certified"
+    ]
+  },
+  "static_memory": {
+    "elf": "zera_level3.elf",
+    "elf_sha256": "f321b0ad221c639d31783269f3c84bf7a22e6bae12a432770f291ed074e43f85",
+    "text": 834124,
+    "data": 2274,
+    "bss": 295896,
+    "static_bytes": 1132294,
+    "budget_bytes": 1572864,
+    "limitation": "Static sections only; BIOS, dynamic allocation, stack and runtime performance require separate validation"
+  },
+  "host_suite": {
+    "command": "sh tools/run_host_checks.sh",
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "status": "passed"
+  },
+  "source_files_sha256": {
+    "src/collision.c": "32ba2890ca1931f5f9fdc6ddb8a057bb73c8aad52f4121a27a3220c89b10e4be",
+    "src/collision.h": "d474cd81c93e599cbb3e15dc241f992a10289fa3619e3e587bd6848e6e727c33",
+    "src/player.c": "86f247d458222a9fd9cbd1c6818f38fffb70f72f4e8b3a7e8492ca91725ac3a7",
+    "src/world.c": "1cd9d39154ed4d1b17390293bac9f1da6a9b1f00d73c7f055514bf891dc9b36c",
+    "tools/convert_world.py": "ee97858d5db6891b1b2aac413ae33fa4c6623d5167957db55e4f1bac46e67a7d",
+    "tools/test_collision.c": "35bb1868e79b33e067ce4acee2e0bfe05f0b9cecb3c9decb7c4bb4e56b675be0",
+    "tools/test_level3.c": "9afb013897bee56cd173914838008e6adfa28d00d014fe0ab9addd0652aa5c3d",
+    "tools/scenarios/level3_corridor.json": "a1b9de47a5db36bb55240dce7cadd7a9c278e81c0d24701a4ae6f0800d67aaf1"
+  },
+  "source_bounds_units": [
+    -24,
+    24,
+    -96,
+    16
+  ],
+  "render_triangles": 2760,
+  "source_patch_triangles": 918,
+  "source_batch_validation": {
+    "validation": "Independent collider-local mesh transformed by original object hierarchy vs scene-space static-batch render bounds",
+    "tolerance_source_units": 0.1,
+    "results": [
+      {
+        "object": "Walkable.006",
+        "collider_mesh_path_id": 64,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.02154263075254903
+      },
+      {
+        "object": "Walkable.003",
+        "collider_mesh_path_id": 29,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.026009853332439548
+      },
+      {
+        "object": "Walkable.027",
+        "collider_mesh_path_id": 178,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.014498401537174743
+      },
+      {
+        "object": "Walkable.008",
+        "collider_mesh_path_id": 33,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.011411276575216789
+      },
+      {
+        "object": "Walkable.007",
+        "collider_mesh_path_id": 103,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.020726440828383375
+      },
+      {
+        "object": "Walkable.028",
+        "collider_mesh_path_id": 118,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.029558461209816755
+      },
+      {
+        "object": "Walkable.018",
+        "collider_mesh_path_id": 106,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.007506547035958988
+      },
+      {
+        "object": "Walkable.002",
+        "collider_mesh_path_id": 186,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.04014837433999219
+      },
+      {
+        "object": "Walkable.001",
+        "collider_mesh_path_id": 133,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.027334404850066107
+      },
+      {
+        "object": "Walkable.024",
+        "collider_mesh_path_id": 74,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.026395082473754883
+      },
+      {
+        "object": "Walkable.017",
+        "collider_mesh_path_id": 144,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.006089673729206879
+      },
+      {
+        "object": "Walkable.013",
+        "collider_mesh_path_id": 155,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.023304343223571777
+      },
+      {
+        "object": "Walkable.016",
+        "collider_mesh_path_id": 102,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.015539154410362244
+      },
+      {
+        "object": "Walkable.025",
+        "collider_mesh_path_id": 84,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.023585986093337397
+      },
+      {
+        "object": "Walkable.026",
+        "collider_mesh_path_id": 120,
+        "collider_source_file": "sharedassets3.assets",
+        "batch_vs_collider_bounds_max_error_source_units": 0.029365543025591023
+      }
+    ]
+  },
+  "regressions": {
+    "corridor": {
+      "frames": 2400,
+      "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "final_position": [
+        0,
+        -16,
+        -2000
+      ],
+      "previous_boundary_z": -1280,
+      "automatic_respawns": 0,
+      "validation": "Continuous controller-only walk from original start, beyond previous patch, grounded on recovered original colliders",
+      "limitations": [
+        "This scenario demonstrates only the first 2000 units; later relic/checkpoint routes have separate checks",
+        "Full original level progression remains incomplete",
+        "HLE only; performance and hardware not certified"
+      ]
+    },
+    "wall": {
+      "frames": 1100,
+      "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+      "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
+      "wall_x_at_ground": 574,
+      "wall_x_at_head": 562,
+      "previous_proxy_x": 547,
+      "player_radius": 24,
+      "final_position": [
+        537.0,
+        0.0,
+        0.0
+      ],
+      "blocked_while_holding_right": true,
+      "automatic_respawns": 0,
+      "limitations": [
+        "One sloped wall route in a bounded patch",
+        "Height-clipped triangle projection, not a continuous capsule sweep",
+        "HLE only; does not demonstrate the path to the original checkpoint"
+      ]
+    },
+    "jump": {
+      "bin_sha256": "da81c32468a66e397a8906446759d235660e06be654d0945ec3ae15dc11d6845",
+      "position": [
+        500,
+        0,
+        0
+      ],
+      "jump_peak": 153,
+      "automatic_respawns": 0,
+      "frames": 1250,
+      "validation": "Controller-only HLE unobstructed jump and landing regression; does not demonstrate an overhead collision"
+    },
+    "standalone_checkpoint": {
+      "frames": 1750,
+      "bin_sha256": "a1ece41188c3d0e5e258b11c8bef75a2b95d9bbf3dd81ef2aa05e3642813e988",
+      "select_respawn": true,
+      "pause_respawn": true,
+      "camera_yaw": 1447
+    },
+    "launch_relic": {
+      "frames": 5700,
+      "bin_sha256": "1de5c478f47dc5dff1c79677ae62c785bd7e81d9aad9c752d4febd9f3a14a218",
+      "count": 3,
+      "value": 20,
+      "restart_and_title_clear": true
+    }
+  },
+  "next_milestone": "Recover and render the original checkpoint plant in the connected area"
+}

@@ -1,0 +1,57 @@
+{
+  "frames": 2200,
+  "gif": true,
+  "audio": false,
+  "shots": [
+    359,
+    650,
+    950,
+    1150,
+    1250,
+    1380,
+    1500,
+    1700,
+    2199
+  ],
+  "actions": [
+    {
+      "start": 300,
+      "end": 320,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 340,
+      "end": 400,
+      "buttons": [
+        10
+      ]
+    },
+    {
+      "start": 600,
+      "end": 1150,
+      "buttons": [
+        12
+      ]
+    },
+    {
+      "start": 1200,
+      "end": 1300,
+      "buttons": [
+        7,
+        12
+      ]
+    },
+    {
+      "start": 1320,
+      "end": 1600,
+      "buttons": [
+        0
+      ]
+    }
+  ],
+  "gif_start_frame": 1200,
+  "gif_end_frame": 1600,
+  "gif_sample_step": 4
+}

@@ -1,0 +1,57 @@
+{
+  "frames": 2100,
+  "audio": false,
+  "gif": false,
+  "map_file": "zera_atlas.map",
+  "sample_interval": 10,
+  "shots": [
+    350,
+    900,
+    1400,
+    2099
+  ],
+  "actions": [
+    {
+      "start": 120,
+      "end": 130,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 180,
+      "end": 190,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 240,
+      "end": 250,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 300,
+      "end": 310,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 360,
+      "end": 370,
+      "buttons": [
+        5
+      ]
+    },
+    {
+      "start": 450,
+      "end": 460,
+      "buttons": [
+        0
+      ]
+    }
+  ]
+}

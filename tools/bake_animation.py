@@ -10,9 +10,10 @@ from scipy.spatial.transform import Rotation
 import UnityPy
 from UnityPy.helpers.MeshHelper import MeshHandler
 from character_packing import pack
+from character_rotations import source_euler_quaternion
 P=Path(__file__).resolve().parents[1]
 E=UnityPy.load(sys.argv[1]);objects=list(E.objects)
-sm=next(o.read() for o in objects if o.type.name=='SkinnedMeshRenderer' and o.read().m_Mesh.path_id==314 and o.read().m_Mesh.deref().assets_file.name=='resources.assets')
+sm=next(o.read() for o in objects if o.assets_file.name=='level2' and o.type.name=='SkinnedMeshRenderer' and o.read().m_Mesh.path_id==314 and o.read().m_Mesh.deref().assets_file.name=='resources.assets')
 mesh=sm.m_Mesh.read();h=MeshHandler(mesh);h.process()
 root=sm.m_GameObject.read().m_Component[0].component.read()
 while root.m_GameObject.read().m_Name!='Zera':root=root.m_Father.read()
@@ -48,7 +49,7 @@ def globals_for(values):
  for id,n in nodes.items():
   pos=values.get((id,1),n['pos']);scale=values.get((id,3),n['scale'])
   if (id,4) in values:
-   x,y,z=values[id,4];q=Rotation.from_euler('zxy',[z,x,y],degrees=True).as_quat()
+   q=source_euler_quaternion(values[id,4])
   else:q=values.get((id,2),n['quat'])
   q=np.array(q);q=q/np.linalg.norm(q)
   glob[id]=glob[n['parent']]@matrix(pos,q,scale)
@@ -120,4 +121,4 @@ s+='static const unsigned short zera_anim_count[]={'+','.join(str(x['frames']) f
 s+='static const unsigned short zera_anim_ticks[]={'+','.join(str(round(x['duration']*30)) for x in meta)+'};\n'
 (P/'src/zera_anim.h').write_text(s)
 (P/'assets/character_animation_source.json').write_text(json.dumps({'nodes':nodes,'bones':bones,'bind':bind.tolist(),'vertices':verts.tolist(),'weights':weights.tolist(),'indices':indices.tolist(),'clips':sourceclips}))
-(P/'reports/animation_conversion.json').write_text(json.dumps({'clips':meta,'total_frames':len(allframes),'weight_sum_max_error':weight_error,'packed_vertices':packed_count,'unmatched_bindings':list(unmatched),'default_pose_differs_from_bind_pose':True,'normalization':'animator-root space; idle foot height; same scale for all clips','method':'offline linear blend skinning, sampled transform curves, ~12 Hz integer vertex frames','limitations':['original transition graph not recovered','Unity custom shader effects omitted','root motion ignored','no original-Unity visual reference comparison yet']},indent=2))
+(P/'reports/animation_conversion.json').write_text(json.dumps({'renderer_scene':'level2','renderer_path_id':sm.object_reader.path_id,'euler_convention':'intrinsic ZXY; validated against serialized source Transform quaternion','clips':meta,'total_frames':len(allframes),'weight_sum_max_error':weight_error,'packed_vertices':packed_count,'unmatched_bindings':list(unmatched),'default_pose_differs_from_bind_pose':True,'normalization':'animator-root space; idle foot height; same scale for all clips','method':'offline linear blend skinning, sampled transform curves, ~12 Hz integer vertex frames','limitations':['original transition graph not recovered','Unity custom shader effects omitted','root motion ignored','no original-Unity visual reference comparison yet']},indent=2))

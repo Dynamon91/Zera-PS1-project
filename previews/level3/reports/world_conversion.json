@@ -7,15 +7,15 @@
     111.0
   ],
   "ground_height": 22.85286337527764,
-  "source_radius_units": 16.0,
+  "source_radius_units": 96.0,
   "world_scale": 80,
-  "render_triangles": 543,
+  "render_triangles": 2760,
   "texture_materials": [
     "None 2"
   ],
   "texture_format": "8-bit indexed 256x256 atlas, 64x64 repeating tiles",
-  "source_collision_triangles": 51,
-  "wall_proxies": 156,
+  "source_collision_triangles": 199,
+  "wall_proxies": 436,
   "instances": [
     {
       "object": "Walls.058",
@@ -92,9 +92,897 @@
       ]
     },
     {
+      "object": "Walkable.006",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 4,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3885,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 224,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          -9.0234375,
+          50.65625,
+          27.96875
+        ],
+        [
+          23.171875,
+          53.8125,
+          67.375
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.003",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 29,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3811,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 183,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          20.328125,
+          11.7421875,
+          -12.0859375
+        ],
+        [
+          88.0,
+          21.859375,
+          74.5625
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.027",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 2,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3831,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 110,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          27.125,
+          53.90625,
+          88.5
+        ],
+        [
+          29.390625,
+          54.0,
+          90.75
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.008",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 12,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3759,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 198,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          16.1875,
+          21.4375,
+          11.1328125
+        ],
+        [
+          37.75,
+          21.4375,
+          33.875
+        ]
+      ]
+    },
+    {
+      "object": "Walls.053",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 20,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3765,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 126,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          55.53125,
+          27.828125,
+          9.4296875
+        ],
+        [
+          73.0625,
+          31.03125,
+          27.015625
+        ]
+      ]
+    },
+    {
+      "object": "Walls.054",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 8,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3739,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 137,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          62.75,
+          24.5,
+          17.015625
+        ],
+        [
+          65.75,
+          33.125,
+          19.984375
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.007",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 5,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3790,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 80,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          22.515625,
+          19.421875,
+          31.09375
+        ],
+        [
+          39.71875,
+          21.234375,
+          65.5625
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.028",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 2,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3777,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 124,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          30.078125,
+          53.28125,
+          80.1875
+        ],
+        [
+          31.734375,
+          53.3125,
+          81.875
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.018",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 2,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3771,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 165,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          15.1875,
+          23.734375,
+          22.734375
+        ],
+        [
+          24.046875,
+          24.234375,
+          34.125
+        ]
+      ]
+    },
+    {
+      "object": "Walls.018",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 10,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3802,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 132,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          55.28125,
+          51.0,
+          80.0625
+        ],
+        [
+          57.6875,
+          54.25,
+          82.4375
+        ]
+      ]
+    },
+    {
+      "object": "Walls.006",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 80,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3743,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 133,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          60.46875,
+          28.4375,
+          14.359375
+        ],
+        [
+          67.8125,
+          29.53125,
+          22.0625
+        ]
+      ]
+    },
+    {
+      "object": "Walls.020",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 10,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3817,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 218,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          27.125,
+          50.4375,
+          88.5
+        ],
+        [
+          29.390625,
+          54.0,
+          90.75
+        ]
+      ]
+    },
+    {
       "object": "Walkable.002",
       "mesh": "Combined Mesh (root: scene)",
-      "triangles_before_clipping": 7,
+      "triangles_before_clipping": 75,
       "source_file": "level3",
       "mesh_id": 1,
       "transform_path_id": 3718,
@@ -168,7 +1056,7 @@
     {
       "object": "Walkable.001",
       "mesh": "Combined Mesh (root: scene)",
-      "triangles_before_clipping": 44,
+      "triangles_before_clipping": 48,
       "source_file": "level3",
       "mesh_id": 1,
       "transform_path_id": 3823,
@@ -236,6 +1124,302 @@
           57.09375,
           26.4375,
           124.75
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.024",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 6,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3824,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 115,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          58.15625,
+          20.515625,
+          12.8203125
+        ],
+        [
+          70.9375,
+          20.53125,
+          25.796875
+        ]
+      ]
+    },
+    {
+      "object": "Walls.019",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 10,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3842,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 136,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          58.40625,
+          51.4375,
+          88.8125
+        ],
+        [
+          60.09375,
+          54.15625,
+          90.5
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.017",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 2,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3820,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 192,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          19.015625,
+          23.453125,
+          11.265625
+        ],
+        [
+          31.09375,
+          23.453125,
+          17.140625
+        ]
+      ]
+    },
+    {
+      "object": "Walls.021",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 10,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3775,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 216,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          30.078125,
+          50.21875,
+          80.1875
+        ],
+        [
+          31.734375,
+          53.3125,
+          81.875
         ]
       ]
     },
@@ -316,7 +1500,7 @@
     {
       "object": "Walls.059",
       "mesh": "Combined Mesh (root: scene)",
-      "triangles_before_clipping": 74,
+      "triangles_before_clipping": 80,
       "source_file": "level3",
       "mesh_id": 1,
       "transform_path_id": 3763,
@@ -388,9 +1572,231 @@
       ]
     },
     {
+      "object": "Walkable.013",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 7,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3880,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 232,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          55.3125,
+          21.984375,
+          8.875
+        ],
+        [
+          72.25,
+          22.0,
+          28.515625
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.016",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 2,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3735,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 223,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          31.859375,
+          23.125,
+          21.109375
+        ],
+        [
+          37.59375,
+          23.125,
+          31.265625
+        ]
+      ]
+    },
+    {
+      "object": "Walkable.025",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 2,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3816,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 199,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          55.28125,
+          54.1875,
+          80.0625
+        ],
+        [
+          57.6875,
+          54.25,
+          82.4375
+        ]
+      ]
+    },
+    {
       "object": "Walls.094",
       "mesh": "Combined Mesh (root: scene)",
-      "triangles_before_clipping": 84,
+      "triangles_before_clipping": 385,
       "source_file": "level3",
       "mesh_id": 1,
       "transform_path_id": 3788,
@@ -460,12 +1866,86 @@
           209.5
         ]
       ]
+    },
+    {
+      "object": "Walkable.026",
+      "mesh": "Combined Mesh (root: scene)",
+      "triangles_before_clipping": 2,
+      "source_file": "level3",
+      "mesh_id": 1,
+      "transform_path_id": 3742,
+      "source_world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_object_world_matrix": [
+        [
+          100.0,
+          0.0,
+          0.0,
+          42.99131774902344
+        ],
+        [
+          0.0,
+          -1.6858739687597435e-05,
+          99.99999999999858,
+          9.229999542236328
+        ],
+        [
+          0.0,
+          -99.99999999999858,
+          -1.6858739687597435e-05,
+          109.5626220703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "static_batch_first_submesh": 202,
+      "static_batch_submesh_count": 1,
+      "source_world_bounds": [
+        [
+          58.40625,
+          54.125,
+          88.8125
+        ],
+        [
+          60.09375,
+          54.15625,
+          90.5
+        ]
+      ]
     }
   ],
   "heightfield": {
-    "size": 65,
+    "size": 385,
     "step": 40,
-    "origin": -1280,
+    "origin": -7680,
     "missing_sentinel": -32768
   },
   "limitations": [
@@ -477,10 +1957,861 @@
     "heightfield samples capped at spawn height + 6 source units",
     "not full original level"
   ],
-  "source_patch_triangles_before_render_partition": 289,
+  "source_bounds_units": [
+    -24.0,
+    24.0,
+    -96.0,
+    16.0
+  ],
+  "wall_collision_source": {
+    "type": "original enabled solid static MeshColliders",
+    "instances": [
+      {
+        "component_path_id": 5014,
+        "object": "Walls.094",
+        "mesh_id": 41,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5015,
+        "object": "Walls.059",
+        "mesh_id": 21,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5022,
+        "object": "Walls.021",
+        "mesh_id": 98,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5041,
+        "object": "Walls.018",
+        "mesh_id": 158,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5047,
+        "object": "Walkable.027",
+        "mesh_id": 178,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5063,
+        "object": "Walls.019",
+        "mesh_id": 78,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5066,
+        "object": "Walkable.016",
+        "mesh_id": 102,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5070,
+        "object": "Walkable.003",
+        "mesh_id": 29,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5075,
+        "object": "Walkable.007",
+        "mesh_id": 103,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5077,
+        "object": "Walkable.025",
+        "mesh_id": 84,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5082,
+        "object": "Walkable.008",
+        "mesh_id": 33,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5088,
+        "object": "Walkable.013",
+        "mesh_id": 155,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5092,
+        "object": "Walls.060",
+        "mesh_id": 126,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5096,
+        "object": "Walls.058",
+        "mesh_id": 59,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5097,
+        "object": "Walkable.006",
+        "mesh_id": 64,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5106,
+        "object": "Walkable.028",
+        "mesh_id": 118,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5109,
+        "object": "Walkable.002",
+        "mesh_id": 186,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5118,
+        "object": "Walls.020",
+        "mesh_id": 49,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5119,
+        "object": "Walls.053",
+        "mesh_id": 99,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5124,
+        "object": "Walls.054",
+        "mesh_id": 37,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5135,
+        "object": "Walls.006",
+        "mesh_id": 112,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5138,
+        "object": "Walkable.018",
+        "mesh_id": 106,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5145,
+        "object": "Walkable.026",
+        "mesh_id": 120,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5150,
+        "object": "Walkable.017",
+        "mesh_id": 144,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5167,
+        "object": "Walkable.024",
+        "mesh_id": 74,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "component_path_id": 5180,
+        "object": "Walkable.001",
+        "mesh_id": 133,
+        "source_file": "sharedassets3.assets",
+        "source_world_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            42.99131774902344
+          ],
+          [
+            0.0,
+            -1.6858739687597435e-05,
+            99.99999999999858,
+            9.229999542236328
+          ],
+          [
+            0.0,
+            -99.99999999999858,
+            -1.6858739687597435e-05,
+            109.5626220703125
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "source_triangles": 840,
+    "clipped_triangles": 918,
+    "exclusions": [
+      "Lava",
+      "triggers",
+      "disabled components or hierarchies",
+      "actors outside the converted static environment"
+    ]
+  },
+  "source_patch_triangles_before_render_partition": 918,
   "render_cells": {
     "size_world_units": 640,
-    "count": 16,
+    "count": 84,
     "draw_radius_world_units": 1280
   },
   "source_files_sha256": {
@@ -489,7 +2820,7 @@
   },
   "converter_unitypy_version": "1.25.4",
   "floor_surfaces": {
-    "triangles": 55,
+    "triangles": 234,
     "height_cap": null,
     "selection": "highest original collider surface at or below player step/landing ceiling",
     "limitations": [

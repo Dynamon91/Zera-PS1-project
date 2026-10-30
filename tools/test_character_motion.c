@@ -2,6 +2,18 @@
 #include "../src/character.h"
 #include "../src/player.h"
 int main(void){
+ /* Clockwise outward projected faces survive; backs/edge-on faces do not.
+    Wide coordinates exercise products beyond signed 32-bit range. */
+ const short front[]={0,0,10,0,0,10},back[]={0,0,0,10,10,0};
+ const short edge[]={0,0,10,10,20,20};
+ const short wide[]={-32768,-32768,32767,-32768,-32768,32767};
+ assert(character_front_face(front) && character_front_face(wide));
+ assert(!character_front_face(back) && !character_front_face(edge));
+ CharacterDrawFace faces[5]={{.key=4002},{.key=4000},{.key=3902},{.key=4102},{.key=4000}};
+ short head=-1;for(short i=0;i<5;i++)character_link_face(faces,&head,i);
+ const int expected[]={2,1,4,0,3};
+ for(int i=0;i<5;i++){assert(head==expected[i]);head=faces[head].next;}
+ assert(head==-1);
  const int input[][3]={{0,1,0},{1,1,512},{1,0,1024},{1,-1,1536},{0,-1,2048},{-1,-1,2560},{-1,0,3072},{-1,1,3584}};
  for(int yaw=0;yaw<4096;yaw+=256)for(int k=0;k<8;k++){
   int facing=0,target=(input[k][2]-yaw)&4095;

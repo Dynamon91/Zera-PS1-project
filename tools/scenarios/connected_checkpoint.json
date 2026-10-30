@@ -1,0 +1,27 @@
+{
+  "frames":11200,"gif":false,"audio":false,"map_file":"zera_level3.map","sample_interval":5,
+  "corridor_relic_route":true,"corridor_camera_yaw":2048,"corridor_route_end":10000,
+  "corridor_target_mask":3,"corridor_to_checkpoint":true,
+  "shots":[359,10050,10300,10580,10720,11000,11199],
+  "capture_events":[
+    {"name":"two_relics","relic_mask":3,"delay_frames":15},
+    {"name":"checkpoint_active","relic_mask":3,"checkpoint_id":6752,"delay_frames":15},
+    {"name":"checkpoint_return","min_frame":10210,"relic_mask":3,"checkpoint_id":6752,"delay_frames":15}
+  ],
+  "actions":[
+    {"start":300,"end":320,"buttons":[0]},
+    {"start":340,"end":350,"buttons":[10]},
+    {"start":10200,"end":10210,"buttons":[2]},
+    {"start":10400,"end":10410,"buttons":[10]},
+    {"start":10420,"end":10540,"buttons":[6]},
+    {"start":10600,"end":10610,"buttons":[3]},
+    {"start":10640,"end":10650,"buttons":[5]},
+    {"start":10680,"end":10690,"buttons":[0]},
+    {"start":10800,"end":10810,"buttons":[3]},
+    {"start":10840,"end":10850,"buttons":[5]},
+    {"start":10880,"end":10890,"buttons":[5]},
+    {"start":10920,"end":10930,"buttons":[5]},
+    {"start":10960,"end":10970,"buttons":[0]},
+    {"start":11040,"end":11050,"buttons":[0]}
+  ]
+}

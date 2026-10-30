@@ -1,4 +1,5 @@
 /build/
+/build-character/
 /dist/
 __pycache__/
 *.py[cod]

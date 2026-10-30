@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include "surface.h"
-int surface_height(const short (*triangles)[9],int count,int x,int z,int ceiling,int *height){
+static int surface_select(const short (*triangles)[9],int count,int x,int z,int limit,int above,int *height){
  int found=0,best=0;
  for(int i=0;i<count;i++){
   const short *t=triangles[i];
@@ -15,8 +15,14 @@ int surface_height(const short (*triangles)[9],int count,int x,int z,int ceiling
   if(den<0){den=-den;a=-a;b=-b;c=-c;}
   if(a<0 || b<0 || c<0)continue;
   int h=(a*t[1]+b*t[4]+c*t[7])/den;
-  if(h<=ceiling && (!found || h>best)){best=h;found=1;}
+  if(above ? (h>=limit && (!found || h<best)) : (h<=limit && (!found || h>best))){best=h;found=1;}
  }
  if(found)*height=best;
  return found;
+}
+int surface_height(const short (*triangles)[9],int count,int x,int z,int ceiling,int *height){
+ return surface_select(triangles,count,x,z,ceiling,0,height);
+}
+int surface_ceiling(const short (*triangles)[9],int count,int x,int z,int minimum,int *height){
+ return surface_select(triangles,count,x,z,minimum,1,height);
 }

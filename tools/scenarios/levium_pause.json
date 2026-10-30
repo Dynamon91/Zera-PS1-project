@@ -1,0 +1,39 @@
+{
+  "frames": 9000,
+  "map_file": "zera_campaign.map",
+  "sample_interval": 5,
+  "audio": false,
+  "gif": false,
+  "frontend_auto_start": true,
+  "frontend_auto_start_end": 1000,
+  "levium_route": true,
+  "levium_route_until": 8500,
+  "shots": [
+    5100,
+    5350,
+    5550,
+    5900,
+    8999
+  ],
+  "capture_events": [],
+  "actions": [
+    {
+      "start": 5200,
+      "end": 5208,
+      "buttons": [
+        3
+      ]
+    },
+    {
+      "start": 5600,
+      "end": 5608,
+      "buttons": [
+        3
+      ]
+    }
+  ],
+  "gif_start_frame": 4400,
+  "gif_end_frame": 5300,
+  "gif_sample_step": 6,
+  "levium_target_completions": 1
+}

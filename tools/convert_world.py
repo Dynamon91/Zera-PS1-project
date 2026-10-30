@@ -14,8 +14,14 @@ parser.add_argument('--radius',type=float,default=16.0)
 parser.add_argument('--scene',choices=['level2','level3'],default='level2')
 parser.add_argument('--launchpad',type=int,help='Center a separate level3 preview on this original LaunchPad component')
 parser.add_argument('--output-root',type=Path,help='Separate generated project root for a preview')
+parser.add_argument('--checkpoint',type=int,help='Center a separate level3 preview on a recovered checkpoint spawn')
+parser.add_argument('--bounds',type=float,nargs=4,metavar=('XMIN','XMAX','ZMIN','ZMAX'),help='Optional source-unit extraction bounds relative to spawn, within radius')
 args=parser.parse_args()
+if args.checkpoint is not None and (args.scene!='level3' or args.output_root is None or args.launchpad is not None):parser.error('checkpoint requires level3, separate output root and no launchpad')
 if args.radius<=0 or abs(args.radius*80/40-round(args.radius*80/40))>1e-6:parser.error('radius must be positive and align to the 40-unit collision grid')
+if args.bounds is not None:
+ if not all(math.isfinite(v) and abs(v)<=args.radius and abs(v*2-round(v*2))<1e-6 for v in args.bounds) or args.bounds[0]>=args.bounds[1] or args.bounds[2]>=args.bounds[3]:parser.error('bounds must be ordered half-unit coordinates within radius')
+ if not args.bounds[0]<=0<=args.bounds[1] or not args.bounds[2]<=0<=args.bounds[3]:parser.error('bounds must contain spawn')
 P=args.output_root or Path(__file__).resolve().parents[1]
 for folder in ('src','assets','reports'):(P/folder).mkdir(parents=True,exist_ok=True)
 E=UnityPy.load(args.data);F=next(f for f in E.files.values() if getattr(f,'name',None)==args.scene)
@@ -48,7 +54,17 @@ if args.launchpad is not None:
  launch_root=go_transform(component.m_GameObject.read()).object_reader.path_id
 spawn=next(wm(o.read())[:3,3] for o in F.objects.values() if o.type.name=='Transform' and o.read().m_GameObject.read().m_Name.startswith('_StartSpawnPoint'))
 if launch_root is not None:spawn=wm(F.objects[launch_root].read())[:3,3]
-SCALE=80;R=args.radius;scene=[];collision=[];instances=[]
+if args.checkpoint is not None:
+ recovery=json.loads((Path(__file__).resolve().parents[1]/'reports/progression_recovery.json').read_text())
+ for name in ('level3','Managed/Assembly-CSharp.dll'):
+  if hashlib.sha256((Path(args.data)/name).read_bytes()).hexdigest()!=recovery['source_file_sha256'][name]:raise ValueError('Checkpoint recovery source mismatch: '+name)
+ checkpoint=next(e for scene in recovery['scenes'] if scene['scene']=='level3' for e in scene['entries'] if e['kind']=='Checkpoint' and e['component_path_id']==args.checkpoint)
+ spawn=np.array(checkpoint['new_spawn_point']['target']['source_world_position'])
+SCALE=80;R=args.radius;scene=[];collision=[];blocking=[];wall_instances=[];instances=[]
+extents=args.bounds or [-R,R,-R,R]
+lower=np.array([spawn[0]+extents[0],spawn[2]+extents[2]])
+upper=np.array([spawn[0]+extents[1],spawn[2]+extents[3]])
+limits={0:(lower[0],upper[0]),2:(lower[1],upper[1])}
 for o in F.objects.values():
  if o.type.name not in ('MeshFilter','MeshCollider'):continue
  d=o.read();go=d.m_GameObject.read()
@@ -56,7 +72,17 @@ for o in F.objects.values():
  t=go_transform(go);root=t
  while root.m_Father.path_id:root=root.m_Father.read()
  is_launch_object=root.object_reader.path_id==launch_root
- if o.type.name=='MeshCollider' and not go.m_Name.startswith('Walkable') and not is_launch_object:continue
+ if o.type.name=='MeshCollider':
+  if args.scene=='level3':
+   if root.m_GameObject.read().m_Name!='DrearyValley' and not is_launch_object:continue
+   if go.m_Name.startswith('Lava') or not d.m_Enabled or d.m_IsTrigger:continue
+   ancestor=t;active=True
+   while True:
+    active=active and bool(ancestor.m_GameObject.read().m_IsActive)
+    if not ancestor.m_Father.path_id:break
+    ancestor=ancestor.m_Father.read()
+   if not active:continue
+  elif not go.m_Name.startswith('Walkable') and not is_launch_object:continue
  renderer=None;batch_first=0;batch_count=0
  if o.type.name=='MeshFilter':
   if root.m_GameObject.read().m_Name not in (('Islands','Tutorial') if args.scene=='level2' else ('DrearyValley',)) and not is_launch_object:continue
@@ -81,7 +107,7 @@ for o in F.objects.values():
   selected_ids.extend(idx[start:start+sub.indexCount])
  if not selected_ids:continue
  bounds=v[selected_ids]
- if np.any(bounds[:,[0,2]].max(0)<spawn[[0,2]]-R) or np.any(bounds[:,[0,2]].min(0)>spawn[[0,2]]+R):continue
+ if np.any(bounds[:,[0,2]].max(0)<lower) or np.any(bounds[:,[0,2]].min(0)>upper):continue
  added=0;material_tiles=[]
  if renderer:
   for mp in renderer.m_Materials:
@@ -99,10 +125,13 @@ for o in F.objects.values():
   start=sub.firstByte//(2 if mesh.m_IndexFormat==0 else 4)
   for ids in idx[start:start+sub.indexCount].reshape(-1,3):
    a=v[ids]
-   if np.any(a[:,[0,2]].max(0)<spawn[[0,2]]-R) or np.any(a[:,[0,2]].min(0)>spawn[[0,2]]+R):continue
-   if o.type.name=='MeshCollider':collision.append(a)
+   if np.any(a[:,[0,2]].max(0)<lower) or np.any(a[:,[0,2]].min(0)>upper):continue
+   if o.type.name=='MeshCollider':
+    blocking.append(a)
+    if go.m_Name.startswith('Walkable') or is_launch_object:collision.append(a)
    else:scene.append((np.column_stack([a,uv[ids]]),col[ids,:3].mean(0),material_tiles[min(local_si,len(material_tiles)-1)]));added+=1
  if added:instances.append({'object':go.m_Name,'mesh':mesh.m_Name,'triangles_before_clipping':added,'source_file':d.m_Mesh.deref().assets_file.name,'mesh_id':d.m_Mesh.path_id,'transform_path_id':t.object_reader.path_id,'source_world_matrix':applied_matrix.tolist(),'original_object_world_matrix':wm(t).tolist(),'static_batch_first_submesh':batch_first,'static_batch_submesh_count':batch_count,'source_world_bounds':[bounds.min(0).tolist(),bounds.max(0).tolist()]})
+ if o.type.name=='MeshCollider':wall_instances.append({'component_path_id':o.path_id,'object':go.m_Name,'mesh_id':d.m_Mesh.path_id,'source_file':d.m_Mesh.deref().assets_file.name,'source_world_matrix':applied_matrix.tolist()})
 collision=np.array(collision)
 def heights(x,z):
  a,b,c=collision[:,0],collision[:,1],collision[:,2]
@@ -126,9 +155,9 @@ tri=[];colors=[];uvs=[];tile_indices=[]
 for a,color,tile in scene:
  poly=list(a)
  for axis in (0,2):
-  poly=clip(poly,axis,spawn[axis]-R,1)
+  poly=clip(poly,axis,limits[axis][0],1)
   if not poly:break
-  poly=clip(poly,axis,spawn[axis]+R,-1)
+  poly=clip(poly,axis,limits[axis][1],-1)
   if not poly:break
  for j in range(1,len(poly)-1):
   pts=np.array([poly[0],poly[j],poly[j+1]])
@@ -146,7 +175,8 @@ for iz in range(N):
  row=[]
  for ix in range(N):
   x=spawn[0]-(ORIGIN+ix*STEP)/SCALE;z=spawn[2]+(ORIGIN+iz*STEP)/SCALE
-  h=heights(x,z);row.append(round((float(h.max())-ground)*SCALE) if len(h) else -32768)
+  h=heights(x,z) if lower[0]<=x<=upper[0] and lower[1]<=z<=upper[1] else []
+  row.append(round((float(h.max())-ground)*SCALE) if len(h) else -32768)
  grid.append(row)
 assert grid[N//2][N//2]==0
 used=sorted(set(tile_indices));remap={old:new for new,old in enumerate(used)}
@@ -154,7 +184,21 @@ tiles=[tiles[i] for i in used];texture_names=[texture_names[i] for i in used];ti
 assert len(tiles)<=16, 'expanded area exceeds the current atlas capacity'
 # Partition rendering only. Collision proxies retain the unpartitioned surface,
 # so optimizing draw cells does not alter the recovered collision adaptation.
-wall_source_tri=tri.copy();patch_triangle_count=len(tri)
+wall_source_tri=[]
+if args.scene=='level3':
+ for a in blocking:
+  poly=list(a)
+  for axis in (0,2):
+   poly=clip(poly,axis,limits[axis][0],1)
+   if poly:poly=clip(poly,axis,limits[axis][1],-1)
+   if not poly:break
+  for j in range(1,len(poly)-1):
+   pts=np.array([poly[0],poly[j],poly[j+1]])
+   q=np.rint(np.column_stack([-(pts[:,0]-spawn[0])*SCALE,80-(pts[:,1]-ground)*SCALE,(pts[:,2]-spawn[2])*SCALE])).astype(int)
+   if np.abs(q).max()>32767:raise ValueError('Collider wall exceeds short coordinates')
+   wall_source_tri.append(q)
+else:wall_source_tri=tri.copy()
+patch_triangle_count=len(tri)
 cell_size=640;cell_origin=-round(R*SCALE);cell_count=math.ceil(2*R*SCALE/cell_size)
 buckets={}
 for a,color,tc,tile in zip(tri,colors,uvs,tile_indices):
@@ -197,19 +241,23 @@ s+='#define WORLD_TRIANGLE_COUNT %d\n'%len(tri)
 s+='#define WORLD_CELL_COUNT %d\n'%len(cells)
 s+='static const short world_cells[][8]={'+''.join('{'+','.join(map(str,c))+'},' for c in cells)+'};\n'
 (P/'src/world_mesh.h').write_text(s)
-# Conservative vertical-wall proxies from steep triangles in this collision-
-# matched walkable mesh. Longest XZ edge plus the triangle's vertical interval.
-walls=set()
+# Conservative vertical-wall proxies: level3 uses solid static MeshColliders;
+# level2 retains render-derived geometry. Longest XZ edge and vertical interval.
+walls=set();wall_triangles=set()
 for a in wall_source_tri:
  g=a.copy();g[:,1]=80-g[:,1]
  normal=np.cross(g[1]-g[0],g[2]-g[0])
  if 2*int(normal[1])**2 >= int(normal[0])**2+int(normal[2])**2:continue
+ wall_triangles.add(tuple(map(int,g.flatten())))
  edges=[(g[i],g[(i+1)%3]) for i in range(3)]
  a,b=max(edges,key=lambda e:int(e[0][0]-e[1][0])**2+int(e[0][2]-e[1][2])**2)
  if np.sum((a[[0,2]]-b[[0,2]])**2)<16:continue
  ends=sorted([(int(a[0]),int(a[2])),(int(b[0]),int(b[2]))])
  walls.add((*ends[0],*ends[1],int(g[:,1].min()),int(g[:,1].max())))
 walls=sorted(walls)
+wall_triangles=sorted(wall_triangles)
+if args.scene=='level3':
+ (P/'src/world_wall_triangles.h').write_text('/* Original steep collider triangles; positive Y up. */\n#define WORLD_WALL_TRIANGLE_COUNT %d\nstatic const short world_wall_triangles[][9]={\n'%len(wall_triangles)+''.join('{'+','.join(map(str,t))+'},\n' for t in wall_triangles)+'};\n')
 (P/'src/world_walls.h').write_text('/* Steep original terrain, conservative vertical proxies. */\n#define WORLD_WALL_COUNT %d\nstatic const short world_walls[][6]={\n'%len(walls)+''.join('{'+','.join(map(str,w))+'},\n' for w in walls)+'};\n')
 
 assert len(tiles)<=16
@@ -228,6 +276,9 @@ s=('#define WORLD_N %d\n#define WORLD_STEP %d\n#define WORLD_ORIGIN (%d)\nstatic
 (P/'src/world_height.h').write_text(s)
 report={'scene':args.scene,'area':'original bounded spawn vicinity','spawn':spawn.tolist(),'ground_height':ground,'source_radius_units':R,'world_scale':SCALE,'render_triangles':len(tri),'texture_materials':texture_names,'texture_format':'8-bit indexed 256x256 atlas, 64x64 repeating tiles','source_collision_triangles':len(collision),'wall_proxies':len(walls),'instances':instances,'heightfield':{'size':N,'step':STEP,'origin':ORIGIN,'missing_sentinel':-32768},'limitations':['single-valued heightfield','conservative steep-triangle wall proxies; not full capsule/triangle collision','original main textures; custom Unity shader effects omitted','actors and effects omitted', 'lava geometry and hazard behavior omitted','heightfield samples capped at spawn height + 6 source units','not full original level']}
 source_hashes={}
+if args.bounds is not None:report['source_bounds_units']=args.bounds
+if args.scene=='level3':
+ report['wall_collision_source']={'type':'original enabled solid static MeshColliders','instances':wall_instances,'source_triangles':len(blocking),'clipped_triangles':len(wall_source_tri),'exclusions':['Lava','triggers','disabled components or hierarchies','actors outside the converted static environment']}
 for name in sorted(source_asset_files):
  matches=list(Path(args.data).rglob(name))
  if len(matches)!=1:raise RuntimeError('Cannot resolve source provenance file: '+name)
@@ -235,6 +286,9 @@ for name in sorted(source_asset_files):
 if launch_root is not None:
  report['launchpad_component_path_id']=args.launchpad
  report['area']='original launchpad vicinity; dedicated traversal prototype'
+if args.checkpoint is not None:
+ report['checkpoint_component_path_id']=args.checkpoint
+ report['area']='original checkpoint spawn vicinity; dedicated respawn prototype'
 report['source_patch_triangles_before_render_partition']=patch_triangle_count
 report['render_cells']={'size_world_units':cell_size,'count':len(cells),'draw_radius_world_units':1280}
 report['source_files_sha256']=source_hashes
@@ -244,8 +298,8 @@ if args.scene=='level3':
  for triangle in collision:
   poly=list(triangle)
   for axis in (0,2):
-   poly=clip(poly,axis,spawn[axis]-R,1)
-   if poly:poly=clip(poly,axis,spawn[axis]+R,-1)
+   poly=clip(poly,axis,limits[axis][0],1)
+   if poly:poly=clip(poly,axis,limits[axis][1],-1)
    if not poly:break
   for i in range(1,len(poly)-1):
    pts=np.array([poly[0],poly[i],poly[i+1]])
@@ -259,5 +313,5 @@ if args.scene=='level3':
  report['floor_surfaces']={'triangles':len(floor_triangles),'height_cap':None,'selection':'highest original collider surface at or below player step/landing ceiling','limitations':['point support only; no capsule sweep or overhead ceiling collision','integer-quantized original triangles']}
 
 (P/'reports/world_conversion.json').write_text(json.dumps(report,indent=2))
-(P/'assets/world_chunk_source.json').write_text(json.dumps({'report':report,'triangles':[a.tolist() for a in tri],'colors':[c.tolist() for c in colors],'heightfield':grid,'walls':walls,'render_cells':cells,'floor_triangles':floor_triangles}))
+(P/'assets/world_chunk_source.json').write_text(json.dumps({'report':report,'triangles':[a.tolist() for a in tri],'colors':[c.tolist() for c in colors],'heightfield':grid,'walls':walls,'wall_triangles':wall_triangles,'render_cells':cells,'floor_triangles':floor_triangles}))
 print('World triangles:',len(tri),'collision source:',len(collision),'spawn ground:',ground,'instances:',len(instances))

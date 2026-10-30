@@ -1,0 +1,9 @@
+{
+  "frames":2400,"gif":false,"audio":false,"map_file":"zera_level3.map",
+  "stop_movement_at_z":-2000,"shots":[359,1100,1600,2399],
+  "actions":[
+    {"start":300,"end":320,"buttons":[0]},
+    {"start":340,"end":350,"buttons":[10]},
+    {"start":460,"end":2200,"buttons":[5]}
+  ]
+}

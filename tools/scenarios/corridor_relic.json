@@ -1,0 +1,20 @@
+{
+  "frames":4500,"gif":false,"audio":false,"map_file":"zera_level3.map",
+  "sample_interval":5,"corridor_relic_route":true,"corridor_camera_yaw":2048,
+  "shots":[359,3600,3900,4300,4499],
+  "capture_events":[
+    {"name":"approach","max_z":-3450,"relic_mask":0},
+    {"name":"collected","relic_mask":1,"delay_frames":15}
+  ],
+  "actions":[
+    {"start":300,"end":320,"buttons":[0]},
+    {"start":340,"end":350,"buttons":[10]},
+    {"start":3800,"end":3810,"buttons":[2]},
+    {"start":4100,"end":4110,"buttons":[3]},
+    {"start":4140,"end":4150,"buttons":[5]},
+    {"start":4180,"end":4190,"buttons":[5]},
+    {"start":4220,"end":4230,"buttons":[5]},
+    {"start":4260,"end":4270,"buttons":[0]},
+    {"start":4340,"end":4350,"buttons":[0]}
+  ]
+}

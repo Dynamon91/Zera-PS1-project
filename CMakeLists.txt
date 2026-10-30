@@ -1,14 +1,55 @@
 cmake_minimum_required(VERSION 3.21)
 project(ZeraPS1 LANGUAGES C CXX ASM)
 psn00bsdk_add_executable(zera GPREL src/main.c src/character.c src/player.c src/surface.c src/world.c src/collision.c src/camera.c src/clip.c src/animator.c src/menu.c src/audio.c src/stream.c src/trial.c)
+option(ZERA_CHARACTER_CLOSEUP "Build the base disc with a close camera for model inspection" OFF)
+if(ZERA_CHARACTER_CLOSEUP)
+  target_compile_definitions(zera PRIVATE CAMERA_DISTANCE=420)
+endif()
+
+option(ZERA_STREAM_WALK "Build the streamed Dreary Valley walking prototype" OFF)
+if(ZERA_STREAM_WALK)
+  psn00bsdk_add_executable(zera_walk GPREL src/atlas_main.c src/clip.c src/player.c src/animator.c src/character.c src/surface.c src/collision.c src/stream_world.c src/stream_collision_cache.c src/camera.c src/relics.c src/checkpoint.c)
+  target_compile_definitions(zera_walk PRIVATE ZERA_ATLAS_WALK=1 ZERA_STREAM_RELICS=1)
+  psn00bsdk_add_cd_image(iso_walk zera_stream_walk iso_walk.xml DEPENDS zera_walk system.cnf previews/atlas/assets/WORLD.DAT previews/walk/assets/COLLIDE.DAT)
+endif()
+option(ZERA_LEVIUM_DIALOGUE "Enable the original first Levium conversation in Cosmic Core" OFF)
+option(ZERA_CAMPAIGN_ENTRY "Build Cosmic Core campaign entry with expanded original menu pages" OFF)
+if(ZERA_CAMPAIGN_ENTRY)
+  psn00bsdk_add_executable(zera_campaign GPREL src/atlas_main.c src/frontend.c src/frontend_media.c src/clip.c src/player.c src/animator.c src/character.c src/surface.c src/collision.c src/stream_world.c src/stream_collision_cache.c src/camera.c src/relics.c src/checkpoint.c)
+  target_compile_definitions(zera_campaign PRIVATE ZERA_ATLAS_WALK=1 ZERA_STREAM_RELICS=1 ZERA_FULL_FRONTEND=1 ZERA_CAMPAIGN_ENTRY=1)
+  if(ZERA_LEVIUM_DIALOGUE)
+    target_sources(zera_campaign PRIVATE src/dialogue.c)
+    target_compile_definitions(zera_campaign PRIVATE ZERA_LEVIUM_DIALOGUE=1)
+  endif()
+  psn00bsdk_add_cd_image(iso_campaign zera_campaign iso_campaign.xml DEPENDS zera_campaign system.cnf previews/atlas/assets/WORLD.DAT previews/cosmic/assets/COLLIDE.DAT previews/frontend/assets/FRONT.DAT)
+endif()
+option(ZERA_FULL_FRONTEND "Build original startup media and an integrated game menu" OFF)
+if(ZERA_FULL_FRONTEND)
+  psn00bsdk_add_executable(zera_game GPREL src/atlas_main.c src/frontend.c src/frontend_media.c src/clip.c src/player.c src/animator.c src/character.c src/surface.c src/collision.c src/stream_world.c src/stream_collision_cache.c src/camera.c src/relics.c src/checkpoint.c)
+  target_compile_definitions(zera_game PRIVATE ZERA_ATLAS_WALK=1 ZERA_STREAM_RELICS=1 ZERA_FULL_FRONTEND=1)
+  psn00bsdk_add_cd_image(iso_game zera_gameplay iso_game.xml DEPENDS zera_game system.cnf previews/atlas/assets/WORLD.DAT previews/walk/assets/COLLIDE.DAT previews/frontend/assets/FRONT.DAT)
+endif()
 psn00bsdk_add_cd_image(iso zera_wip09 iso.xml DEPENDS zera system.cnf assets/audio/MUSIC.VAG)
 
 # Separate executable/disc: preserve the established level2 WIP09 build.
-psn00bsdk_add_executable(zera_level3 GPREL src/main.c src/character.c src/player.c src/surface.c src/world.c src/collision.c src/camera.c src/clip.c src/animator.c src/menu.c src/audio.c src/stream.c src/trial.c)
-target_compile_definitions(zera_level3 PRIVATE ZERA_LEVEL3_PREVIEW=1)
+psn00bsdk_add_executable(zera_level3 GPREL src/main.c src/character.c src/player.c src/relics.c src/checkpoint.c src/surface.c src/world.c src/collision.c src/camera.c src/clip.c src/animator.c src/menu.c src/audio.c src/stream.c src/trial.c)
+target_compile_definitions(zera_level3 PRIVATE ZERA_LEVEL3_PREVIEW=1 ZERA_CORRIDOR_RELICS=1)
 psn00bsdk_add_cd_image(iso_level3 zera_level3_preview iso_level3.xml DEPENDS zera_level3 system.cnf assets/audio/MUSIC.VAG)
 
 # Dedicated recovered launchpad area; existing level2/level3 discs remain available.
 psn00bsdk_add_executable(zera_launchpad GPREL src/main.c src/character.c src/player.c src/launch.c src/relics.c src/surface.c src/world.c src/collision.c src/camera.c src/clip.c src/animator.c src/menu.c src/audio.c src/stream.c src/trial.c)
 target_compile_definitions(zera_launchpad PRIVATE ZERA_LEVEL3_PREVIEW=1 ZERA_LAUNCH_PREVIEW=1)
 psn00bsdk_add_cd_image(iso_launchpad zera_launchpad_preview iso_launchpad.xml DEPENDS zera_launchpad system.cnf assets/audio/MUSIC.VAG)
+
+# Separate original checkpoint area while continuous level traversal is incomplete.
+psn00bsdk_add_executable(zera_checkpoint GPREL src/main.c src/character.c src/player.c src/checkpoint.c src/surface.c src/world.c src/collision.c src/camera.c src/clip.c src/animator.c src/menu.c src/audio.c src/stream.c src/trial.c)
+target_compile_definitions(zera_checkpoint PRIVATE ZERA_LEVEL3_PREVIEW=1 ZERA_CHECKPOINT_PREVIEW=1)
+psn00bsdk_add_cd_image(iso_checkpoint zera_checkpoint_preview iso_checkpoint.xml DEPENDS zera_checkpoint system.cnf assets/audio/MUSIC.VAG)
+
+# Optional complete static-world inspection. Its streamed CD data is generated
+# separately from the established gameplay previews.
+option(ZERA_WORLD_ATLAS "Build the CD-streamed original-world atlas" OFF)
+if(ZERA_WORLD_ATLAS)
+  psn00bsdk_add_executable(zera_atlas GPREL src/atlas_main.c src/clip.c)
+  psn00bsdk_add_cd_image(iso_atlas zera_world_atlas iso_atlas.xml DEPENDS zera_atlas system.cnf previews/atlas/assets/WORLD.DAT)
+endif()

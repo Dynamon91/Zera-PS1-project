@@ -1,0 +1,29 @@
+{
+  "frames": 2000,
+  "map_file": "zera_game.map",
+  "sample_interval": 5,
+  "audio": true,
+  "gif": false,
+  "shots": [
+    350,
+    800,
+    1500,
+    1999
+  ],
+  "actions": [
+    {
+      "start": 300,
+      "end": 308,
+      "buttons": [
+        0
+      ]
+    },
+    {
+      "start": 900,
+      "end": 908,
+      "buttons": [
+        0
+      ]
+    }
+  ]
+}

@@ -6,15 +6,25 @@ int main(void){
  int h=999;
  assert(surface_height(layers,2,0,0,48,&h) && h==0);
  assert(surface_height(layers,2,0,0,208,&h) && h==200);
+ assert(surface_ceiling(layers,2,0,0,1,&h) && h==200);
+ assert(surface_ceiling(layers,2,0,0,0,&h) && h==0);
+ assert(!surface_ceiling(layers,2,0,0,201,&h) && h==0);
+ assert(surface_ceiling(layers,2,-100,-100,1,&h) && h==200);
+ assert(!surface_ceiling(layers,2,200,0,INT_MIN,&h));
+ h=200;
  assert(!surface_height(layers,2,0,0,-1,&h) && h==200);
  assert(!surface_height(layers,2,200,0,INT_MAX,&h));
  assert(surface_height(layers,2,-100,-100,INT_MAX,&h) && h==200);
  const short slope[][9]={{-100,-100,-100,100,100,-100,0,0,100}};
  assert(surface_height(slope,1,50,-50,INT_MAX,&h) && h==50);
+ assert(surface_ceiling(slope,1,50,-50,50,&h) && h==50);
+ assert(!surface_ceiling(slope,1,50,-50,51,&h));
  const short vertical[][9]={{0,0,0,0,200,0,0,0,100}};
  assert(!surface_height(vertical,1,0,0,INT_MAX,&h));
+ assert(!surface_ceiling(vertical,1,0,0,INT_MIN,&h));
  /* Large short-coordinate triangles require 64-bit weights and products. */
  const short large[][9]={{-32768,-30000,-32768,32767,30000,-32768,0,0,32767}};
  assert(surface_height(large,1,0,0,INT_MAX,&h) && h==0);
+ assert(surface_ceiling(large,1,0,0,INT_MIN,&h) && h==0);
  return 0;
 }

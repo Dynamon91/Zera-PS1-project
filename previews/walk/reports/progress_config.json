@@ -1,0 +1,59 @@
+{
+  "source_recovery_sha256": "2369c297b39e69ea6591b2660c79e0596e67ac36156139769f769436335ec2df",
+  "collision_report_sha256": "a2f16732e58ea95624f466e87edd051fe9c6473200ddd2942b89e367de3568ab",
+  "source_origin": [
+    44.0,
+    22.81999969482422,
+    111.0
+  ],
+  "physics_scale": 80,
+  "relics": [
+    {
+      "id": 6606,
+      "source_position": [
+        44.606346130371094,
+        20.997663497924805,
+        63.578399658203125
+      ],
+      "position": [
+        -49,
+        -146,
+        -3794
+      ],
+      "value": 1
+    },
+    {
+      "id": 6898,
+      "source_position": [
+        56.25260925292969,
+        16.970075607299805,
+        30.088287353515625
+      ],
+      "position": [
+        -980,
+        -468,
+        -6473
+      ],
+      "value": 16
+    }
+  ],
+  "checkpoint": {
+    "id": 6752,
+    "spawn": [
+      1356,
+      -112,
+      -7101
+    ],
+    "trigger": [
+      1356,
+      -110,
+      -7101
+    ],
+    "yaw": 1447
+  },
+  "limitations": [
+    "Two relics only; provisional pickup volume, no original homing/effects",
+    "Grounded checkpoint proximity replaces Kiwi interaction",
+    "Session state only, no memory-card save"
+  ]
+}

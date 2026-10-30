@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "instances": [
+    {
+      "component_path_id": 6606,
+      "body_transform_path_id": 3435,
+      "mesh_file": "resources.assets",
+      "mesh_path_id": 387,
+      "mesh_name": "Gaia Statue",
+      "material_path_id": 53,
+      "material_name": "1",
+      "source_base_rgb": [
+        0.9333333373069763,
+        0.09803921729326248,
+        0.0
+      ],
+      "source_body_world_matrix": [
+        [
+          0.10000000149011609,
+          0.0,
+          0.0,
+          44.606346130371094
+        ],
+        [
+          0.0,
+          0.0,
+          0.10000000149011609,
+          20.98666349798441
+        ],
+        [
+          0.0,
+          -0.10000000149011609,
+          0.0,
+          63.578399658203125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_origin": [
+        44.606346130371094,
+        20.997663497924805,
+        63.578399658203125
+      ],
+      "source_vertices": 402,
+      "source_triangles": 206,
+      "packed_vertices": 105,
+      "render_triangles": 206
+    },
+    {
+      "component_path_id": 6898,
+      "body_transform_path_id": 2537,
+      "mesh_file": "resources.assets",
+      "mesh_path_id": 387,
+      "mesh_name": "Gaia Statue",
+      "material_path_id": 60,
+      "material_name": "7",
+      "source_base_rgb": [
+        0.5597407221794128,
+        0.03762974217534065,
+        0.8529411554336548
+      ],
+      "source_body_world_matrix": [
+        [
+          0.10000000149011609,
+          0.0,
+          0.0,
+          56.25260925292969
+        ],
+        [
+          0.0,
+          0.0,
+          0.10000000149011609,
+          16.95907560735941
+        ],
+        [
+          0.0,
+          -0.10000000149011609,
+          0.0,
+          30.088287353515625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_origin": [
+        56.25260925292969,
+        16.970075607299805,
+        30.088287353515625
+      ],
+      "source_vertices": 402,
+      "source_triangles": 206,
+      "packed_vertices": 105,
+      "render_triangles": 206
+    }
+  ],
+  "source_file_sha256": {
+    "level3": "06324ca85b7a0888b05b823256262f722a8eab261ec3a1e073e2d066e8daba99",
+    "resources.assets": "625e9ed92d9369aea8162b5d107a62551e56f2881f6e9e96cb411b6b6a39037d"
+  },
+  "conversion": "Original body world transform relative to original relic origin, scale80, mirrored X/Y for PS1 rendering; integer quantization",
+  "limitations": [
+    "Static serialized body pose; original runtime rotation not ported",
+    "Original base material colors with provisional facet lighting",
+    "Reflective/specular shader, flare, shadow and particles omitted",
+    "Pickup locations and behavior unchanged"
+  ]
+}

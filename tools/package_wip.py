@@ -10,7 +10,7 @@ import zipfile
 
 CHECKPOINT = "WIP09-source"
 ARCHIVE_NAME = "Zera_PS1_WIP09_Source_Checkpoint.zip"
-EXCLUDED_DIRS = {".git", "build", "dist", "__pycache__", ".pytest_cache", ".venv"}
+EXCLUDED_DIRS = {".git", "build", "build-character", "dist", "__pycache__", ".pytest_cache", ".venv"}
 REQUIRED = (
     "README.md", "PROGRESS.md", "src/main.c", "disc/zera.exe",
     "disc/zera.elf", "disc/zera.map", "disc/zera_wip08.bin", "disc/zera_wip08.cue",
