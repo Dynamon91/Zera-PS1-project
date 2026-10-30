@@ -2,7 +2,7 @@
 
 A second PS1 disc now opens a bounded patch around the original level3 named
 start spawn at (44, 22.82, 111) in Unity coordinates. It uses original static
-terrain and vertex colors/main texture, now with 918 globally clipped source triangles
+terrain and vertex colors/main texture, with 918 globally clipped source triangles
 and 2760 cell-partitioned render triangles. The extraction region is 48×112
 source units; this is an early terrain preview, not a complete level.
 The extended route beyond the previous patch is documented in [Dreary Valley corridor](DREARY_CORRIDOR.md).
@@ -51,7 +51,7 @@ MeshColliders, including `Walls.*`, instead of the render mesh. See
 The source uses Unity scene-space static batches. Conversion selects only each
 renderer’s declared `firstSubMesh`/`subMeshCount`, applies no individual-object
 transform to scene-space vertices, and maps material slots relative to that
-range. Non-scene batch roots are rejected. Fifteen walkable render bounds are checked
+range. Non-scene batch roots are rejected. All converted walkable render bounds are checked
 against separately stored collider-local meshes transformed by their original
 hierarchy; maximum differences are below 0.041 source units. This cross-check
 supports the batch transform/submesh interpretation, not full Unity physics.
@@ -65,6 +65,6 @@ python3 tools/convert_world.py "/path/to/Zera Myths Awaken_Data" --scene level3 
 python3 tools/check_level3_batch_source.py "/path/to/Zera Myths Awaken_Data"
 ```
 
-Native source tested: `7fdee8ba3f48d175728488c383ae56c72e1fc86f`. HLE interpreter/software-GPU
+Native source tested: `e09b8614296895194f49f731feb9655480b03865`. HLE interpreter/software-GPU
 verification is not retail BIOS or physical-hardware validation. Completion
 remains the provisional **29%** while this separate content preview is integrated.

@@ -1,6 +1,6 @@
 {
-  "source_commit": "7fdee8ba3f48d175728488c383ae56c72e1fc86f",
-  "bin_sha256": "6dda3c2bf8a91c7c724bf88315494affe022456dde9d5291de3d6af4a515eaad",
+  "source_commit": "e09b8614296895194f49f731feb9655480b03865",
+  "bin_sha256": "c6886b14f21967e4f20ffedaff2edaa7d71d1b503ef65bf176499da4c6a8bc8b",
   "scene": "level3",
   "final_position": [
     500,
@@ -11,7 +11,7 @@
   "automatic_respawns": 0,
   "floor_support": "original uncapped collider triangles selected by player height",
   "overhead_surface_heights": [],
-  "render_triangles": 543,
-  "source_patch_triangles": 289,
+  "render_triangles": 2760,
+  "source_patch_triangles": 918,
   "validation": "Separate level3 bounded terrain preview; input-only HLE smoke test; no original progression implemented"
 }

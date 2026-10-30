@@ -1,6 +1,6 @@
 {
-  "source_commit": "7fdee8ba3f48d175728488c383ae56c72e1fc86f",
-  "bin_sha256": "9bd1a364f184cadfb015032b0cf419a85d20fd9b9552a08138939f61ef9c157f",
+  "source_commit": "e09b8614296895194f49f731feb9655480b03865",
+  "bin_sha256": "ef5f1ceb6053366f0da4a0e8b4c7239da059f2f4e6776fd5189b56ef9aa5aa4f",
   "emulator": "PCSX-ReARMed c881679 HLE BIOS interpreter software GPU",
   "scenario": "tools/scenarios/native_wall_preview.json",
   "validation": "HLE smoke capture only; no retail BIOS or physical hardware test."
